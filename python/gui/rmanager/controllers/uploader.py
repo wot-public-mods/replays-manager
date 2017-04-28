@@ -90,7 +90,7 @@ class UploaderController(object):
 	
 	def __parseApiStatus(self, callback):
 		try:
-			targetDomen = 'ru' if CURRENT_REALM == 'CURRENT_REALM' else 'eu'
+			targetDomen = 'ru' if CURRENT_REALM == 'RU' else 'eu'
 			status = urllib.urlopen('http://wotreplays.%s' % targetDomen).getcode() == 200
 		except:
 			status = False
@@ -112,7 +112,7 @@ class UploaderController(object):
 
 		form.add_file('Replay[file_name]', self.__replayFileName, fileStream)
 		
-		targetDomen = 'ru' if CURRENT_REALM == 'CURRENT_REALM' else 'eu'
+		targetDomen = 'ru' if CURRENT_REALM == 'RU' else 'eu'
 		targetURL = WOTREPLAYS_API_URL % (targetDomen, str(self.__replayUserDBID), str(self.__replayUserName))
 
 		LOG_DEBUG('UploaderController.__uploaderThread endpoint', targetURL)
@@ -160,6 +160,6 @@ class UploaderController(object):
 	
 	def openURL(self, data):
 		if data.startswith('/'):
-			targetDomen = 'ru' if CURRENT_REALM == 'CURRENT_REALM' else 'eu'
+			targetDomen = 'ru' if CURRENT_REALM == 'RU' else 'eu'
 			data = ('http://wotreplays.%s' % targetDomen) + data
 		BigWorld.wg_openWebBrowser(data)
