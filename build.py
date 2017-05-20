@@ -10,7 +10,7 @@ ANIMATE_PATH = 'C:\\Program Files\\Adobe\\Adobe Animate CC 2015\\Animate.exe'
 
 # game data
 COPY_INTO_GAME = True
-GAME_VERSION = '0.9.18.0'
+GAME_VERSION = '0.9.19.0'
 GAME_FOLDER = 'X:/wot_ct' # 'X:/wot'
 
 # modification data
@@ -18,7 +18,7 @@ MODIFICATION_AUTHOR = 'net.wargaming'
 MODIFICATION_DESCRIPTION = "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site"
 MODIFICATION_IDENTIFICATOR = 'replaysmanager'
 MODIFICATION_NAME = "Replays Manager"
-MODIFICATION_VERSION = '3.0.7'
+MODIFICATION_VERSION = '3.0.9'
 
 # result package name
 PACKAGE_NAME = '{author}.{name}_{version}.wotmod'.format( author = MODIFICATION_AUTHOR, \
@@ -28,6 +28,8 @@ def copytree(source, destination, ignore=None):
 	"""implementation of shutil.copytree 
 	original sometimes throw error on folders create"""
 	for item in os.listdir(source):
+		if '.gitkeep' in item:
+			continue
 		sourcePath = os.path.join(source, item)
 		destinationPath = os.path.join(destination, item)
 		if os.path.isfile(sourcePath):
@@ -86,9 +88,11 @@ if not os.path.isdir('as3/bin'):
 
 # build flash
 with open('build.jsfl', 'wb') as fh:
+	projectFolder = os.getcwd().replace('\\', '/').replace(':', '|')
+	fileItem = 'fl.publishDocument("file:///{project}/as3/{fileName}", "Default");\r\n'
 	for fileName in os.listdir('as3'):
 		if fileName.endswith('fla'):
-			fh.write('fl.publishDocument("file:///{path}/as3/{fileName}", "Default");\r\n'.format(path = os.getcwd().replace('\\', '/').replace(':', '|'), fileName = fileName))
+			fh.write(fileItem.format(project = projectFolder, fileName = fileName))
 	fh.write('fl.quit(false);')
 os.system('"{animate}" -e build.jsfl -AlwaysRunJSFL'.format(animate = ANIMATE_PATH))
 
