@@ -8,7 +8,7 @@ from datetime import datetime
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 
 from gui.rmanager.rmanager_constants import CURRENT_GAME_VERSION
-from gui.rmanager.utils import versionTuple, getTankType, convertKeys
+from gui.rmanager.utils import byteify, versionTuple, getTankType, convertKeys
 
 
 __all__ = ('ParserController', )
@@ -63,11 +63,11 @@ class ParserController(object):
 						myblock = f.read(int(datablockSize[i]))
 						blockdict = dict()				
 						if 'arenaUniqueID' not in str(myblock):
-							blockdict = json.loads(myblock)
+							blockdict = byteify(json.loads(myblock))
 							blockdict['vehicleInfo'] = self.__getVehicleInfo(blockdict)
 							result_blocks['data']['common'] = blockdict
 						else:
-							blockdict = json.loads(myblock)
+							blockdict = byteify(json.loads(myblock))
 							result_blocks['data']['result_data'] = blockdict[0]
 				except:
 					LOG_ERROR('ParserController.parseReplay %s' % file_name)
@@ -106,12 +106,15 @@ class ParserController(object):
 				result_dict['common_data']['mapDisplayName'] = result_blocks['data']['common']['mapDisplayName']			
 				result_dict['common_data']['playerVehicle'] = result_blocks['data']['common']['playerVehicle']
 				result_dict['common_data']['tankInfo'] = result_blocks['data']['common']['vehicleInfo']
-				result_dict['common_data']['battleType'] = result_blocks['data']['common']['battleType']
+				if result_blocks['data']['common']['battleType'] == 22:
+					result_dict['common_data']['battleType'] = 17
+				else:
+					result_dict['common_data']['battleType'] = result_blocks['data']['common']['battleType']
 				
 				result_dict['common_data']['canShowBattleResults'] = versionTuple(result_blocks['data']['common']['clientVersionFromExe']) >= CURRENT_GAME_VERSION
 			else:
 				return None
-				
+			
 			hasBattleResults = False
 			if 'result_data' in result_blocks['data']:
 				try:		 
@@ -122,11 +125,13 @@ class ParserController(object):
 							vehicleKey = key
 							personal_block = result_blocks['data']['result_data']['personal'].get(key).copy()
 					
+					result_dict['common_data']['battleType'] = result_blocks['data']['result_data']['common']['guiType']
+					
 					result_dict['common_data']['xp'] = int(personal_block.get('xp'))
 					result_dict['common_data']['credits'] = int(personal_block.get('credits'))
 					result_dict['common_data']['damage'] = int(personal_block.get('damageDealt'))
-					result_dict['common_data']['kills'] = int(personal_block.get('kills'))			
-					result_dict['common_data']['damageAssistedRadio'] = int(personal_block.get('damageAssistedRadio'))		   
+					result_dict['common_data']['kills'] = int(personal_block.get('kills'))
+					result_dict['common_data']['damageAssistedRadio'] = int(personal_block.get('damageAssistedRadio'))
 					result_dict['common_data']['spotted'] = int(personal_block.get('spotted'))		
 					playerTeam = int(personal_block.get('team'))
 					

@@ -166,7 +166,7 @@ class DataBaseController(object):
 			
 				
 	def getReplayFavorite(self, replayName):
-		Log('DataBaseController.getReplayFavorite %s' % replayName)
+		LOG_DEBUG('DataBaseController.getReplayFavorite %s' % replayName)
 		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
 		try:
 			return self.__database['replays_data'][replayName]['common_data']['favorite']
@@ -174,7 +174,7 @@ class DataBaseController(object):
 			self.__database.close()
 				
 	def setReplayFavorite(self, replayName, isFavorite):
-		Log('DataBaseController.setReplayFavorite %s' % replayName)
+		LOG_DEBUG('DataBaseController.setReplayFavorite %s' % replayName)
 		self.__database = shelve.open(DB_FILENAME, flag='w', protocol=2, writeback=True)
 		try:
 			self.__database['replays_data'][replayName]['common_data']['favorite'] = 1 if isFavorite else 0

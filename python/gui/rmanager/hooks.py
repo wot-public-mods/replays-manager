@@ -2,14 +2,13 @@
 import BigWorld
 from gui.app_loader.loader import g_appLoader, _AppLoader
 from gui.Scaleform.daapi.view.login.LoginView import LoginView
-from gui.LobbyContext import _LobbyContext
 from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
 from gui.Scaleform.daapi.view.lobby.user_cm_handlers import AppealCMHandler
 from gui.Scaleform.locale.MENU import MENU
 from gui.Scaleform.daapi.view.lobby.user_cm_handlers import USER
 from BattleReplay import BattleReplay
 from helpers.ServerSettings import _ClanProfile, RoamingSettings, _SpgRedesignFeatures
-from gui.LobbyContext import g_lobbyContext
+from gui.lobby_context import LobbyContext
 from debug_utils import LOG_DEBUG, LOG_ERROR
 from Event import Event
 
@@ -41,7 +40,7 @@ def populate(baseMethod, baseObject):
 	g_eventsManager.onLoginViewLoaded()
 
 # context menu fixes
-@override(_LobbyContext, 'getPlayerFullName')
+@override(LobbyContext, 'getPlayerFullName')
 def getPlayerFullName(baseMethod, baseObject, pName, clanInfo = None, clanAbbrev = None, regionCode = None, pDBID = None):
 	if clanAbbrev:
 		clanAbbrev = str(clanAbbrev)
@@ -75,18 +74,7 @@ def showLoginPage(baseMethod, baseObject):
 
 # track stat
 from gui.rmanager.data_collector import g_dataCollector
-g_dataCollector.addSoloMod('replays_manager', '3.0.7')
-
-# Fake server settings on login page
-class FakeServerSettings(object):
-	roaming = property(lambda self: RoamingSettings.defaults())
-	clanProfile = property(lambda self: _ClanProfile.defaults())
-	spgRedesignFeatures = property(lambda self: _SpgRedesignFeatures.defaults())
-	isPremiumInPostBattleEnabled = lambda self: False
-	clear = lambda *args, **kwargs: None
-	onServerSettingsChange = Event()
-
-g_lobbyContext._LobbyContext__serverSettings = FakeServerSettings()
+g_dataCollector.addSoloMod('replays_manager', '3.0.9')
 
 # Add missing battle result fields (creditsReplay, xpReply, freeXpReplay, goldReplay, fortResource)
 # See BattleReplay.py onBattleResultsReceived method
