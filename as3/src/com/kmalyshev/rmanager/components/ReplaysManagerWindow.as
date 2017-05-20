@@ -55,11 +55,11 @@
 					
 			width = 1000;
 			height = 665;
-			canDrag = false;
+			//canDrag = false;
 			canResize = false;
-			isModal = true;
-			isCentered = true;
-			canClose = true;
+			//isModal = true;
+			//isCentered = true;
+			//canClose = true;
 			//showWindowBgForm = false;
 			
 			Logger.globalDispatcher.addEventListener(LoggerEvent.LOG, this.handleLoggerEvent);
