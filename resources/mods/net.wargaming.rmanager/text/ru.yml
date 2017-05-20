@@ -37,7 +37,7 @@ ui.uploader.error3: Пользователь не найден:
 ui.uploader.error4: Пустой запрос: 
 ui.uploader.error5: Ошибка сохранения реплея: 
 ui.uploader.error6: Реплей записан не тем игроком, из-под которого происходит загрузка.
-ui.uploader.responceLabel: Ваш реплей успешно загружен на сайт WoTReplays.ru! <br />Перейти на сайт: {{url}} <br />Скачать файл: {{directLink}}
+ui.uploader.responceLabel: Ваш реплей успешно загружен на сайт WoTReplays! <br />Перейти на сайт: {{url}} <br />Скачать файл: {{directLink}}
 ui.uploader.progressLabel:  Кб из {{value}} Кб
 ui.uploader.buttonStartUpload: Начать загрузку
 ui.uploader.inputTitle: Название (до 100 символов)

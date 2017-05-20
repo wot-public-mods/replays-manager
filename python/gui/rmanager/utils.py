@@ -38,12 +38,11 @@ def byteify(data):
 	else: 
 		return data
 
-def parseLangFields(langCode):
-	"""split items by lines and key value by : 
+def parseLangFields(langFile):
+	"""split items by lines and key value by ':'
 	like yaml format"""
-	from gui.rmanager.rmanager_constants import LANGUAGE_FILE_PATH
 	result = {}
-	langData = readFromVFS(LANGUAGE_FILE_PATH % langCode)
+	langData = readFromVFS(langFile)
 	if langData:
 		for item in langData.splitlines():
 			if ': ' not in item: continue

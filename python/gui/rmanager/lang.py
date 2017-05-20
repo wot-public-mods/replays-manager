@@ -2,7 +2,7 @@
 from constants import DEFAULT_LANGUAGE
 from helpers import getClientLanguage
 
-from gui.rmanager.rmanager_constants import DEFAULT_UI_LANGUAGE, LANGUAGE_CODES
+from gui.rmanager.rmanager_constants import DEFAULT_UI_LANGUAGE, LANGUAGE_CODES, LANGUAGE_FILE_PATH
 from gui.rmanager.utils import parseLangFields
 
 __all__ = ('l10n', )
@@ -10,7 +10,7 @@ __all__ = ('l10n', )
 _LANGUAGES = {}
 
 for langCode in LANGUAGE_CODES:
-	_LANGUAGES[langCode] = parseLangFields(langCode)
+	_LANGUAGES[langCode] = parseLangFields(LANGUAGE_FILE_PATH % langCode)
 
 _CLIENT_LANGUAGE = getClientLanguage()
 if _CLIENT_LANGUAGE in _LANGUAGES.keys():
