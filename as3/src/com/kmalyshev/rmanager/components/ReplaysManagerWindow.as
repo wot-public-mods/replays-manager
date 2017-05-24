@@ -4,7 +4,10 @@
 	import flash.display.InteractiveObject;
 	
 	import net.wg.gui.components.advanced.ViewStack;
+	import net.wg.gui.components.windows.WindowEvent;
 	import net.wg.infrastructure.base.AbstractWindowView;
+	import net.wg.infrastructure.constants.WindowViewInvalidationType;
+	import net.wg.infrastructure.interfaces.IWindow;
 	
 	import com.kmalyshev.rmanager.events.LoggerEvent;
 	import com.kmalyshev.rmanager.events.ReplayActionEvent;
@@ -53,10 +56,10 @@
 		{
 			super();
 					
-			width = 1000;
-			height = 665;
+			//width = 1000;
+			//height = 665;
 			//canDrag = false;
-			canResize = false;
+			//canResize = false;
 			//isModal = true;
 			//isCentered = true;
 			//canClose = true;
@@ -70,18 +73,31 @@
 			this.flashLogS(event.data);
 		}
 		
+		override public function setWindow(param1:IWindow) : void
+		{
+			super.setWindow(param1);
+			if(window)
+			{
+				//this.canDrag = false;
+				window.title = STRINGS.RMANAGER_WINDOW_TITLE;
+			}
+		}
+		
+		override protected function configUI() : void
+		{
+			super.configUI();
+			window.addEventListener(WindowEvent.SCALE_Y_CHANGED, this.onWindowScaleYChangedHandler);
+		}
+		
 		override protected function onPopulate():void
 		{
 			super.onPopulate();
-			
 			try
 			{
 				this.view.addEventListener(PagingEvent.PAGE_CHANGED, this.handlePageChanged);
 				this.view.addEventListener(SortingEvent.SORT_KEY_CHANGED, this.handleSortingChanged);
 				this.view.addEventListener(FilterEvent.FILTERS_CHANGED, this.handleFiltersChanged);
 				this.view.addEventListener(ReplayActionEvent.REPLAY_ACTION, this.handleReplayAction);
-								
-				window.title = STRINGS.RMANAGER_WINDOW_TITLE;
 				
 				Helpers.ConfigureViewStack(this.view);
 				this.view.show(Helpers.REPLAYS);
@@ -107,6 +123,16 @@
 			this.view = null;
 			
 			super.onDispose();
+		}
+		
+		override protected function draw() : void
+		{
+			super.draw();
+			if(geometry && window && isInvalid(WindowViewInvalidationType.POSITION_INVALID))
+			{
+				window.x = App.appWidth - window.getBackground().width >> 1;
+				window.y = App.appHeight - window.getBackground().height >> 1;
+			}
 		}
 		
 		private function handleReplayAction(event:ReplayActionEvent):void
@@ -165,6 +191,11 @@
 			{
 				Logger.Error("ReplaysManagerWindow::as_setReplaysData: " + err.getStackTrace());
 			}
+		}
+		
+		private function onWindowScaleYChangedHandler(param1:WindowEvent) : void
+		{
+			invalidate(WindowViewInvalidationType.POSITION_INVALID);
 		}
 	}
 
