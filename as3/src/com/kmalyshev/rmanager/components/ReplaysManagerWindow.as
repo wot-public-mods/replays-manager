@@ -78,8 +78,7 @@
 			super.setWindow(param1);
 			if(window)
 			{
-				//this.canDrag = false;
-				window.title = STRINGS.RMANAGER_WINDOW_TITLE;
+				window.title = STRINGS.l10n('ui.window.title');
 			}
 		}
 		
@@ -94,6 +93,10 @@
 			super.onPopulate();
 			try
 			{
+				if(window)
+				{
+					window.title = STRINGS.l10n('ui.window.title');
+				}
 				this.view.addEventListener(PagingEvent.PAGE_CHANGED, this.handlePageChanged);
 				this.view.addEventListener(SortingEvent.SORT_KEY_CHANGED, this.handleSortingChanged);
 				this.view.addEventListener(FilterEvent.FILTERS_CHANGED, this.handleFiltersChanged);
@@ -190,6 +193,19 @@
 			catch (err:Error)
 			{
 				Logger.Error("ReplaysManagerWindow::as_setReplaysData: " + err.getStackTrace());
+			}
+		}
+		
+		public function as_setLangData(data:Object):void
+		{
+			try
+			{
+				Logger.Debug("as_setLangData");
+				STRINGS.setData(data);
+			}
+			catch (err:Error)
+			{
+				Logger.Error("ReplaysManagerWindow::as_setLangData: " + err.getStackTrace());
 			}
 		}
 		

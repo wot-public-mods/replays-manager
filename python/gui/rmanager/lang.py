@@ -5,7 +5,7 @@ from helpers import getClientLanguage
 from gui.rmanager.rmanager_constants import DEFAULT_UI_LANGUAGE, LANGUAGE_CODES, LANGUAGE_FILE_PATH
 from gui.rmanager.utils import parseLangFields
 
-__all__ = ('l10n', )
+__all__ = ('l10n', 'allFields')
 
 _LANGUAGES = {}
 
@@ -28,4 +28,12 @@ def l10n(key):
 		return _LANGUAGES[DEFAULT_UI_LANGUAGE][key]
 	else:
 		return key
-	
+
+def allFields():
+	'''returns all localized fields'''
+	result = {}
+	for key in _LANGUAGES[DEFAULT_UI_LANGUAGE]:
+		result[key] = _LANGUAGES[DEFAULT_UI_LANGUAGE][key]
+	for key in _LANGUAGE:
+		result[key] = _LANGUAGE[key]
+	return result

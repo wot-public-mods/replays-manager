@@ -65,7 +65,7 @@
 		override protected function configUI():void
 		{
 			super.configUI();
-			this.buttonBar.label = STRINGS.RMANAGER_PAGINATOR_LABEL;
+			this.buttonBar.label = STRINGS.l10n('ui.window.paginatorLabel');
 			this.buttonBar.itemRendererName = "com.kmalyshev.rmanager.ui.TextLinkButtonUI";
 			this.buttonBar.direction = DirectionMode.HORIZONTAL;
 			this.buttonBar.spacing = 5;
@@ -168,8 +168,8 @@
 			
 			if (firstPage != 1)
 			{
-				arr.push({label: STRINGS.RMANAGER_PAGINATOR_FIRST, value: 1, selected: false});
-				arr.push({label: STRINGS.RMANAGER_PAGINATOR_PREV, value: null, key: "prev", selected: false});
+				arr.push({label: STRINGS.l10n('ui.window.paginatorFirst'), value: 1, selected: false});
+				arr.push({label: STRINGS.l10n('ui.window.paginatorPrev'), value: null, key: "prev", selected: false});
 			}
 			
 			for (var i:int = firstPage; i <= lastPage; i++)
@@ -179,12 +179,12 @@
 			
 			if (this._currentPage != this.totalPages)
 			{
-				arr.push({label: STRINGS.RMANAGER_PAGINATOR_NEXT, value: null, key: "next", selected: false});
+				arr.push({label: STRINGS.l10n('ui.window.paginatorNext'), value: null, key: "next", selected: false});
 			}
 			
 			if (lastPage < this.totalPages)
 			{
-				arr.push({label: STRINGS.RMANAGER_PAGINATOR_LAST, value: this.totalPages, selected: false});
+				arr.push({label: STRINGS.l10n('ui.window.paginatorLast'), value: this.totalPages, selected: false});
 			}
 			
 			return new DataProvider(arr);

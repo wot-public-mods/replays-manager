@@ -62,11 +62,11 @@
 				this._selectedTF = new TextFormat();
 				this._selectedTF.color = 0xFFFFFF;
 				
-				this.title.text = STRINGS.RMANAGER_FILTER_TAB_TITLE;
-				this.mapLabel.text = STRINGS.RMANAGER_FILTER_TAB_MAP;
-				this.vehicleLabel.text = STRINGS.RMANAGER_FILTER_TAB_VEHICLE;
+				this.title.text = STRINGS.l10n('ui.window.filterTab.title');
+				this.mapLabel.text = STRINGS.l10n('ui.window.filterTab.map');
+				this.vehicleLabel.text = STRINGS.l10n('ui.window.filterTab.vehicle');
 				this.vehicleLabel.autoSize = TextFieldAutoSize.LEFT;
-				this.battleTypeLabel.text = STRINGS.RMANAGER_FILTER_TAB_BATTLE_TYPE;
+				this.battleTypeLabel.text = STRINGS.l10n('ui.window.filterTab.battleType');
 				
 				Helpers.ConfigureMapsList(this.mapsList);
 				this.mapsList.addEventListener(ListEvent.INDEX_CHANGE, this.handleMapsListIndexChange);
@@ -82,20 +82,20 @@
 				this.battleType.addEventListener(ListEvent.INDEX_CHANGE, this.handleBattleTypeIndexChange);
 				this.battleType.selectedIndex = 0;
 				
-				this.battleResultLabel.text = STRINGS.RMANAGER_FILTER_TAB_BATTLE_RESULT;
+				this.battleResultLabel.text = STRINGS.l10n('ui.window.filterTab.battleResult');
 				Helpers.ConfigureBattleResultDropdown(this.battleResult);
 				this.battleResult.addEventListener(ListEvent.INDEX_CHANGE, this.handleBattleResultIndexChange);
 				this.battleResult.selectedIndex = 0;
 				
-				this.otherLabel.text = STRINGS.RMANAGER_FILTER_TAB_OTHER_LABEL;								
-				this.cbFavorite.label = STRINGS.RMANAGER_FILTER_TAB_OTHER_SHOW_FAV;
+				this.otherLabel.text = STRINGS.l10n('ui.window.filterTab.otherLabel');
+				this.cbFavorite.label = STRINGS.l10n('ui.window.filterTab.otherShowFavorite');
 				
 				this.btnApply.width = 235;
-				this.btnApply.label = STRINGS.RMANAGER_BTN_APPLY;
+				this.btnApply.label = STRINGS.l10n('ui.window.buttonApply');
 				this.btnApply.addEventListener(ButtonEvent.CLICK, this.handleBtnApplyClick);
 				
 				this.btnReset.width = 235;
-				this.btnReset.label = STRINGS.RMANAGER_BTN_RESET;
+				this.btnReset.label = STRINGS.l10n('ui.window.buttonReset');
 				this.btnReset.addEventListener(ButtonEvent.CLICK, this.handleBtnResetClick);				
 			}
 			catch (err:Error)
@@ -131,7 +131,7 @@
 			if (isInvalid(InvalidationType.DATA))
 			{
 				var mapsData:DataProvider = new DataProvider(this._data.maps);
-				mapsData.unshift({label: STRINGS.RMANAGER_FILTER_TAB_MAP_ALL, data: ""});
+				mapsData.unshift({label: STRINGS.l10n('ui.window.filterTab.mapAll'), data: ""});
 				this.mapsList.dataProvider = mapsData;
 				this.mapsList.validateNow();
 				this.mapsList.rowCount = 6;
@@ -157,21 +157,21 @@
 		
 		protected function handleBattleResultIndexChange(event:ListEvent):void
 		{
-			var startBlock:String = STRINGS.RMANAGER_FILTER_TAB_BATTLE_RESULT + "  ";
+			var startBlock:String = STRINGS.l10n('ui.window.filterTab.battleResult') + "  ";
 			this.battleResultLabel.text = startBlock + event.itemData.label;
 			this.battleResultLabel.setTextFormat(this._selectedTF, startBlock.length);
 		}
 		
 		protected function handleMapsListIndexChange(event:ListEvent):void
 		{
-			var startBlock:String = STRINGS.RMANAGER_FILTER_TAB_MAP + "  ";
+			var startBlock:String = STRINGS.l10n('ui.window.filterTab.map') + "  ";
 			this.mapLabel.text = startBlock + event.itemData.label;
 			this.mapLabel.setTextFormat(this._selectedTF, startBlock.length);
 		}
 		
 		protected function handleBattleTypeIndexChange(event:ListEvent):void
 		{
-			var startBlock:String = STRINGS.RMANAGER_FILTER_TAB_BATTLE_TYPE + "  ";
+			var startBlock:String = STRINGS.l10n('ui.window.filterTab.battleType') + "  ";
 			this.battleTypeLabel.text = startBlock + event.itemData.label;
 			this.battleTypeLabel.setTextFormat(this._selectedTF, startBlock.length);
 		}

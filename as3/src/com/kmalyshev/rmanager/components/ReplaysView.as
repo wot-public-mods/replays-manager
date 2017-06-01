@@ -71,7 +71,7 @@
 				this.btnFilters.toggleEnable = true;
 				this.btnFilters.toggleGlow.visible = false;
 				this.btnFilters.addEventListener(MouseEvent.CLICK, this.handleFiltersButtonClick);
-				this.btnFilters.label = STRINGS.RMANAGER_FILTER_BTN_LABEL;
+				this.btnFilters.label = STRINGS.l10n('ui.window.filterButtonLabel');
 				this.btnFilters.width = 235;
 				this.btnFilters.focusable = false;				
 				this.btnFilters.iconSource = "../maps/rmanager/filter.png";				

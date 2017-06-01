@@ -1,21 +1,69 @@
 
-ui.waiting.prepareDB: Подготовка списка. Пожалуйста, подождите...
-ui.waiting.updatingList: Обновление списка
+ui.window.title: Менеджер реплеев
+ui.window.tabsOwn: Мои реплеи
+ui.window.placeholder: Выберите реплей из списка для отображения информации
+ui.window.frags: Уничтожено
+ui.window.damage: Урон
+ui.window.credits: Кредиты
+ui.window.xp: Опыт
+ui.window.spotted: Обнаружено
+ui.window.assist: Вспомогательный урон
+ui.window.battleResult: —
+ui.window.battleResultVictory: Победа
+ui.window.battleResultDefeat: Поражение
+ui.window.battleResultDraw: Ничья
+ui.window.buttonShowResult: Показать результаты
+ui.window.buttonPlay: Воспроизвести
+ui.window.buttonUpload: Загрузить на WoTReplays
+ui.window.buttonRemove: Удалить
+ui.window.buttonApply: Применить
+ui.window.buttonReset: Сбросить
+ui.window.infoPlaceholder: Уничтожено
+ui.window.sorting.label: Сортировать
+ui.window.sorting.byTime: по дате
+ui.window.sorting.byCredits: по кредитам
+ui.window.sorting.byDamage: по урону
+ui.window.sorting.byResults: по результату
+ui.window.sorting.byMap: по карте
+ui.window.sorting.byVehicle: по танку
+ui.window.sorting.byXp: по опыту
+ui.window.sorting.byKills: по фрагам
+ui.window.sorting.bySpotted: по обнаруженным
+ui.window.sorting.byAssist: по поддержке
 
-ui.action.showResults: Показать результаты
-ui.action.play: Воспроизвести
-ui.action.upload: Загрузить на WoTReplays
-ui.action.favoriteAdd: Добавить в избранное
-ui.action.favoriteDelete: Убрать из избранного
-ui.action.delete: Удалить
+ui.window.dateFilter.label: Реплеи за
+ui.window.dateFilter.today: сегодня
+ui.window.dateFilter.week: неделю
+ui.window.dateFilter.month: месяц
+ui.window.dateFilter.allTime: все время
+ui.window.filterButtonLabel: Фильтры
+ui.window.filterTab.title: ФИЛЬТРАЦИЯ
+ui.window.filterTab.all: Все
+ui.window.filterTab.any: Любой
+ui.window.filterTab.map: Карта:
+ui.window.filterTab.mapAll: Все карты
+ui.window.filterTab.vehicle: Танк:
+ui.window.filterTab.vehicleTypeAll: Все типы
+ui.window.filterTab.vehicleTypeHeavy: Тяжелые танк
+ui.window.filterTab.vehicleTypeMedium: Средний танк
+ui.window.filterTab.vehicleTypeLight: Легкий танк
+ui.window.filterTab.vehicleTypeATSPG: ПТ-САУ
+ui.window.filterTab.vehicleTypeSPG: САУ
+ui.window.filterTab.vehicleLevel: уровень
+ui.window.filterTab.battleType: Тип боя:
+ui.window.filterTab.battleResult: Результат боя:
+ui.window.filterTab.otherLabel: Разное:
+ui.window.filterTab.otherShowFavorite: Избранные реплеи
 
-ui.popup.button.yes: Да
-ui.popup.button.no: Нет
-ui.popup.button.close: Закрыть
-ui.popup.play.title: Подтверждение перезагрузки игры
-ui.popup.play.message: Для воспроизведения реплея необходимо перезагрузить игру. Перезагрузить?
-ui.popup.delete.title: Подтверждение удаления реплея
-ui.popup.delete.message: Вы действительно хотите удалить реплей: %s?
+ui.window.paginatorLabel: Страницы
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: первая
+ui.window.paginatorLast: последняя
+
+ui.window.tabsFilter: Фильтр
+ui.window.tabsInfo: Инфо
+
 
 
 ui.uploader.windowTitle: Загрузка реплея на WoTReplays.ru
@@ -45,5 +93,34 @@ ui.uploader.inputDescription: Описание (до 500 символов)
 ui.uploader.checkBoxIsSecretLabel: Секретный реплей
 ui.uploader.checkBoxIsSecretInfo: {HEADER}Секретный реплей{/HEADER}{BODY}Секретный реплей{/BODY}
 
+
+
+ui.waiting.prepareDB: Подготовка списка. Пожалуйста, подождите...
+ui.waiting.updatingList: Обновление списка
+
+
+
+ui.action.showResults: Показать результаты
+ui.action.play: Воспроизвести
+ui.action.upload: Загрузить на WoTReplays
+ui.action.favoriteAdd: Добавить в избранное
+ui.action.favoriteDelete: Убрать из избранного
+ui.action.delete: Удалить
+
+
+
+ui.popup.button.yes: Да
+ui.popup.button.no: Нет
+ui.popup.button.close: Закрыть
+ui.popup.play.title: Подтверждение перезагрузки игры
+ui.popup.play.message: Для воспроизведения реплея необходимо перезагрузить игру. Перезагрузить?
+ui.popup.delete.title: Подтверждение удаления реплея
+ui.popup.delete.message: Вы действительно хотите удалить реплей: %s?
+
+
+modsListApi.title: Список модификаций
+modsListApi.info: {HEADER}Список модификаций{/HEADER}{BODY}Простой запуск и удобная настройка модификаций{/BODY}
 modsListApi.name: Менеджер реплеев
 modsListApi.description: Удобный просмотр реплеев, просмотр результатов, воспроизведение, а так же загрузка реплеев на WoTReplays.ru
+
+

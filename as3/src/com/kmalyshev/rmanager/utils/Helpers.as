@@ -19,26 +19,37 @@
 		public static var WOTREPLAYS_API_STATUS:Boolean = false;
 		public static var REPLAYS:String = "com.kmalyshev.rmanager.ui.ReplaysViewUI";
 		public static var REPLAY_CM_HANDLER_TYPE:String = "replayCMHandler";
-		
+
 		public static const SORTING_BUTTONS:Array = [
-			{label: STRINGS.RMANAGER_SORTING_BY_TIME, selected: true, ascending: false, key: "timestamp"}, 
-			{label: STRINGS.RMANAGER_SORTING_BY_CREDITS, selected: false, ascending: false, key: "credits"},
-			{label: STRINGS.RMANAGER_SORTING_BY_XP, selected: false, ascending: false, key: "xp"}, 
-			{label: STRINGS.RMANAGER_SORTING_BY_KILLS, selected: false, ascending: false, key: "kills"},
-			{label: STRINGS.RMANAGER_SORTING_BY_DAMAGE, selected: false, ascending: false, key: "damage"}, 			
-			{label: STRINGS.RMANAGER_SORTING_BY_SPOTTED, selected: false, ascending: false, key: "spotted"}, 
-			{label: STRINGS.RMANAGER_SORTING_BY_ASSIST, selected: false, ascending: false, key: "damageAssistedRadio"}
+			{label: STRINGS.l10n('ui.window.sorting.byTime'), selected: true, ascending: false, key: "timestamp"},
+			{label: STRINGS.l10n('ui.window.sorting.byCredits'), selected: false, ascending: false, key: "credits"},
+			{label: STRINGS.l10n('ui.window.sorting.byXp'), selected: false, ascending: false, key: "xp"},
+			{label: STRINGS.l10n('ui.window.sorting.byKills'), selected: false, ascending: false, key: "kills"},
+			{label: STRINGS.l10n('ui.window.sorting.byDamage'), selected: false, ascending: false, key: "damage"},
+			{label: STRINGS.l10n('ui.window.sorting.bySpotted'), selected: false, ascending: false, key: "spotted"},
+			{label: STRINGS.l10n('ui.window.sorting.byAssist'), selected: false, ascending: false, key: "damageAssistedRadio"}
 		];
-		
-		public static const DATE_BUTTONS:Array = [{label: STRINGS.RMANAGER_DATE_FILTER_TODAY, selected: false, key: "today"}, {label: STRINGS.RMANAGER_DATE_FILTER_WEEK, selected: false, key: "week"}, {label: STRINGS.RMANAGER_DATE_FILTER_MONTH, selected: false, key: "month"}, {label: STRINGS.RMANAGER_DATE_FILTER_ALL_TIME, selected: true, key: "all"}];		
-		public static const VEHICLE_TYPES:Array = [{label: STRINGS.RMANAGER_FILTER_TAB_VEHICLE_TYPE_ALL, data: "", icon: "../maps/icons/filters/tanks/all.png"}, {label: STRINGS.RMANAGER_FILTER_TAB_VEHICLE_TYPE_HEAVY, data: "heavyTank", icon: "../maps/icons/filters/tanks/heavyTank.png"}, {label: STRINGS.RMANAGER_FILTER_TAB_VEHICLE_TYPE_MEDIUM, data: "mediumTank", icon: "../maps/icons/filters/tanks/mediumTank.png"}, {label: STRINGS.RMANAGER_FILTER_TAB_VEHICLE_TYPE_LIGHT, data: "lightTank", icon: "../maps/icons/filters/tanks/lightTank.png"}, {label: STRINGS.RMANAGER_FILTER_TAB_VEHICLE_TYPE_AT_SPG, data: "AT-SPG", icon: "../maps/icons/filters/tanks/AT-SPG.png"}, {label: STRINGS.RMANAGER_FILTER_TAB_VEHICLE_TYPE_SPG, data: "SPG", icon: "../maps/icons/filters/tanks/SPG.png"}];
+		public static const DATE_BUTTONS:Array = [
+			{label: STRINGS.l10n('ui.window.dateFilter.today'), selected: false, key: "today"},
+			{label: STRINGS.l10n('ui.window.dateFilter.week'), selected: false, key: "week"},
+			{label: STRINGS.l10n('ui.window.dateFilter.month'), selected: false, key: "month"},
+			{label: STRINGS.l10n('ui.window.dateFilter.allTime'), selected: true, key: "all"}
+		];
+		public static const VEHICLE_TYPES:Array = [
+			{label: STRINGS.l10n('ui.window.filterTab.vehicleTypeAll'), data: "", icon: "../maps/icons/filters/tanks/all.png"}, 
+			{label: STRINGS.l10n('ui.window.filterTab.vehicleTypeHeavy'), data: "heavyTank", icon: "../maps/icons/filters/tanks/heavyTank.png"}, 
+			{label: STRINGS.l10n('ui.window.filterTab.vehicleTypeMedium'), data: "mediumTank", icon: "../maps/icons/filters/tanks/mediumTank.png"}, 
+			{label: STRINGS.l10n('ui.window.filterTab.vehicleTypeLight'), data: "lightTank", icon: "../maps/icons/filters/tanks/lightTank.png"}, 
+			{label: STRINGS.l10n('ui.window.filterTab.vehicleTypeATSPG'), data: "AT-SPG", icon: "../maps/icons/filters/tanks/AT-SPG.png"}, 
+			{label: STRINGS.l10n('ui.window.filterTab.vehicleTypeSPG'), data: "SPG", icon: "../maps/icons/filters/tanks/SPG.png"}
+		];
 		public static const BATTLE_RESULT:Array = [
-			{label: STRINGS.RMANAGER_FILTER_TAB_ANY, data: -100}, 
-			{label: STRINGS.RMANAGER_BATTLE_RESULT_VICTORY, data: 1}, 
-			{label: STRINGS.RMANAGER_BATTLE_RESULT_DEFEAT, data: 0}, 
-			{label: STRINGS.RMANAGER_BATTLE_RESULT_DRAW, data: -5}
+			{label: STRINGS.l10n('ui.window.filterTab.any'), data: -100}, 
+			{label: STRINGS.l10n('ui.window.battleResultVictory'), data: 1}, 
+			{label: STRINGS.l10n('ui.window.battleResultDefeat'), data: 0}, 
+			{label: STRINGS.l10n('ui.window.battleResultDraw'), data: -5}
 		];
-		
+
 		public function Helpers()
 		{
 			return;
@@ -60,7 +71,7 @@
 		
 		public static function ConfigureSortingMenu(list:LabelButtonBar):void
 		{
-			list.label = STRINGS.RMANAGER_SORTING_LABEL;
+			list.label = STRINGS.l10n('ui.window.sorting.label');
 			list.direction = DirectionMode.HORIZONTAL;
 			list.itemRendererName = "com.kmalyshev.rmanager.ui.TextLinkSortButtonUI";
 			list.spacing = 5;
@@ -69,7 +80,7 @@
 		
 		public static function ConfigureDateFilterMenu(list:LabelButtonBar):void
 		{
-			list.label = STRINGS.RMANAGER_DATE_FILTER_LABEL;
+			list.label = STRINGS.l10n('ui.window.dateFilter.label');
 			list.direction = DirectionMode.HORIZONTAL;
 			list.itemRendererName = "com.kmalyshev.rmanager.ui.TextLinkButtonUI";
 			list.spacing = 5;
@@ -129,7 +140,7 @@
 		{
 			var _nations:* = App.utils.nations;
 			var _nationsData:Array = _nations.getNationsData();
-			var _fn:Array = [{label: STRINGS.RMANAGER_FILTER_TAB_ALL, data: -1, icon: "../maps/icons/filters/nations/all.png"}];
+			var _fn:Array = [{label: STRINGS.l10n('ui.window.filterTab.all'), data: -1, icon: "../maps/icons/filters/nations/all.png"}];
 			var i:uint = 0;
 			while (i < _nationsData.length)
 			{
@@ -162,10 +173,10 @@
 		public static function ConfigureVehicleLevelsDropdown(menu:DropDownImageText):void
 		{
 			var _fl:Array = new Array();
-			_fl.push({label: STRINGS.RMANAGER_FILTER_TAB_ALL, data: -1, icon: "../maps/icons/filters/levels/level_all.png"});
+			_fl.push({label: STRINGS.l10n('ui.window.filterTab.all'), data: -1, icon: "../maps/icons/filters/levels/level_all.png"});
 			for (var i:uint = 1; i <= 10; i++)
 			{
-				_fl.push({label: i + " " + STRINGS.RMANAGER_FILTER_TAB_VEHICLE_LEVEL, data: i, icon: "../maps/icons/filters/levels/level_" + i + ".png"});
+				_fl.push({label: i + " " + STRINGS.l10n('ui.window.filterTab.vehicleLevel'), data: i, icon: "../maps/icons/filters/levels/level_" + i + ".png"});
 			}
 			
 			menu.focusable = false;
@@ -181,7 +192,7 @@
 		public static function ConfigureBattleTypeDropdown(menu:DropdownMenu):void
 		{
 			var _fl:Array = new Array();
-			_fl.push({label: STRINGS.RMANAGER_FILTER_TAB_ALL, data: -1});
+			_fl.push({label: STRINGS.l10n('ui.window.filterTab.all'), data: -1});
 			for (var i:int = 0; i < MENU.LOADING_BATTLETYPES_ENUM.length; i++)
 			{
 				var labelText:String = Utils.getBattleTypeLocalString(i.toString());

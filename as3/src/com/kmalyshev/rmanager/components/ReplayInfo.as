@@ -65,30 +65,30 @@
 			this.mapIcon.autoSize = false;
 			this.vehicleIcon.enabled = false;
 			this.frags.width = this.damage.width = this.credits.width = this.xp.width = this.spotted.width = this.assist.width = 235;
-			this.frags.label = STRINGS.RMANAGER_FRAGS;
-			this.damage.label = STRINGS.RMANAGER_DAMAGE;
-			this.credits.label = STRINGS.RMANAGER_CREDITS;
-			this.xp.label = STRINGS.RMANAGER_XP;						
-			this.spotted.label = STRINGS.RMANAGER_SPOTTED;
-			this.assist.label = STRINGS.RMANAGER_ASSIST;
+			this.frags.label = STRINGS.l10n('ui.window.frags');
+			this.damage.label = STRINGS.l10n('ui.window.damage');
+			this.credits.label = STRINGS.l10n('ui.window.credits');
+			this.xp.label = STRINGS.l10n('ui.window.xp');
+			this.spotted.label = STRINGS.l10n('ui.window.spotted');
+			this.assist.label = STRINGS.l10n('ui.window.assist');
 			
 			this.btnShowResults.width = 235;
-			this.btnShowResults.label = STRINGS.RMANAGER_BTN_SHOW_RESULTS;
+			this.btnShowResults.label = STRINGS.l10n('ui.window.buttonShowResult');
 			this.btnShowResults.enabled = false;
 			this.btnShowResults.addEventListener(ButtonEvent.CLICK, this.handleShowResultsButtonClick);
 			
 			this.btnPlay.width = 235;
-			this.btnPlay.label = STRINGS.RMANAGER_BTN_PLAY;
+			this.btnPlay.label = STRINGS.l10n('ui.window.buttonPlay');
 			this.btnPlay.enabled = false;
 			this.btnPlay.addEventListener(ButtonEvent.CLICK, this.handlePlayButtonClick);
 			
 			this.btnUpload.width = 235;
-			this.btnUpload.label = STRINGS.RMANAGER_BTN_UPLOAD;
+			this.btnUpload.label = STRINGS.l10n('ui.window.buttonUpload');
 			this.btnUpload.enabled = false;
 			this.btnUpload.addEventListener(ButtonEvent.CLICK, this.handleUploadButtonClick);
 			
 			this.btnRemove.width = 235;
-			this.btnRemove.label = STRINGS.RMANAGER_BTN_REMOVE;
+			this.btnRemove.label = STRINGS.l10n('ui.window.buttonRemove');
 			this.btnRemove.enabled = false;
 			this.btnRemove.addEventListener(ButtonEvent.CLICK, this.handleRemoveButtonClick);
 			
@@ -172,26 +172,26 @@
 						if (this.data.winnerTeam == 0)
 						{
 							this.battleResult.gotoAndStop("draw");
-							this.battleResult.textfield.text = STRINGS.RMANAGER_BATTLE_RESULT_DRAW.toUpperCase();
+							this.battleResult.textfield.text = STRINGS.l10n('ui.window.battleResultDraw').toUpperCase();
 						}
 						else
 						{
 							if (this.data.isWinner)
 							{
 								this.battleResult.gotoAndStop("victory");
-								this.battleResult.textfield.text = STRINGS.RMANAGER_BATTLE_RESULT_VICTORY.toUpperCase();
+								this.battleResult.textfield.text = STRINGS.l10n('ui.window.battleResultVictory').toUpperCase();
 							}
 							else
 							{
 								this.battleResult.gotoAndStop("defeat");
-								this.battleResult.textfield.text = STRINGS.RMANAGER_BATTLE_RESULT_DEFEAT.toUpperCase();
+								this.battleResult.textfield.text = STRINGS.l10n('ui.window.battleResultDefeat').toUpperCase();
 							}
 						}
 					}
 					else
 					{
 						this.battleResult.gotoAndStop("noresult");
-						this.battleResult.textfield.text = STRINGS.RMANAGER_BATTLE_RESULT;
+						this.battleResult.textfield.text = STRINGS.l10n('ui.window.battleResult');
 					}
 					
 					var vehData:Object = {level: this.data.tankInfo.vehicleLevel, nationID: this.data.tankInfo.vehicleNation, type: this.data.tankInfo.vehicleType, name: this.data.playerVehicle, smallIconPath: "../maps/icons/vehicle/small/" + this.data.playerVehicle + ".png", userName: this.data.tankInfo.userString, shortUserName: this.data.tankInfo.shortUserString};
@@ -202,7 +202,7 @@
 					this.setDashLineValue(this.frags, this.data.kills.toString());
 					this.setDashLineValue(this.damage, this.data.damage.toString());
 					this.setDashLineValue(this.credits, this.data.credits.toString());
-					this.setDashLineValue(this.xp, this.data.xp.toString());										
+					this.setDashLineValue(this.xp, this.data.xp.toString());
 					this.setDashLineValue(this.spotted, this.data.spotted.toString());
 					this.setDashLineValue(this.assist, this.data.damageAssistedRadio.toString());
 					
@@ -224,7 +224,7 @@
 			this.dateTime.text = "—";
 			
 			this.battleResult.gotoAndStop("noresult");
-			this.battleResult.textfield.text = STRINGS.RMANAGER_BATTLE_RESULT;
+			this.battleResult.textfield.text = STRINGS.l10n('ui.window.battleResult');
 			this.vehicleIcon.reset();
 			
 			this.frags.enabled = false;
@@ -264,8 +264,8 @@
 		}
 		
 		
-		private function toggleVisible(visible:Boolean):void {			
-			this.placeholder.text = STRINGS.RMANAGER_PLACEHOLDER;
+		private function toggleVisible(visible:Boolean) : void {
+			this.placeholder.text = STRINGS.l10n('ui.window.placeholder');
 			this.battleResult.visible = visible;
 			this.mapName.visible = visible;
 			this.battleType.visible = visible;
@@ -293,7 +293,7 @@
 		{
 			if (new_data != null)
 			{
-				this.data = new_data;				
+				this.data = new_data;
 				this.btnShowResults.enabled = true;
 				this.btnPlay.enabled = true;
 				this.btnUpload.enabled = true;
@@ -302,7 +302,7 @@
 			}
 			else
 			{
-				this.clearData();				
+				this.clearData();
 			}
 		}
 	
