@@ -54,6 +54,10 @@ def getItemByCD(baseMethod, baseObject, typeCompDescr):
 	except:
 		return 0
 
+@override(ItemsRequester, '_ItemsRequester__logBrokenSync')
+def __logBrokenSync(baseMethod, baseObject):
+	pass
+
 @override(AppealCMHandler, 'getOptions')
 def getOptions(baseMethod, baseObject, ctx = None):
 	if baseObject.prbDispatcher:
