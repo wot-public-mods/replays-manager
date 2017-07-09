@@ -175,8 +175,8 @@ def _EconomicsRecordsChains_addXPResults(baseMethod, baseObject, connector, resu
 		results['freeXPReplay'] = genFreeXPReplay(results)
 	return baseMethod(baseObject, connector, results)
 
-@override(_EconomicsRecordsChains, "_addFortResourceResults")
-def _EconomicsRecordsChains_addFortResourceResults(baseMethod, baseObject, connector, results):
-	if 'fortResourceReplay' in results and not results['fortResourceReplay']:
-		results['fortResourceReplay'] = genFortResourceReplay(results)
-	return baseMethod(baseObject, connector, results)
+#@override(_EconomicsRecordsChains, "_addFortResourceResults")
+#def _EconomicsRecordsChains_addFortResourceResults(baseMethod, baseObject, connector, results):
+#	if 'fortResourceReplay' in results and not results['fortResourceReplay']:
+#		results['fortResourceReplay'] = genFortResourceReplay(results)
+#	return baseMethod(baseObject, connector, results)
