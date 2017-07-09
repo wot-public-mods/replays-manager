@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Manager reluări
+ui.window.tabsOwn: Reluările mele
+ui.window.placeholder: Alege o reluare din listă pentru a afișa detalii
+ui.window.frags: Distrugere
+ui.window.damage: Daune
+ui.window.credits: Credite
+ui.window.xp: Experiență
+ui.window.spotted: Observare
+ui.window.assist: Asisturi
+ui.window.battleResult: —
+ui.window.battleResultVictory: Victorie
+ui.window.battleResultDefeat: Înfrângere
+ui.window.battleResultDraw: Egal
+ui.window.buttonShowResult: Afișează rezultatele luptei
+ui.window.buttonPlay: Rulează
+ui.window.buttonUpload: Urcă pe WoTReplays.eu
+ui.window.buttonRemove: Șterge
+ui.window.buttonApply: Aplică
+ui.window.buttonReset: Resetare
+ui.window.infoPlaceholder: Distrugere
+ui.window.sorting.label: Sortare după
+ui.window.sorting.byTime: dată
+ui.window.sorting.byCredits: credite
+ui.window.sorting.byDamage: daune
+ui.window.sorting.byResults: rezultate
+ui.window.sorting.byMap: hartă
+ui.window.sorting.byVehicle: vehicule
+ui.window.sorting.byXp: experiență
+ui.window.sorting.byKills: vehicule distruse
+ui.window.sorting.bySpotted: vehicles spotted
+ui.window.sorting.byAssist: asisturi
+
+ui.window.dateFilter.label: Reluări
+ui.window.dateFilter.today: de azi
+ui.window.dateFilter.week: ultima săptămână
+ui.window.dateFilter.month: ultima lună
+ui.window.dateFilter.allTime: toate
+ui.window.filterButtonLabel: Filtre
+ui.window.filterTab.title: FILTRU
+ui.window.filterTab.all: Toate
+ui.window.filterTab.any: Oricare
+ui.window.filterTab.map: Harta:
+ui.window.filterTab.mapAll: Toate hărțile
+ui.window.filterTab.vehicle: Vehicul:
+ui.window.filterTab.vehicleTypeAll: Toate tipurile
+ui.window.filterTab.vehicleTypeHeavy: Tanc greu
+ui.window.filterTab.vehicleTypeMedium: Tanc mediu
+ui.window.filterTab.vehicleTypeLight: Tanc ușor
+ui.window.filterTab.vehicleTypeATSPG: Antitanc
+ui.window.filterTab.vehicleTypeSPG: Artilerie
+ui.window.filterTab.vehicleLevel: generație
+ui.window.filterTab.battleType: Tip luptă:
+ui.window.filterTab.battleResult: Rezultate luptă:
+ui.window.filterTab.otherLabel: Altele:
+ui.window.filterTab.otherShowFavorite: Reluări favorite
+
+ui.window.paginatorLabel: Pagini
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: prima
+ui.window.paginatorLast: ultima
+
+ui.window.tabsFilter: Filtru
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Urcă reluarea pe WoTReplays.eu
+ui.uploader.labelStatus: Stare
+ui.uploader.statusNotFound: Nu s-a găsit reluarea
+ui.uploader.statusWrongAccount: Poți urca doar reluările proprii!
+ui.uploader.statusNotAccount: Lansează jocul pentru a încărca reluarea
+ui.uploader.statusErrorOccure: Eroare
+ui.uploader.statusFound: Reluare găsită
+ui.uploader.statusLoading: În urcare
+ui.uploader.statusConnectionError: Eroare de conexiune!
+ui.uploader.statusLoadingComplete: Se așteaptă serverul
+ui.uploader.statusSucces: Fișierul tău a fost urcat cu succes pe WoTReplays.eu
+ui.uploader.linkLabel: link
+ui.uploader.error0: Eroare de sistem a site-ului: 
+ui.uploader.error1: Nu s-a găsit fișierul: 
+ui.uploader.error2: Nu s-a procesat: 
+ui.uploader.error3: Nu s-a găsit utilizatorul: 
+ui.uploader.error4: Cerere incompletă: 
+ui.uploader.error5: Eroare la salvarea reluării: 
+ui.uploader.error6: Reluarea pe care încerci să o urci a fost salvată de un alt jucător.
+ui.uploader.responceLabel: Reluarea ta a fost urcată cu succes pe WoTReplays.eu! <br />Mergi la site: {{url}} <br />Descarcă fișierul: {{directLink}}
+ui.uploader.progressLabel:  Kb din {{value}} Kb
+ui.uploader.buttonStartUpload: Start urcare
+ui.uploader.inputTitle: Nume (maxim 100 litere)
+ui.uploader.inputDescription: Descriere (maxim 500 litere)
+ui.uploader.checkBoxIsSecretLabel: Reluare ascunsă
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Reluare ascunsă{/HEADER}{BODY}Doar tu poți vedea această reluare.{/BODY}
+
+
+
+ui.waiting.prepareDB: Listă în procesare. Te rugăm să aștepti...
+ui.waiting.updatingList: Se actualizează lista
+
+
+
+ui.action.showResults: Afișare rezultate
+ui.action.play: Redare
+ui.action.upload: Urcă pe WoTReplays.eu
+ui.action.favoriteAdd: Adaugă la favorite
+ui.action.favoriteDelete: Scoate de la favorite
+ui.action.delete: Elimină
+
+
+
+ui.popup.button.yes: Da
+ui.popup.button.no: Nu
+ui.popup.button.close: Închide
+ui.popup.play.title: Confirmă restart joc
+ui.popup.play.message: Jocul va fi restartat pentru a vizualiza reluarea. Confirmi?
+ui.popup.delete.title: Elimină reluarea
+ui.popup.delete.message: Ești sigur că vrei să ștergi fișierul: %s?
+
+
+modsListApi.title: Listă moduri
+modsListApi.info: {HEADER}Listă moduri{/HEADER}{BODY}Managementul facil al modurilor{/BODY}
+modsListApi.name: Manager reluări
+modsListApi.description: Acest simplu manager de reluări îți permite să vizualizezi reluări, să vezi rezultatele luptelor și să urci relulările pe WoTReplays.eu
+
+

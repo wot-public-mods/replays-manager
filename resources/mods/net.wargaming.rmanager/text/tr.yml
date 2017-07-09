@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Savaş Kaydı Yöneticisi
+ui.window.tabsOwn: Kaydıayıtlarım
+ui.window.placeholder: Bilgilerini görmek için listeden bir savaş kaydı seçin
+ui.window.frags: Yok Edilen
+ui.window.damage: Hasar
+ui.window.credits: Kredi
+ui.window.xp: Deneyim
+ui.window.spotted: Tespit Edilen
+ui.window.assist: Destek
+ui.window.battleResult: —
+ui.window.battleResultVictory: Zafer
+ui.window.battleResultDefeat: Yenilgi
+ui.window.battleResultDraw: Beraberlik
+ui.window.buttonShowResult: Savaş sonuçlarını göster
+ui.window.buttonPlay: Oynat
+ui.window.buttonUpload: WoTReplays.ru'ya yükle
+ui.window.buttonRemove: Sil
+ui.window.buttonApply: Uygula
+ui.window.buttonReset: Sıfırla
+ui.window.infoPlaceholder: Yok Edilen
+ui.window.sorting.label: Sırala:
+ui.window.sorting.byTime: tarih
+ui.window.sorting.byCredits: kredi
+ui.window.sorting.byDamage: hasar
+ui.window.sorting.byResults: sonuçlar
+ui.window.sorting.byMap: harita
+ui.window.sorting.byVehicle: araç
+ui.window.sorting.byXp: deneyim
+ui.window.sorting.byKills: yok edilen araçlar
+ui.window.sorting.bySpotted: tespit edilen araçlar
+ui.window.sorting.byAssist: destek
+
+ui.window.dateFilter.label: Kayıtlar:
+ui.window.dateFilter.today: bugün
+ui.window.dateFilter.week: hafta
+ui.window.dateFilter.month: ay
+ui.window.dateFilter.allTime: tüm zamanlar
+ui.window.filterButtonLabel: Süzgeçler
+ui.window.filterTab.title: SÜZGEÇ
+ui.window.filterTab.all: Tümü
+ui.window.filterTab.any: Herhangi biri
+ui.window.filterTab.map: Harita:
+ui.window.filterTab.mapAll: Tüm haritalar
+ui.window.filterTab.vehicle: Araç:
+ui.window.filterTab.vehicleTypeAll: Tüm türler
+ui.window.filterTab.vehicleTypeHeavy: Ağır tank
+ui.window.filterTab.vehicleTypeMedium: Orta tank
+ui.window.filterTab.vehicleTypeLight: Hafif tank
+ui.window.filterTab.vehicleTypeATSPG: Tank avcısı
+ui.window.filterTab.vehicleTypeSPG: KMT
+ui.window.filterTab.vehicleLevel: seviye
+ui.window.filterTab.battleType: Savaş türü:
+ui.window.filterTab.battleResult: Savaş sonuçları:
+ui.window.filterTab.otherLabel: Çeşitli:
+ui.window.filterTab.otherShowFavorite: Favori savaş kayıtları
+
+ui.window.paginatorLabel: Sayfalar
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: ilk
+ui.window.paginatorLast: son
+
+ui.window.tabsFilter: Süzgeç
+ui.window.tabsInfo: Bilgi
+
+
+
+ui.uploader.windowTitle: Kayıtları WoTReplays.ru'ya Yükle
+ui.uploader.labelStatus: Durum
+ui.uploader.statusNotFound: Kayıt bulunamadı
+ui.uploader.statusWrongAccount: Sadece kendi kaydınızı yükleyebilirsiniz!
+ui.uploader.statusNotAccount: Kaydı yüklemek için oyunu çalıştırın
+ui.uploader.statusErrorOccure: Hata
+ui.uploader.statusFound: Kayıt bulunamadı
+ui.uploader.statusLoading: Yükleniyor
+ui.uploader.statusConnectionError: Bağlantı hatası!
+ui.uploader.statusLoadingComplete: Sunucu cevabı bekleniyor
+ui.uploader.statusSucces: Dosyanız başarıyla WoTReplays.ru'ya yüklendi
+ui.uploader.linkLabel: link
+ui.uploader.error0: Web sitesi sistem hatası:
+ui.uploader.error1: Dosya bulunamadı:
+ui.uploader.error2: İşlenmemiş hata: 
+ui.uploader.error3: Kullanıcı bulunamadı: 
+ui.uploader.error4: Boş sorgu: 
+ui.uploader.error5: Savaş kaydı kaydedilirken hata: 
+ui.uploader.error6: Yüklemeye çalıştığınız kayıt farklı bir oyuncu tarafından kaydedilmiş.
+ui.uploader.responceLabel: Savaş kaydınız başarıyla WoTReplays.ru'ya yüklendi! <br />Web sitesine gidin: {{url}} <br />Dosyayı indirin: {{directLink}}
+ui.uploader.progressLabel:  Kb / {{value}} Kb
+ui.uploader.buttonStartUpload: Yüklemeye başla
+ui.uploader.inputTitle: Adı (100 karaktere kadar)
+ui.uploader.inputDescription: Tanım (500 karaktere kadar)
+ui.uploader.checkBoxIsSecretLabel: Gizli savaş kaydı
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Gizlenmiş Savaş Kaydı{/HEADER}{BODY}Sadece siz bu savaş kaydını izleyebilirsiniz.{/BODY}
+
+
+
+ui.waiting.prepareDB: Liste hazırlanıyor. Lütfen bekleyin...
+ui.waiting.updatingList: Liste güncelleniyor
+
+
+
+ui.action.showResults: Sonuçları göster
+ui.action.play: Oynat
+ui.action.upload: WoTReplays.ru'ya Yükle
+ui.action.favoriteAdd: Favorilere ekle
+ui.action.favoriteDelete: Favorilerden kaldır
+ui.action.delete: Kaldır
+
+
+
+ui.popup.button.yes: Evet
+ui.popup.button.no: Hayır
+ui.popup.button.close: Kapat
+ui.popup.play.title: Oyunu Yeniden Başlatmayı Onaylayın
+ui.popup.play.message: Savaş kaydını izlemek için oyunu yeniden başlatın. Devam edecek misiniz?
+ui.popup.delete.title: Savaş Kaydını Sil
+ui.popup.delete.message: Dosyayı silmek istediğinizden emin misiniz: %s?
+
+
+modsListApi.title: Modifikasyonlar Listesi
+modsListApi.info: {HEADER}Modifikasyonlar Listesi{/HEADER}{BODY}Modifikasyonlarınızı yönetmenin kolay yolu{/BODY}
+modsListApi.name: Savaş Kaydı Yöneticisi
+modsListApi.description: Bu basit savaş kaydı yöneticisi savaş kayıtlarını izlemenizi, savaş sonuçlarına bakmanızı ve kayıtlarınızı WoTReplays.ru'ya yüklemenizi sağlar.
+
+

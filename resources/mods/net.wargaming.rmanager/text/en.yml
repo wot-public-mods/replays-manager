@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Replay Manager
+ui.window.tabsOwn: My replays
+ui.window.placeholder: Select a replay from the list to display information
+ui.window.frags: Destroyed
+ui.window.damage: Damage
+ui.window.credits: Credits
+ui.window.xp: Experience
+ui.window.spotted: Spotted
+ui.window.assist: Assistance
+ui.window.battleResult: —
+ui.window.battleResultVictory: Victory
+ui.window.battleResultDefeat: Defeat
+ui.window.battleResultDraw: Draw
+ui.window.buttonShowResult: Show battle results
+ui.window.buttonPlay: Play
+ui.window.buttonUpload: Upload to WoTReplays.ru
+ui.window.buttonRemove: Delete
+ui.window.buttonApply: Apply
+ui.window.buttonReset: Reset
+ui.window.infoPlaceholder: Destroyed
+ui.window.sorting.label: Sort by
+ui.window.sorting.byTime: date
+ui.window.sorting.byCredits: credits
+ui.window.sorting.byDamage: damage
+ui.window.sorting.byResults: results
+ui.window.sorting.byMap: map
+ui.window.sorting.byVehicle: vehicle
+ui.window.sorting.byXp: experience
+ui.window.sorting.byKills: vehicles destroyed
+ui.window.sorting.bySpotted: vehicles spotted
+ui.window.sorting.byAssist: assistance
+
+ui.window.dateFilter.label: Replays for
+ui.window.dateFilter.today: today
+ui.window.dateFilter.week: week
+ui.window.dateFilter.month: month
+ui.window.dateFilter.allTime: all time
+ui.window.filterButtonLabel: Filters
+ui.window.filterTab.title: FILTER
+ui.window.filterTab.all: All
+ui.window.filterTab.any: Any
+ui.window.filterTab.map: Map:
+ui.window.filterTab.mapAll: All maps
+ui.window.filterTab.vehicle: Vehicle:
+ui.window.filterTab.vehicleTypeAll: All types
+ui.window.filterTab.vehicleTypeHeavy: Heavy tank
+ui.window.filterTab.vehicleTypeMedium: Medium tank
+ui.window.filterTab.vehicleTypeLight: Light tank
+ui.window.filterTab.vehicleTypeATSPG: Tank destroyer
+ui.window.filterTab.vehicleTypeSPG: SPG
+ui.window.filterTab.vehicleLevel: tier
+ui.window.filterTab.battleType: Battle type:
+ui.window.filterTab.battleResult: Battle results:
+ui.window.filterTab.otherLabel: Misc:
+ui.window.filterTab.otherShowFavorite: Favorite replays
+
+ui.window.paginatorLabel: Pages
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: first
+ui.window.paginatorLast: last
+
+ui.window.tabsFilter: Filter
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Upload Replay to WoTReplays.ru
+ui.uploader.labelStatus: Status
+ui.uploader.statusNotFound: Replay not found
+ui.uploader.statusWrongAccount: You can upload only your replay!
+ui.uploader.statusNotAccount: Run the game to load the replay
+ui.uploader.statusErrorOccure: Error
+ui.uploader.statusFound: Replay not found
+ui.uploader.statusLoading: Uploading
+ui.uploader.statusConnectionError: Connection error!
+ui.uploader.statusLoadingComplete: Awaiting server reply
+ui.uploader.statusSucces: Your file was successfully uploaded to WoTReplays.ru
+ui.uploader.linkLabel: link
+ui.uploader.error0: Website system error: 
+ui.uploader.error1: File not found: 
+ui.uploader.error2: Unprocessed error: 
+ui.uploader.error3: User not found: 
+ui.uploader.error4: Empty query: 
+ui.uploader.error5: Error saving the replay: 
+ui.uploader.error6: The replay you are trying to upload was recorded by a different player.
+ui.uploader.responceLabel: Your replay was successfully uploaded to WoTReplays.ru! <br />Go to the website: {{url}} <br />Download the file: {{directLink}}
+ui.uploader.progressLabel:  Kb of {{value}} Kb
+ui.uploader.buttonStartUpload: Start uploading
+ui.uploader.inputTitle: Name (up to 100 characters)
+ui.uploader.inputDescription: Description (up to 500 characters)
+ui.uploader.checkBoxIsSecretLabel: Hidden replay
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Hidden Replay{/HEADER}{BODY}Only you can watch this replay.{/BODY}
+
+
+
+ui.waiting.prepareDB: Preparing the list. Please wait...
+ui.waiting.updatingList: Updating the list
+
+
+
+ui.action.showResults: Show results
+ui.action.play: Play
+ui.action.upload: Upload to WoTReplays.ru
+ui.action.favoriteAdd: Add to favorites
+ui.action.favoriteDelete: Remove from favorites
+ui.action.delete: Remove
+
+
+
+ui.popup.button.yes: Yes
+ui.popup.button.no: No
+ui.popup.button.close: Close
+ui.popup.play.title: Confirm Game Restart
+ui.popup.play.message: Restart the game to watch the replay. Continue?
+ui.popup.delete.title: Delete Replay
+ui.popup.delete.message: Are you sure you want to delete the file: %s?
+
+
+modsListApi.title: Modifications List
+modsListApi.info: {HEADER}Modifications List{/HEADER}{BODY}Managing your modifications easily{/BODY}
+modsListApi.name: Replay Manager
+modsListApi.description: This simple replay manager allows you to watch replays, view battle results, and upload your replays to WoTReplays.ru
+
+

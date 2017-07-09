@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Replay Manager
+ui.window.tabsOwn: Mano įrašai
+ui.window.placeholder: Pasirinkite įrašą iš sąrašo, norėdami pamatyti jo informaciją
+ui.window.frags: Sunaikinta
+ui.window.damage: Žala
+ui.window.credits: Kreditai
+ui.window.xp: Patirtis
+ui.window.spotted: Aptikta
+ui.window.assist: Pagalbą
+ui.window.battleResult: —
+ui.window.battleResultVictory: Pergalė
+ui.window.battleResultDefeat: Pralaimėjimas
+ui.window.battleResultDraw: Lygiosios
+ui.window.buttonShowResult: Parodyti mūšio rezultatus
+ui.window.buttonPlay: Paleisti
+ui.window.buttonUpload: Siųsti į WoTReplays.eu
+ui.window.buttonRemove: Ištrinti
+ui.window.buttonApply: Pritaikyti
+ui.window.buttonReset: Atstatyti
+ui.window.infoPlaceholder: Sunaikinta
+ui.window.sorting.label: Rūšiuoti pagal
+ui.window.sorting.byTime: datą
+ui.window.sorting.byCredits: kreditus
+ui.window.sorting.byDamage: žalą
+ui.window.sorting.byResults: rezultatą
+ui.window.sorting.byMap: žemėlapį
+ui.window.sorting.byVehicle: mašiną
+ui.window.sorting.byXp: patirtį
+ui.window.sorting.byKills: sunaikintas mašinas
+ui.window.sorting.bySpotted: aptiktas mašinas
+ui.window.sorting.byAssist: pagalbą
+
+ui.window.dateFilter.label: Įrašai per
+ui.window.dateFilter.today: šiandien
+ui.window.dateFilter.week: savaitę
+ui.window.dateFilter.month: mėnesį
+ui.window.dateFilter.allTime: visą laiką
+ui.window.filterButtonLabel: Filtrai
+ui.window.filterTab.title: FILTRAS
+ui.window.filterTab.all: Visi
+ui.window.filterTab.any: Bet kuris
+ui.window.filterTab.map: Žemėlapis:
+ui.window.filterTab.mapAll: Visi žemėlapiai
+ui.window.filterTab.vehicle: Mašina:
+ui.window.filterTab.vehicleTypeAll: Visi tipai
+ui.window.filterTab.vehicleTypeHeavy: Sunkusis tankas
+ui.window.filterTab.vehicleTypeMedium: Vidutinis tankas
+ui.window.filterTab.vehicleTypeLight: Lengvasis tankas
+ui.window.filterTab.vehicleTypeATSPG: Prieštankinis tankas
+ui.window.filterTab.vehicleTypeSPG: Artilerija
+ui.window.filterTab.vehicleLevel: lygis
+ui.window.filterTab.battleType: Mūšio tipas:
+ui.window.filterTab.battleResult: Mūšio rezultatai:
+ui.window.filterTab.otherLabel: Įvairūs:
+ui.window.filterTab.otherShowFavorite: Mėgstamiausi įrašai
+
+ui.window.paginatorLabel: Puslapiai
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: pirmas
+ui.window.paginatorLast: paskutinis
+
+ui.window.tabsFilter: Filtras
+ui.window.tabsInfo: Informacija
+
+
+
+ui.uploader.windowTitle: Siųsti įrašą į WoTReplays.eu
+ui.uploader.labelStatus: Statusas
+ui.uploader.statusNotFound: Įrašas nerastas
+ui.uploader.statusWrongAccount: Jūs galite įkelti tik savo įrašą!
+ui.uploader.statusNotAccount: Paleiskite žaidimą įrašo užkrovimui
+ui.uploader.statusErrorOccure: Klaida
+ui.uploader.statusFound: Įrašas nerastas
+ui.uploader.statusLoading: Siunčiama
+ui.uploader.statusConnectionError: Ryšio klaida!
+ui.uploader.statusLoadingComplete: Laukiama serverio atsakymo
+ui.uploader.statusSucces: Jūsų failas buvo sėkmingai įkeltas į WoTReplays.eu
+ui.uploader.linkLabel: nuoroda
+ui.uploader.error0: Puslapio sistemos klaida: 
+ui.uploader.error1: Failas nerastas: 
+ui.uploader.error2: Nenumatyta klaida: 
+ui.uploader.error3: Vartotojas nerastas: 
+ui.uploader.error4: Tuščia užklausa: 
+ui.uploader.error5: Klaida išsaugant įrašą: 
+ui.uploader.error6: Įrašą, kurį bandote įkelti, įrašė kitas žaidėjas.
+ui.uploader.responceLabel: Jūsų įrašas buvo sėkmingai įkeltas į WoTReplays.eu! <br />Eiti į puslapį: {{url}} <br />Atsisiųsti failą: {{directLink}}
+ui.uploader.progressLabel:  Kb iš {{value}} Kb
+ui.uploader.buttonStartUpload: Pradėti siuntimą
+ui.uploader.inputTitle: Pavadinimas (iki 100 simbolių)
+ui.uploader.inputDescription: Aprašymas (iki 500 simbolių)
+ui.uploader.checkBoxIsSecretLabel: Paslėptas įrašas
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Paslėptas įrašas{/HEADER}{BODY}Tik jūs galite žiūrėti šį įrašą.{/BODY}
+
+
+
+ui.waiting.prepareDB: Ruošiamas sąrašas. Prašome palaukti...
+ui.waiting.updatingList: Atnaujinamas sąrašas
+
+
+
+ui.action.showResults: Rodyti rezultatus
+ui.action.play: Paleisti
+ui.action.upload: Nusiųsti į WoTReplays.eu
+ui.action.favoriteAdd: Pridėti prie mėgstamiausių
+ui.action.favoriteDelete: Pašalinti iš mėgstamiausių
+ui.action.delete: Pašalinti
+
+
+
+ui.popup.button.yes: Taip
+ui.popup.button.no: Ne
+ui.popup.button.close: Uždaryti
+ui.popup.play.title: Patvirtinti žaidimo paleidimą iš naujo
+ui.popup.play.message: Paleisti žaidimą iš naujo ir žiūrėti įrašą. Tęsti?
+ui.popup.delete.title: Ištrinti įrašą
+ui.popup.delete.message: Ar jūs tikrai norite ištrinti failą: %s?
+
+
+modsListApi.title: Modifikacijų sąrašas
+modsListApi.info: {HEADER}Modifikacijų sąrašas{/HEADER}{BODY}Patodus modifikacijų valdymas{/BODY}
+modsListApi.name: Replay Manager
+modsListApi.description: Ši paprasta įrašų tvarkyklė leidžia peržiūrėti žaidimo įrašus, pamatyti mūšių rezultatus ir įkelti savo kovų įrašus į WoTReplays.eu
+
+

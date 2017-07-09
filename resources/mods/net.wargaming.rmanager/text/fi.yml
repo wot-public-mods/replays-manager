@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Tallenteiden hallinta
+ui.window.tabsOwn: Omat tallenteeni
+ui.window.placeholder: Valitse tallenne listasta tarkastellaksesi sen tietoja
+ui.window.frags: Tuhotut
+ui.window.damage: Vahinko
+ui.window.credits: Krediitit
+ui.window.xp: Kokemus
+ui.window.spotted: Havaitut
+ui.window.assist: Avustuksella vahinko
+ui.window.battleResult: —
+ui.window.battleResultVictory: Voitto
+ui.window.battleResultDefeat: Tappio
+ui.window.battleResultDraw: Tasapeli
+ui.window.buttonShowResult: Näytä taistelun tulokset
+ui.window.buttonPlay: Toista
+ui.window.buttonUpload: Lataa WoTReplays.eu -palveluun
+ui.window.buttonRemove: Poista
+ui.window.buttonApply: Hyväksy
+ui.window.buttonReset: Nollaa
+ui.window.infoPlaceholder: Tuhotut
+ui.window.sorting.label: Lajitteluperuste
+ui.window.sorting.byTime: päiväys
+ui.window.sorting.byCredits: krediitit
+ui.window.sorting.byDamage: vahinko
+ui.window.sorting.byResults: tulokset
+ui.window.sorting.byMap: kartta
+ui.window.sorting.byVehicle: vaunu
+ui.window.sorting.byXp: kokemus
+ui.window.sorting.byKills: vaunuja tuhottu
+ui.window.sorting.bySpotted: vaunuja havaittu
+ui.window.sorting.byAssist: avustettu vahinko
+
+ui.window.dateFilter.label: Tallenteet
+ui.window.dateFilter.today: tältä päivältä
+ui.window.dateFilter.week: viikolta
+ui.window.dateFilter.month: kuukaudelta
+ui.window.dateFilter.allTime: koko ajalta
+ui.window.filterButtonLabel: Suotimet
+ui.window.filterTab.title: SUOTIMET
+ui.window.filterTab.all: Kaikki
+ui.window.filterTab.any: Mikä hyvänsä
+ui.window.filterTab.map: Kartta:
+ui.window.filterTab.mapAll: Kaikki kartat
+ui.window.filterTab.vehicle: Vaunu:
+ui.window.filterTab.vehicleTypeAll: Kaikki tyypit
+ui.window.filterTab.vehicleTypeHeavy: Raskas vaunu
+ui.window.filterTab.vehicleTypeMedium: Keskiraskas vaunu
+ui.window.filterTab.vehicleTypeLight: Kevyt vaunu
+ui.window.filterTab.vehicleTypeATSPG: PST-vaunu
+ui.window.filterTab.vehicleTypeSPG: Telatykki
+ui.window.filterTab.vehicleLevel: taso
+ui.window.filterTab.battleType: Taistelutyyppi:
+ui.window.filterTab.battleResult: Taistelun tulos:
+ui.window.filterTab.otherLabel: Sekalaiset:
+ui.window.filterTab.otherShowFavorite: Suosikkitallenteet
+
+ui.window.paginatorLabel: Sivut
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: ensimmäinen
+ui.window.paginatorLast: viimeinen
+
+ui.window.tabsFilter: Suotimet
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Lataa tallenne WoTReplays.eu -palveluun
+ui.uploader.labelStatus: Tila
+ui.uploader.statusNotFound: Tallennetta ei löydy
+ui.uploader.statusWrongAccount: Voit ladata vain omia tallenteitasi!
+ui.uploader.statusNotAccount: Käynnistä peli toistaaksesi tallenne
+ui.uploader.statusErrorOccure: Virhe
+ui.uploader.statusFound: Tallennetta ei löydy
+ui.uploader.statusLoading: Ladataan
+ui.uploader.statusConnectionError: Yhteysvirhe!
+ui.uploader.statusLoadingComplete: Odotetaan vastausta palvelimelta
+ui.uploader.statusSucces: Tiedostosi ladattiin onnistuneesti WoTReplays.eu -palveluun
+ui.uploader.linkLabel: linkki
+ui.uploader.error0: Verkkosivuston järjestelmävirhe: 
+ui.uploader.error1: Tiedostoa ei löydy: 
+ui.uploader.error2: Prosessoimaton virhe: 
+ui.uploader.error3: Käyttäjää ei löydy: 
+ui.uploader.error4: Tyhjä kysely: 
+ui.uploader.error5: Virhe tallennettaessa tallennetta: 
+ui.uploader.error6: Tallenteen, jota yrität ladata, on tallentanut toinen pelaaja.
+ui.uploader.responceLabel: Tallenteesi on onnistuneesti ladattu WoTReplays.eu -palveluun! <br />Mene verkkosivulle: {{url}} <br />Lataa tiedosto: {{directLink}}
+ui.uploader.progressLabel:  Kb / {{value}} Kb
+ui.uploader.buttonStartUpload: Aloita lataus
+ui.uploader.inputTitle: Nimi (enintään 100 merkkiä)
+ui.uploader.inputDescription: Kuvaus (enintään 500 merkkiä)
+ui.uploader.checkBoxIsSecretLabel: Piilotettu tallenne
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Piilotettu tallenne{/HEADER}{BODY}Vain sinä voit katsella tätä tallennetta.{/BODY}
+
+
+
+ui.waiting.prepareDB: Valmistellaan listausta. Ole hyvä ja odota...
+ui.waiting.updatingList: Päivitetään listausta
+
+
+
+ui.action.showResults: Näytä tulokset
+ui.action.play: Toista
+ui.action.upload: Lataa WoTReplays.eu -palveluun
+ui.action.favoriteAdd: Lisää suosikkeihin
+ui.action.favoriteDelete: Poista suosikeista
+ui.action.delete: Poista
+
+
+
+ui.popup.button.yes: Kyllä
+ui.popup.button.no: Ei
+ui.popup.button.close: Sulje
+ui.popup.play.title: Vahvista pelin uudelleenkäynnistys
+ui.popup.play.message: Käynnistä peli uudelleen toistaaksesi tallenteen. Jatketaanko?
+ui.popup.delete.title: Poista tallenne
+ui.popup.delete.message: Oletko varma, että haluat poistaa tiedoston: %s?
+
+
+modsListApi.title: Pelimodien listaus
+modsListApi.info: {HEADER}Pelimodien listaus{/HEADER}{BODY}Hallitse pelimodeja helposti{/BODY}
+modsListApi.name: Tallenteiden hallinta
+modsListApi.description: Tämä yksinkertainen tallenteiden hallintaohjelma antaa sinulle mahdollisuuden katsella tallenteita, tarkastella tuloksia ja ladata tallenteesi WoTReplays.eu -palveluun.
+
+

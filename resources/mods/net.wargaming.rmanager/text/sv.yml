@@ -1,0 +1,123 @@
+﻿ui.window.title: Replay Manager
+ui.window.tabsOwn: Mina inspelningar
+ui.window.placeholder: Välj en inspelning från listan för att visa information
+ui.window.frags: Förstörda
+ui.window.damage: Skada
+ui.window.credits: Krediter
+ui.window.xp: Erfarenhet
+ui.window.spotted: Upptäckta
+ui.window.assist: Аssistans
+ui.window.battleResult: —
+ui.window.battleResultVictory: Seger
+ui.window.battleResultDefeat: Förlust
+ui.window.battleResultDraw: Oavgjort
+ui.window.buttonShowResult: Visa stridsresultat
+ui.window.buttonPlay: Spela
+ui.window.buttonUpload: Ladda upp till WoTReplays.eu
+ui.window.buttonRemove: Ta bort
+ui.window.buttonApply: Tillämpa
+ui.window.buttonReset: Återställ
+ui.window.infoPlaceholder: Förstörda
+ui.window.sorting.label: Sortera efter
+ui.window.sorting.byTime: datum
+ui.window.sorting.byCredits: krediter
+ui.window.sorting.byDamage: skada
+ui.window.sorting.byResults: resultat
+ui.window.sorting.byMap: karta
+ui.window.sorting.byVehicle: vagn
+ui.window.sorting.byXp: erfarenhet
+ui.window.sorting.byKills: förstörda vagnar
+ui.window.sorting.bySpotted: upptäckta vagnar
+ui.window.sorting.byAssist: assistans
+ 
+ui.window.dateFilter.label: Inspelningar för
+ui.window.dateFilter.today: idag
+ui.window.dateFilter.week: veckan
+ui.window.dateFilter.month: månaden
+ui.window.dateFilter.allTime: alla
+ui.window.filterButtonLabel: Filter
+ui.window.filterTab.title: FILTER
+ui.window.filterTab.all: Alla
+ui.window.filterTab.any: Valfri
+ui.window.filterTab.map: Karta
+ui.window.filterTab.mapAll: Alla kartor
+ui.window.filterTab.vehicle: Vagnar
+ui.window.filterTab.vehicleTypeAll: Alla typer
+ui.window.filterTab.vehicleTypeHeavy: Tunga stridsvagnar
+ui.window.filterTab.vehicleTypeMedium: Medeltunga stridsvagnar
+ui.window.filterTab.vehicleTypeLight: Lätta stridsvagnar
+ui.window.filterTab.vehicleTypeATSPG: Pansarvärnskanonvagnar
+ui.window.filterTab.vehicleTypeSPG: Artillerivagnar
+ui.window.filterTab.vehicleLevel: Klass
+ui.window.filterTab.battleType: Stridstyp
+ui.window.filterTab.battleResult: Stridsresultat
+ui.window.filterTab.otherLabel: Övrigt
+ui.window.filterTab.otherShowFavorite: Favoriter
+ 
+ui.window.paginatorLabel: Sidor
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: första
+ui.window.paginatorLast: sista
+ 
+ui.window.tabsFilter: Filter
+ui.window.tabsInfo: Info
+ 
+ 
+ 
+ui.uploader.windowTitle: Ladda upp inspelningen till WoTReplays.eu
+ui.uploader.labelStatus: Status
+ui.uploader.statusNotFound: Inspelningen hittades inte
+ui.uploader.statusWrongAccount: Du bara ladda upp din egen inspelning!
+ui.uploader.statusNotAccount: Kör spelet för att ladda inspelningen
+ui.uploader.statusErrorOccure: Fel
+ui.uploader.statusFound: Inspelningen hittades inte
+ui.uploader.statusLoading: Laddar upp
+ui.uploader.statusConnectionError: Anslutningsfel!
+ui.uploader.statusLoadingComplete: Väntar på servern
+ui.uploader.statusSucces: Din fil har laddats upp till WoTReplays.eu
+ui.uploader.linkLabel: länk
+ui.uploader.error0: Systemfel på hemsidan
+ui.uploader.error1: Filen hittades inte
+ui.uploader.error2: Ej processat fel
+ui.uploader.error3: Användaren hittades inte
+ui.uploader.error4: Data saknas
+ui.uploader.error5: Kan inte spara inspelningen
+ui.uploader.error6: Inspelningen du försöker ladda upp spelades in av en annan spelare.
+ui.uploader.responceLabel: Din fil har laddats upp till WoTReplays.eu!<br />Till hemsidan: {{url}} <br />Ladda ned filen:  {{directLink}}
+ui.uploader.progressLabel:  Kb av {{value}} Kb
+ui.uploader.buttonStartUpload: Påbörja uppladdning
+ui.uploader.inputTitle: Namn (upp till 100 tecken)
+ui.uploader.inputDescription: Beskrivning (upp till 500 tecken)
+ui.uploader.checkBoxIsSecretLabel: Dold inspelning
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Dold inspelning{/HEADER}{BODY}Bara du kan se denna inspelning.{/BODY}
+ 
+ 
+ 
+ui.waiting.prepareDB: Förbereder lista. Vänligen vänta…
+ui.waiting.updatingList: Uppdaterar listan
+ 
+ 
+ 
+ui.action.showResults: Visa resultat
+ui.action.play: Spela
+ui.action.upload: Ladda upp till WoTReplays.eu
+ui.action.favoriteAdd: Lägg till i favoriter
+ui.action.favoriteDelete: Ta bort från favoriter
+ui.action.delete: Ta bort
+ 
+ 
+ 
+ui.popup.button.yes: Ja
+ui.popup.button.no: Nej
+ui.popup.button.close: Stäng
+ui.popup.play.title: Starta om spelet
+ui.popup.play.message: Starta om spelet för att se inspelningen. Fortsätt?
+ui.popup.delete.title: Ta bort inspelningen
+ui.popup.delete.message: Är du säker på att du vill ta bort filen: %s?
+ 
+ 
+modsListApi.title: Modifications List
+modsListApi.info: {HEADER}Modifications List{/HEADER}{BODY}Hanterar dina moddar med lätthet{/BODY}
+modsListApi.name: Replay Manager
+modsListApi.description: Detta enkla inspelningshanteringsprogram låter dig titta på inspelningar, stridsresultat och ladda upp dina inspelningar till WoTReplays.eu

@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Replay Manager
+ui.window.tabsOwn: Τα replays μου
+ui.window.placeholder: Επιλέξτε replay από τη λίστα για προβολή πληροφοριών
+ui.window.frags: Καταστροφές
+ui.window.damage: Φθορά
+ui.window.credits: Credits
+ui.window.xp: Experience
+ui.window.spotted: Εντοπισμοί
+ui.window.assist: συνεισφορά
+ui.window.battleResult: —
+ui.window.battleResultVictory: Νίκη
+ui.window.battleResultDefeat: Ήττα
+ui.window.battleResultDraw: Ισοπαλία
+ui.window.buttonShowResult: Προβολή αποτελεσμάτων μάχης
+ui.window.buttonPlay: Αναπαραγωγή
+ui.window.buttonUpload: Ανέβασμα στο WoTReplays.eu
+ui.window.buttonRemove: Διαγραφή
+ui.window.buttonApply: Εφαρμογή
+ui.window.buttonReset: Επαναφορά
+ui.window.infoPlaceholder: Καταστροφές
+ui.window.sorting.label: Ταξινόμηση σύμφωνα με
+ui.window.sorting.byTime: ημερομηνία
+ui.window.sorting.byCredits: credits
+ui.window.sorting.byDamage: φθορά
+ui.window.sorting.byResults: επιδόσεις
+ui.window.sorting.byMap: χάρτη
+ui.window.sorting.byVehicle: όχημα
+ui.window.sorting.byXp: experience
+ui.window.sorting.byKills: καταστροφές οχημάτων
+ui.window.sorting.bySpotted: εντοπισμούς οχημάτων
+ui.window.sorting.byAssist: συνεισφορά
+
+ui.window.dateFilter.label: Replays
+ui.window.dateFilter.today: σημερινά
+ui.window.dateFilter.week: εβδομάδας
+ui.window.dateFilter.month: μήνα
+ui.window.dateFilter.allTime: όλα
+ui.window.filterButtonLabel: Φίλτρα
+ui.window.filterTab.title: ΦΙΛΤΡΟ
+ui.window.filterTab.all: Όλα
+ui.window.filterTab.any: Κάθε
+ui.window.filterTab.map: Χάρτης:
+ui.window.filterTab.mapAll: Όλοι οι χάρτες
+ui.window.filterTab.vehicle: Όχημα:
+ui.window.filterTab.vehicleTypeAll: Όλοι οι τύποι
+ui.window.filterTab.vehicleTypeHeavy: Βαρύ άρμα μάχης
+ui.window.filterTab.vehicleTypeMedium: Μέσο άρμα μάχης
+ui.window.filterTab.vehicleTypeLight: Ελαφρύ άρμα μάχης
+ui.window.filterTab.vehicleTypeATSPG: Αντιαρματικό
+ui.window.filterTab.vehicleTypeSPG: Α/Κ Πυροβόλο
+ui.window.filterTab.vehicleLevel: βαθμίδα
+ui.window.filterTab.battleType: Τύπος μάχης:
+ui.window.filterTab.battleResult: Αποτελέσματα μάχης:
+ui.window.filterTab.otherLabel: Διάφορα:
+ui.window.filterTab.otherShowFavorite: Αγαπημένα replays
+
+ui.window.paginatorLabel: Σελίδες
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: πρώτη
+ui.window.paginatorLast: τελευταία
+
+ui.window.tabsFilter: Φίλτρο
+ui.window.tabsInfo: Πληροφορίες
+
+
+
+ui.uploader.windowTitle: Ανέβασμα Replay στο WoTReplays.eu
+ui.uploader.labelStatus: Κατάσταση
+ui.uploader.statusNotFound: Δεν βρέθηκε replay
+ui.uploader.statusWrongAccount: Μπορείτε να ανεβάσετε μόνο τα δικά σας replay!
+ui.uploader.statusNotAccount: Ανοίξτε το παιχνίδι για φόρτωση του replay
+ui.uploader.statusErrorOccure: Σφάλμα
+ui.uploader.statusFound: Δεν βρέθηκε replay
+ui.uploader.statusLoading: Ανέβασμα
+ui.uploader.statusConnectionError: Σφάλμα σύνδεσης!
+ui.uploader.statusLoadingComplete: Αναμονή για ανταπόκριση του server
+ui.uploader.statusSucces: Το αρχείο σας ανέβηκε επιτυχώς στο WoTReplays.eu
+ui.uploader.linkLabel: link
+ui.uploader.error0: Σφάλμα συστήματος ιστοσελίδας: 
+ui.uploader.error1: Δεν βρέθηκε το αρχείο: 
+ui.uploader.error2: Σφάλμα χωρίς επεξεργασία: 
+ui.uploader.error3: Δεν βρέθηκε ο χρήστης: 
+ui.uploader.error4: Κενό ερώτημα: 
+ui.uploader.error5: Σφάλμα στην αποθήκευση του replay: 
+ui.uploader.error6: Η εγγραφή του replay που προσπαθείτε να ανεβάσετε έγινε από άλλον παίκτη.
+ui.uploader.responceLabel: Το replay σας ανέβηκε επιτυχώς στο WoTReplays.eu! <br />Επισκεφτείτε την ιστοσελίδα: {{url}} <br />Κατέβασμα αρχείου: {{directLink}}
+ui.uploader.progressLabel:  Kb από {{value}} Kb
+ui.uploader.buttonStartUpload: Εκκίνηση ανεβάσματος
+ui.uploader.inputTitle: Όνομα (μέχρι και 100 χαρακτήρες)
+ui.uploader.inputDescription: Περιγραφή (μέχρι και 500 χαρακτήρες)
+ui.uploader.checkBoxIsSecretLabel: Κρυφό replay
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Κρυφό Replay{/HEADER}{BODY}Μόνο εσείς μπορείτε να δείτε το συγκεκριμένο replay.{/BODY}
+
+
+
+ui.waiting.prepareDB: Προετοιμασία λίστας. Παρακαλούμε περιμένετε...
+ui.waiting.updatingList: Ενημέρωση λίστας
+
+
+
+ui.action.showResults: Προβολή αποτελεσμάτων
+ui.action.play: Αναπαραγωγή
+ui.action.upload: Ανέβασμα στο WoTReplays.eu
+ui.action.favoriteAdd: Προσθήκη στα αγαπημένα
+ui.action.favoriteDelete: Αφαίρεση από τα αγαπημένα
+ui.action.delete: Αφαίρεση
+
+
+
+ui.popup.button.yes: Ναι
+ui.popup.button.no: Όχι
+ui.popup.button.close: Κλείσιμο
+ui.popup.play.title: Επικύρωση Επανεκκίνησης Παιχνιδιού
+ui.popup.play.message: Επανεκκίνηση του παιχνιδιού για προβολή του replay. Συνέχεια?
+ui.popup.delete.title: Διαγραφή Replay
+ui.popup.delete.message: Θέλετε σίγουρα να διαγράψετε το αρχείο: %s?
+
+
+modsListApi.title: Λίστα Modifications
+modsListApi.info: {HEADER}Λίστα Modifications{/HEADER}{BODY}Εύκολη διαχείριση των modifications σας{/BODY}
+modsListApi.name: Replay Manager
+modsListApi.description: Αυτός ο απλός replay manager σας επιτρέπει να βλέπετε replays και αποτελέσματα μάχης, καθώς και να ανεβάζετε τα δικά σας replays στο WoTReplays.eu
+
+

@@ -1,0 +1,126 @@
+
+ui.window.title: Gerenciador de Reprises
+ui.window.tabsOwn: Meus reprises
+ui.window.placeholder: Selecione um reprise da lista para exibir as informações
+ui.window.frags: Destruído
+ui.window.damage: Dano
+ui.window.credits: Créditos
+ui.window.xp: Experiência
+ui.window.spotted: Detectado
+ui.window.assist: Assistência
+ui.window.battleResult: —
+ui.window.battleResultVictory: Vitória
+ui.window.battleResultDefeat: Derrota
+ui.window.battleResultDraw: Empate
+ui.window.buttonShowResult: Exibir resultados da batalha
+ui.window.buttonPlay: Executar
+ui.window.buttonUpload: Enviar para WoTReplays.ru
+ui.window.buttonRemove: Excluir
+ui.window.buttonApply: Aplicar
+ui.window.buttonReset: Reset
+ui.window.infoPlaceholder: Destruído
+ui.window.sorting.label: Ordenar por
+ui.window.sorting.byTime: data
+ui.window.sorting.byCredits: créditos
+ui.window.sorting.byDamage: dano
+ui.window.sorting.byResults: resultados
+ui.window.sorting.byMap: mapa
+ui.window.sorting.byVehicle: veículo
+ui.window.sorting.byXp: experiência
+ui.window.sorting.byKills: veículos destruídos
+ui.window.sorting.bySpotted: veículos detectados
+ui.window.sorting.byAssist: assistência
+
+ui.window.dateFilter.label: Reprises de
+ui.window.dateFilter.today: hoje
+ui.window.dateFilter.week: semana
+ui.window.dateFilter.month: mês
+ui.window.dateFilter.allTime: todos
+ui.window.filterButtonLabel: Filtros
+ui.window.filterTab.title: FILTRO
+ui.window.filterTab.all: Todos
+ui.window.filterTab.any: Qualquer
+ui.window.filterTab.map: Mapa:
+ui.window.filterTab.mapAll: Todos os mapas
+ui.window.filterTab.vehicle: Veículo:
+ui.window.filterTab.vehicleTypeAll: Todos os tipos
+ui.window.filterTab.vehicleTypeHeavy: Tanque pesado
+ui.window.filterTab.vehicleTypeMedium: Tanque médio
+ui.window.filterTab.vehicleTypeLight: Tanque leve
+ui.window.filterTab.vehicleTypeATSPG: Caça-tanques
+ui.window.filterTab.vehicleTypeSPG: AAP
+ui.window.filterTab.vehicleLevel: nível
+ui.window.filterTab.battleType: Tipo de batalha:
+ui.window.filterTab.battleResult: Resultados de batalha:
+ui.window.filterTab.otherLabel: Misc:
+ui.window.filterTab.otherShowFavorite: Reprises favoritos
+
+ui.window.paginatorLabel: Páginas
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: primeira
+ui.window.paginatorLast: última
+
+ui.window.tabsFilter: Filtro
+ui.window.tabsInfo: Informações
+
+
+
+ui.uploader.windowTitle: Enviar Reprise para WoTReplays.ru
+ui.uploader.labelStatus: Status
+ui.uploader.statusNotFound: Reprise não encontrado
+ui.uploader.statusWrongAccount: Você pode enviar somente os seus reprises!
+ui.uploader.statusNotAccount: Execute o jogo para carregar o reprise
+ui.uploader.statusErrorOccure: Erro
+ui.uploader.statusFound: Reprise não encontrado
+ui.uploader.statusLoading: Enviando
+ui.uploader.statusConnectionError: Erro de conexão!
+ui.uploader.statusLoadingComplete: Aguardando resposta do servidor
+ui.uploader.statusSucces: Seu arquivo foi enviado com sucesso para WoTReplays.ru
+ui.uploader.linkLabel: link
+ui.uploader.error0: Erro no sistema do site:
+ui.uploader.error1: Arquivo não encontrado:
+ui.uploader.error2: Erro não processado:
+ui.uploader.error3: Usuário não encontrado:
+ui.uploader.error4: Consulta vazia:
+ui.uploader.error5: Erro ao salvar o reprise:
+ui.uploader.error6: O reprise que você está tentando enviar foi gravado por um jogador diferente.
+ui.uploader.responceLabel: Seu reprise foi enviado com sucesso para WoTReplays.ru! <br />Vá ao site: {{url}} <br />Baixe o arquivo: {{directLink}}
+ui.uploader.progressLabel: Kb de {{value}} Kb
+ui.uploader.buttonStartUpload: Iniciar envio
+ui.uploader.inputTitle: Nome (até 100 caracteres)
+ui.uploader.inputDescription: Descrição (até 500 caracteres)
+ui.uploader.checkBoxIsSecretLabel: Ocultar reprise
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Reprise Oculto{/HEADER}{BODY}Somente você pode assistir a esse reprise.{/BODY}
+
+
+
+ui.waiting.prepareDB: Preparando a lista. Por favor, aguarde...
+ui.waiting.updatingList: Atualizando a lista
+
+
+
+ui.action.showResults: Exibir resultados
+ui.action.play: Executar
+ui.action.upload: Enviar para WoTReplays.ru
+ui.action.favoriteAdd: Adicionar aos favoritos
+ui.action.favoriteDelete: Remover dos favoritos
+ui.action.delete: Remover
+
+
+
+ui.popup.button.yes: Sim
+ui.popup.button.no: Não
+ui.popup.button.close: Fechar
+ui.popup.play.title: Confirmar Reinício do Jogo
+ui.popup.play.message: Reinicie o jogo para assistir o jogo. Continuar
+ui.popup.delete.title: Excluir Reprise
+ui.popup.delete.message: Tem certeza que deseja excluir o arquivo: %s?
+
+
+modsListApi.title: Lista de Modificações
+modsListApi.info: {HEADER}Lista de Modificações{/HEADER}{BODY}Gerencie suas modificações mais facilmente{/BODY}
+modsListApi.name: Gerenciador de Reprises
+modsListApi.description: Este simples gerenciador de reprises permite que você assista reprises, visualize resultados de batalha e envie seus reprises para WoTReplays.ru
+
+

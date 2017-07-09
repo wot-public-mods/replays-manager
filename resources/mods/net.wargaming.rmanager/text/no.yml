@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Reprisebehandler
+ui.window.tabsOwn: Mine repriser
+ui.window.placeholder: Velg en reprise fra listen for å vise informasjon
+ui.window.frags: Bekjempet
+ui.window.damage: Skade
+ui.window.credits: Credits
+ui.window.xp: Erfaring
+ui.window.spotted: Oppdaget
+ui.window.assist: Assistanse
+ui.window.battleResult: —
+ui.window.battleResultVictory: Seier
+ui.window.battleResultDefeat: Tap
+ui.window.battleResultDraw: Uavgjort
+ui.window.buttonShowResult: Vis kampresultater
+ui.window.buttonPlay: Spill av
+ui.window.buttonUpload: Last opp til WoTReplays.eu
+ui.window.buttonRemove: Slett
+ui.window.buttonApply: Iverksett
+ui.window.buttonReset: Nullstill
+ui.window.infoPlaceholder: Bekjempet
+ui.window.sorting.label: Sortér etter
+ui.window.sorting.byTime: dato
+ui.window.sorting.byCredits: credits
+ui.window.sorting.byDamage: skade
+ui.window.sorting.byResults: resultater
+ui.window.sorting.byMap: kart
+ui.window.sorting.byVehicle: kjøretøy
+ui.window.sorting.byXp: erfaring
+ui.window.sorting.byKills: bekjempede kjøretøy
+ui.window.sorting.bySpotted: oppdagede kjøretøy
+ui.window.sorting.byAssist: assistanse
+
+ui.window.dateFilter.label: Repriser for
+ui.window.dateFilter.today: i dag
+ui.window.dateFilter.week: uke
+ui.window.dateFilter.month: måned
+ui.window.dateFilter.allTime: all tid
+ui.window.filterButtonLabel: Filtre
+ui.window.filterTab.title: FILTER
+ui.window.filterTab.all: Alle
+ui.window.filterTab.any: Hvilken som helst
+ui.window.filterTab.map: Map:
+ui.window.filterTab.mapAll: Alle kart
+ui.window.filterTab.vehicle: Vehicle:
+ui.window.filterTab.vehicleTypeAll: Alle typer
+ui.window.filterTab.vehicleTypeHeavy: Tung tanks
+ui.window.filterTab.vehicleTypeMedium: Medium tanks
+ui.window.filterTab.vehicleTypeLight: Lett tanks
+ui.window.filterTab.vehicleTypeATSPG: Panserjager
+ui.window.filterTab.vehicleTypeSPG: SPG
+ui.window.filterTab.vehicleLevel: nivå
+ui.window.filterTab.battleType: Kamptype:
+ui.window.filterTab.battleResult: Kampresultater:
+ui.window.filterTab.otherLabel: Div:
+ui.window.filterTab.otherShowFavorite: Favorittrepriser
+
+ui.window.paginatorLabel: Sider
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: første
+ui.window.paginatorLast: siste
+
+ui.window.tabsFilter: Filter
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Last opp reprise til WoTReplays.eu
+ui.uploader.labelStatus: Status
+ui.uploader.statusNotFound: Kunne ikke finne reprise
+ui.uploader.statusWrongAccount: Du kan kun laste opp din egen reprise!
+ui.uploader.statusNotAccount: Kjør spillet for å hente reprisen
+ui.uploader.statusErrorOccure: Feil
+ui.uploader.statusFound: Kan ikke finne reprise
+ui.uploader.statusLoading: Laster opp
+ui.uploader.statusConnectionError: Feil med forbindelsen!
+ui.uploader.statusLoadingComplete: Venter på svar fra server
+ui.uploader.statusSucces: Din fil ble lastet opp til WoTReplays.eu
+ui.uploader.linkLabel: link
+ui.uploader.error0: Sestemfeil på nettsted: 
+ui.uploader.error1: Kunne ikke finne fila: 
+ui.uploader.error2: Ikke-prossessert feil: 
+ui.uploader.error3: Kan ikke finne bruker: 
+ui.uploader.error4: Tomt søk: 
+ui.uploader.error5: Feil ved lagring av reprise: 
+ui.uploader.error6: Reprisen du forsøker å laste opp ble lagret av en annen spiller.
+ui.uploader.responceLabel: Din reprise ble lastet opp til WoTReplays.eu! <br />Gå til nettstedet: {{url}} <br />Last ned filen: {{directLink}}
+ui.uploader.progressLabel:  Kb av {{value}} Kb
+ui.uploader.buttonStartUpload: Start opplasting
+ui.uploader.inputTitle: Navn (opptil 100 tegn)
+ui.uploader.inputDescription: Beskrivelse (opptil 500 tegn)
+ui.uploader.checkBoxIsSecretLabel: Skjult reprise
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Skjult reprise{/HEADER}{BODY}Bare du kan se denne reprisen.{/BODY}
+
+
+
+ui.waiting.prepareDB: Gjør klar listen. Vennligst vent...
+ui.waiting.updatingList: Oppdaterer lista
+
+
+
+ui.action.showResults: Vis resultater
+ui.action.play: Spill av
+ui.action.upload: Last opp til WoTReplays.eu
+ui.action.favoriteAdd: Legg til i favoritter
+ui.action.favoriteDelete: Fjern fra favoritter
+ui.action.delete: Fjern
+
+
+
+ui.popup.button.yes: Ja
+ui.popup.button.no: Nei
+ui.popup.button.close: Lukk
+ui.popup.play.title: Bekreft restart av spill
+ui.popup.play.message: Restart spillet for å se reprisen. Fortsette?
+ui.popup.delete.title: Slett reprise
+ui.popup.delete.message: Er du sikker på at du vil slette filen: %s?
+
+
+modsListApi.title: Modifikasjonsliste
+modsListApi.info: {HEADER}Modifikasjonsliste{/HEADER}{BODY}Enkel styring av dine modifikasjoner{/BODY}
+modsListApi.name: Reprisebehandler
+modsListApi.description: Denne enkle reprisebehandleren lar deg se repriser, kampresultater og laste opp repriser til WoTReplays.eu
+
+

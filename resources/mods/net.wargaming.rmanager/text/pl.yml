@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Menadżer powtórek
+ui.window.tabsOwn: Moje powtórki
+ui.window.placeholder: Wybierz powtórkę z listy, aby wyświetlić informacje
+ui.window.frags: Zniszczenia
+ui.window.damage: Uszkodzenia
+ui.window.credits: Kredyty
+ui.window.xp: Doświadczenie
+ui.window.spotted: Wykrycia
+ui.window.assist: Asysty
+ui.window.battleResult: —
+ui.window.battleResultVictory: Zwycięstwo
+ui.window.battleResultDefeat: Porażka
+ui.window.battleResultDraw: Remis
+ui.window.buttonShowResult: Pokaż wyniki bitwy
+ui.window.buttonPlay: Odtwarzaj
+ui.window.buttonUpload: Wyślij do WoTReplays.eu
+ui.window.buttonRemove: Usuń
+ui.window.buttonApply: Zastosuj
+ui.window.buttonReset: Wyzeruj
+ui.window.infoPlaceholder: Zniszczenia
+ui.window.sorting.label: Sortuj wg
+ui.window.sorting.byTime: data
+ui.window.sorting.byCredits: kredyty
+ui.window.sorting.byDamage: uszkodzenia
+ui.window.sorting.byResults: wyniki
+ui.window.sorting.byMap: mapa
+ui.window.sorting.byVehicle: pojazd
+ui.window.sorting.byXp: doświadczenie
+ui.window.sorting.byKills: zniszczone pojazdy
+ui.window.sorting.bySpotted: wykryte pojazdy
+ui.window.sorting.byAssist: asysty
+
+ui.window.dateFilter.label: Powtórki z
+ui.window.dateFilter.today: dzisiaj
+ui.window.dateFilter.week: tygodnia
+ui.window.dateFilter.month: miesiąca
+ui.window.dateFilter.allTime: zawsze
+ui.window.filterButtonLabel: Filtry
+ui.window.filterTab.title: FILTR
+ui.window.filterTab.all: Wszystkie
+ui.window.filterTab.any: Dowolne
+ui.window.filterTab.map: Mapa:
+ui.window.filterTab.mapAll: Wszystkie mapy
+ui.window.filterTab.vehicle: Pojazd:
+ui.window.filterTab.vehicleTypeAll: Wszystkie typy
+ui.window.filterTab.vehicleTypeHeavy: Czołg ciężki
+ui.window.filterTab.vehicleTypeMedium: Czołg średni
+ui.window.filterTab.vehicleTypeLight: Czołg lekki
+ui.window.filterTab.vehicleTypeATSPG: Niszczyciel czołgów
+ui.window.filterTab.vehicleTypeSPG: Działo samobieżne
+ui.window.filterTab.vehicleLevel: poziom
+ui.window.filterTab.battleType: Typ bitwy:
+ui.window.filterTab.battleResult: Wyniki bitwy:
+ui.window.filterTab.otherLabel: Różne:
+ui.window.filterTab.otherShowFavorite: Ulubione powtórki
+
+ui.window.paginatorLabel: Strony
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: pierwsza
+ui.window.paginatorLast: ostatnia
+
+ui.window.tabsFilter: Filtr
+ui.window.tabsInfo: Informacja
+
+
+
+ui.uploader.windowTitle: Prześlij powtórkę do WoTReplays.eu
+ui.uploader.labelStatus: Status
+ui.uploader.statusNotFound: Nie znaleziono powtórki
+ui.uploader.statusWrongAccount: Możesz przesłać tylko swoją powtórkę!
+ui.uploader.statusNotAccount: Uruchom grę, aby wczytać powtórkę
+ui.uploader.statusErrorOccure: Błąd
+ui.uploader.statusFound: Nie znaleziono powtórki
+ui.uploader.statusLoading: Przesyłanie
+ui.uploader.statusConnectionError: Błąd połączenia!
+ui.uploader.statusLoadingComplete: Oczekiwanie na odpowiedź serwera
+ui.uploader.statusSucces: Twój plik został przesłany do WoTReplays.eu
+ui.uploader.linkLabel: odnośnik
+ui.uploader.error0: Błąd systemu strony internetowej: 
+ui.uploader.error1: Nie znaleziono pliku: 
+ui.uploader.error2: Nieprzetworzony błąd: 
+ui.uploader.error3: Nie znaleziono użytkownika: 
+ui.uploader.error4: Puste zapytanie: 
+ui.uploader.error5: Błąd podczas zapisywania powtórki: 
+ui.uploader.error6: Powtórka, którą próbujesz przesłać, została nagrana przez innego gracza.
+ui.uploader.responceLabel: Twoja powtórka została przesłana do WoTReplays.eu! <br />Przejdź do strony: {{url}} <br />Pobierz plik: {{directLink}}
+ui.uploader.progressLabel:  Kb z {{value}} Kb
+ui.uploader.buttonStartUpload: Rozpocznij przesyłanie
+ui.uploader.inputTitle: Nazwa (do 100 znaków)
+ui.uploader.inputDescription: Opis (do 500 znaków)
+ui.uploader.checkBoxIsSecretLabel: Ukryta powtórka
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Ukryta powtórka{/HEADER}{BODY}Tylko Ty możesz oglądać tę powtórkę.{/BODY}
+
+
+
+ui.waiting.prepareDB: Przygotowywanie listy. Prosimy czekać...
+ui.waiting.updatingList: Aktualizacja listy
+
+
+
+ui.action.showResults: Pokaż wyniki
+ui.action.play: Odtwarzaj
+ui.action.upload: Prześlij do WoTReplays.eu
+ui.action.favoriteAdd: Dodaj do ulubionych
+ui.action.favoriteDelete: Usuń z ulubionych
+ui.action.delete: Usuń
+
+
+
+ui.popup.button.yes: Tak
+ui.popup.button.no: Nie
+ui.popup.button.close: Zamknij
+ui.popup.play.title: Potwierdź ponowne uruchomienie gry
+ui.popup.play.message: Uruchom grę ponownie, aby obejrzeć powtórkę. Kontynuować?
+ui.popup.delete.title: Usuń powtórkę
+ui.popup.delete.message: Czy jesteś pewien, że chcesz usunąć ten plik: %s?
+
+
+modsListApi.title: Lista modyfikacji
+modsListApi.info: {HEADER}Lista modyfikacji{/HEADER}{BODY}Łatwe zarządzanie Twoimi modyfikacjami{/BODY}
+modsListApi.name: Menadżer powtórek
+modsListApi.description: Ten prosty menadżer powtórek pozwala Ci oglądać powtórki, przeglądać wyniki bitew i przesyłać Twoje powtórki do WoTReplays.eu
+
+

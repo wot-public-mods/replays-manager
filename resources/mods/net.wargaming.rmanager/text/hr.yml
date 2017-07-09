@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Upravljač reprizama
+ui.window.tabsOwn: Moje reprize 
+ui.window.placeholder: Odaberi reprize s liste za prikaz informacija
+ui.window.frags: Uništen
+ui.window.damage: Šteta
+ui.window.credits: Krediti
+ui.window.xp: Iskustvo
+ui.window.spotted: Otkriven
+ui.window.assist: Pomoći
+ui.window.battleResult: —
+ui.window.battleResultVictory: Pobjeda
+ui.window.battleResultDefeat: Poraz
+ui.window.battleResultDraw: Nerješeno
+ui.window.buttonShowResult: Prikaži rezultate bitke
+ui.window.buttonPlay: Pokreni
+ui.window.buttonUpload: Postavi na WoTReplays.eu
+ui.window.buttonRemove: Obriši
+ui.window.buttonApply: Primjeni
+ui.window.buttonReset: Poništi
+ui.window.infoPlaceholder: Uništen
+ui.window.sorting.label: Poredaj po
+ui.window.sorting.byTime: datumu
+ui.window.sorting.byCredits: kreditima
+ui.window.sorting.byDamage: šteti
+ui.window.sorting.byResults: rezultatima
+ui.window.sorting.byMap: mapi
+ui.window.sorting.byVehicle: vozilu
+ui.window.sorting.byXp: iskustvu
+ui.window.sorting.byKills: uništenim vozilima
+ui.window.sorting.bySpotted: otkrivenim vozilima
+ui.window.sorting.byAssist: pomoći
+
+ui.window.dateFilter.label: Reprize za
+ui.window.dateFilter.today: danas
+ui.window.dateFilter.week: tjedan
+ui.window.dateFilter.month: mjesec
+ui.window.dateFilter.allTime: sve
+ui.window.filterButtonLabel: Filteri
+ui.window.filterTab.title: FILTER
+ui.window.filterTab.all: Sve
+ui.window.filterTab.any: Bilo koji
+ui.window.filterTab.map: Mapa:
+ui.window.filterTab.mapAll: Sve mape
+ui.window.filterTab.vehicle: Vozilo:
+ui.window.filterTab.vehicleTypeAll: Svi tipovi
+ui.window.filterTab.vehicleTypeHeavy: Teški tenk
+ui.window.filterTab.vehicleTypeMedium: srednji tenk
+ui.window.filterTab.vehicleTypeLight: Laki tenk
+ui.window.filterTab.vehicleTypeATSPG: Lovac na tenkove
+ui.window.filterTab.vehicleTypeSPG: Samohodni top
+ui.window.filterTab.vehicleLevel: razina
+ui.window.filterTab.battleType: Tip bitke:
+ui.window.filterTab.battleResult: Rezultati bitke:
+ui.window.filterTab.otherLabel: Razno:
+ui.window.filterTab.otherShowFavorite: Omiljene reprize
+
+ui.window.paginatorLabel: Stranice
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: prva
+ui.window.paginatorLast: zadnja
+
+ui.window.tabsFilter: Filter
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Postavi reprizu na WoTReplays.eu
+ui.uploader.labelStatus: Status
+ui.uploader.statusNotFound: Repriza nije pronađena
+ui.uploader.statusWrongAccount: Možete postaviti samo svoju reprizu!
+ui.uploader.statusNotAccount: Pokrenite igru za učitavanje reprize
+ui.uploader.statusErrorOccure: Greška
+ui.uploader.statusFound: Repriza nije pronađena
+ui.uploader.statusLoading: Postavljanje
+ui.uploader.statusConnectionError:Greška u spajanju!
+ui.uploader.statusLoadingComplete: Čekam odgovor servera
+ui.uploader.statusSucces: Vaša datoteka je uspješno postavljena na WoTReplays.eu
+ui.uploader.linkLabel: link
+ui.uploader.error0: Sistemska greška stranice: 
+ui.uploader.error1: Datoteka nije pronađena: 
+ui.uploader.error2: Neobrađena greška: 
+ui.uploader.error3: Korisnike nije pronađen: 
+ui.uploader.error4: Prazni upit: 
+ui.uploader.error5: Greška u spremanju reprize: 
+ui.uploader.error6: Repriza koju pokušavate postaviti je snimio drugi igrač.
+ui.uploader.responceLabel: Vaša repriza je uspješno postavljena na WoTReplays.eu! <br />Idite na stranicu: {{url}} <br />Preuzmite datoteku: {{directLink}}
+ui.uploader.progressLabel:  Kb od {{value}} Kb
+ui.uploader.buttonStartUpload: Započni postavljanje
+ui.uploader.inputTitle: Ime (do 100 znakova)
+ui.uploader.inputDescription: Opis (do 500 znakova)
+ui.uploader.checkBoxIsSecretLabel: Skrivena repriza
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Skrivena repriza{/HEADER}{BODY}Samo vi možete gledati ovu reprizu.{/BODY}
+
+
+
+ui.waiting.prepareDB: Priprema spiska. Molim, pričekajte...
+ui.waiting.updatingList: Osvježavanje spiska
+
+
+
+ui.action.showResults: Prikaži rezultate
+ui.action.play: Pokren9i
+ui.action.upload: Postavi na WoTReplays.eu
+ui.action.favoriteAdd: Dodaj u omiljene
+ui.action.favoriteDelete: Ukloni iz omiljenih
+ui.action.delete: Ukloni
+
+
+
+ui.popup.button.yes: Da
+ui.popup.button.no: Ne
+ui.popup.button.close: Zatvori
+ui.popup.play.title: Potvrdi ponovno pokretanje igre
+ui.popup.play.message: Ponovno pokretanje igre za gledanje reprize. Nastaviti?
+ui.popup.delete.title: Obriši reprizu
+ui.popup.delete.message: Da li ste sigurni da želite obrisati datoteku: %s?
+
+
+modsListApi.title: Spisak promjena
+modsListApi.info: {HEADER}Spisak promjena{/HEADER}{BODY}Lakše upravljanje vašim promjenama{/BODY}
+modsListApi.name: Upravljač reprizama
+modsListApi.description: Ovaj jednostavni upravljač reprizama vam omogućava da gledate reprize, pregledavate rezultate bitaka i postavljate vaše reprize na WoTReplays.eu
+
+

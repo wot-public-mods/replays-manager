@@ -7,7 +7,7 @@ ui.window.damage: Урон
 ui.window.credits: Кредиты
 ui.window.xp: Опыт
 ui.window.spotted: Обнаружено
-ui.window.assist: Вспомогательный урон
+ui.window.assist: Поддержка
 ui.window.battleResult: —
 ui.window.battleResultVictory: Победа
 ui.window.battleResultDefeat: Поражение

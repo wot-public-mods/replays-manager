@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Visszajátszás kezelő
+ui.window.tabsOwn: Visszajátszásaim
+ui.window.placeholder: Válassz ki egy visszajátszást a listáról, hogy megnézhesd az adatait
+ui.window.frags: Megsemmisítve
+ui.window.damage: Sebzés
+ui.window.credits: Kredit
+ui.window.xp: Tapasztalati pontok
+ui.window.spotted: Felderítve
+ui.window.assist: Közreműködés
+ui.window.battleResult: —
+ui.window.battleResultVictory: Győzelem
+ui.window.battleResultDefeat: Vereség
+ui.window.battleResultDraw: Döntetlen
+ui.window.buttonShowResult: Csata eredmények megjelenítése
+ui.window.buttonPlay: Lejátszás
+ui.window.buttonUpload: Feltöltés a WoTReplays.eu-ra
+ui.window.buttonRemove: Törlés
+ui.window.buttonApply: Alkalmaz
+ui.window.buttonReset: Visszaállítás
+ui.window.infoPlaceholder: Megsemmisítve
+ui.window.sorting.label: Rendszerezési elv
+ui.window.sorting.byTime: dátum
+ui.window.sorting.byCredits: kredit
+ui.window.sorting.byDamage: sebzés
+ui.window.sorting.byResults: eredmény
+ui.window.sorting.byMap: pálya
+ui.window.sorting.byVehicle: jármű
+ui.window.sorting.byXp: tapasztalat
+ui.window.sorting.byKills: megsemmisített járművek
+ui.window.sorting.bySpotted: felderített járművek
+ui.window.sorting.byAssist: közreműködés
+
+ui.window.dateFilter.label: Visszajátszások időpontja:
+ui.window.dateFilter.today: mai
+ui.window.dateFilter.week: a héten
+ui.window.dateFilter.month: a hónapban
+ui.window.dateFilter.allTime: mind
+ui.window.filterButtonLabel: Szűrök
+ui.window.filterTab.title: SZŰRŐ
+ui.window.filterTab.all: Mind
+ui.window.filterTab.any: Bármelyik
+ui.window.filterTab.map: Pálya:
+ui.window.filterTab.mapAll: Összes pálya
+ui.window.filterTab.vehicle: Jármű:
+ui.window.filterTab.vehicleTypeAll: Minden típus
+ui.window.filterTab.vehicleTypeHeavy: Nehéz tank
+ui.window.filterTab.vehicleTypeMedium: Közepes tank
+ui.window.filterTab.vehicleTypeLight: Könnyű tank
+ui.window.filterTab.vehicleTypeATSPG: Páncélvadász
+ui.window.filterTab.vehicleTypeSPG: Önjáró löveg
+ui.window.filterTab.vehicleLevel: szint
+ui.window.filterTab.battleType: Csata típusa:
+ui.window.filterTab.battleResult: Csata eredménye:
+ui.window.filterTab.otherLabel: Egyéb:
+ui.window.filterTab.otherShowFavorite: Kedvenc visszajátszásaid
+
+ui.window.paginatorLabel: Oldal
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: első
+ui.window.paginatorLast: utolsó
+
+ui.window.tabsFilter: Szűrő
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Visszajátszás feltöltése a WoTReplays.eu-ra
+ui.uploader.labelStatus: Állapot
+ui.uploader.statusNotFound: A visszajátszás nem található
+ui.uploader.statusWrongAccount: Csak a saját visszajátszásodat töltheted fel!
+ui.uploader.statusNotAccount: Futtasd a játékot a visszajátszás betöltéséhez
+ui.uploader.statusErrorOccure: Hiba
+ui.uploader.statusFound: A visszajátszás nem található
+ui.uploader.statusLoading: Feltöltés
+ui.uploader.statusConnectionError: Csatlakozási hiba!
+ui.uploader.statusLoadingComplete: Várakozás a szerver válaszára
+ui.uploader.statusSucces: A fájlt sikeresen feltöltöttük a WoTReplays.eu-ra
+ui.uploader.linkLabel: link
+ui.uploader.error0: Weboldal rendszer hiba: 
+ui.uploader.error1: A file nem található: 
+ui.uploader.error2: Feldolgozatlan hiba: 
+ui.uploader.error3: A felhasználó nem található: 
+ui.uploader.error4: Üres lekérdezés: 
+ui.uploader.error5: Hiba a visszajátszás mentése során: 
+ui.uploader.error6: A feltölteni kívánt visszajátszást másik játékos készítette.
+ui.uploader.responceLabel: Visszajátszásod sikeresen feltöltötted a WoTReplays.eu-ra! <br />Weboldal megnyitása: {{url}} <br />Fájl letöltése: {{directLink}}
+ui.uploader.progressLabel:  Kb / {{value}} Kb
+ui.uploader.buttonStartUpload: Feltöltés indítása
+ui.uploader.inputTitle: Név (legfeljebb 100 karakter)
+ui.uploader.inputDescription: Leírás (legfeljebb 500 karakter)
+ui.uploader.checkBoxIsSecretLabel: Rejtett visszajátszás
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Rejtett visszajátszás{/HEADER}{BODY}Csak te láthatod ezt a visszajátszást.{/BODY}
+
+
+
+ui.waiting.prepareDB: Lista elkészítése. Kérlek, várj...
+ui.waiting.updatingList: Lista frissítése
+
+
+
+ui.action.showResults: Eredmények megjelenítése
+ui.action.play: Lejátszás
+ui.action.upload: Feltöltés a WoTReplays.eu-ra
+ui.action.favoriteAdd: Hozzáadás a kedvencekhez
+ui.action.favoriteDelete: Eltávolítás a kedvencek közül
+ui.action.delete: Eltávolítás
+
+
+
+ui.popup.button.yes: Igen
+ui.popup.button.no: Nem
+ui.popup.button.close: Bezárás
+ui.popup.play.title: Játék újraindításának jóváhagyása
+ui.popup.play.message: A visszajátszás megtekintéséhez újra kell indítanod a játékot. Folytatod?
+ui.popup.delete.title: Visszajátszás törlése
+ui.popup.delete.message: Biztosan törölni akarod ezt a fájlt: %s?
+
+
+modsListApi.title: Mod lista
+modsListApi.info: {HEADER}Mod lista{/HEADER}{BODY}A modjaid egyszerű kezeléséhez.{/BODY}
+modsListApi.name: Visszajátszás kezelő
+modsListApi.description: Ez az egyszerű Visszajátszás kezelő lehetővé teszi számodra, hogy megnézd a visszajátszásaid, a csaták eredményeit és feltöltsd a visszajátszásaid a WoTReplays.eu-ra
+
+

@@ -1,0 +1,126 @@
+
+ui.window.title: Менеджер повторів бою
+ui.window.tabsOwn: Мої повтори бою
+ui.window.placeholder: Виберіть повтор бою зі списку, щоб подивитися інформацію
+ui.window.frags: Знищено
+ui.window.damage: Шкода
+ui.window.credits: Кредити
+ui.window.xp: Досвід
+ui.window.spotted: Виявлено
+ui.window.assist: Підтримка
+ui.window.battleResult: —
+ui.window.battleResultVictory: Перемога
+ui.window.battleResultDefeat: Поразка
+ui.window.battleResultDraw: Нічия
+ui.window.buttonShowResult: Показати результати
+ui.window.buttonPlay: Відтворити
+ui.window.buttonUpload: Завантажити на WoTReplays.ru
+ui.window.buttonRemove: Видалити
+ui.window.buttonApply: Застосувати
+ui.window.buttonReset: Скинути
+ui.window.infoPlaceholder: Знищено
+ui.window.sorting.label: Упорядкувати
+ui.window.sorting.byTime: за датою
+ui.window.sorting.byCredits: за кредитами
+ui.window.sorting.byDamage: за шкодою
+ui.window.sorting.byResults: за результатом
+ui.window.sorting.byMap: за мапою
+ui.window.sorting.byVehicle: за танком
+ui.window.sorting.byXp: за досвідом
+ui.window.sorting.byKills: за знищеними цілями
+ui.window.sorting.bySpotted: за кількістю виявлених
+ui.window.sorting.byAssist: за підтримкою
+
+ui.window.dateFilter.label: Повтори за
+ui.window.dateFilter.today: сьогодні
+ui.window.dateFilter.week: тиждень
+ui.window.dateFilter.month: місяць
+ui.window.dateFilter.allTime: весь час
+ui.window.filterButtonLabel: Фільтри
+ui.window.filterTab.title: ФІЛЬТР
+ui.window.filterTab.all: Всі
+ui.window.filterTab.any: Будь-який
+ui.window.filterTab.map: Мапа:
+ui.window.filterTab.mapAll: Всі мапи
+ui.window.filterTab.vehicle: Машина:
+ui.window.filterTab.vehicleTypeAll: Всі типи
+ui.window.filterTab.vehicleTypeHeavy: Важкий танк
+ui.window.filterTab.vehicleTypeMedium: Середній танк
+ui.window.filterTab.vehicleTypeLight: Легкий танк
+ui.window.filterTab.vehicleTypeATSPG: ПТ-САУ
+ui.window.filterTab.vehicleTypeSPG: САУ
+ui.window.filterTab.vehicleLevel: рівень
+ui.window.filterTab.battleType: Тип бою:
+ui.window.filterTab.battleResult: Результат бою:
+ui.window.filterTab.otherLabel: Різне:
+ui.window.filterTab.otherShowFavorite: Уподобані повтори
+
+ui.window.paginatorLabel: Сторінки
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: перша
+ui.window.paginatorLast: остання
+
+ui.window.tabsFilter: Фільтр
+ui.window.tabsInfo: Інформація
+
+
+
+ui.uploader.windowTitle: Завантаження повтору бою на WoTReplays.ru
+ui.uploader.labelStatus: Статус
+ui.uploader.statusNotFound: Повтор бою не знайдено
+ui.uploader.statusWrongAccount: Завантажити можна лише повтор власного бою!
+ui.uploader.statusNotAccount: Щоб завантажити, увійдіть у гру
+ui.uploader.statusErrorOccure: Трапилася помилка
+ui.uploader.statusFound: Повтор бою знайдено
+ui.uploader.statusLoading: Завантажуємо...
+ui.uploader.statusConnectionError: Помилка з’єднання!
+ui.uploader.statusLoadingComplete: Очікуємо відповідь від сервера
+ui.uploader.statusSucces: Ваш файл надіслано на WoTReplays.ru
+ui.uploader.linkLabel: посилання
+ui.uploader.error0: Системна помилка сайту: 
+ui.uploader.error1: Файл не знайдено: 
+ui.uploader.error2: Неопрацьована помилка: 
+ui.uploader.error3: Користувача не знайдено: 
+ui.uploader.error4: Пустий запит: 
+ui.uploader.error5: Помилка збереження повтору бою: 
+ui.uploader.error6: Повтор бою записано не тим гравцем, хто завантажує його на сайт.
+ui.uploader.responceLabel: Ваш повтор бою завантажено на сайт WoTReplays.ru! <br />Перейти на сайт: {{url}} <br />Завантажити файл: {{directLink}}
+ui.uploader.progressLabel:  КБ з {{value}} КБ
+ui.uploader.buttonStartUpload: Почати завантаження
+ui.uploader.inputTitle: Назва (до 100 символів)
+ui.uploader.inputDescription: Опис (до 500 символів)
+ui.uploader.checkBoxIsSecretLabel: Прихований повтор бою
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Прихований повтор бою{/HEADER} {BODY}Цей файл зможете переглянути лише ви.{/BODY}
+
+
+
+ui.waiting.prepareDB: Підготування списку. Зачекайте...
+ui.waiting.updatingList: Оновлення списку
+
+
+
+ui.action.showResults: Показати результати
+ui.action.play: Відтворити
+ui.action.upload: Завантажити на WoTReplays.ru
+ui.action.favoriteAdd: Додати до уподобань
+ui.action.favoriteDelete: Видалити з уподобань
+ui.action.delete: Видалити
+
+
+
+ui.popup.button.yes: Так
+ui.popup.button.no: Ні
+ui.popup.button.close: Закрити
+ui.popup.play.title: Підтвердити перезапуск гри
+ui.popup.play.message: Щоб відтворити повтор бою, потрібно перезапустити гру. Продовжити?
+ui.popup.delete.title: Підтвердити видалення повтору бою
+ui.popup.delete.message: Ви дійсно хочете видалити файл: %s?
+
+
+modsListApi.title: Список модифікацій
+modsListApi.info: {HEADER}Список модифікацій{/HEADER} {BODY}Простий запуск і зручне налаштування модифікацій{/BODY}
+modsListApi.name: Менеджер повторів бою
+modsListApi.description: Зручний перегляд повторів, результатів, іх відтворення, а також завантаження повторів ваших боїв на WoTReplays.ru
+
+

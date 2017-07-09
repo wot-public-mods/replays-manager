@@ -1,0 +1,126 @@
+
+ui.window.title: Менеджар паўтораў бою
+ui.window.tabsOwn: Мае паўторы бою
+ui.window.placeholder: Выберыце паўтор бою са спіса для паказу інфармацыі
+ui.window.frags: Знішчыў
+ui.window.damage: Пашкоджанні
+ui.window.credits: Крэдыты
+ui.window.xp: Досвед
+ui.window.spotted: Выявіў
+ui.window.assist: Падтрымкі
+ui.window.battleResult: —
+ui.window.battleResultVictory: Перамога
+ui.window.battleResultDefeat: Паражэнне
+ui.window.battleResultDraw: Нічыя
+ui.window.buttonShowResult: Паказаць вынікі
+ui.window.buttonPlay: Прайграць
+ui.window.buttonUpload: Запампаваць на WoTReplays.ru
+ui.window.buttonRemove: Выдаліць
+ui.window.buttonApply: Ужыць
+ui.window.buttonReset: Скінуць
+ui.window.infoPlaceholder: Знішчыў
+ui.window.sorting.label: Упарадкаваць
+ui.window.sorting.byTime: паводле даты
+ui.window.sorting.byCredits: паводле крэдытаў
+ui.window.sorting.byDamage: паводле пашкоджанняў
+ui.window.sorting.byResults: паводле выніку
+ui.window.sorting.byMap: паводле мапы
+ui.window.sorting.byVehicle: паводле танка
+ui.window.sorting.byXp: паводле досведу
+ui.window.sorting.byKills: паводле знішчаных цэляў
+ui.window.sorting.bySpotted: паводле выяўленых
+ui.window.sorting.byAssist: паводле падтрымкі
+
+ui.window.dateFilter.label: Паўторы за
+ui.window.dateFilter.today: сёння
+ui.window.dateFilter.week: тыдзень
+ui.window.dateFilter.month: месяц
+ui.window.dateFilter.allTime: увесь час
+ui.window.filterButtonLabel: Фільтры
+ui.window.filterTab.title: ФІЛЬТР
+ui.window.filterTab.all: Усе
+ui.window.filterTab.any: Любы
+ui.window.filterTab.map: Мапа:
+ui.window.filterTab.mapAll: Усе мапы
+ui.window.filterTab.vehicle: Машына:
+ui.window.filterTab.vehicleTypeAll: Усе тыпы
+ui.window.filterTab.vehicleTypeHeavy: Цяжкі танк
+ui.window.filterTab.vehicleTypeMedium: Сярэдні танк
+ui.window.filterTab.vehicleTypeLight: Лёгкі танк
+ui.window.filterTab.vehicleTypeATSPG: СТ-САУ
+ui.window.filterTab.vehicleTypeSPG: САУ
+ui.window.filterTab.vehicleLevel: узровень
+ui.window.filterTab.battleType: Тып бою:
+ui.window.filterTab.battleResult: Вынік бою:
+ui.window.filterTab.otherLabel: Рознае:
+ui.window.filterTab.otherShowFavorite: Упадабаныя паўторы
+
+ui.window.paginatorLabel: Старонкі
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: першая
+ui.window.paginatorLast: апошняя
+
+ui.window.tabsFilter: Фільтр
+ui.window.tabsInfo: Звесткі
+
+
+
+ui.uploader.windowTitle: Запампоўванне паўтору бою на WoTReplays.ru
+ui.uploader.labelStatus: Стан
+ui.uploader.statusNotFound: Паўтор бою не знойдзены
+ui.uploader.statusWrongAccount: Запампаваць можна толькі паўтор свайго бою!
+ui.uploader.statusNotAccount: Каб запампоўваць, увайдзіце ў гульню
+ui.uploader.statusErrorOccure: Адбылася памылка
+ui.uploader.statusFound: Паўтор бою знойдзены
+ui.uploader.statusLoading: Ідзе запампоўванне
+ui.uploader.statusConnectionError: Памылка злучэння!
+ui.uploader.statusLoadingComplete: Чаканне адказу ад сервера
+ui.uploader.statusSucces: Ваш файл быў адпраўлены на WoTReplays.ru
+ui.uploader.linkLabel: спасылка
+ui.uploader.error0: Сістэмная памылка сайта: 
+ui.uploader.error1: Файл не знойдзены: 
+ui.uploader.error2: Неапрацаваная памылка: 
+ui.uploader.error3: Карыстальнік не знойдзены: 
+ui.uploader.error4: Пусты запыт: 
+ui.uploader.error5: Памылка захавання паўтору бою: 
+ui.uploader.error6: Паўтор бою запісаны не тым гульцом, хто запампоўвае яго на вэб-сайт.
+ui.uploader.responceLabel: Ваш паўтор бою запампаваны на вэб-сайт WoTReplays.ru <br />Перайсці на вэб-сайт : {{url}} <br />Спампаваць файл: {{directLink}}
+ui.uploader.progressLabel:  КБ з {{value}} КБ
+ui.uploader.buttonStartUpload: Пачаць запампаванне
+ui.uploader.inputTitle: Назва (да 100 сімвалаў)
+ui.uploader.inputDescription: Апісанне (да 500 сімвалаў)
+ui.uploader.checkBoxIsSecretLabel: Схаваны паўтор бою
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Схаваны паўтор бою{/HEADER}{BODY}Гэты файл можаце праглядаць толькі вы.{/BODY}
+
+
+
+ui.waiting.prepareDB: Падрыхтоўка спіса. Пачакайце...
+ui.waiting.updatingList: Абнаўленне спіса
+
+
+
+ui.action.showResults: Паказаць вынікі
+ui.action.play: Прайграць
+ui.action.upload: Запампаваць на WoTReplays.ru
+ui.action.favoriteAdd: Дадаць ва ўпадабаныя
+ui.action.favoriteDelete: Прыбраць з упадабаных
+ui.action.delete: Выдаліць
+
+
+
+ui.popup.button.yes: Так
+ui.popup.button.no: Не
+ui.popup.button.close: Закрыць
+ui.popup.play.title: Пацвярджэнне перазапуску гульні
+ui.popup.play.message: Каб прайграць паўтор, трэба перазапусціць гульню. Працягнуць?
+ui.popup.delete.title: Пацвярджэнне выдалення паўтору бою
+ui.popup.delete.message: Ці сапраўды хочаце выдаліць файл: %s?
+
+
+modsListApi.title: Спіс мадыфікацый
+modsListApi.info: {HEADER}Спіс мадыфікацый{/HEADER}{BODY}Просты запуск і зручная наладка мадыфікацый{/BODY}
+modsListApi.name: Менеджар паўтораў бою
+modsListApi.description: Зручны прагляд паўтораў, вынікаў, прайграванне, а таксама запампоўванне паўтораў вашых баёў на WoTReplays.ru
+
+

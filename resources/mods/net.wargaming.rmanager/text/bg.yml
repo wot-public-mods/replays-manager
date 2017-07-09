@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Мениджър на записи
+ui.window.tabsOwn: Моите записи
+ui.window.placeholder: Изберете запис от списъка за показване на информация
+ui.window.frags: Унищожени
+ui.window.damage: Поражения
+ui.window.credits: Кредити
+ui.window.xp: Опит
+ui.window.spotted: Открити
+ui.window.assist: Помощ
+ui.window.battleResult: —
+ui.window.battleResultVictory: Победа
+ui.window.battleResultDefeat: Загуба
+ui.window.battleResultDraw: Реми
+ui.window.buttonShowResult: Покажи резултати от битка
+ui.window.buttonPlay: Пусни
+ui.window.buttonUpload: Качи на WoTReplays.eu
+ui.window.buttonRemove: Изтрий
+ui.window.buttonApply: Приложи
+ui.window.buttonReset: Нулирай
+ui.window.infoPlaceholder: Унищожени
+ui.window.sorting.label: Сортирай по
+ui.window.sorting.byTime: дата
+ui.window.sorting.byCredits: кредити
+ui.window.sorting.byDamage: поражения
+ui.window.sorting.byResults: резултати
+ui.window.sorting.byMap: карта
+ui.window.sorting.byVehicle: машина
+ui.window.sorting.byXp: опит
+ui.window.sorting.byKills: унищожени машини
+ui.window.sorting.bySpotted: открити машини
+ui.window.sorting.byAssist: помощ
+
+ui.window.dateFilter.label: Записи за
+ui.window.dateFilter.today: днес
+ui.window.dateFilter.week: седмица
+ui.window.dateFilter.month: месец
+ui.window.dateFilter.allTime: всички
+ui.window.filterButtonLabel: Филтри
+ui.window.filterTab.title: ФИЛТЪР
+ui.window.filterTab.all: Всички
+ui.window.filterTab.any: Всяка
+ui.window.filterTab.map: Карта:
+ui.window.filterTab.mapAll: Всички карти
+ui.window.filterTab.vehicle: Машина:
+ui.window.filterTab.vehicleTypeAll: Всички видове
+ui.window.filterTab.vehicleTypeHeavy: Тежък танк
+ui.window.filterTab.vehicleTypeMedium: Среден танк
+ui.window.filterTab.vehicleTypeLight: Лек танк
+ui.window.filterTab.vehicleTypeATSPG: ПТ-САУ
+ui.window.filterTab.vehicleTypeSPG: САУ
+ui.window.filterTab.vehicleLevel: ниво
+ui.window.filterTab.battleType: Вид битка:
+ui.window.filterTab.battleResult: Резултати от битка:
+ui.window.filterTab.otherLabel: Разни:
+ui.window.filterTab.otherShowFavorite: Любими записи
+
+ui.window.paginatorLabel: Страници
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: първа
+ui.window.paginatorLast: последна
+
+ui.window.tabsFilter: Филтър
+ui.window.tabsInfo: Информация
+
+
+
+ui.uploader.windowTitle: Качи запис на WoTReplays.eu
+ui.uploader.labelStatus: Състояние
+ui.uploader.statusNotFound: Записът не е открит
+ui.uploader.statusWrongAccount: Можете да качите само ваш запис!
+ui.uploader.statusNotAccount: Пуснете играта, за да заредите записа
+ui.uploader.statusErrorOccure: Грешка
+ui.uploader.statusFound: Записът не е открит
+ui.uploader.statusLoading: Качване
+ui.uploader.statusConnectionError: Грешка при свързване!
+ui.uploader.statusLoadingComplete: Чака се отговор от сървъра
+ui.uploader.statusSucces: Вашият файл е качен успешно на WoTReplays.eu
+ui.uploader.linkLabel: връзка
+ui.uploader.error0: Системна грешка на уебсайта: 
+ui.uploader.error1: Файлът не е намерен: 
+ui.uploader.error2: Необработена грешка: 
+ui.uploader.error3: Потребителят не е намерен: 
+ui.uploader.error4: Празна заявка: 
+ui.uploader.error5: Грешка при запазване на записа: 
+ui.uploader.error6: Записът, което се опитвате да качите, е направен от друг играч.
+ui.uploader.responceLabel: Вашият запис е качен успешно на WoTReplays.eu! <br />Отидете на уебсайта: {{url}} <br />Свалете файла: {{directLink}}
+ui.uploader.progressLabel:  Кб от {{value}} Кб
+ui.uploader.buttonStartUpload: Започни качване
+ui.uploader.inputTitle: Име (до 100 знака)
+ui.uploader.inputDescription: Описание (до 500 знака)
+ui.uploader.checkBoxIsSecretLabel: Скрит запис
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Скрит запис{/HEADER}{BODY}Само вие можете да гледате този запис.{/BODY}
+
+
+
+ui.waiting.prepareDB: Подготвяне на списъка. Моля изчакайте...
+ui.waiting.updatingList: Обновяване на списъка
+
+
+
+ui.action.showResults: Покажи резултати
+ui.action.play: Пусни
+ui.action.upload: Качи на WoTReplays.eu
+ui.action.favoriteAdd: Добави към любими
+ui.action.favoriteDelete: Махни от любими
+ui.action.delete: Махни
+
+
+
+ui.popup.button.yes: Да
+ui.popup.button.no: Не
+ui.popup.button.close: Затвори
+ui.popup.play.title: Потвърди рестарта на играта
+ui.popup.play.message: Рестартирайте играта, за да гледате записа. Продължи?
+ui.popup.delete.title: Изтрий запис
+ui.popup.delete.message: Наистина ли искате да изтриете файла: %s?
+
+
+modsListApi.title: Списък с модификации
+modsListApi.info: {HEADER}Списък с модификации{/HEADER}{BODY}Лесно управление на модификациите ви{/BODY}
+modsListApi.name: Мениджър на записи
+modsListApi.description: Този прост мениджър на записи ви позволява да гледате записи и резултати от битки и да качвате записите си на WoTReplays.eu
+
+

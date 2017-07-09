@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Gestore replay
+ui.window.tabsOwn: I miei replay
+ui.window.placeholder: Seleziona un replay dalla lista per visualizzarne le informazioni
+ui.window.frags: Distruzioni
+ui.window.damage: Danno
+ui.window.credits: Crediti
+ui.window.xp: Esperienza
+ui.window.spotted: Avvistati
+ui.window.assist: Assistenza
+ui.window.battleResult: —
+ui.window.battleResultVictory: Vittoria
+ui.window.battleResultDefeat: Sconfitta
+ui.window.battleResultDraw: Stallo
+ui.window.buttonShowResult: Mostra risultati di battaglia
+ui.window.buttonPlay: Gioca
+ui.window.buttonUpload: Carica su WoTReplays.eu
+ui.window.buttonRemove: Cancella
+ui.window.buttonApply: Applica
+ui.window.buttonReset: Reset
+ui.window.infoPlaceholder: Distrutto
+ui.window.sorting.label: Ordina per
+ui.window.sorting.byTime: data
+ui.window.sorting.byCredits: crediti
+ui.window.sorting.byDamage: danno
+ui.window.sorting.byResults: risultati
+ui.window.sorting.byMap: mappa
+ui.window.sorting.byVehicle: veicolo
+ui.window.sorting.byXp: esperienza
+ui.window.sorting.byKills: veicoli distrutti
+ui.window.sorting.bySpotted: veicoli avvistati
+ui.window.sorting.byAssist: assistenza
+
+ui.window.dateFilter.label: Replay di
+ui.window.dateFilter.today: oggi
+ui.window.dateFilter.week: settimana
+ui.window.dateFilter.month: mese
+ui.window.dateFilter.allTime: sempre
+ui.window.filterButtonLabel: Filtri
+ui.window.filterTab.title: FILTRA
+ui.window.filterTab.all: Tutti
+ui.window.filterTab.any: Qualsiasi
+ui.window.filterTab.map: Mappa:
+ui.window.filterTab.mapAll: Tutte le mappe
+ui.window.filterTab.vehicle: Veicolo:
+ui.window.filterTab.vehicleTypeAll: Tutti i tipi
+ui.window.filterTab.vehicleTypeHeavy: Corazzati pesanti
+ui.window.filterTab.vehicleTypeMedium: Corazzati medi
+ui.window.filterTab.vehicleTypeLight: Corazzati leggeri
+ui.window.filterTab.vehicleTypeATSPG: Cacciacarri
+ui.window.filterTab.vehicleTypeSPG: A-SMV
+ui.window.filterTab.vehicleLevel: livello
+ui.window.filterTab.battleType: Tipo di battaglia:
+ui.window.filterTab.battleResult: Risultati di battaglia:
+ui.window.filterTab.otherLabel: Varie:
+ui.window.filterTab.otherShowFavorite: Replay preferiti
+
+ui.window.paginatorLabel: Pagine
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: prima
+ui.window.paginatorLast: ultima
+
+ui.window.tabsFilter: Filtro
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Carica replay su WoTReplays.eu
+ui.uploader.labelStatus: Stato
+ui.uploader.statusNotFound: Replay non trovato
+ui.uploader.statusWrongAccount: Puoi caricare il tuo replay!
+ui.uploader.statusNotAccount: Avvia il gioco per caricare il replay
+ui.uploader.statusErrorOccure: Errore
+ui.uploader.statusFound: Replay non trovato
+ui.uploader.statusLoading: Caricamento
+ui.uploader.statusConnectionError: Errore di connessione!
+ui.uploader.statusLoadingComplete: In attesa di risposta dal server
+ui.uploader.statusSucces: Il tuo file è stato caricato con successo su WoTReplays.eu
+ui.uploader.linkLabel: link
+ui.uploader.error0: Errore di sistema del sito: 
+ui.uploader.error1: File non trovato: 
+ui.uploader.error2: Errore non elaborato: 
+ui.uploader.error3: Utente non trovato: 
+ui.uploader.error4: Richiesta vuota: 
+ui.uploader.error5: Errore durante il salvataggio del replay: 
+ui.uploader.error6: Il replay che stai cercando di caricare è stato registrato da un giocatore differente.
+ui.uploader.responceLabel: Il tuo replay è stato caricato con successo su WoTReplays.eu! <br />Vai al sito: {{url}} <br />Scarica il file: {{directLink}}
+ui.uploader.progressLabel:  Kb di {{value}} Kb
+ui.uploader.buttonStartUpload: Inizia a caricare
+ui.uploader.inputTitle: Nome (fino a 100 caratteri)
+ui.uploader.inputDescription: Descrizione (fino a 500 caratteri)
+ui.uploader.checkBoxIsSecretLabel: Replay nascosto
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Replay nascosto{/HEADER}{BODY}Solo tu puoi guardare questo replay.{/BODY}
+
+
+
+ui.waiting.prepareDB: Preparazione della lista. Attendere...
+ui.waiting.updatingList: Aggiornamento della lista
+
+
+
+ui.action.showResults: Mostra risultati
+ui.action.play: Gioca
+ui.action.upload: Carica su WoTReplays.eu
+ui.action.favoriteAdd: Aggiungi ai favoriti
+ui.action.favoriteDelete: Rimuovi dai favoriti
+ui.action.delete: Rimuovi
+
+
+
+ui.popup.button.yes: Sì
+ui.popup.button.no: No
+ui.popup.button.close: Chiudi
+ui.popup.play.title: Conferma il riavvio del gioco
+ui.popup.play.message: Riavvia il gioco per guardare il replay. Continuare?
+ui.popup.delete.title: Elimina il replay
+ui.popup.delete.message: Sei sicuro di voler eliminare il file : %s?
+
+
+modsListApi.title: Lista modifiche
+modsListApi.info: {HEADER}Lista modifiche{/HEADER}{BODY}Semplifica la gestione delle modifiche{/BODY}
+modsListApi.name: Gestore replay
+modsListApi.description: Questo semplice gestore ti permette di guardare i replay, visualizzare i risultati di battaglia e caricare i tuoi replay su WoTReplays.eu
+
+

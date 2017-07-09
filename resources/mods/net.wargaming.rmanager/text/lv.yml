@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Ierakstu menedžeris
+ui.window.tabsOwn: Mani ieraksti
+ui.window.placeholder: Lai atainotu informāciju, izvēlieties ierakstu no saraksta
+ui.window.frags: Iznīcināts
+ui.window.damage: Bojājumi
+ui.window.credits: Kredīti
+ui.window.xp: Pieredze
+ui.window.spotted: Atklāts
+ui.window.assist: Atbalsts
+ui.window.battleResult: —
+ui.window.battleResultVictory: Uzvara
+ui.window.battleResultDefeat: Zaudējums
+ui.window.battleResultDraw: Neizšķirts
+ui.window.buttonShowResult: Parādīt kaujas rezultātus
+ui.window.buttonPlay: Spēlēt
+ui.window.buttonUpload: Augšupielādēt vietnē WoTReplays.eu
+ui.window.buttonRemove: Izdzēst
+ui.window.buttonApply: Pielietot
+ui.window.buttonReset: Atiestatīt
+ui.window.infoPlaceholder: Iznīcināts
+ui.window.sorting.label: Kārtot pēc
+ui.window.sorting.byTime: datuma
+ui.window.sorting.byCredits: kredītiem
+ui.window.sorting.byDamage: bojājumiem
+ui.window.sorting.byResults: rezultātiem
+ui.window.sorting.byMap: kartes
+ui.window.sorting.byVehicle: bruņutehnikas
+ui.window.sorting.byXp: pieredzes
+ui.window.sorting.byKills: iznīcināto bruņutehnikas vienību skaita
+ui.window.sorting.bySpotted: atklāto bruņutehnikas vienību skaita
+ui.window.sorting.byAssist: atbalsts
+
+ui.window.dateFilter.label: Ieraksti no
+ui.window.dateFilter.today: šīs dienas
+ui.window.dateFilter.week: šīs nedēļas
+ui.window.dateFilter.month: šī mēneša
+ui.window.dateFilter.allTime: visa laika
+ui.window.filterButtonLabel: Filtri
+ui.window.filterTab.title: FILTRS
+ui.window.filterTab.all: Visi
+ui.window.filterTab.any: Jebkurš
+ui.window.filterTab.map: Karte:
+ui.window.filterTab.mapAll: Visas kartes
+ui.window.filterTab.vehicle: Bruņutehnika:
+ui.window.filterTab.vehicleTypeAll: Visi veidi
+ui.window.filterTab.vehicleTypeHeavy: Smagais tanks
+ui.window.filterTab.vehicleTypeMedium: Vidējais tanks
+ui.window.filterTab.vehicleTypeLight: Vieglais tanks
+ui.window.filterTab.vehicleTypeATSPG: Tanku iznīcinātājs
+ui.window.filterTab.vehicleTypeSPG: Artilērija
+ui.window.filterTab.vehicleLevel: līmenis
+ui.window.filterTab.battleType: Kaujas veids:
+ui.window.filterTab.battleResult: Kaujas rezultāti:
+ui.window.filterTab.otherLabel: Dažādi:
+ui.window.filterTab.otherShowFavorite: Labākie ieraksti
+
+ui.window.paginatorLabel: Lapas
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: pirmā
+ui.window.paginatorLast: pēdējā
+
+ui.window.tabsFilter: Filtrs
+ui.window.tabsInfo: Informācija
+
+
+
+ui.uploader.windowTitle: Augšupielādēt vietnē WoTReplays.eu
+ui.uploader.labelStatus: Statuss
+ui.uploader.statusNotFound: Ieraksts netika atrasts
+ui.uploader.statusWrongAccount: Jūs varat augšupielādēt tikai savu ierakstu!
+ui.uploader.statusNotAccount: Palaist spēli, lai ielādētu ierakstu
+ui.uploader.statusErrorOccure: Kļūda
+ui.uploader.statusFound: Ieraksts netika atrasts
+ui.uploader.statusLoading: Augšupielādē
+ui.uploader.statusConnectionError: Savienojuma kļūda!
+ui.uploader.statusLoadingComplete: Gaida servera atbildi
+ui.uploader.statusSucces: Jūsu fails tika veiksmīgi augšupielādēts vietnē WoTReplays.eu
+ui.uploader.linkLabel: saite
+ui.uploader.error0: Tīmekļa vietnes sistēmas kļūda: 
+ui.uploader.error1: Fails netika atrasts: 
+ui.uploader.error2: Neapstrādāta kļūda: 
+ui.uploader.error3: Lietotājs netika atrasts: 
+ui.uploader.error4: Tukšs pieprasījums: 
+ui.uploader.error5: Kļūda saglabājot ierakstu: 
+ui.uploader.error6: Ieraksts, kuru cenšaties augšupielādēt, tika ierakstīts ar citu atskaņotāju.
+ui.uploader.responceLabel: Jūsu ieraksts tika veiksmīgi augšupielādēts vietnē WoTReplays.eu! <br />Doties uz: {{url}} <br />Lejupielādēt failu: {{directLink}}
+ui.uploader.progressLabel: Kb no {{value}} Kb
+ui.uploader.buttonStartUpload: Sākt augšupielādi
+ui.uploader.inputTitle: Nosaukums (līdz 100 simboliem)
+ui.uploader.inputDescription: Apraksts (līdz 500 simboliem)
+ui.uploader.checkBoxIsSecretLabel: Paslēpts ieraksts
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Paslēpts ieraksts{/HEADER}{BODY}Tikai jūs varat apskatīties šo ierakstu.{/BODY}
+
+
+
+ui.waiting.prepareDB: Sagatavo sarakstu. Lūdzu, uzgaidiet...
+ui.waiting.updatingList: Atjaunina sarakstu.
+
+
+
+ui.action.showResults: Rādīt rezultātus
+ui.action.play: Spēlēt
+ui.action.upload: Augšupielādēt vietnē WoTReplays.eu
+ui.action.favoriteAdd: Pievienot izlasei
+ui.action.favoriteDelete: Izņemt no izlases
+ui.action.delete: Izņemt
+
+
+
+ui.popup.button.yes: Jā
+ui.popup.button.no: Nē
+ui.popup.button.close: Aizvērt
+ui.popup.play.title: Apstiprināt spēles restartēšanu
+ui.popup.play.message: Restartēt spēli, lai apskatītos ierakstu. Turpināt?
+ui.popup.delete.title: Izdzēst ierakstu
+ui.popup.delete.message: Tiešām vēlaties izdzēst failu: %s?
+
+
+modsListApi.title: Modifikāciju saraksts
+modsListApi.info: {HEADER}Modifikāciju saraksts{/HEADER}{BODY}Jūsu modifikāciju vienkārša menedžēšana{/BODY}
+modsListApi.name: Ierakstu menedžeris
+modsListApi.description: Šis vienkāršais ierakstu menedžeris ļauj jums atskaņot ierakstus, apskatīties kaujas rezultātus un augšupielādēt ierakstus vietnē WoTReplays.eu
+
+

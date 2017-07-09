@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Správce záznamů
+ui.window.tabsOwn: Moje záznamy
+ui.window.placeholder: Pro zobrazení informací vyberte záznam ze seznamu
+ui.window.frags: Zničeno
+ui.window.damage: Poškození
+ui.window.credits: Kredity
+ui.window.xp: Zkušenosti
+ui.window.spotted: Odhaleno
+ui.window.assist: Hráčovou asistencí
+ui.window.battleResult: —
+ui.window.battleResultVictory: Vítězství
+ui.window.battleResultDefeat: Porážka
+ui.window.battleResultDraw: Remíza
+ui.window.buttonShowResult: Ukázat výsledky bitvy
+ui.window.buttonPlay: Přehrát
+ui.window.buttonUpload: Nahrát na WoTReplays.eu
+ui.window.buttonRemove: Smazat
+ui.window.buttonApply: Použít
+ui.window.buttonReset: Vynulovat
+ui.window.infoPlaceholder: Zničeno
+ui.window.sorting.label: Řadit podle
+ui.window.sorting.byTime: data
+ui.window.sorting.byCredits: kreditů
+ui.window.sorting.byDamage: poškození
+ui.window.sorting.byResults: výsledků
+ui.window.sorting.byMap: mapy
+ui.window.sorting.byVehicle: vozidla
+ui.window.sorting.byXp: zkušeností
+ui.window.sorting.byKills: zničených vozidel
+ui.window.sorting.bySpotted: odhalených vozidel
+ui.window.sorting.byAssist: asistence
+
+ui.window.dateFilter.label: Záznamy za
+ui.window.dateFilter.today: dnešek
+ui.window.dateFilter.week: týden
+ui.window.dateFilter.month: měsíc
+ui.window.dateFilter.allTime: celou dobu
+ui.window.filterButtonLabel: Filtry
+ui.window.filterTab.title: FILTR
+ui.window.filterTab.all: Vše
+ui.window.filterTab.any: Jakékoliv
+ui.window.filterTab.map: Mapa:
+ui.window.filterTab.mapAll: Všechny mapy
+ui.window.filterTab.vehicle: Vozidlo:
+ui.window.filterTab.vehicleTypeAll: Všechny typy
+ui.window.filterTab.vehicleTypeHeavy: Těžký tank
+ui.window.filterTab.vehicleTypeMedium: Střední tank
+ui.window.filterTab.vehicleTypeLight: Lehký tank
+ui.window.filterTab.vehicleTypeATSPG: Stíhač tanků
+ui.window.filterTab.vehicleTypeSPG: Dělostřelectvo
+ui.window.filterTab.vehicleLevel: úroveň
+ui.window.filterTab.battleType: Typ bitvy:
+ui.window.filterTab.battleResult: Výsledky bitvy:
+ui.window.filterTab.otherLabel: Různé:
+ui.window.filterTab.otherShowFavorite: Oblíbené záznamy
+
+ui.window.paginatorLabel: Stránky
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: první
+ui.window.paginatorLast: poslední
+
+ui.window.tabsFilter: Filtr
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Nahrát záznam na WoTReplays.eu
+ui.uploader.labelStatus: Status
+ui.uploader.statusNotFound: Záznam nebyl nalezen
+ui.uploader.statusWrongAccount: Můžete nahrát pouze svůj záznam!
+ui.uploader.statusNotAccount: Spusťte hru, abyste záznam načetli
+ui.uploader.statusErrorOccure: Chyba
+ui.uploader.statusFound: Záznam nebyl nalezen
+ui.uploader.statusLoading: Nahrávání
+ui.uploader.statusConnectionError: Chyba připojení!
+ui.uploader.statusLoadingComplete: Čekání na odpověď serveru
+ui.uploader.statusSucces: Váš soubor byl úspěšně nahrán na WoTReplays.eu
+ui.uploader.linkLabel: odkaz
+ui.uploader.error0: Systémová chyba webové stránky: 
+ui.uploader.error1: Soubor nebyl nalezen: 
+ui.uploader.error2: Nezpracovaná chyba: 
+ui.uploader.error3: Uživatel nebyl nalezen: 
+ui.uploader.error4: Prázdný dotaz: 
+ui.uploader.error5: Chyba při ukládání záznamu: 
+ui.uploader.error6: Záznam, který se pokoušíte nahrát, byl natočen jiným hráčem.
+ui.uploader.responceLabel: Váš záznam byl úspěšně nahrán na WoTReplays.eu! <br />Přejít na stránku: {{url}} <br />Stáhnout soubor: {{directLink}}
+ui.uploader.progressLabel:  Kb z {{value}} Kb
+ui.uploader.buttonStartUpload: Zahájit nahrávání
+ui.uploader.inputTitle: Název (až 100 znaků)
+ui.uploader.inputDescription: Popis (až 500 znaků)
+ui.uploader.checkBoxIsSecretLabel: Skrytý záznam
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Skrytý záznam{/HEADER}{BODY}Na tento záznam se můžete podívat pouze vy.{/BODY}
+
+
+
+ui.waiting.prepareDB: Příprava seznamu. Počkejte prosím...
+ui.waiting.updatingList: Aktualizace seznamu
+
+
+
+ui.action.showResults: Ukázat výsledky
+ui.action.play: Přehrát
+ui.action.upload: Nahrát na WoTReplays.eu
+ui.action.favoriteAdd: Přidat do oblíbených
+ui.action.favoriteDelete: Odstranit z oblíbených
+ui.action.delete: Odstranit
+
+
+
+ui.popup.button.yes: Ano
+ui.popup.button.no: Ne
+ui.popup.button.close: Zavřít
+ui.popup.play.title: Potvrďte restart hry
+ui.popup.play.message: Restartovat hru, abyste se mohli na záznam podívat. Pokračovat?
+ui.popup.delete.title: Smazat záznam
+ui.popup.delete.message: Opravdu chcete smazat soubor: %s?
+
+
+modsListApi.title: Seznam modifikací
+modsListApi.info: {HEADER}Seznam modifikací{/HEADER}{BODY}Spravujte snadno své modifikace{/BODY}
+modsListApi.name: Správce záznamů
+modsListApi.description: Tento jednoduchý správce záznamů vám umožňuje sledování záznamů, prohlížení výsledků bitev a nahrávání vašich záznamů na WoTReplays.eu
+
+

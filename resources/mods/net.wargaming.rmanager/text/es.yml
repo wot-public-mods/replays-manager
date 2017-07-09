@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Gestor de repeticiones
+ui.window.tabsOwn: Mis repeticiones
+ui.window.placeholder: Elige una repeteción de la lista para mostrar la información
+ui.window.frags: Destruido
+ui.window.damage: Daño
+ui.window.credits: Créditos
+ui.window.xp: Experiencia
+ui.window.spotted: Detectado
+ui.window.assist: Asistencia
+ui.window.battleResult: —
+ui.window.battleResultVictory: Victoria
+ui.window.battleResultDefeat: Derrota
+ui.window.battleResultDraw: Empate
+ui.window.buttonShowResult: Mostrar resultados de la batalla
+ui.window.buttonPlay: Jugar
+ui.window.buttonUpload: Subir a WoTReplays.eu
+ui.window.buttonRemove: Borrar
+ui.window.buttonApply: Aplicar
+ui.window.buttonReset: Reiniciar
+ui.window.infoPlaceholder: Destruido
+ui.window.sorting.label: Ordenar por
+ui.window.sorting.byTime: fecha
+ui.window.sorting.byCredits: créditos
+ui.window.sorting.byDamage: daño
+ui.window.sorting.byResults: resultados
+ui.window.sorting.byMap: mapa
+ui.window.sorting.byVehicle: vehículo
+ui.window.sorting.byXp: experiencia
+ui.window.sorting.byKills: vehículos destruidos
+ui.window.sorting.bySpotted: vehículos detectados
+ui.window.sorting.byAssist: asistencia
+
+ui.window.dateFilter.label: Repeticiones para
+ui.window.dateFilter.today: hoy
+ui.window.dateFilter.week: semana
+ui.window.dateFilter.month: mes
+ui.window.dateFilter.allTime: siempre
+ui.window.filterButtonLabel: Filtros
+ui.window.filterTab.title: FILTRO
+ui.window.filterTab.all: Todos
+ui.window.filterTab.any: Cualquiera
+ui.window.filterTab.map: Mapa:
+ui.window.filterTab.mapAll: Todos los mapas
+ui.window.filterTab.vehicle: Vehículos:
+ui.window.filterTab.vehicleTypeAll: Todos los tipos
+ui.window.filterTab.vehicleTypeHeavy: Carro pesado
+ui.window.filterTab.vehicleTypeMedium: Carro medio
+ui.window.filterTab.vehicleTypeLight: Carro ligero
+ui.window.filterTab.vehicleTypeATSPG: Cazacarros
+ui.window.filterTab.vehicleTypeSPG: AAP
+ui.window.filterTab.vehicleLevel: nivel
+ui.window.filterTab.battleType: Tipo de batalla:
+ui.window.filterTab.battleResult: Resultados de la batalla:
+ui.window.filterTab.otherLabel: Misc.:
+ui.window.filterTab.otherShowFavorite: Repeticiones favoritas
+
+ui.window.paginatorLabel: Páginas
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: primera
+ui.window.paginatorLast: última
+
+ui.window.tabsFilter: Filtro
+ui.window.tabsInfo: Info
+
+
+
+ui.uploader.windowTitle: Subir repetición a WoTReplays.eu
+ui.uploader.labelStatus: Estado
+ui.uploader.statusNotFound: Repetición no encontrada
+ui.uploader.statusWrongAccount: ¡Sólo puedes subir tu repeteción!
+ui.uploader.statusNotAccount: Ejecuta el juego para cargar la repetición
+ui.uploader.statusErrorOccure: Error
+ui.uploader.statusFound: Repetición no encontrada
+ui.uploader.statusLoading: Subiendo
+ui.uploader.statusConnectionError: ¡Error de conexión!
+ui.uploader.statusLoadingComplete: Esperando respuesta del servidor
+ui.uploader.statusSucces: Tu archivo se ha subido con éxito a WoTReplays.eu
+ui.uploader.linkLabel: enlace
+ui.uploader.error0: Error del sistema del sitio wen:
+ui.uploader.error1: Archivo no encontrado: 
+ui.uploader.error2: Error  no procesado: 
+ui.uploader.error3: Usuario no encontrado: 
+ui.uploader.error4: Consulta vacía: 
+ui.uploader.error5: Error guardando la repeteción: 
+ui.uploader.error6: La repeteción que estás intentando subir fue grabada por un jugador diferente.
+ui.uploader.responceLabel: ¡Tu repeteción se ha subido con éxito a WoTReplays.eu! <br />Ve al sitio web: {{url}} <br />Descarga el archivo: {{directLink}}
+ui.uploader.progressLabel:  Kb de {{value}} Kb
+ui.uploader.buttonStartUpload: Start uploading
+ui.uploader.inputTitle: Nombre (hasta 100 caracteres)
+ui.uploader.inputDescription: Descripción (hasta 500 caracteres)
+ui.uploader.checkBoxIsSecretLabel: Repetición oculta
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Repetición oculta{/HEADER}{BODY}Sólo tú puedes ver esta repetición.{/BODY}
+
+
+
+ui.waiting.prepareDB: Preparando la lista. Espera, por favor...
+ui.waiting.updatingList: Actualizando la lista
+
+
+
+ui.action.showResults: Mostrar resultados
+ui.action.play: Reproducir
+ui.action.upload: Subir a WoTReplays.eu
+ui.action.favoriteAdd: Añadir a favoritos
+ui.action.favoriteDelete: Eliminar de favoritos
+ui.action.delete: Eliminar
+
+
+
+ui.popup.button.yes: Sí
+ui.popup.button.no: No
+ui.popup.button.close: Cerrar
+ui.popup.play.title: Confirmar el reinicio del juego
+ui.popup.play.message: Reiniciar el juego para ver la repetición. ¿Continuar?
+ui.popup.delete.title: Borrar repeteción
+ui.popup.delete.message: ¿Estás seguro de que quieres borrar el archivo: %s?
+
+
+modsListApi.title: Listado de modificaciones
+modsListApi.info: {HEADER}Listado de modificaciones{/HEADER}{BODY}Administra tus modificaciones fácilmente{/BODY}
+modsListApi.name: Gestor de repeticiones
+modsListApi.description: Este simple gestor de repeticiones te premite ver repeticiones, resultados de batalla, así como subir tus repeticiones a WoTReplays.eu
+
+

@@ -1,0 +1,126 @@
+﻿
+ui.window.title: Gestionnaire des relectures
+ui.window.tabsOwn: Mes relectures
+ui.window.placeholder: Sélectionnez une relecture dans la liste pour afficher les informations
+ui.window.frags: Détruits
+ui.window.damage: Dégâts
+ui.window.credits: Crédits
+ui.window.xp: Expérience
+ui.window.spotted: Repérés
+ui.window.assist: Assistance
+ui.window.battleResult: —
+ui.window.battleResultVictory: Victoire
+ui.window.battleResultDefeat: Défaite
+ui.window.battleResultDraw: Égalité
+ui.window.buttonShowResult: Afficher les résultats de la bataille
+ui.window.buttonPlay: Lire
+ui.window.buttonUpload: Envoyer sur WoTReplays.eu
+ui.window.buttonRemove: Supprimer
+ui.window.buttonApply: Appliquer
+ui.window.buttonReset: Réinitialiser
+ui.window.infoPlaceholder: Détruit
+ui.window.sorting.label: Trier par
+ui.window.sorting.byTime: date
+ui.window.sorting.byCredits: crédits
+ui.window.sorting.byDamage: dégâts
+ui.window.sorting.byResults: résultats
+ui.window.sorting.byMap: carte
+ui.window.sorting.byVehicle: véhicule
+ui.window.sorting.byXp: expérience
+ui.window.sorting.byKills: véhicules détruits
+ui.window.sorting.bySpotted: véhicules repérés
+ui.window.sorting.byAssist: assistance
+
+ui.window.dateFilter.label: Relectures envoyées
+ui.window.dateFilter.today: hier
+ui.window.dateFilter.week: cette semaine
+ui.window.dateFilter.month: ce mois
+ui.window.dateFilter.allTime: depuis le début
+ui.window.filterButtonLabel: Filtres
+ui.window.filterTab.title: FILTRER
+ui.window.filterTab.all: Tous
+ui.window.filterTab.any: N'importe lequel
+ui.window.filterTab.map: Carte :
+ui.window.filterTab.mapAll: Toutes les cartes
+ui.window.filterTab.vehicle: Véhicule :
+ui.window.filterTab.vehicleTypeAll: Tous les types
+ui.window.filterTab.vehicleTypeHeavy: Char lourd
+ui.window.filterTab.vehicleTypeMedium: Char moyen
+ui.window.filterTab.vehicleTypeLight: Char léger
+ui.window.filterTab.vehicleTypeATSPG: Chasseur de chars
+ui.window.filterTab.vehicleTypeSPG: Canon automoteur
+ui.window.filterTab.vehicleLevel: rang
+ui.window.filterTab.battleType: Type de bataille :
+ui.window.filterTab.battleResult: Résultats de la bataille :
+ui.window.filterTab.otherLabel: Divers :
+ui.window.filterTab.otherShowFavorite: Relectures favorites
+
+ui.window.paginatorLabel: Pages
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: première
+ui.window.paginatorLast: dernière
+
+ui.window.tabsFilter: Filtrer
+ui.window.tabsInfo: Infos
+
+
+
+ui.uploader.windowTitle: Envoyer la relecture sur WoTReplays.eu
+ui.uploader.labelStatus: Statut
+ui.uploader.statusNotFound: Relecture introuvable
+ui.uploader.statusWrongAccount: Vous ne pouvez envoyer que votre relecture !
+ui.uploader.statusNotAccount: Lancez le jeu pour lire la relecture
+ui.uploader.statusErrorOccure: Erreur
+ui.uploader.statusFound: La relecture est introuvable
+ui.uploader.statusLoading: Envoi en cours
+ui.uploader.statusConnectionError: Erreur de connexion !
+ui.uploader.statusLoadingComplete: En attente de la réponse du serveur
+ui.uploader.statusSucces: Votre fichier a bien été envoyé sur WoTReplays.eu
+ui.uploader.linkLabel: lien
+ui.uploader.error0: Erreur système du site : 
+ui.uploader.error1: Fichier introuvable : 
+ui.uploader.error2: Erreur non traitée : 
+ui.uploader.error3: Utilisateur introuvable : 
+ui.uploader.error4: Requête vide : 
+ui.uploader.error5: Erreur lors de l'enregistrement de la relecture : 
+ui.uploader.error6: La relecture que vous essayez d'envoyer a été enregistrée par un joueur différent.
+ui.uploader.responceLabel: Votre relecture a bien été envoyée sur WoTReplays.eu ! <br />Aller sur le site : {{url}} <br />Télécharger le fichier : {{directLink}}
+ui.uploader.progressLabel:  ko sur {{value}} ko
+ui.uploader.buttonStartUpload: Commencer l'envoi
+ui.uploader.inputTitle: Nom (jusqu'à 100 caractères)
+ui.uploader.inputDescription: Description (jusqu'à 500 caractères)
+ui.uploader.checkBoxIsSecretLabel: Relecture cachée
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Relecture cachée{/HEADER}{BODY}Vous êtes le seul à pouvoir regarder cette relecture.{/BODY}
+
+
+
+ui.waiting.prepareDB: Préparation de la liste. Veuillez patienter...
+ui.waiting.updatingList: Envoi de la liste
+
+
+
+ui.action.showResults: Afficher les résultats
+ui.action.play: Lire
+ui.action.upload: Envoyer sur WoTReplays.eu
+ui.action.favoriteAdd: Ajouter aux favoris
+ui.action.favoriteDelete: Retirer des favoris
+ui.action.delete: Retirer
+
+
+
+ui.popup.button.yes: Oui
+ui.popup.button.no: Non
+ui.popup.button.close: Fermer
+ui.popup.play.title: Confirmer le redémarrage du jeu
+ui.popup.play.message: Redémarrez le jeu pour regarder la relecture. Voulez-vous continuer ?
+ui.popup.delete.title: Supprimer la relecture
+ui.popup.delete.message: Êtes-vous sûr de vouloir supprimer le fichier : %s ?
+
+
+modsListApi.title: Liste des modifications
+modsListApi.info: {HEADER}Liste des modifications{/HEADER}{BODY}Gérez facilement vos modifications{/BODY}
+modsListApi.name: Gestionnaire des relectures
+modsListApi.description: Ce simple gestionnaire des relectures vous permet de regarder les relectures, de voir les résultats de la bataille et d'envoyer vos relectures favorites sur WoTReplays.eu
+
+
