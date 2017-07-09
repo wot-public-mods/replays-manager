@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Defeat
 ui.window.battleResultDraw: Draw
 ui.window.buttonShowResult: Show battle results
 ui.window.buttonPlay: Play
-ui.window.buttonUpload: Upload to WoTReplays.ru
+ui.window.buttonUpload: Upload to WoTReplays.eu
 ui.window.buttonRemove: Delete
 ui.window.buttonApply: Apply
 ui.window.buttonReset: Reset
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Upload Replay to WoTReplays.ru
+ui.uploader.windowTitle: Upload Replay to WoTReplays.eu
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Replay not found
 ui.uploader.statusWrongAccount: You can upload only your replay!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Replay not found
 ui.uploader.statusLoading: Uploading
 ui.uploader.statusConnectionError: Connection error!
 ui.uploader.statusLoadingComplete: Awaiting server reply
-ui.uploader.statusSucces: Your file was successfully uploaded to WoTReplays.ru
+ui.uploader.statusSucces: Your file was successfully uploaded to WoTReplays.eu
 ui.uploader.linkLabel: link
 ui.uploader.error0: Website system error: 
 ui.uploader.error1: File not found: 
@@ -85,7 +85,7 @@ ui.uploader.error3: User not found:
 ui.uploader.error4: Empty query: 
 ui.uploader.error5: Error saving the replay: 
 ui.uploader.error6: The replay you are trying to upload was recorded by a different player.
-ui.uploader.responceLabel: Your replay was successfully uploaded to WoTReplays.ru! <br />Go to the website: {{url}} <br />Download the file: {{directLink}}
+ui.uploader.responceLabel: Your replay was successfully uploaded to WoTReplays.eu! <br />Go to the website: {{url}} <br />Download the file: {{directLink}}
 ui.uploader.progressLabel:  Kb of {{value}} Kb
 ui.uploader.buttonStartUpload: Start uploading
 ui.uploader.inputTitle: Name (up to 100 characters)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Updating the list
 
 ui.action.showResults: Show results
 ui.action.play: Play
-ui.action.upload: Upload to WoTReplays.ru
+ui.action.upload: Upload to WoTReplays.eu
 ui.action.favoriteAdd: Add to favorites
 ui.action.favoriteDelete: Remove from favorites
 ui.action.delete: Remove
@@ -121,6 +121,6 @@ ui.popup.delete.message: Are you sure you want to delete the file: %s?
 modsListApi.title: Modifications List
 modsListApi.info: {HEADER}Modifications List{/HEADER}{BODY}Managing your modifications easily{/BODY}
 modsListApi.name: Replay Manager
-modsListApi.description: This simple replay manager allows you to watch replays, view battle results, and upload your replays to WoTReplays.ru
+modsListApi.description: This simple replay manager allows you to watch replays, view battle results, and upload your replays to WoTReplays.eu
 
 
