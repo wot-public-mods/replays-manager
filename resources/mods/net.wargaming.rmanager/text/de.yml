@@ -1,7 +1,7 @@
 ﻿
-ui.window.title: Wiederholungs-Manager
-ui.window.tabsOwn: Meine Wiederholungen
-ui.window.placeholder: Wählen Sie eine Wiederholung in der Liste aus, um Informationen anzeigen zu lassen
+ui.window.title: Replay Manager
+ui.window.tabsOwn: Meine Replays
+ui.window.placeholder: Wählen Sie ein Replay in der Liste aus, um Informationen anzeigen zu lassen.
 ui.window.frags: Abschüsse
 ui.window.damage: Schaden
 ui.window.credits: Kreditpunkte
@@ -31,7 +31,7 @@ ui.window.sorting.byKills: Fahrzeuge zerstört
 ui.window.sorting.bySpotted: Fahrzeuge aufgeklärt
 ui.window.sorting.byAssist: Unterstützung
 
-ui.window.dateFilter.label: Wiederholungen für
+ui.window.dateFilter.label: Replays für
 ui.window.dateFilter.today: heute
 ui.window.dateFilter.week: Woche
 ui.window.dateFilter.month: Monat
@@ -53,7 +53,7 @@ ui.window.filterTab.vehicleLevel: Stufe
 ui.window.filterTab.battleType: Gefechtstyp:
 ui.window.filterTab.battleResult: Gefechtsergebnisse:
 ui.window.filterTab.otherLabel: Verschiedenes:
-ui.window.filterTab.otherShowFavorite: Lieblings-Wiederholungen
+ui.window.filterTab.otherShowFavorite: Lieblings Replays
 
 ui.window.paginatorLabel: Seiten
 ui.window.paginatorPrev: <<
@@ -66,13 +66,13 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Wiederholung auf WoTReplays.eu hochladen
+ui.uploader.windowTitle: Replay auf WoTReplays.eu hochladen
 ui.uploader.labelStatus: Status
-ui.uploader.statusNotFound: Wiederholung nicht gefunden
-ui.uploader.statusWrongAccount: Sie können nur Ihre Wiederholung hochladen!
-ui.uploader.statusNotAccount: Starten Sie das Spiel, um die Wiederholung zu laden
+ui.uploader.statusNotFound: Replay nicht gefunden
+ui.uploader.statusWrongAccount: Sie können nur Ihr Replay hochladen!
+ui.uploader.statusNotAccount: Starten Sie das Spiel um das Replay abzuspielen
 ui.uploader.statusErrorOccure: Fehler
-ui.uploader.statusFound: Wiederholung nicht gefunden
+ui.uploader.statusFound: Replay nicht gefunden
 ui.uploader.statusLoading: Lade hoch
 ui.uploader.statusConnectionError: Verbindungsfehler!
 ui.uploader.statusLoadingComplete: Warte auf Serverantwort
@@ -83,15 +83,15 @@ ui.uploader.error1: Datei nicht gefunden:
 ui.uploader.error2: Unverarbeiteter Fehler: 
 ui.uploader.error3: Benutzer nicht gefunden: 
 ui.uploader.error4: Leere Anfrage: 
-ui.uploader.error5: Fehler beim Speichern der Wiederholung: 
-ui.uploader.error6: Sie versuchen, eine Wiederholung hochzuladen, die von einem anderen Spieler aufgezeichnet wurde.
-ui.uploader.responceLabel: Ihre Wiederholung wurde erfolgreich auf WoTReplays.eu hochgeladen! <br />Zur Website gehen: {{url}} <br />Die Datei herunterladen: {{directLink}}
+ui.uploader.error5: Fehler beim Speichern des Replays: 
+ui.uploader.error6: Sie versuchen, ein Replay hochzuladen, das von einem anderen Spieler aufgezeichnet wurde.
+ui.uploader.responceLabel: Ihr Replay wurde erfolgreich auf WoTReplays.eu hochgeladen! <br />Zur Website gehen: {{url}} <br />Die Datei herunterladen: {{directLink}}
 ui.uploader.progressLabel:  kB of {{value}} kB
 ui.uploader.buttonStartUpload: Upload starten
 ui.uploader.inputTitle: Name (max. 100 Zeichen)
 ui.uploader.inputDescription: Beschreibung (max. 500 Zeichen)
-ui.uploader.checkBoxIsSecretLabel: Versteckte Wiederholung
-ui.uploader.checkBoxIsSecretInfo: {HEADER}Versteckte Wiederholung{/HEADER}{BODY}Nur Sie können diese Wiederholung ansehen.{/BODY}
+ui.uploader.checkBoxIsSecretLabel: Verstecktes Replay
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Verstecktes  Replay{/HEADER}{BODY}Nur Sie können dieses Replay anschauen.{/BODY}
 
 
 
@@ -113,14 +113,14 @@ ui.popup.button.yes: Ja
 ui.popup.button.no: Nein
 ui.popup.button.close: Schließen
 ui.popup.play.title: Neustart des Spiels bestätigen
-ui.popup.play.message: Das Spiel muss zum ansehen der Wiederholung neu gestartet werden. Fortfahren?
-ui.popup.delete.title: Wiederholung löschen
+ui.popup.play.message: Das Spiel muss zum ansehen des Replays neu gestartet werden. Fortfahren?
+ui.popup.delete.title: Replay löschen
 ui.popup.delete.message: Wollen Sie die Datei %s löschen?
 
 
 modsListApi.title: Modifikationsliste
 modsListApi.info: {HEADER}Modifikationsliste{/HEADER}{BODY}Verwalten Sie spielend einfach Ihre Modifikationen{/BODY}
-modsListApi.name: Wiederholungs-Manager
-modsListApi.description: Mit diesem einfachen Wiederholungs-Manager können Sie Wiederholungen ansehen, Gefechtsergebnisse betrachten und Ihre Wiederholungen auf  WoTReplays.eu hochladen
+modsListApi.name: Replay Manager
+modsListApi.description: Mit diesem einfachen Replay Manager können Sie Replays ansehen, Gefechtsergebnisse betrachten und Ihre Replays auf WoTReplays.eu hochladen
 
 
