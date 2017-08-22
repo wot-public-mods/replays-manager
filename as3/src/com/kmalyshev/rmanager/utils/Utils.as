@@ -41,11 +41,8 @@
 		{
 			var result:* = null;
 			result = "#menu:loading/battleTypes/" + battleTypeNum;
-			if (MENU.LOADING_BATTLETYPES_ENUM.indexOf(result) != -1) {
-				result = App.utils.locale.makeString(result);
-				return result;
-			}
-			return "";
+			result = App.utils.locale.makeString(result);
+			return result;
 		}
 		
 		public static function truncateString(str:String, maxLength:Number, addAfter:String = "..."):String

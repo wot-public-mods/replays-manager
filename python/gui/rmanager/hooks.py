@@ -1,14 +1,15 @@
 
+from BattleReplay import BattleReplay
 import BigWorld
 from gui.app_loader.loader import g_appLoader, _AppLoader
-from gui.Scaleform.daapi.view.login.LoginView import LoginView
-from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
-from gui.Scaleform.daapi.view.lobby.user_cm_handlers import AppealCMHandler
-from gui.Scaleform.locale.MENU import MENU
-from gui.Scaleform.daapi.view.lobby.user_cm_handlers import USER
-from BattleReplay import BattleReplay
-from helpers.ServerSettings import _ClanProfile, RoamingSettings, _SpgRedesignFeatures
+from gui.app_loader.settings import APP_NAME_SPACE
 from gui.lobby_context import LobbyContext
+from gui.Scaleform.daapi.view.lobby.user_cm_handlers import AppealCMHandler, USER
+from gui.Scaleform.daapi.view.login.LoginView import LoginView
+from gui.Scaleform.framework.managers.loaders import ViewLoadParams
+from gui.Scaleform.locale.MENU import MENU
+from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
+from helpers.ServerSettings import _ClanProfile, RoamingSettings, _SpgRedesignFeatures
 from debug_utils import LOG_DEBUG, LOG_ERROR
 from Event import Event
 
@@ -22,10 +23,16 @@ from gui.rmanager.rmanager_constants import  REPLAYS_MANAGER_WINDOW_ALIAS, REPLA
 __all__ = ( )
 
 # adding menu item to modslist
-add = g_modsListApi.addModification
-add(id = "rmanager", name = l10n('modsListApi.name'), description = l10n('modsListApi.description'), \
-	icon = "gui/maps/rmanager/modsListApi.png", enabled = True,	login = True, lobby = True, \
-	callback = lambda : g_appLoader.getDefLobbyApp().loadView(REPLAYS_MANAGER_WINDOW_ALIAS))
+def showManager():
+	"""fire load popover view on button click"""
+	app = g_appLoader.getApp(APP_NAME_SPACE.SF_LOBBY)
+	if not app:
+		return
+	app.loadView(ViewLoadParams(REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_WINDOW_ALIAS), {})
+
+g_modsListApi.addModification(id = 'rmanager', name = l10n('modsListApi.name'), description = l10n('modsListApi.description'), \
+	enabled = True, callback = showManager, login = True, lobby = True, icon = 'gui/maps/rmanager/modsListApi.png' )
+
 
 # app finished
 @override(_AppLoader, 'fini')

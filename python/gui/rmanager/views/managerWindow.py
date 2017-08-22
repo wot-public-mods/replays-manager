@@ -40,7 +40,7 @@ class ReplaysManagerWindowMeta(AbstractWindowView):
 	
 class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 	
-	def __init__(self):
+	def __init__(self, ctx = None):
 		super(ReplaysManagerWindow, self).__init__()
 		self._settings = DEFAULT_SETTINGS
 		self._sortedList = None

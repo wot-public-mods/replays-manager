@@ -191,9 +191,10 @@
 		
 		public static function ConfigureBattleTypeDropdown(menu:DropdownMenu):void
 		{
+			
 			var _fl:Array = new Array();
 			_fl.push({label: STRINGS.l10n('ui.window.filterTab.all'), data: -1});
-			for (var i:int = 0; i < MENU.LOADING_BATTLETYPES_ENUM.length; i++)
+			for (var i:int = 0; i < 17; i++)
 			{
 				var labelText:String = Utils.getBattleTypeLocalString(i.toString());
 				if(labelText != "") {

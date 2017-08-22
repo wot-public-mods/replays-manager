@@ -6,8 +6,8 @@ from gui.rmanager.views.managerWindow import ReplaysManagerWindow
 from gui.rmanager.views.uploaderWindow import ReplaysManagerUploader
 
 def getViewSettings():
-	return (ViewSettings(REPLAYS_MANAGER_WINDOW_ALIAS, ReplaysManagerWindow, 'ReplaysManagerWindow.swf', ViewTypes.WINDOW, None, ScopeTemplates.GLOBAL_SCOPE),
-			ViewSettings(REPLAYS_MANAGER_UPLOADER_ALIAS, ReplaysManagerUploader, 'ReplaysManagerUpload.swf', ViewTypes.TOP_WINDOW, None, ScopeTemplates.GLOBAL_SCOPE), )
+	return (ViewSettings(REPLAYS_MANAGER_WINDOW_ALIAS, ReplaysManagerWindow, 'ReplaysManagerWindow.swf', ViewTypes.WINDOW, None, ScopeTemplates.GLOBAL_SCOPE, isModal=True, canClose=True, canDrag=False),
+			ViewSettings(REPLAYS_MANAGER_UPLOADER_ALIAS, ReplaysManagerUploader, 'ReplaysManagerUpload.swf', ViewTypes.TOP_WINDOW, None, ScopeTemplates.GLOBAL_SCOPE, isModal=True, canClose=True, canDrag=True), )
 
 for item in getViewSettings():
 	g_entitiesFactories.addSettings(item)

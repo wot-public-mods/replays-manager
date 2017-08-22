@@ -10,15 +10,15 @@ ANIMATE_PATH = 'C:\\Program Files\\Adobe\\Adobe Animate CC 2015\\Animate.exe'
 
 # game data
 COPY_INTO_GAME = True
-GAME_VERSION = '0.9.19.1.2'
-GAME_FOLDER = 'Z:/wot'
+GAME_VERSION = '0.9.20.0'
+GAME_FOLDER = 'E:/wot_ct'
 
 # modification data
 MODIFICATION_AUTHOR = 'net.wargaming'
 MODIFICATION_DESCRIPTION = "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site"
 MODIFICATION_IDENTIFICATOR = 'replaysmanager'
 MODIFICATION_NAME = "Replays Manager"
-MODIFICATION_VERSION = '3.1.2'
+MODIFICATION_VERSION = '3.2.0'
 
 # result package name
 PACKAGE_NAME = '{author}.{name}_{version}.wotmod'.format( author = MODIFICATION_AUTHOR, \
