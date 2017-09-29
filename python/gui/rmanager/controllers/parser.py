@@ -103,14 +103,10 @@ class ParserController(object):
 				result_dict['common_data']['dateTime'] = date_string		
 				result_dict['common_data']['timestamp'] = int(time.mktime(datetime.strptime(date_string, "%d.%m.%Y %H:%M:%S").timetuple()))
 				result_dict['common_data']['mapName'] = result_blocks['data']['common']['mapName']
-				result_dict['common_data']['mapDisplayName'] = result_blocks['data']['common']['mapDisplayName']			
+				result_dict['common_data']['mapDisplayName'] = result_blocks['data']['common']['mapDisplayName']
 				result_dict['common_data']['playerVehicle'] = result_blocks['data']['common']['playerVehicle']
 				result_dict['common_data']['tankInfo'] = result_blocks['data']['common']['vehicleInfo']
-				if result_blocks['data']['common']['battleType'] == 22:
-					result_dict['common_data']['battleType'] = 17
-				else:
-					result_dict['common_data']['battleType'] = result_blocks['data']['common']['battleType']
-				
+				result_dict['common_data']['battleType'] = result_blocks['data']['common']['battleType']
 				result_dict['common_data']['canShowBattleResults'] = versionTuple(result_blocks['data']['common']['clientVersionFromExe']) >= CURRENT_GAME_VERSION
 			else:
 				return None
@@ -148,7 +144,7 @@ class ParserController(object):
 					hasBattleResults = False
 			else:
 				hasBattleResults = False 
-				
+			
 			result_dict['common_data']['hasBattleResults'] = hasBattleResults
 			
 			if not hasBattleResults:
@@ -160,7 +156,13 @@ class ParserController(object):
 				result_dict['common_data']['kills'] = -10
 				result_dict['common_data']['damageAssistedRadio'] = -10
 				result_dict['common_data']['spotted'] = -10
-				
+			
+			if result_dict['common_data']['battleType'] not in [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]:
+				result_dict['common_data']['battleType'] = 1
+			
+			if result_dict['common_data']['battleType'] == 18:
+				result_dict['common_data']['battleType'] = 4
+			
 			return result_dict
 		except:
 			LOG_ERROR('ParserController.__getProcessedReplayData')

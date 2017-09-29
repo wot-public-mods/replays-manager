@@ -9,7 +9,7 @@ from gui.Scaleform.daapi.view.login.LoginView import LoginView
 from gui.Scaleform.framework.managers.loaders import ViewLoadParams
 from gui.Scaleform.locale.MENU import MENU
 from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
-from helpers.ServerSettings import _ClanProfile, RoamingSettings, _SpgRedesignFeatures
+from helpers.server_settings import _ClanProfile, RoamingSettings, _SpgRedesignFeatures
 from debug_utils import LOG_DEBUG, LOG_ERROR
 from Event import Event
 
@@ -85,9 +85,9 @@ def showLoginPage(baseMethod, baseObject):
 
 # track stat
 from gui.rmanager.data_collector import g_dataCollector
-g_dataCollector.addSoloMod('replays_manager', '3.0.9')
+g_dataCollector.addSoloMod('replays_manager', '3.2.2')
 
-# Add missing battle result fields (creditsReplay, xpReply, freeXpReplay, goldReplay, fortResource)
+# Add missing battle result fields (creditsReplay, xpReply, freeXpReplay, goldReplay, fortResource, crystalReplay)
 # See BattleReplay.py onBattleResultsReceived method
 
 import struct
@@ -164,6 +164,11 @@ def genFortResourceReplay(results = {}):
 	replay.append(makeStepCompDescr(ValueReplay.TAG, makeIndex(nameToIndex('subtotalFortResource'), 0, 0)))
 	return pack(replay)
 
+def genCrystalReplay(results = {}):
+	replay = []
+	replay.append(makeStepCompDescr(ValueReplay.SET, makeIndex(nameToIndex('originalCrystal'), 0, 0)))
+	return pack(replay)
+
 @override(_EconomicsRecordsChains, "_addMoneyResults")
 def _EconomicsRecordsChains_addMoneyResults(baseMethod, baseObject, connector, results):
 	if 'creditsReplay' in results and not results['creditsReplay']:
@@ -180,6 +185,12 @@ def _EconomicsRecordsChains_addXPResults(baseMethod, baseObject, connector, resu
 		results['xpReplay'] = genXPReplay(results)
 	if 'freeXPReplay' in results and not results['freeXPReplay']:
 		results['freeXPReplay'] = genFreeXPReplay(results)
+	return baseMethod(baseObject, connector, results)
+
+@override(_EconomicsRecordsChains, "_addCrystalResults")
+def _EconomicsRecordsChains_addCrystalResults(baseMethod, baseObject, connector, results):
+	if 'crystalReplay' in results and not results['crystalReplay']:
+		results['crystalReplay'] = genCrystalReplay(results)
 	return baseMethod(baseObject, connector, results)
 
 #@override(_EconomicsRecordsChains, "_addFortResourceResults")
