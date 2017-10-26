@@ -11,7 +11,7 @@ ANIMATE_PATH = 'C:\\Program Files\\Adobe\\Adobe Animate CC 2015\\Animate.exe'
 # game data
 COPY_INTO_GAME = True
 GAME_VERSION = '0.9.20.1'
-GAME_FOLDER = 'E:/wot_ct'
+GAME_FOLDER = 'E:/wot'
 
 # modification data
 MODIFICATION_AUTHOR = 'net.wargaming'
