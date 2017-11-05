@@ -2,7 +2,7 @@ import os
 import BigWorld
 import BattleReplay
 from gui import DialogsInterface
-from gui.Scaleform.daapi.view.dialogs import SimpleDialogMeta, ConfirmDialogButtons, InfoDialogButtons
+from gui.Scaleform.daapi.view.dialogs import SimpleDialogMeta, ConfirmDialogButtons, InfoDialogButtons, DIALOG_BUTTON_ID
 from gui.Scaleform.daapi.settings.views import VIEW_ALIAS
 from gui.Scaleform.framework.managers.context_menu import AbstractContextMenuHandler
 from gui.Scaleform.framework.managers.loaders import ViewLoadParams
@@ -20,6 +20,11 @@ from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.lang import l10n
 from gui.rmanager.rmanager_constants import REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS, REPLAY_FLAG_FILE, REPLAYS_MANAGER_UPLOADER_ALIAS
+
+class CustomDialogButtons(ConfirmDialogButtons):
+	
+	def getLabels(self):
+		return [ {'id': DIALOG_BUTTON_ID.SUBMIT, 'label': self._submit, 'focused': False}, {'id': DIALOG_BUTTON_ID.CLOSE, 'label': self._close, 'focused': True } ]
 
 class ActionsController(object):
 	
@@ -82,10 +87,8 @@ class ActionsController(object):
 			LOG_DEBUG('ActionsController.__playBattleReplay => isReplayPlayed: %s' % self.__isReplayPlayed)
 			if self.__isReplayPlayed or not self.__tryToPlay(replayName):
 				def getPlayConfirmDialogMeta():
-					title = l10n('ui.popup.play.title')
-					message = l10n('ui.popup.play.message')
-					buttons = ConfirmDialogButtons(l10n('ui.popup.button.yes'), l10n('ui.popup.button.no'))
-					return SimpleDialogMeta(message=message, title=title, buttons=buttons)
+					buttons = CustomDialogButtons(l10n('ui.popup.button.yes'), l10n('ui.popup.button.no'))
+					return SimpleDialogMeta(message=l10n('ui.popup.play.message'), title=l10n('ui.popup.play.title'), buttons=buttons)
 					
 				def dialogCallback(result):
 					if result:
@@ -117,10 +120,8 @@ class ActionsController(object):
 				else:
 					
 					def getErrorInfoDialogMeta():
-						title = l10n('ui.uploader.statusErrorOccure')
-						message = l10n('ui.uploader.status%s' % g_controllers.uploader.status)
 						buttons = InfoDialogButtons(l10n('ui.popup.button.close'))
-						return SimpleDialogMeta(message=message, title=title, buttons=buttons)
+						return SimpleDialogMeta(message=l10n('ui.uploader.status%s' % g_controllers.uploader.status), title=l10n('ui.uploader.statusErrorOccure'), buttons=buttons)
 					DialogsInterface.showDialog(getErrorInfoDialogMeta(), lambda *args: None)
 		
 		except:
@@ -136,11 +137,10 @@ class ActionsController(object):
 			LOG_CURRENT_EXCEPTION()
 	
 	def __removeBattleReplay(self, replayName):
+		
 		def getConfirmDialogMeta():
-			title = l10n('ui.popup.delete.title')
-			message = l10n('ui.popup.delete.message') % replayName			
-			buttons = ConfirmDialogButtons(l10n('ui.popup.button.yes'), l10n('ui.popup.button.no'))
-			return SimpleDialogMeta(message=message, title=title, buttons=buttons)
+			buttons = CustomDialogButtons(l10n('ui.popup.button.yes'), l10n('ui.popup.button.no'))
+			return SimpleDialogMeta(message=l10n('ui.popup.delete.message') % replayName, title=l10n('ui.popup.delete.title'), buttons=buttons)
 			
 		def dialogCallback(result):
 			if result:
