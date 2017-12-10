@@ -16,7 +16,7 @@ REPLAYS_MANAGER_UPLOADER_ALIAS = 'ReplaysManagerUploadWindow'
 
 REPLAY_CM_HANDLER_TYPE = 'replayCMHandler'
 REPLAY_FLAG_FILE = 'replay_need_to_play.killme'
-DB_VERSION = 4
+DB_VERSION = 5
 DB_FILENAME = "./replays/replays_manager/database"
 REPLAYS_PATH = os.getcwd() + '/replays/'
 UPLOAD_REPLAY_TEMP = 'temp_upload_data.dat'
