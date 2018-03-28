@@ -5,13 +5,13 @@
 	},
 	"game": {
 		"folder": "E:\\wot\\common_test",
-		"version": "0.9.22.0"
+		"version": "1.0.0"
 	},
 	"info": {
 		"id": "replaysmanager",
 		"author": "net.wargaming",
 		"name": "Replays Manager",
 		"description": "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site",
-		"version": "3.2.6"
+		"version": "3.2.7"
 	}
 }
