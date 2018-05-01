@@ -15,6 +15,7 @@ from helpers import dependency
 from skeletons.gui.battle_results import IBattleResultsService
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from skeletons.gui.game_control import IRankedBattlesController
+from skeletons.gui.game_control import IEpicBattleMetaGameController
 
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
@@ -29,6 +30,7 @@ class CustomDialogButtons(ConfirmDialogButtons):
 class ActionsController(object):
 	
 	rankedController = dependency.descriptor(IRankedBattlesController)
+	epicMetaGameCtrl = dependency.descriptor(IEpicBattleMetaGameController)
 	battleResults = dependency.descriptor(IBattleResultsService)
 	
 	def __init__(self):
@@ -69,13 +71,26 @@ class ActionsController(object):
 		try:
 			replayData = g_controllers.database.getReplayResultData(replayName)
 			if replayData:
+				
 				arenaUniqueID = replayData.get('arenaUniqueID', 0)
+				
 				LOG_DEBUG("ActionsController.__showBattleResults => replayData: %s", replayData)
+				
 				if not self.battleResults.areResultsPosted(arenaUniqueID):
+					
 					rankedControllerABRWS = self.rankedController._RankedBattlesController__arenaBattleResultsWasShown
 					if arenaUniqueID not in rankedControllerABRWS:
 						rankedControllerABRWS.add(arenaUniqueID)
+					
+					if not hasattr(self.epicMetaGameCtrl, '_arenaBattleResultsWasShown'):
+						self.epicMetaGameCtrl._arenaBattleResultsWasShown = set()
+					
+					epicMetaGameCtrlABRWS = self.epicMetaGameCtrl._arenaBattleResultsWasShown
+					if arenaUniqueID not in epicMetaGameCtrlABRWS:
+						epicMetaGameCtrlABRWS.add(arenaUniqueID)
+					
 					self.battleResults.postResult(replayData, False)
+
 				g_eventBus.handleEvent(events.LoadViewEvent(VIEW_ALIAS.BATTLE_RESULTS, getViewName(VIEW_ALIAS.BATTLE_RESULTS, str(arenaUniqueID)), ctx={'arenaUniqueID': arenaUniqueID}), EVENT_BUS_SCOPE.LOBBY)
 				LOG_DEBUG('ActionsController.__showBattleResults => replayName: %s' % replayName)
 		except:
