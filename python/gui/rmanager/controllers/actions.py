@@ -5,7 +5,7 @@ from gui import DialogsInterface
 from gui.Scaleform.daapi.view.dialogs import SimpleDialogMeta, ConfirmDialogButtons, InfoDialogButtons, DIALOG_BUTTON_ID
 from gui.Scaleform.daapi.settings.views import VIEW_ALIAS
 from gui.Scaleform.framework.managers.context_menu import AbstractContextMenuHandler
-from gui.Scaleform.framework.managers.loaders import ViewLoadParams
+from gui.Scaleform.framework.managers.loaders import SFViewLoadParams
 from gui.Scaleform.framework.entities.EventSystemEntity import EventSystemEntity
 from gui.shared import events, g_eventBus, EVENT_BUS_SCOPE
 from gui.shared.utils.functions import getViewName
@@ -131,7 +131,7 @@ class ActionsController(object):
 				}
 				noError = g_controllers.uploader.prepare(replayName, replayData.get('playerID'), replayData.get('playerName'))
 				if noError:
-					g_appLoader.getDefLobbyApp().loadView(ViewLoadParams(REPLAYS_MANAGER_UPLOADER_ALIAS, REPLAYS_MANAGER_UPLOADER_ALIAS))
+					g_appLoader.getDefLobbyApp().loadView(SFViewLoadParams(REPLAYS_MANAGER_UPLOADER_ALIAS))
 				else:
 					
 					def getErrorInfoDialogMeta():

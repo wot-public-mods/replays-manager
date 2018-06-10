@@ -6,7 +6,7 @@ from gui.app_loader.settings import APP_NAME_SPACE
 from gui.lobby_context import LobbyContext
 from gui.Scaleform.daapi.view.lobby.user_cm_handlers import AppealCMHandler, USER
 from gui.Scaleform.daapi.view.login.LoginView import LoginView
-from gui.Scaleform.framework.managers.loaders import ViewLoadParams
+from gui.Scaleform.framework.managers.loaders import SFViewLoadParams
 from gui.Scaleform.locale.MENU import MENU
 from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
 from helpers.server_settings import _ClanProfile, RoamingSettings, _SpgRedesignFeatures
@@ -18,7 +18,7 @@ from gui.modsListApi import g_modsListApi
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.lang import l10n
 from gui.rmanager.utils import override
-from gui.rmanager.rmanager_constants import  REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_UPLOADER_ALIAS
+from gui.rmanager.rmanager_constants import  REPLAYS_MANAGER_WINDOW_ALIAS
 
 __all__ = ( )
 
@@ -28,7 +28,7 @@ def showManager():
 	app = g_appLoader.getApp(APP_NAME_SPACE.SF_LOBBY)
 	if not app:
 		return
-	app.loadView(ViewLoadParams(REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_WINDOW_ALIAS), {})
+	app.loadView(SFViewLoadParams(REPLAYS_MANAGER_WINDOW_ALIAS), {})
 
 g_modsListApi.addModification(id = 'rmanager', name = l10n('modsListApi.name'), description = l10n('modsListApi.description'), \
 	enabled = True, callback = showManager, login = True, lobby = True, icon = 'gui/maps/rmanager/modsListApi.png' )
@@ -76,7 +76,7 @@ def getOptions(baseMethod, baseObject, ctx = None):
 		return options
 
 # restart game if replay finished playing
-@override(BattleReplay, '_BattleReplay__showLoginPage')
+#@override(BattleReplay, '_BattleReplay__showLoginPage')
 def showLoginPage(baseMethod, baseObject):
 	from BattleReplay import g_replayCtrl
 	if g_replayCtrl._BattleReplay__isPlayingPlayList:
@@ -85,7 +85,7 @@ def showLoginPage(baseMethod, baseObject):
 
 # track stat
 from gui.rmanager.data_collector import g_dataCollector
-g_dataCollector.addSoloMod('replays_manager', '3.2.8')
+g_dataCollector.addSoloMod('replays_manager', '3.2.9')
 
 
 from gui.game_control.epic_meta_game_ctrl import EpicBattleMetaGameController
