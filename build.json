@@ -1,17 +1,17 @@
 {
 	"version": 1,
 	"software": {
-		"animate": "C:\\Program Files\\Adobe\\Adobe Animate CC 2015\\Animate.exe"
+		"animate": "C:\\Program Files\\Adobe\\Adobe Animate CC 2017\\Animate.exe"
 	},
 	"game": {
-		"folder": "E:\\wot\\common_test",
-		"version": "1.0.2.0"
+		"folder": "D:\\wot\\common_test",
+		"version": "1.1.0.0"
 	},
 	"info": {
 		"id": "replaysmanager",
 		"author": "net.wargaming",
 		"name": "Replays Manager",
 		"description": "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site",
-		"version": "3.2.9"
+		"version": "3.3.0"
 	}
 }
