@@ -136,7 +136,7 @@
 				this.updateFiltersVisible(false);
 			
 			this.btnFilters.toggleIndicator.selected = this._filtersToggle;
-			this.btnFilters.glow.visible = this._filtersToggle;
+			//this.btnFilters.glow.visible = this._filtersToggle;
 			this.btnFilters.validateNow();
 			
 		}
@@ -154,7 +154,7 @@
 			this._filtersToggle = !this._filtersToggle;
 			
 			this.btnFilters.toggleIndicator.selected = this._filtersToggle;
-			this.btnFilters.glow.visible = this._filtersToggle;
+			//this.btnFilters.glow.visible = this._filtersToggle;
 			this.btnFilters.validateNow();
 			
 			this.updateFiltersVisible(this._filtersToggle);
