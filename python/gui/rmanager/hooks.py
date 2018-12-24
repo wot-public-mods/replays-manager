@@ -15,6 +15,7 @@ from Event import Event
 
 from gui.modsListApi import g_modsListApi
 
+from gui.rmanager import __version__
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.lang import l10n
 from gui.rmanager.utils import override
@@ -61,10 +62,6 @@ def getItemByCD(baseMethod, baseObject, typeCompDescr):
 	except:
 		return 0
 
-@override(ItemsRequester, '_ItemsRequester__logBrokenSync')
-def __logBrokenSync(baseMethod, baseObject):
-	pass
-
 @override(AppealCMHandler, 'getOptions')
 def getOptions(baseMethod, baseObject, ctx = None):
 	if baseObject.prbDispatcher:
@@ -75,17 +72,10 @@ def getOptions(baseMethod, baseObject, ctx = None):
 					baseObject._makeItem(USER.VEHICLE_INFO, MENU.contextmenu(USER.VEHICLE_INFO)) ]
 		return options
 
-# restart game if replay finished playing
-#@override(BattleReplay, '_BattleReplay__showLoginPage')
-def showLoginPage(baseMethod, baseObject):
-	from BattleReplay import g_replayCtrl
-	if g_replayCtrl._BattleReplay__isPlayingPlayList:
-		return baseMethod(baseObject)
-	BigWorld.restartGame()
 
 # track stat
 from gui.rmanager.data_collector import g_dataCollector
-g_dataCollector.addSoloMod('replays_manager', '3.2.9')
+g_dataCollector.addSoloMod('replays_manager', __version__)
 
 
 from gui.game_control.epic_meta_game_ctrl import EpicBattleMetaGameController

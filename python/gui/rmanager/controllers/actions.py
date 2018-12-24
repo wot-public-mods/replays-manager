@@ -16,6 +16,7 @@ from skeletons.gui.battle_results import IBattleResultsService
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from skeletons.gui.game_control import IRankedBattlesController
 from skeletons.gui.game_control import IEpicBattleMetaGameController
+from skeletons.gui.shared import IItemsCache
 
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
@@ -32,6 +33,7 @@ class ActionsController(object):
 	rankedController = dependency.descriptor(IRankedBattlesController)
 	epicMetaGameCtrl = dependency.descriptor(IEpicBattleMetaGameController)
 	battleResults = dependency.descriptor(IBattleResultsService)
+	itemsCache = dependency.descriptor(IItemsCache)
 	
 	def __init__(self):
 		self.__isReplayPlayed = False
@@ -89,8 +91,14 @@ class ActionsController(object):
 					if arenaUniqueID not in epicMetaGameCtrlABRWS:
 						epicMetaGameCtrlABRWS.add(arenaUniqueID)
 					
-					self.battleResults.postResult(replayData, False)
-
+					if self.itemsCache.isSynced():
+						self.battleResults.postResult(replayData, False)
+					else:
+						original_isSynced = self.itemsCache.items.isSynced
+						self.itemsCache.items.isSynced = lambda *a, **kw: True
+						self.battleResults.postResult(replayData, False)
+						self.itemsCache.items.isSynced = original_isSynced
+				
 				g_eventBus.handleEvent(events.LoadViewEvent(VIEW_ALIAS.BATTLE_RESULTS, getViewName(VIEW_ALIAS.BATTLE_RESULTS, str(arenaUniqueID)), ctx={'arenaUniqueID': arenaUniqueID}), EVENT_BUS_SCOPE.LOBBY)
 				LOG_DEBUG('ActionsController.__showBattleResults => replayName: %s' % replayName)
 		except:
