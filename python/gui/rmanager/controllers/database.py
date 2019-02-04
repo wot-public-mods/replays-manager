@@ -4,6 +4,7 @@ import os
 import shelve
 import time
 import json
+from adisp import async, process
 from operator import itemgetter
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 
@@ -32,6 +33,7 @@ class DataBaseController(object):
 		self.__replayFiles = None
 		self.__state = DATABASE_STATES.FINI
 	
+	@process
 	def prepareDataBase(self):
 		LOG_DEBUG('DataBaseController.prepareDataBase')
 		g_eventsManager.onUpdatingDatabaseStart()
@@ -49,10 +51,8 @@ class DataBaseController(object):
 				if self.__database['db_version'] != DB_VERSION:
 					self.__database.close()
 					result = self.__createEmptyDataBase()
-				else:
-					result = self.__updateDataBase()
+			result = yield self.__updateDataBase()
 			self.__state = DATABASE_STATES.READY
-			return result
 		except Exception as e:
 			self.__state = DATABASE_STATES.ERROR
 			LOG_ERROR('DataBaseController.prepareDataBase')
@@ -68,10 +68,10 @@ class DataBaseController(object):
 		self.__database['existing_replays'] = list()
 		self.__database['replays_data'] = dict()
 		self.__database.close()
-		result = self.__updateDataBase()
-		return result
-		
-	def __updateDataBase(self):
+	
+	@async
+	@process
+	def __updateDataBase(self, callback):
 		LOG_DEBUG('DataBaseController.__updateDataBase')
 		replaysToParse = list()
 		replaysToRemove = list()
@@ -92,11 +92,16 @@ class DataBaseController(object):
 		LOG_DEBUG('DataBaseController.__updateDataBase removing replays', replaysToRemove)
 		if replaysToRemove:
 			self.__removeFromDataBase(replaysToRemove)
-			
-		result = self.__parseToDataBase(replaysToParse)
+		
+		result = True
+		replaysCount = len(replaysToParse)
+		for idx, replayName in enumerate(replaysToParse):
+			g_eventsManager.onParsingReplay(idx, replaysCount)
+			result = yield lambda callback : self.__parseReplayFile(replayName, callback)
 		self.__database.close()
-		return result
-			
+		
+		callback(result)
+
 	def __removeFromDataBase(self, replays):
 		for replayName in replays:
 			if replayName in self.__database['existing_replays']:
@@ -105,25 +110,25 @@ class DataBaseController(object):
 				self.__database['corrupted_replays'].remove(replayName)
 			if self.__database['replays_data'].has_key(replayName):
 				del self.__database['replays_data'][replayName]
+
 	
-	def __parseToDataBase(self, replays):
-		try:
-			replays_count = len(replays)
-			for idx, replayName in enumerate(replays):
-				g_eventsManager.onParsingReplay(idx, replays_count)
+	def __parseReplayFile(self, replayName, callback):
+		def parseReplayFile():
+			try:
 				replayData = g_controllers.parser.parseReplay(REPLAYS_PATH + replayName, replayName)
-				LOG_DEBUG('DataBaseController.__parseToDataBase: %s' % replayName)
+				LOG_DEBUG('DataBaseController.parseReplayFile: %s' % replayName)
 				if replayData:
 					self.__database['replays_data'][replayName] = replayData
 					self.__database['existing_replays'].append(replayName)
 				else:
 					self.__database['corrupted_replays'].append(replayName)
-			return True
-		except:
-			LOG_ERROR('DataBaseController.__parseToDataBase')
-			LOG_CURRENT_EXCEPTION()
-			return False
-			
+				callback(True)
+			except:
+				LOG_ERROR('DataBaseController.parseReplayFile')
+				LOG_CURRENT_EXCEPTION()
+				callback(False)
+		BigWorld.callback(0, parseReplayFile)
+	
 	def getReplaysData(self, settings):
 		LOG_DEBUG('DataBaseController.getReplaysData')
 		replaysCommonData = self.__getReplaysCommonData()

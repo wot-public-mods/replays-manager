@@ -18,7 +18,10 @@ class ReplaysManagerWindowMeta(AbstractWindowView):
 		if self._isDAAPIInited():
 			return self.flashObject.as_initFilters(mapping)
 	
-
+	def as_updateWaitingS(self, message):
+		if self._isDAAPIInited():
+			self.flashObject.as_updateWaiting(message)
+	
 	def as_setLangDataS(self, langData):
 		if self._isDAAPIInited():
 			return self.flashObject.as_setLangData(langData)
@@ -54,11 +57,13 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 		g_eventsManager.onNeedToClose += self.onWindowClose
 		g_eventsManager.onUpdatingDatabaseStop += self.__onUpdatingDatabaseStop 
 		self.__getAPIStatus()
+		g_eventsManager.onParsingReplay += self.__onParsingReplay
 	
 	def _dispose(self):
 		g_eventsManager.onNeedToUpdateReplaysList -= self.__prepareDataBase
 		g_eventsManager.onNeedToClose -= self.onWindowClose
 		g_eventsManager.onUpdatingDatabaseStop -= self.__onUpdatingDatabaseStop
+		g_eventsManager.onParsingReplay -= self.__onParsingReplay
 		super(ReplaysManagerWindow, self)._dispose()
 	
 	def updateReplaysList(self, settings, paging=False):
@@ -73,6 +78,9 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 	def __getAPIStatus(self):
 		status = yield g_controllers.uploader.apiStatus()
 		self.as_setAPIStatusS(status)
+	
+	def __onParsingReplay(self, idx, lenght):
+		self.as_updateWaitingS(l10n('ui.waiting.prepareDB') + str(' %s / %s' % (str(idx), str(lenght))))
 	
 	def __processReplaysData(self, sortedList, listLength):
 		self._sortedList = sortedList

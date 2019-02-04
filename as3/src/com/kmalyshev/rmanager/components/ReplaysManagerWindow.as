@@ -209,6 +209,18 @@
 			}
 		}
 		
+		public function as_updateWaiting(_label:String):void
+		{
+			try
+			{
+				if (waiting) waiting.setMessage(_label);
+			}
+			catch (err:Error)
+			{
+				Logger.Error("ReplaysManagerWindow::as_updateWaiting: " + err.getStackTrace());
+			}
+		}
+		
 		private function onWindowScaleYChangedHandler(param1:WindowEvent) : void
 		{
 			invalidate(WindowViewInvalidationType.POSITION_INVALID);
