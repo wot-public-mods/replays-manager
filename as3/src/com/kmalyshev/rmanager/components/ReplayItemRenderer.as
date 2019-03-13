@@ -17,6 +17,7 @@
 	public class ReplayItemRenderer extends SoundListItemRenderer
 	{
 		
+		public var hitAreaA:MovieClip;
 		public var mapIcon:UILoaderAlt;
 		public var vehicleIcon:UILoaderAlt;
 		
@@ -38,8 +39,10 @@
 		public function ReplayItemRenderer()
 		{
 			super();
-			this.mapIcon.autoSize = false;
-			this.vehicleIcon.autoSize = false;
+			this.scaleY = 1;
+			this.scaleX = 1;
+			this.preventAutosizing = true;
+			this.hitArea = this.hitAreaA;
 		}
 		
 		override protected function onDispose():void
@@ -70,10 +73,23 @@
 				Logger.Error("ReplayItemRenderer::configUI " + err.getStackTrace());
 			}
 			
+			this.vehicleIcon.autoSize = false;
+
+			this.mapIcon.autoSize = false;
+			this.mapIcon.width = 231;
+			this.mapIcon.height = 98;
+			this.mapIcon.addEventListener(UILoaderEvent.COMPLETE, handleMapIconLoaded);
+
 			if (this.data)
 			{
 				this.setup();
 			}
+		}
+		
+		private function handleMapIconLoaded():void
+		{
+			this.mapIcon.width = 231;
+			this.mapIcon.height = 98;
 		}
 		
 		override protected function draw():void

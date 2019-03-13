@@ -12,6 +12,7 @@
 	import net.wg.gui.components.controls.UILoaderAlt;
 	import net.wg.gui.components.controls.SoundButton;
 	import net.wg.gui.cyberSport.controls.CSVehicleButton;
+	import net.wg.gui.events.UILoaderEvent;
 	import net.wg.gui.rally.vo.VehicleVO;
 	
 	import com.kmalyshev.rmanager.lang.STRINGS;
@@ -63,6 +64,10 @@
 			this._dashTF.size = 12;
 			
 			this.mapIcon.autoSize = false;
+			this.mapIcon.width = 231;
+			this.mapIcon.height = 98;
+			this.mapIcon.addEventListener(UILoaderEvent.COMPLETE, handleMapIconLoaded);
+
 			this.vehicleIcon.enabled = false;
 			this.frags.width = this.damage.width = this.credits.width = this.xp.width = this.spotted.width = this.assist.width = 235;
 			this.frags.label = STRINGS.l10n('ui.window.frags');
@@ -148,6 +153,12 @@
 			{
 				this.setup();
 			}
+		}
+		
+		private function handleMapIconLoaded():void
+		{
+			this.mapIcon.width = 231;
+			this.mapIcon.height = 98;
 		}
 		
 		private function setup():void
