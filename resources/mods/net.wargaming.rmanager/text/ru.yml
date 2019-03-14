@@ -1,0 +1,49 @@
+
+ui.waiting.prepareDB: Подготовка списка. Пожалуйста, подождите...
+ui.waiting.updatingList: Обновление списка
+
+ui.action.showResults: Показать результаты
+ui.action.play: Воспроизвести
+ui.action.upload: Загрузить на WoTReplays
+ui.action.favoriteAdd: Добавить в избранное
+ui.action.favoriteDelete: Убрать из избранного
+ui.action.delete: Удалить
+
+ui.popup.button.yes: Да
+ui.popup.button.no: Нет
+ui.popup.button.close: Закрыть
+ui.popup.play.title: Подтверждение перезагрузки игры
+ui.popup.play.message: Для воспроизведения реплея необходимо перезагрузить игру. Перезагрузить?
+ui.popup.delete.title: Подтверждение удаления реплея
+ui.popup.delete.message: Вы действительно хотите удалить реплей: %s?
+
+
+ui.uploader.windowTitle: Загрузка реплея на WoTReplays.ru
+ui.uploader.labelStatus: Статус
+ui.uploader.statusNotFound: Реплей не найден
+ui.uploader.statusWrongAccount: Загрузить можно только свой реплей!
+ui.uploader.statusNotAccount: Для загрузки войдите в игру!
+ui.uploader.statusErrorOccure: Произошла ошибка!
+ui.uploader.statusFound: Реплей найден
+ui.uploader.statusLoading: Идет загрузка
+ui.uploader.statusConnectionError: Ошибка соединения!
+ui.uploader.statusLoadingComplete: Ожидание ответа от сервера
+ui.uploader.statusSucces: Ваш реплей был успешно отправлен на WoTReplays.ru!
+ui.uploader.linkLabel: ссылка
+ui.uploader.error0: Cистемная ошибка сайта: 
+ui.uploader.error1: Реплей не найден: 
+ui.uploader.error2: Необработанная ошибка: 
+ui.uploader.error3: Пользователь не найден: 
+ui.uploader.error4: Пустой запрос: 
+ui.uploader.error5: Ошибка сохранения реплея: 
+ui.uploader.error6: Реплей записан не тем игроком, из-под которого происходит загрузка.
+ui.uploader.responceLabel: Ваш реплей успешно загружен на сайт WoTReplays.ru! <br />Перейти на сайт: {{url}} <br />Скачать файл: {{directLink}}
+ui.uploader.progressLabel:  Кб из {{value}} Кб
+ui.uploader.buttonStartUpload: Начать загрузку
+ui.uploader.inputTitle: Название (до 100 символов)
+ui.uploader.inputDescription: Описание (до 500 символов)
+ui.uploader.checkBoxIsSecretLabel: Секретный реплей
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Секретный реплей{/HEADER}{BODY}Секретный реплей{/BODY}
+
+modsListApi.name: Менеджер реплеев
+modsListApi.description: Удобный просмотр реплеев, просмотр результатов, воспроизведение, а так же загрузка реплеев на WoTReplays.ru
