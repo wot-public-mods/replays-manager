@@ -205,6 +205,7 @@
 					this.replaysList.invalidateData();
 					this.replaysList.invalidateRenderers();
 					this.replaysList.invalidate();
+					this.replayInfo.setData(null);
 				}
 			}
 			catch (err:Error)
