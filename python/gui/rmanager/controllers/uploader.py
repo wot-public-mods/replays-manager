@@ -49,9 +49,10 @@ class UploaderController(object):
 		self.__status = None
 		self.__sended = 0.0
 
+	@staticmethod
 	@async
 	@process
-	def apiStatus(self, callback):
+	def apiStatus(callback):
 		url = 'http://wotreplays.%s' % ('ru' if CURRENT_REALM == 'RU' else 'eu')
 		response = yield lambda callback: BigWorld.fetchURL(url, callback)
 		LOG_DEBUG('UploaderController.apiStatus %s' % response.responseCode, response.body)
