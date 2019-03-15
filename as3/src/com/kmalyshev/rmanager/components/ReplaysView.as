@@ -21,7 +21,6 @@
 	import com.kmalyshev.rmanager.events.SortingEvent;
 	import com.kmalyshev.rmanager.events.FilterEvent;
 	import com.kmalyshev.rmanager.utils.Helpers;
-	import com.kmalyshev.rmanager.utils.Logger;
 	
 	public class ReplaysView extends UIComponent implements IViewStackContent
 	{
@@ -81,7 +80,7 @@
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplaysView::configUI " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplaysView::configUI " + err.getStackTrace());
 			}
 		}
 		
@@ -114,7 +113,7 @@
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplaysView::onDispose " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplaysView::onDispose " + err.getStackTrace());
 			}
 		}
 		
@@ -136,7 +135,6 @@
 				this.updateFiltersVisible(false);
 			
 			this.btnFilters.toggleIndicator.selected = this._filtersToggle;
-			//this.btnFilters.glow.visible = this._filtersToggle;
 			this.btnFilters.validateNow();
 			
 		}
@@ -154,7 +152,6 @@
 			this._filtersToggle = !this._filtersToggle;
 			
 			this.btnFilters.toggleIndicator.selected = this._filtersToggle;
-			//this.btnFilters.glow.visible = this._filtersToggle;
 			this.btnFilters.validateNow();
 			
 			this.updateFiltersVisible(this._filtersToggle);
@@ -199,7 +196,7 @@
 		{
 			try
 			{
-				Logger.Debug("ReplaysView::setData", (data as Array).length);
+				DebugUtils.LOG_DEBUG("ReplaysView::setData ", (data as Array).length);
 				if (data != null)
 				{
 					this.replaysList.scrollPosition = 0;
@@ -212,7 +209,7 @@
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplaysView::setData " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplaysView::setData " + err.getStackTrace());
 			}
 		}
 		
@@ -245,5 +242,4 @@
 			return null;
 		}
 	}
-
 }

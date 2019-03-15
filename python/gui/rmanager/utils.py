@@ -1,16 +1,23 @@
 
-import ResMgr
-import types
-import itertools
+import ast
 import collections
+import itertools
 import mimetools
 import os
-from ast import literal_eval
+import types
+import urllib
 
-__all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm', 'requestProgress', 'versionTuple', 'getTankType', 'convertKeys', 'convertData')
+import BigWorld
+import ResMgr
+from constants import CURRENT_REALM
 
-def overrider(target, holder, name):
+__all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm', 'requestProgress', \
+			'versionTuple', 'openURL', 'getTankType', 'convertData', 'parseApiStatus')
+
+def override(holder, name, target=None):
 	"""using for override any staff"""
+	if target is None:
+		return lambda target: override(holder, name, target)
 	original = getattr(holder, name)
 	overrided = lambda *a, **kw: target(original, *a, **kw)
 	if not isinstance(holder, types.ModuleType) and isinstance(original, types.FunctionType):
@@ -19,24 +26,17 @@ def overrider(target, holder, name):
 		setattr(holder, name, property(overrided))
 	else:
 		setattr(holder, name, overrided)
-def decorator(function):
-	def wrapper(*args, **kwargs):
-		def decorate(handler):
-			function(handler, *args, **kwargs)
-		return decorate
-	return wrapper
-override = decorator(overrider)
 
 def byteify(data):
 	"""using for convert unicode key/value to utf-8"""
-	if isinstance(data, types.DictType): 
-		return { byteify(key): byteify(value) for key, value in data.iteritems() }
-	elif isinstance(data, types.ListType) or isinstance(data, tuple) or isinstance(data, set):
-		return [ byteify(element) for element in data ]
+	result = data
+	if isinstance(data, types.DictType):
+		result = {byteify(key): byteify(value) for key, value in data.iteritems()}
+	elif isinstance(data, (types.ListType, tuple, set)):
+		result = [byteify(element) for element in data]
 	elif isinstance(data, types.UnicodeType):
-		return data.encode('utf-8')
-	else: 
-		return data
+		result = data.encode('utf-8')
+	return result
 
 def parseLangFields(langFile):
 	"""split items by lines and key value by ':'
@@ -45,7 +45,8 @@ def parseLangFields(langFile):
 	langData = readFromVFS(langFile)
 	if langData:
 		for item in langData.splitlines():
-			if ': ' not in item: continue
+			if ': ' not in item:
+				continue
 			key, value = item.split(": ", 1)
 			result[key] = value
 	return result
@@ -57,49 +58,50 @@ def readFromVFS(path):
 		return str(file.asBinary)
 	return None
 
+def openURL(url):
+	if url.startswith('/'):
+		targetDomain = 'ru' if CURRENT_REALM == 'RU' else 'eu'
+		url = 'http://wotreplays.%s%s' % (targetDomain, url)
+	BigWorld.wg_openWebBrowser(url)
+
+def parseApiStatus(callback):
+	try:
+		targetDomain = 'ru' if CURRENT_REALM == 'RU' else 'eu'
+		status = urllib.urlopen('http://wotreplays.%s' % targetDomain).getcode() == 200
+	except: #NOSONAR
+		status = False
+	callback(status)
+
 class MultiPartForm(object):
 	"""using for send multipart form data to server"""
-	
+
 	def __init__(self):
 		self.form_fields = []
 		self.files = []
 		self.boundary = mimetools.choose_boundary()
-	
+
 	def getContentType(self):
 		return 'multipart/form-data; boundary=%s' % self.boundary
-	
-	def add_field(self, name, value):		
+
+	def add_field(self, name, value):
 		self.form_fields.append((name, value))
-	
+
 	def add_file(self, fieldname, filename, fileHandle, mimetype=None):
 		body = fileHandle.read()
 		mimetype = 'application/octet-stream'
 		self.files.append((fieldname, filename, mimetype, body))
-	
+
 	def __str__(self):
 		parts = []
 		part_boundary = '--' + self.boundary
 
-		parts.extend(
-			[ part_boundary,
-			  'Content-Disposition: form-data; name="%s"' % name,
-			  '',
-			  value,
-			]
-			for name, value in self.form_fields
-			)
+		for name, value in self.form_fields:
+			parts.extend([part_boundary, 'Content-Disposition: form-data; name="%s"' % name, '', value])
 
-		parts.extend(
-			[ part_boundary,
-			  'Content-Disposition: file; name="%s"; filename="%s"' % \
-				 (field_name, filename),
-			  'Content-Type: %s' % content_type,
-			  '',
-			  body,
-			]
-			for field_name, filename, content_type, body in self.files
-			)
-		
+		for field_name, filename, content_type, body in self.files:
+			parts.extend([part_boundary, 'Content-Disposition: file; name="%s"; filename="%s"' % \
+				 (field_name, filename), 'Content-Type: %s' % content_type, '', body])
+
 		flattened = list(itertools.chain(*parts))
 		flattened.append('--' + self.boundary + '--')
 		flattened.append('')
@@ -107,7 +109,7 @@ class MultiPartForm(object):
 
 class requestProgress(file):
 	"""using for track file read progress"""
-	
+
 	def __init__(self, path, mode, callback, *args):
 		file.__init__(self, path, mode)
 		self.seek(0, os.SEEK_END)
@@ -115,10 +117,10 @@ class requestProgress(file):
 		self.seek(0)
 		self._callback = callback
 		self._args = args
-	
+
 	def __len__(self):
 		return self._total
-	
+
 	def read(self, size):
 		data = file.read(self, size)
 		self._callback(self._total, len(data))
@@ -131,31 +133,20 @@ def versionTuple(stringVersion):
 	return tuple(map(int, stringVersion.split(',' if ',' in stringVersion else '.')[:4]))
 
 def getTankType(tags):
-	types = { 'heavyTank', 'mediumTank', 'lightTank', 'AT-SPG', 'SPG' }
-	for type in types:
+	for type in 'heavyTank', 'mediumTank', 'lightTank', 'AT-SPG', 'SPG':
 		if type in tags:
 			return type
 	return ''
 
-def convertKeys(d):
-	output_dict = dict()
-	for k,v in d.iteritems():
-		try:
-			new_key = int(k)
-		except:
-			new_key = convertData(k)
-		output_dict[new_key] = v
-	return output_dict
-
 def convertData(data):
+	result = data
 	if isinstance(data, basestring):
 		try:
-			return literal_eval(data)
-		except:
-			return str(data)
+			result = ast.literal_eval(data)
+		except: #NOSONAR
+			result = str(data)
 	elif isinstance(data, collections.Mapping):
-		return dict(map(convertData, data.iteritems()))
+		result = dict(map(convertData, data.iteritems()))
 	elif isinstance(data, collections.Iterable):
-		return type(data)(map(convertData, data))
-	else:
-		return data
+		result = type(data)(map(convertData, data))
+	return result

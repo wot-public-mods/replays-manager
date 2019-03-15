@@ -29,7 +29,7 @@
 			sPrefix == "" ? sPrefix = "---" : sPrefix += "---";
 			for (var i:*in oObj)
 			{
-				Logger.Debug(sPrefix, i + " : " + oObj[i], "  ");
+				DebugUtils.LOG_DEBUG(sPrefix, i + " : " + oObj[i], "  ");
 				if (typeof(oObj[i]) == "object")
 				{
 					traceObject(oObj[i], sPrefix);
@@ -39,7 +39,7 @@
 		
 		public static function getBattleTypeLocalString(battleTypeNum:String):String
 		{
-			var result:* = null;
+			var result:String = "";
 			result = "#menu:loading/battleTypes/" + battleTypeNum;
 			result = App.utils.locale.makeString(result);
 			return result;
@@ -78,16 +78,14 @@
 			}
 		}
 		
-		public static function mergeObjects(obj0:Object, obj1:Object):Object
+		public static function mergeObjects(obj0:Object, obj1:Object) : Object
 		{
-			var obj:Object = {};
+			var obj:Object = new Object();
 			for (var key in obj0)
 			{
 				obj[key] = (obj1[key] != null) ? obj1[key] : obj0[key];
 			}
 			return obj;
 		}
-	
 	}
-
 }

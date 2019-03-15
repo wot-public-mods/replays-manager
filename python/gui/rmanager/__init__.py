@@ -13,7 +13,7 @@ from gui.rmanager.lang import *
 from gui.rmanager.events import *
 from gui.rmanager.utils import *
 from gui.rmanager.rmanager_constants import *
-from gui.rmanager.controllers import *
+from gui.rmanager.controllers import g_controllers
 from gui.rmanager.views import *
 
 g_controllers.init()

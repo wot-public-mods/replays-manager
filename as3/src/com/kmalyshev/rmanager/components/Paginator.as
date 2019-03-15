@@ -20,7 +20,6 @@
 		public var buttonBar:LabelButtonBar;
 		
 		private var _itemsCount:Number = 0;
-		private var _label:String = "";
 		private var _currentPage:Number = 1;
 		private var _totalPages:Number = 1;
 		
@@ -189,7 +188,5 @@
 			
 			return new DataProvider(arr);
 		}
-	
 	}
-
 }

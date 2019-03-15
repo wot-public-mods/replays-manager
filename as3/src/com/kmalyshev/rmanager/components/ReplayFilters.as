@@ -19,7 +19,6 @@
 	import com.kmalyshev.rmanager.events.FilterEvent;
 	import com.kmalyshev.rmanager.lang.STRINGS;
 	import com.kmalyshev.rmanager.utils.Helpers;
-	import com.kmalyshev.rmanager.utils.Logger;
 	import com.kmalyshev.rmanager.utils.Utils;
 	
 	public class ReplayFilters extends UIComponent
@@ -76,9 +75,8 @@
 				Helpers.ConfigureVehicleLevelsDropdown(this.vehicleLevel);
 				
 				Helpers.ConfigureVehicleTypesDropdown(this.vehicleType);
-				//this.vehicleType.addEventListener(ListEvent.INDEX_CHANGE, this.handleVehicleTypeIndexChange);
-				
-				Helpers.ConfigureBattleTypeDropdown(this.battleType);				
+
+				Helpers.ConfigureBattleTypeDropdown(this.battleType);
 				this.battleType.addEventListener(ListEvent.INDEX_CHANGE, this.handleBattleTypeIndexChange);
 				this.battleType.selectedIndex = 0;
 				
@@ -96,11 +94,11 @@
 				
 				this.btnReset.width = 235;
 				this.btnReset.label = STRINGS.l10n('ui.window.buttonReset');
-				this.btnReset.addEventListener(ButtonEvent.CLICK, this.handleBtnResetClick);				
+				this.btnReset.addEventListener(ButtonEvent.CLICK, this.handleBtnResetClick);
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplayFilters::configUI " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplayFilters::configUI " + err.getStackTrace());
 			}
 		}
 		
@@ -152,7 +150,6 @@
 			this.battleType.selectedIndex = 0;
 			this.battleResult.selectedIndex = 0;
 			this.cbFavorite.selected = false;
-			//this.dispatchFiltersData();
 		}
 		
 		protected function handleBattleResultIndexChange(event:ListEvent):void

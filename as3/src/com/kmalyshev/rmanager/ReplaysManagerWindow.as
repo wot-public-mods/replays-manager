@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package com.kmalyshev.rmanager
 {	
 	import flash.text.TextField;
 	import flash.display.InteractiveObject;
@@ -9,7 +9,8 @@
 	import net.wg.infrastructure.constants.WindowViewInvalidationType;
 	import net.wg.infrastructure.interfaces.IWindow;
 	
-	import com.kmalyshev.rmanager.events.LoggerEvent;
+	import com.kmalyshev.rmanager.components.Paginator;
+	
 	import com.kmalyshev.rmanager.events.ReplayActionEvent;
 	import com.kmalyshev.rmanager.events.PagingEvent;
 	import com.kmalyshev.rmanager.events.SortingEvent;
@@ -17,7 +18,6 @@
 	
 	import com.kmalyshev.rmanager.lang.STRINGS;
 	import com.kmalyshev.rmanager.ui.ReplaysViewUI;
-	import com.kmalyshev.rmanager.utils.Logger;
 	import com.kmalyshev.rmanager.utils.Helpers;
 	import com.kmalyshev.rmanager.utils.Utils;
 	
@@ -27,7 +27,6 @@
 		public var view:ViewStack = null;
 		public var updateReplaysList:Function = null;
 		public var onReplayAction:Function = null;
-		public var flashLogS:Function = null;
 		
 		private var settingsObject:Object = {
 			filters: {
@@ -55,22 +54,6 @@
 		public function ReplaysManagerWindow()
 		{
 			super();
-					
-			//width = 1000;
-			//height = 665;
-			//canDrag = false;
-			//canResize = false;
-			//isModal = true;
-			//isCentered = true;
-			//canClose = true;
-			//showWindowBgForm = false;
-			
-			Logger.globalDispatcher.addEventListener(LoggerEvent.LOG, this.handleLoggerEvent);
-		}
-		
-		public function handleLoggerEvent(event:LoggerEvent):void
-		{
-			this.flashLogS(event.data);
 		}
 		
 		override public function setWindow(param1:IWindow) : void
@@ -108,15 +91,13 @@
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplaysManagerWindow::onPopulate: " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplaysManagerWindow::onPopulate: " + err.getStackTrace());
 			}
 		
 		}
 		
 		override protected function onDispose():void
 		{
-			Logger.globalDispatcher.removeEventListener(LoggerEvent.LOG, this.handleLoggerEvent);
-		
 			this.view.removeEventListener(PagingEvent.PAGE_CHANGED, this.handlePageChanged);
 			this.view.removeEventListener(SortingEvent.SORT_KEY_CHANGED, this.handleSortingChanged);
 			this.view.removeEventListener(FilterEvent.FILTERS_CHANGED, this.handleFiltersChanged);
@@ -159,14 +140,14 @@
 		private function handleFiltersChanged(event:FilterEvent):void
 		{
 			
-			Logger.Debug("handleFiltersChanged", Utils.objectToString(event.data.tankInfo));
+			DebugUtils.LOG_DEBUG("handleFiltersChanged", Utils.objectToString(event.data.tankInfo));
 			this.settingsObject["filters"] = Utils.mergeObjects(this.settingsObject["filters"], event.data);
 			this.updateReplaysList(App.utils.JSON.encode(this.settingsObject));
 		}
 		
 		public function as_setAPIStatus(status:Boolean):void
 		{
-			Helpers.WOTREPLAYS_API_STATUS = status;
+			Helpers.apiStatus = status;
 		}
 		
 		public function as_initFilters(maps:Array):void
@@ -178,7 +159,7 @@
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplaysManagerWindow::as_initFilters: " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplaysManagerWindow::as_initFilters: " + err.getStackTrace());
 			}
 		}
 		
@@ -186,13 +167,13 @@
 		{
 			try
 			{
-				Logger.Debug("as_setReplaysData", data.length, itemsCount);
+				DebugUtils.LOG_DEBUG("as_setReplaysData", data.length, itemsCount);
 				var currentView:ReplaysViewUI = ReplaysViewUI(this.view.currentView);
 				currentView.update({id: Helpers.REPLAYS, data: data, itemsCount: itemsCount});
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplaysManagerWindow::as_setReplaysData: " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplaysManagerWindow::as_setReplaysData: " + err.getStackTrace());
 			}
 		}
 		
@@ -200,12 +181,12 @@
 		{
 			try
 			{
-				Logger.Debug("as_setLangData");
+				DebugUtils.LOG_DEBUG("as_setLangData");
 				STRINGS.setData(data);
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplaysManagerWindow::as_setLangData: " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplaysManagerWindow::as_setLangData: " + err.getStackTrace());
 			}
 		}
 		
@@ -217,7 +198,7 @@
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplaysManagerWindow::as_updateWaiting: " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplaysManagerWindow::as_updateWaiting: " + err.getStackTrace());
 			}
 		}
 		

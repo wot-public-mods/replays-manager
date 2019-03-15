@@ -16,11 +16,6 @@
 			return;
 		}
 		
-		override protected function configUI():void
-		{
-			super.configUI();
-		}
-		
 		override protected function draw():void
 		{
 			

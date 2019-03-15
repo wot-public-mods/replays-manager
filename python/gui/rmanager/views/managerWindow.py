@@ -1,14 +1,14 @@
 
-import ArenaType
-import BigWorld
 import json
 from adisp import process
-from gui.Scaleform.framework.entities.abstract.AbstractWindowView import AbstractWindowView
 
+import ArenaType
+import BigWorld
+from gui.Scaleform.framework.entities.abstract.AbstractWindowView import AbstractWindowView
 from gui.rmanager.lang import l10n, allFields
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
-from gui.rmanager.rmanager_constants import DEFAULT_SETTINGS, DATABASE_STATES, WAITING_DELAY
+from gui.rmanager.rmanager_constants import DEFAULT_SETTINGS, WAITING_DELAY
 
 __all__ = ('ReplaysManagerWindow', )
 
@@ -17,37 +17,37 @@ class ReplaysManagerWindowMeta(AbstractWindowView):
 	def as_initFiltersS(self, mapping):
 		if self._isDAAPIInited():
 			return self.flashObject.as_initFilters(mapping)
-	
+
 	def as_updateWaitingS(self, message):
 		if self._isDAAPIInited():
 			self.flashObject.as_updateWaiting(message)
-	
+
 	def as_setLangDataS(self, langData):
 		if self._isDAAPIInited():
 			return self.flashObject.as_setLangData(langData)
-	
+
 	def as_setAPIStatusS(self, status):
 		if self._isDAAPIInited():
 			return self.flashObject.as_setAPIStatus(status)
-	
+
 	def as_setReplaysDataS(self, sortedList, listLength):
 		if self._isDAAPIInited():
 			self.flashObject.as_setReplaysData(sortedList, listLength)
-	
+
 	def as_isModalS(self):
 		if self._isDAAPIInited():
 			return False
-	
+
 	def onWindowClose(self):
 		self.destroy()
-	
+
 class ReplaysManagerWindow(ReplaysManagerWindowMeta):
-	
-	def __init__(self, ctx = None):
+
+	def __init__(self, ctx=None):
 		super(ReplaysManagerWindow, self).__init__()
 		self._settings = DEFAULT_SETTINGS
 		self._sortedList = None
-	
+
 	def _populate(self):
 		self.__populateLanguage()
 		super(ReplaysManagerWindow, self)._populate()
@@ -55,33 +55,33 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 		self.__prepareDataBase()
 		g_eventsManager.onNeedToUpdateReplaysList += self.__prepareDataBase
 		g_eventsManager.onNeedToClose += self.onWindowClose
-		g_eventsManager.onUpdatingDatabaseStop += self.__onUpdatingDatabaseStop 
+		g_eventsManager.onUpdatingDatabaseStop += self.__onUpdatingDatabaseStop
 		self.__getAPIStatus()
 		g_eventsManager.onParsingReplay += self.__onParsingReplay
-	
+
 	def _dispose(self):
 		g_eventsManager.onNeedToUpdateReplaysList -= self.__prepareDataBase
 		g_eventsManager.onNeedToClose -= self.onWindowClose
 		g_eventsManager.onUpdatingDatabaseStop -= self.__onUpdatingDatabaseStop
 		g_eventsManager.onParsingReplay -= self.__onParsingReplay
 		super(ReplaysManagerWindow, self)._dispose()
-	
+
 	def updateReplaysList(self, settings, paging=False):
 		self._settings = json.loads(settings)
 		self.as_showWaitingS(l10n('ui.waiting.updatingList'), {})
 		BigWorld.callback(WAITING_DELAY, lambda: self.__updateReplaysList(paging))
-	
+
 	def onReplayAction(self, actionType, replayName):
 		g_controllers.actions.handleAction(actionType, replayName)
-	
+
 	@process
 	def __getAPIStatus(self):
 		status = yield g_controllers.uploader.apiStatus()
 		self.as_setAPIStatusS(status)
-	
+
 	def __onParsingReplay(self, idx, lenght):
 		self.as_updateWaitingS(l10n('ui.waiting.prepareDB') + str(' %s / %s' % (str(idx), str(lenght))))
-	
+
 	def __processReplaysData(self, sortedList, listLength):
 		self._sortedList = sortedList
 		pageNum = self._settings['paging']['page']
@@ -91,10 +91,10 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 			endIndex = listLength
 		startIndex = endIndex - pageSize
 		if startIndex < 0:
-			startIndex = 0		
-		return (sortedList[startIndex:endIndex], listLength)
-	
-	def __updateReplaysList(self, paging):		
+			startIndex = 0
+		return sortedList[startIndex:endIndex], listLength
+
+	def __updateReplaysList(self, paging):
 		if self._sortedList and paging:
 			pageNum = self._settings['paging']['page']
 			pageSize = self._settings['paging']['pageSize']
@@ -111,23 +111,23 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 			pagedData, length = self.__processReplaysData(replaysData, len(replaysData))
 			self.as_setReplaysDataS(pagedData, length)
 		self.as_hideWaitingS()
-	
+
 	def __onUpdatingDatabaseStop(self):
 		self.as_hideWaitingS()
 		self.as_showWaitingS(l10n('ui.waiting.updatingList'), {})
 		BigWorld.callback(WAITING_DELAY, lambda: self.__updateReplaysList(False))
-	
+
 	def __prepareDataBase(self):
 		self.as_showWaitingS(l10n('ui.waiting.prepareDB'), {})
 		BigWorld.callback(WAITING_DELAY, g_controllers.database.prepareDataBase)
-	
+
 	def __populateFilters(self):
 		maps = list()
-		for arenaTypeID, arenaType in ArenaType.g_cache.iteritems():
+		for _, arenaType in ArenaType.g_cache.iteritems():
 			if arenaType.explicitRequestOnly:
 				continue
 			maps.append({'label': arenaType.name, 'data': arenaType.geometryName})
-			
+
 		def filterMaps(maps):
 			ids = []
 			result = []
@@ -136,10 +136,9 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 					ids.append(_map['data'])
 					result.append(_map)
 			return result
-			
+
 		maps = filterMaps(maps)
 		self.as_initFiltersS(maps)
-	
+
 	def __populateLanguage(self):
 		self.as_setLangDataS(allFields())
-	

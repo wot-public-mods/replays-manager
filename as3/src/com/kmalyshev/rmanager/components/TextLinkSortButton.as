@@ -78,7 +78,7 @@
 					this.textField.x = 0;
 					break;
 				default: 
-					this.textField.x = Math.ceil((this.hitMc.width - textIconWidth) >> 1);
+					this.textField.x = 10;
 					break;
 			}
 			
@@ -96,7 +96,5 @@
 				this.icon.gotoAndStop("desc");
 			}
 		}
-	
 	}
-
 }

@@ -4,7 +4,7 @@ import BigWorld
 
 LANGUAGE_CODES = ('ru', 'uk', 'be', 'en', 'de', 'et', 'bg', 'da', 'fi', 'fil', 'fr', 'el', 'hu', 'id', \
 	'it', 'ja', 'ms', 'nl', 'no', 'pl', 'pt', 'pt_br', 'ro', 'sr', 'vi', 'zh_sg', 'zh_tw', 'hr', 'th', \
-	'lv', 'lt', 'cs', 'es_ar', 'tr', 'zh_cn', 'es', 'kk', 'sv', )
+	'lv', 'lt', 'cs', 'es_ar', 'tr', 'zh_cn', 'es', 'kk', 'sv')
 
 LANGUAGE_FILE_PATH = 'mods/net.wargaming.rmanager/text/%s.yml'
 
@@ -40,7 +40,7 @@ class REPLAY_ACTIONS:
 	FAVORITE_ADD = 'typeFavoriteAdd'
 	FAVORITE_REMOVE = 'typeFavoriteRemove'
 	REMOVE = 'typeRemove'
-	
+
 class DATABASE_STATES:
 	INITED = 'inited'
 	FINI = 'fini'
@@ -50,27 +50,27 @@ class DATABASE_STATES:
 
 CURRENT_GAME_VERSION = BigWorld.wg_getProductVersion()
 
-DEFAULT_SETTINGS = {
-	'filters': {
-		'favorite': -1,
-		'battleType': -1,
-		'mapName': '',
-		'isWinner': -100,
-		'tankInfo': {
-			'vehicleNation': -1,
-			'vehicleLevel': -1,
-			'vehicleType': ''
-		},
-		'dateTime': 'all'
-	},
-	'sorting': {
-		'key': 'timestamp',
-		'reverse': True
-	},
-	'paging': {
-		'pageSize': 10,
-		'page': 1
-	}
+DEFAULT_SETTINGS = { \
+	'filters': { \
+		'favorite': -1, \
+		'battleType': -1, \
+		'mapName': '', \
+		'isWinner': -100, \
+		'tankInfo': { \
+			'vehicleNation': -1, \
+			'vehicleLevel': -1, \
+			'vehicleType': '' \
+		}, \
+		'dateTime': 'all' \
+	}, \
+	'sorting': { \
+		'key': 'timestamp', \
+		'reverse': True \
+	}, \
+	'paging': { \
+		'pageSize': 10, \
+		'page': 1 \
+	} \
 }
 
 del os, BigWorld

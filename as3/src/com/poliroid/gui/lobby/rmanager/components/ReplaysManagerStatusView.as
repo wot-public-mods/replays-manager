@@ -68,7 +68,7 @@
 			myCSS.setStyle("a:link", {color: '#F25322', textDecoration: 'none'});
 			myCSS.setStyle("a:hover", {color: '#FF7432', textDecoration: 'underline'});
 			responseTF.styleSheet = myCSS;
-			if (response.result == false)
+			if (!response.result)
 			{
 				onUpdateStatus("ErrorOccure");
 				switch (response.code)
@@ -93,6 +93,9 @@
 						break;
 					case 6: 
 						responseTF.htmlText = formatString(l10n.error6);
+						break;
+					default: 
+						responseTF.htmlText = formatString(response.error);
 						break;
 				}
 			}

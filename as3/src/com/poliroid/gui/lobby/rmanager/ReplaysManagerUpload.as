@@ -28,7 +28,6 @@
 		{
 			super();
 			isCentered = true;
-			//canClose = true;
 		}
 		
 		override protected function onPopulate():void
@@ -68,9 +67,7 @@
 		
 		public function as_onPopulateResponce(response:String):void
 		{
-			//canClose = true;
-			var responseObj:Object = App.utils.JSON.decode(response);
-			status.onResponce(responseObj);
+			status.onResponce(App.utils.JSON.decode(response));
 			status.responseTF.addEventListener(TextEvent.LINK, handleLinkClick);
 		}
 		

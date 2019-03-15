@@ -16,9 +16,10 @@
 	
 	public class Helpers
 	{
-		public static var WOTREPLAYS_API_STATUS:Boolean = false;
-		public static var REPLAYS:String = "com.kmalyshev.rmanager.ui.ReplaysViewUI";
-		public static var REPLAY_CM_HANDLER_TYPE:String = "replayCMHandler";
+		public static var apiStatus:Boolean = false;
+
+		public static const REPLAYS:String = "com.kmalyshev.rmanager.ui.ReplaysViewUI";
+		public static const REPLAY_CM_HANDLER_TYPE:String = "replayCMHandler";
 
 		public static const SORTING_BUTTONS:Array = [
 			{label: STRINGS.l10n('ui.window.sorting.byTime'), selected: true, ascending: false, key: "timestamp"},
@@ -138,13 +139,12 @@
 		
 		public static function ConfigureVehicleNationsDropdown(menu:DropDownImageText):void
 		{
-			var _nations:* = App.utils.nations;
-			var _nationsData:Array = _nations.getNationsData();
+			var _nationsData:Array = App.utils.nations.getNationsData();
 			var _fn:Array = [{label: STRINGS.l10n('ui.window.filterTab.all'), data: -1, icon: "../maps/icons/filters/nations/all.png"}];
 			var i:uint = 0;
 			while (i < _nationsData.length)
 			{
-				_nationsData[i]["icon"] = "../maps/icons/filters/nations/" + _nations.getNationName(_nationsData[i]["data"]) + ".png";
+				_nationsData[i]["icon"] = "../maps/icons/filters/nations/" + App.utils.nations.getNationName(_nationsData[i]["data"]) + ".png";
 				_fn.push(_nationsData[i]);
 				i = i + 1;
 			}

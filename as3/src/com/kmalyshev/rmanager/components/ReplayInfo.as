@@ -19,7 +19,6 @@
 	import com.kmalyshev.rmanager.events.ReplayActionEvent;
 	import com.kmalyshev.rmanager.utils.Utils;
 	import com.kmalyshev.rmanager.utils.Helpers;
-	import com.kmalyshev.rmanager.utils.Logger;
 	
 	public class ReplayInfo extends UIComponent
 	{
@@ -170,7 +169,7 @@
 				{
 					this.btnShowResults.enabled = this.data.hasBattleResults && this.data.canShowBattleResults;
 					this.btnPlay.enabled = true;
-					this.btnUpload.enabled = Helpers.WOTREPLAYS_API_STATUS;
+					this.btnUpload.enabled = Helpers.apiStatus;
 					this.btnRemove.enabled = true;
 					
 					this.mapName.text = this.data.mapDisplayName;
@@ -220,7 +219,7 @@
 				}
 				catch (err:Error)
 				{
-					Logger.Error("ReplayInfo::setup " + err.getStackTrace());
+					DebugUtils.LOG_ERROR("ReplayInfo::setup " + err.getStackTrace());
 				}
 				
 			}
@@ -264,7 +263,6 @@
 				item.valueTextField.setTextFormat(this._dashTF);
 				item.dashLine.width = 235 - (item.labelTextField.textWidth + item.valueTextField.textWidth) - 2 ;
 				item.dashLine.x = item.labelTextField.textWidth + 3;
-				//item.valueTextField.y = item.valueTextField.y + 2;
 				item.valueTextField.x = 235 - item.valueTextField.textWidth + 1;
 				item.valueTextField.width = item.valueTextField.textWidth;
 			}

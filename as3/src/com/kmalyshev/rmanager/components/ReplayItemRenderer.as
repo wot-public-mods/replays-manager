@@ -10,7 +10,6 @@
 	import net.wg.gui.components.controls.UILoaderAlt;
 	import net.wg.gui.events.UILoaderEvent;
 	
-	import com.kmalyshev.rmanager.utils.Logger;
 	import com.kmalyshev.rmanager.utils.Utils;
 	import com.kmalyshev.rmanager.utils.Helpers;
 	
@@ -21,8 +20,8 @@
 		public var mapIcon:UILoaderAlt;
 		public var vehicleIcon:UILoaderAlt;
 		
-		public var no_map_mc:MovieClip;
-		public var favorite_mc:MovieClip;
+		public var noMapMC:MovieClip;
+		public var favoriteMC:MovieClip;
 		public var battleResult:MovieClip;
 		
 		public var dateTimeTF:TextField;
@@ -70,7 +69,7 @@
 			}
 			catch (err:Error)
 			{
-				Logger.Error("ReplayItemRenderer::configUI " + err.getStackTrace());
+				DebugUtils.LOG_ERROR("ReplayItemRenderer::configUI " + err.getStackTrace());
 			}
 			
 			this.vehicleIcon.autoSize = false;
@@ -115,16 +114,15 @@
 				try
 				{
 					this.mapIcon.visible = true;
-					this.no_map_mc.visible = false;
+					this.noMapMC.visible = false;
 					
-					this.favorite_mc.visible = Boolean(this.data.favorite);
+					this.favoriteMC.visible = Boolean(this.data.favorite);
 					
 					this.dateTimeTF.text = this.data.dateTime;
 					this.tankNameTF.text = this.data.tankInfo.shortUserString;
 					
 					var battleType:String = Utils.getBattleTypeLocalString(this.data.battleType);
 					this.mapName.text = this.data.mapDisplayName + ", " + battleType;
-					//this.replayName.text = Utils.truncateString(this.data.label, 48);
 					
 					this.fragsTF.text = this.data.hasBattleResults ? this.data.kills : "—";
 					this.damageTF.text = this.data.hasBattleResults ? this.data.damage : "—";
@@ -163,7 +161,7 @@
 				}
 				catch (err:Error)
 				{
-					Logger.Error("ReplayItemRenderer::setup " + err.getStackTrace());
+					DebugUtils.LOG_ERROR("ReplayItemRenderer::setup " + err.getStackTrace());
 				}
 			}
 		}
@@ -176,7 +174,7 @@
 					replayName: this.data.label, 
 					hasBattleResults: Boolean(this.data.hasBattleResults),
 					canShowBattleResults: Boolean(this.data.canShowBattleResults),
-					apiStatus: Helpers.WOTREPLAYS_API_STATUS, 
+					apiStatus: Helpers.apiStatus, 
 					isFavorite: Boolean(this.data.favorite)
 				}
 				App.contextMenuMgr.show(Helpers.REPLAY_CM_HANDLER_TYPE, this, replayData);
@@ -195,7 +193,7 @@
 		private function onMapIconIOError(event:UILoaderEvent):void
 		{
 			this.mapIcon.visible = false;
-			this.no_map_mc.visible = true;
+			this.noMapMC.visible = true;
 			if (this.mapIcon.hasEventListener(UILoaderEvent.IOERROR))
 			{
 				this.mapIcon.removeEventListener(UILoaderEvent.IOERROR, this.onMapIconIOError);

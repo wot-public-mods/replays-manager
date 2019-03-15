@@ -1,2 +1,1 @@
-﻿
-from gui import rmanager
+﻿import gui.rmanager
