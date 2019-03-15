@@ -87,12 +87,25 @@ class MultiPartForm(object):
 		parts = []
 		part_boundary = '--' + self.boundary
 
-		for name, value in self.form_fields:
-			parts.extend([part_boundary, 'Content-Disposition: form-data; name="%s"' % name, '', value])
+		parts.extend( \
+			[part_boundary, \
+			  'Content-Disposition: form-data; name="%s"' % name, \
+			  '', \
+			  value, \
+			] \
+			for name, value in self.form_fields \
+			)
 
-		for field_name, filename, content_type, body in self.files:
-			parts.extend([part_boundary, 'Content-Disposition: file; name="%s"; filename="%s"' % \
-				 (field_name, filename), 'Content-Type: %s' % content_type, '', body])
+		parts.extend( \
+			[part_boundary, \
+			  'Content-Disposition: file; name="%s"; filename="%s"' % \
+				 (field_name, filename), \
+			  'Content-Type: %s' % content_type, \
+			  '', \
+			  body, \
+			] \
+			for field_name, filename, content_type, body in self.files \
+			)
 
 		flattened = list(itertools.chain(*parts))
 		flattened.append('--' + self.boundary + '--')
