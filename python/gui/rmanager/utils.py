@@ -12,7 +12,7 @@ import ResMgr
 from constants import CURRENT_REALM
 
 __all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm', 'requestProgress', \
-			'versionTuple', 'openURL', 'getTankType', 'convertData', 'parseApiStatus')
+			'versionTuple', 'openURL', 'getTankType', 'convertData')
 
 def override(holder, name, target=None):
 	"""using for override any staff"""
@@ -63,14 +63,6 @@ def openURL(url):
 		targetDomain = 'ru' if CURRENT_REALM == 'RU' else 'eu'
 		url = 'http://wotreplays.%s%s' % (targetDomain, url)
 	BigWorld.wg_openWebBrowser(url)
-
-def parseApiStatus(callback):
-	try:
-		targetDomain = 'ru' if CURRENT_REALM == 'RU' else 'eu'
-		status = urllib.urlopen('http://wotreplays.%s' % targetDomain).getcode() == 200
-	except: #NOSONAR
-		status = False
-	callback(status)
 
 class MultiPartForm(object):
 	"""using for send multipart form data to server"""

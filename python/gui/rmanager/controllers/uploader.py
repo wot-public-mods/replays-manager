@@ -13,7 +13,7 @@ from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.rmanager_constants import WAITING_DELAY, WOTREPLAYS_API_URL, REPLAYS_PATH, \
 											UPLOADER_STATUS, UPLOAD_REPLAY_TEMP
-from gui.rmanager.utils import MultiPartForm, requestProgress, parseApiStatus
+from gui.rmanager.utils import MultiPartForm, requestProgress
 
 __all__ = ('UploaderController', )
 
@@ -52,9 +52,10 @@ class UploaderController(object):
 	@async
 	@process
 	def apiStatus(self, callback):
-		status = yield lambda callback=None: parseApiStatus(callback)
-		LOG_DEBUG('UploaderController.apiStatus %s' % status, self.__status)
-		callback(status)
+		url = 'http://wotreplays.%s' % ('ru' if CURRENT_REALM == 'RU' else 'eu')
+		response = yield lambda callback: BigWorld.fetchURL(url, callback)
+		LOG_DEBUG('UploaderController.apiStatus %s' % response.responseCode, response.body)
+		callback(response.responseCode == 200)
 
 	def prepare(self, replayFileName, replayUserDBID, replayUserName):
 
