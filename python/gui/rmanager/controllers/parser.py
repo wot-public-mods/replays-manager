@@ -4,8 +4,9 @@ import struct
 import time
 from datetime import datetime
 
-from items import vehicles as core_vehicles
+from constants import ARENA_GUI_TYPE
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
+from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
 
 from gui.rmanager.rmanager_constants import CURRENT_GAME_VERSION
@@ -140,12 +141,8 @@ class ParserController(object):
 			result_dict['common_data']['damageAssistedRadio'] = -10
 			result_dict['common_data']['spotted'] = -10
 
-		if result_dict['common_data']['battleType'] not in [0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, \
-															14, 15, 16, 17, 18, 19, 20]:
-			result_dict['common_data']['battleType'] = 1
-
-		if result_dict['common_data']['battleType'] == 18:
-			result_dict['common_data']['battleType'] = 4
+		if result_dict['common_data']['battleType'] not in ARENA_GUI_TYPE.RANGE:
+			result_dict['common_data']['battleType'] = ARENA_GUI_TYPE.RANDOM
 
 		return result_dict
 

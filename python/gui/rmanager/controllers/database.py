@@ -148,6 +148,8 @@ class DataBaseController(object):
 		try:
 			result = convertData(self.__database['replays_data'][replayName]['replay_data']['data']['result_data'])
 			json.dumps(result)
+		except: #NOSONAR
+			pass
 		finally:
 			self.__database.close()
 		return result
