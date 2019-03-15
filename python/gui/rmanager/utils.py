@@ -5,7 +5,6 @@ import itertools
 import mimetools
 import os
 import types
-import urllib
 
 import BigWorld
 import ResMgr
