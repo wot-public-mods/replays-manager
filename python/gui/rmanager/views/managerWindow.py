@@ -54,14 +54,12 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 		self.__populateFilters()
 		self.__prepareDataBase()
 		g_eventsManager.onNeedToUpdateReplaysList += self.__prepareDataBase
-		g_eventsManager.onNeedToClose += self.onWindowClose
 		g_eventsManager.onUpdatingDatabaseStop += self.__onUpdatingDatabaseStop
 		self.__getAPIStatus()
 		g_eventsManager.onParsingReplay += self.__onParsingReplay
 
 	def _dispose(self):
 		g_eventsManager.onNeedToUpdateReplaysList -= self.__prepareDataBase
-		g_eventsManager.onNeedToClose -= self.onWindowClose
 		g_eventsManager.onUpdatingDatabaseStop -= self.__onUpdatingDatabaseStop
 		g_eventsManager.onParsingReplay -= self.__onParsingReplay
 		super(ReplaysManagerWindow, self)._dispose()

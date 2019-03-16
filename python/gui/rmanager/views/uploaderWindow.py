@@ -37,14 +37,12 @@ class ReplaysManagerUploader(ReplaysManagerUploaderMeta):
 		g_eventsManager.onUploaderStatus += self.__onUploaderStatus
 		g_eventsManager.onUploaderProgress += self.__onUploaderProgress
 		g_eventsManager.onUploaderResult += self.__onUploaderResult
-		g_eventsManager.onNeedToClose += self.onWindowClose
 		self.as_onUpdateStatusS(g_controllers.uploader.status)
 
 	def _dispose(self):
 		g_eventsManager.onUploaderStatus -= self.__onUploaderStatus
 		g_eventsManager.onUploaderProgress -= self.__onUploaderProgress
 		g_eventsManager.onUploaderResult -= self.__onUploaderResult
-		g_eventsManager.onNeedToClose -= self.onWindowClose
 		if g_controllers.uploader:
 			g_controllers.uploader.clean()
 		super(ReplaysManagerUploader, self)._dispose()

@@ -1,6 +1,6 @@
-import cPickle
+
 import os
-import SafeUnpickler
+from adisp import process
 
 import BigWorld
 import BattleReplay
@@ -115,20 +115,17 @@ class ActionsController(object):
 
 	def __playBattleReplay(self, replayName):
 		try:
-			LOG_DEBUG('ActionsController.__playBattleReplay => isReplayPlayed: %s' % self.__isReplayPlayed)
-			if self.__isReplayPlayed or not self.__tryToPlay(replayName):
-				def getPlayConfirmDialogMeta():
-					buttons = CustomDialogButtons(l10n('ui.popup.button.yes'), l10n('ui.popup.button.no'))
-					return SimpleDialogMeta(message=l10n('ui.popup.play.message'), title=l10n('ui.popup.play.title'), buttons=buttons)
-				def dialogCallback(result):
-					if result:
-						with open(REPLAY_FLAG_FILE, 'w') as f:
-							f.write(replayName)
-						BigWorld.savePreferences()
-						BigWorld.restartGame()
-				DialogsInterface.showDialog(getPlayConfirmDialogMeta(), dialogCallback)
-			else:
-				g_eventsManager.onNeedToClose()
+			LOG_DEBUG('ActionsController.__playBattleReplay => isReplayPlayed: %s', self.__isReplayPlayed)
+			def getPlayConfirmDialogMeta():
+				buttons = CustomDialogButtons(l10n('ui.popup.button.yes'), l10n('ui.popup.button.no'))
+				return SimpleDialogMeta(message=l10n('ui.popup.play.message'), title=l10n('ui.popup.play.title'), buttons=buttons)
+			def dialogCallback(result):
+				if result:
+					with open(REPLAY_FLAG_FILE, 'w') as f:
+						f.write(replayName)
+					BigWorld.savePreferences()
+					BigWorld.restartGame()
+			DialogsInterface.showDialog(getPlayConfirmDialogMeta(), dialogCallback)
 		except: #NOSONAR
 			LOG_ERROR('ActionsController.__playBattleReplay')
 			LOG_CURRENT_EXCEPTION()
@@ -177,16 +174,16 @@ class ActionsController(object):
 		DialogsInterface.showDialog(getConfirmDialogMeta(), dialogCallback)
 
 	def __tryToPlay(self, replayName):
-		unpickler = SafeUnpickler.SafeUnpickler()
-		cPickle.loads = unpickler.loads
-		g_replayCtrl = BattleReplay.g_replayCtrl
-		defaultSpeedIndex = g_replayCtrl._BattleReplay__playbackSpeedModifiers.index(1.0)
+		@process
+		def onReplayFinished():
+			result = yield DialogsInterface.showI18nConfirmDialog('replayStopped')
+			if result:
+				BigWorld.restartGame()
 		result = False
-		if g_replayCtrl._BattleReplay__replayCtrl.startPlayback(REPLAYS_PATH + replayName):
-			g_replayCtrl._BattleReplay__playbackSpeedIdx = defaultSpeedIndex
-			g_replayCtrl._BattleReplay__savedPlaybackSpeedIdx = defaultSpeedIndex
-			self.__isReplayPlayed = True
+		if BattleReplay.g_replayCtrl.play(REPLAYS_PATH + replayName):
+			BattleReplay.g_replayCtrl._BattleReplay__replayCtrl.replayFinishedCallback = onReplayFinished
 			result = True
+			self.__isReplayPlayed = True
 		return result
 
 class ReplayContextMenuHandler(AbstractContextMenuHandler, EventSystemEntity):

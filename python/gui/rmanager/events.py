@@ -15,7 +15,6 @@ class EventsManager(object):
 		self.onParsingReplay = Event.Event()
 
 		self.onNeedToUpdateReplaysList = Event.Event()
-		self.onNeedToClose = Event.Event()
 
 		self.onUploaderStatus = Event.Event()
 		self.onUploaderProgress = Event.Event()
