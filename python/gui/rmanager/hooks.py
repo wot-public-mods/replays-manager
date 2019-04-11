@@ -4,7 +4,7 @@ import struct
 import ValueReplay as vr
 from battle_results_shared import VEH_FULL_RESULTS
 from debug_utils import LOG_ERROR
-from gui.app_loader.loader import g_appLoader, _AppLoader
+from gui.shared.personality import ServicesLocator
 from gui.app_loader.settings import APP_NAME_SPACE
 from gui.battle_results.reusable.personal import _EconomicsRecordsChains
 from gui.game_control.epic_meta_game_ctrl import EpicBattleMetaGameController
@@ -23,16 +23,10 @@ __all__ = ()
 
 def showManager():
 	"""fire load popover view on button click"""
-	app = g_appLoader.getApp(APP_NAME_SPACE.SF_LOBBY)
+	app = ServicesLocator.appLoader.getApp(APP_NAME_SPACE.SF_LOBBY)
 	if not app:
 		return
 	app.loadView(SFViewLoadParams(REPLAYS_MANAGER_WINDOW_ALIAS), {})
-
-# app finished
-@override(_AppLoader, 'fini')
-def hooked_fini(baseMethod, baseObject):
-	g_eventsManager.onAppFinish()
-	baseMethod(baseObject)
 
 # app login populated
 @override(LoginView, '_populate')

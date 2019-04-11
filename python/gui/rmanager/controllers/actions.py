@@ -7,7 +7,7 @@ import BattleReplay
 
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from gui import DialogsInterface
-from gui.app_loader.loader import g_appLoader
+from gui.shared.personality import ServicesLocator
 from gui.Scaleform.daapi.view.dialogs import (SimpleDialogMeta, ConfirmDialogButtons, \
 												InfoDialogButtons, DIALOG_BUTTON_ID)
 from gui.Scaleform.daapi.settings.views import VIEW_ALIAS
@@ -137,7 +137,7 @@ class ActionsController(object):
 			if replayData:
 				noError = g_controllers.uploader.prepare(replayName, replayData.get('playerID'), replayData.get('playerName'))
 				if noError:
-					g_appLoader.getDefLobbyApp().loadView(SFViewLoadParams(REPLAYS_MANAGER_UPLOADER_ALIAS))
+					ServicesLocator.appLoader.getDefLobbyApp().loadView(SFViewLoadParams(REPLAYS_MANAGER_UPLOADER_ALIAS))
 				else:
 					def getErrorInfoDialogMeta():
 						buttons = InfoDialogButtons(l10n('ui.popup.button.close'))
