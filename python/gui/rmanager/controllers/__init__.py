@@ -4,10 +4,11 @@ __all__ = ('g_controllers', )
 
 class ControllersHolder():
 
-	actions = None
-	database = None
-	parser = None
-	uploader = None
+	def __init__(self):
+		self.actions = None
+		self.database = None
+		self.parser = None
+		self.uploader = None
 
 	def init(self):
 

@@ -16,6 +16,8 @@ from gui.rmanager.rmanager_constants import *
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.views import *
 
+__all__ = ('init', 'fini')
+
 def init():
 	g_controllers.init()
 

@@ -86,7 +86,7 @@
 				this.view.addEventListener(ReplayActionEvent.REPLAY_ACTION, this.handleReplayAction);
 				
 				Helpers.ConfigureViewStack(this.view);
-				this.view.show(Helpers.REPLAYS);
+				this.view.show(Helpers.REPLAYS, Helpers.REPLAYS);
 				
 			}
 			catch (err:Error)

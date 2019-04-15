@@ -1,1 +1,2 @@
-﻿import gui.rmanager
+﻿
+from gui.rmanager import *

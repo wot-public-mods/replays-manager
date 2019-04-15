@@ -1,7 +1,7 @@
 
 import struct
 
-import ValueReplay as vr
+from ValueReplay import ValueReplay, ValueReplayConnector
 from battle_results_shared import VEH_FULL_RESULTS
 from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
@@ -103,13 +103,13 @@ def __showBattleResults(baseMethod, baseObject, reusableInfo, composer):
 # See BattleReplay.py onBattleResultsReceived method
 
 def makeIndex(paramIndex, paramSubIndex, secondParamIndex):
-	if not vr.ValueReplayConnector._bitCoder.checkFit(0, paramIndex):
+	if not ValueReplayConnector._bitCoder.checkFit(0, paramIndex):
 		raise AssertionError
-	if not vr.ValueReplayConnector._bitCoder.checkFit(1, paramSubIndex):
+	if not ValueReplayConnector._bitCoder.checkFit(1, paramSubIndex):
 		raise AssertionError
-	if not vr.ValueReplayConnector._bitCoder.checkFit(2, secondParamIndex):
+	if not ValueReplayConnector._bitCoder.checkFit(2, secondParamIndex):
 		raise AssertionError
-	return vr.ValueReplayConnector._bitCoder.emplace(paramIndex, paramSubIndex, secondParamIndex)
+	return ValueReplayConnector._bitCoder.emplace(paramIndex, paramSubIndex, secondParamIndex)
 
 def nameToIndex(name):
 	return VEH_FULL_RESULTS.indexOf(name)
@@ -123,55 +123,61 @@ def pack(value):
 
 def genCreditsReplay(results):
 	replay = []
-	replay.append(makeStepCompDescr(vr.ValueReplay.SET, makeIndex(nameToIndex('originalCredits'), 0, 0)))
-	if 'appliedPremiumCreditsFactor10' in results and results['appliedPremiumCreditsFactor10'] != 10:
-		replay.append(makeStepCompDescr(vr.ValueReplay.MUL, makeIndex(nameToIndex('appliedPremiumCreditsFactor10'), 0, 0)))
-	replay.append(makeStepCompDescr(vr.ValueReplay.SUBCOEFF, makeIndex(nameToIndex('originalCreditsPenalty'), \
-									0, nameToIndex('squadXPFactor100'))))
-	replay.append(makeStepCompDescr(vr.ValueReplay.SUBCOEFF, makeIndex(nameToIndex('originalCreditsContributionOut'), \
-									0, nameToIndex('squadXPFactor100'))))
-	replay.append(makeStepCompDescr(vr.ValueReplay.ADDCOEFF, makeIndex(nameToIndex('originalCreditsContributionIn'), \
-									0, nameToIndex('appliedPremiumCreditsFactor10'))))
-	replay.append(makeStepCompDescr(vr.ValueReplay.TAG, makeIndex(nameToIndex('subtotalCredits'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.SET, makeIndex(nameToIndex('originalCredits'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.MUL, makeIndex(nameToIndex('appliedPremiumCreditsFactor100'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.SUBCOEFF, makeIndex(nameToIndex('originalCreditsPenalty'), 0, nameToIndex('appliedPremiumCreditsFactor100'))))
+	replay.append(makeStepCompDescr(ValueReplay.SUBCOEFF, makeIndex(nameToIndex('originalCreditsContributionOut'), 0, nameToIndex('appliedPremiumCreditsFactor100'))))
+	replay.append(makeStepCompDescr(ValueReplay.ADDCOEFF, makeIndex(nameToIndex('originalCreditsContributionIn'), 0, nameToIndex('appliedPremiumCreditsFactor100'))))
+	replay.append(makeStepCompDescr(ValueReplay.ADDCOEFF, makeIndex(nameToIndex('originalCreditsToDraw'), 0, nameToIndex('appliedPremiumCreditsFactor100'))))
+	replay.append(makeStepCompDescr(ValueReplay.TAG, makeIndex(nameToIndex('subtotalCredits'), 0, 0)))
+	if 'premSquadCreditsFactor100' in results and results['premSquadCreditsFactor100'] != 0:
+		replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('originalPremSquadCredits'), 0, 0)))
+		replay.append(makeStepCompDescr(ValueReplay.SUBCOEFF, makeIndex(nameToIndex('originalCreditsPenaltySquad'), 0, nameToIndex('premSquadCreditsFactor100'))))
+		replay.append(makeStepCompDescr(ValueReplay.SUBCOEFF, makeIndex(nameToIndex('originalCreditsContributionOutSquad'), 0, nameToIndex('premSquadCreditsFactor100'))))
+		replay.append(makeStepCompDescr(ValueReplay.ADDCOEFF, makeIndex(nameToIndex('originalCreditsContributionInSquad'), 0, nameToIndex('premSquadCreditsFactor100'))))
+		replay.append(makeStepCompDescr(ValueReplay.ADDCOEFF, makeIndex(nameToIndex('originalCreditsToDrawSquad'), 0, nameToIndex('premSquadCreditsFactor100'))))
 	if 'boosterCreditsFactor100' in results and results['boosterCreditsFactor100'] != 0:
-		replay.append(makeStepCompDescr(vr.ValueReplay.FACTOR, makeIndex(nameToIndex('boosterCreditsFactor100'), 0, 0)))
+		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('boosterCreditsFactor100'), 0, 0)))
+	for (eventName, eventValue) in results['eventCreditsList']:
+		replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('eventCreditsList'), 0, 50000)))
 	return pack(replay)
 
 def genXPReplay(results):
 	replay = []
-	replay.append(makeStepCompDescr(vr.ValueReplay.SET, makeIndex(nameToIndex('originalXP'), 0, 0)))
-	if 'appliedPremiumXPFactor10' in results and results['appliedPremiumXPFactor10'] != 10:
-		replay.append(makeStepCompDescr(vr.ValueReplay.MUL, makeIndex(nameToIndex('appliedPremiumXPFactor10'), 0, 0)))
-	replay.append(makeStepCompDescr(vr.ValueReplay.SUBCOEFF, makeIndex(nameToIndex('originalXPPenalty'), \
-									0, nameToIndex('premiumVehicleXPFactor100'))))
-	replay.append(makeStepCompDescr(vr.ValueReplay.TAG, makeIndex(nameToIndex('subtotalXP'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.SET, makeIndex(nameToIndex('originalXP'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.MUL, makeIndex(nameToIndex('appliedPremiumXPFactor100'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.SUBCOEFF, makeIndex(nameToIndex('originalXPPenalty'), 0, nameToIndex('appliedPremiumXPFactor100'))))
+	replay.append(makeStepCompDescr(ValueReplay.TAG, makeIndex(nameToIndex('subtotalXP'), 0, 0)))
 	if 'dailyXPFactor10' in results and results['dailyXPFactor10'] != 10:
-		replay.append(makeStepCompDescr(vr.ValueReplay.MUL, makeIndex(nameToIndex('dailyXPFactor10'), 0, 0)))
-	replay.append(makeStepCompDescr(vr.ValueReplay.FACTOR, makeIndex(nameToIndex('premiumVehicleXPFactor100'), 0, 0)))
+		replay.append(makeStepCompDescr(ValueReplay.MUL, makeIndex(nameToIndex('dailyXPFactor10'), 0, 0)))
+		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('additionalXPFactor10'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('premiumVehicleXPFactor100'), 0, 0)))
+	if 'squadXPFactor100' in results and results['squadXPFactor100'] != 0:
+		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('squadXPFactor100'), 0, 0)))
 	if 'boosterXPFactor100' in results and results['boosterXPFactor100'] != 0:
-		replay.append(makeStepCompDescr(vr.ValueReplay.FACTOR, makeIndex(nameToIndex('boosterXPFactor100'), 0, 0)))
+		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('boosterXPFactor100'), 0, 0)))
 	return pack(replay)
 
 def genFreeXPReplay(results):
 	replay = []
-	replay.append(makeStepCompDescr(vr.ValueReplay.SET, makeIndex(nameToIndex('originalFreeXP'), 0, 0)))
-	if 'appliedPremiumXPFactor10' in results and results['appliedPremiumXPFactor10'] != 10:
-		replay.append(makeStepCompDescr(vr.ValueReplay.MUL, makeIndex(nameToIndex('appliedPremiumXPFactor10'), 0, 0)))
-	replay.append(makeStepCompDescr(vr.ValueReplay.TAG, makeIndex(nameToIndex('subtotalFreeXP'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.SET, makeIndex(nameToIndex('originalFreeXP'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.MUL, makeIndex(nameToIndex('appliedPremiumXPFactor100'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.TAG, makeIndex(nameToIndex('subtotalFreeXP'), 0, 0)))
 	if 'dailyXPFactor10' in results and results['dailyXPFactor10'] != 10:
-		replay.append(makeStepCompDescr(vr.ValueReplay.MUL, makeIndex(nameToIndex('dailyXPFactor10'), 0, 0)))
+		replay.append(makeStepCompDescr(ValueReplay.MUL, makeIndex(nameToIndex('dailyXPFactor10'), 0, 0)))
+		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('additionalXPFactor10'), 0, 0)))
 	if 'boosterFreeXPFactor100' in results and results['boosterFreeXPFactor100'] != 0:
-		replay.append(makeStepCompDescr(vr.ValueReplay.FACTOR, makeIndex(nameToIndex('boosterFreeXPFactor100'), 0, 0)))
+		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('boosterFreeXPFactor100'), 0, 0)))
 	return pack(replay)
-
+	
 def genGoldReplay(results):
 	replay = []
-	replay.append(makeStepCompDescr(vr.ValueReplay.SET, makeIndex(nameToIndex('originalGold'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.SET, makeIndex(nameToIndex('originalGold'), 0, 0)))
 	return pack(replay)
 
 def genCrystalReplay(results):
 	replay = []
-	replay.append(makeStepCompDescr(vr.ValueReplay.SET, makeIndex(nameToIndex('originalCrystal'), 0, 0)))
+	replay.append(makeStepCompDescr(ValueReplay.SET, makeIndex(nameToIndex('originalCrystal'), 0, 0)))
 	return pack(replay)
 
 @override(_EconomicsRecordsChains, "_addMoneyResults")
