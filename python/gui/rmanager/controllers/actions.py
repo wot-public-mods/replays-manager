@@ -77,10 +77,9 @@ class ActionsController(object):
 	def __showBattleResults(self, replayName):
 		try:
 
-			# fix 1.5 
+			# fix 1.5
 			from gui.shared.personality import ServicesLocator
 			from constants import PremiumConfigs
-			#{'arena': (1, 22, 24, 5, 27, 20, 21, 13), 'cycleLength': 86400, 'enabled': True, 'cycleStartTime': 1552549800, , 'threshold': 750000}
 			piggyBankCfg = {'multiplier': 0.1}
 			settings = ServicesLocator.lobbyContext.getServerSettings().getSettings()
 			settings[PremiumConfigs.PIGGYBANK] = settings.get(PremiumConfigs.PIGGYBANK, piggyBankCfg)

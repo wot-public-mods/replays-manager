@@ -116,7 +116,7 @@ class ParserController(object):
 					personalVehicle['premiumPlusCreditsFactor100'] = personalVehicle.get('premiumPlusCreditsFactor100', 100)
 					if 'originalCreditsToDraw' not in personalVehicle:
 						personalVehicle['originalCreditsToDraw'] = personalVehicle.get('creditsToDraw', 0)
-			
+
 			# 1.5 fixes
 			if 'vehicles' in result_blocks['data']['result_data']:
 				for vehicleID, vehicleData in result_blocks['data']['result_data']['vehicles'].iteritems():
