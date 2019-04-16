@@ -138,8 +138,9 @@ def genCreditsReplay(results):
 		replay.append(makeStepCompDescr(ValueReplay.ADDCOEFF, makeIndex(nameToIndex('originalCreditsToDrawSquad'), 0, nameToIndex('premSquadCreditsFactor100'))))
 	if 'boosterCreditsFactor100' in results and results['boosterCreditsFactor100'] != 0:
 		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('boosterCreditsFactor100'), 0, 0)))
-	for (eventName, eventValue) in results['eventCreditsList']:
-		replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('eventCreditsList'), 0, 50000)))
+	if results['eventCreditsList']:
+		for x in range(len(results['eventCreditsList'])):
+			replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('eventCreditsList'), x + 1, 0)))
 	return pack(replay)
 
 def genXPReplay(results):
@@ -156,6 +157,9 @@ def genXPReplay(results):
 		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('squadXPFactor100'), 0, 0)))
 	if 'boosterXPFactor100' in results and results['boosterXPFactor100'] != 0:
 		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('boosterXPFactor100'), 0, 0)))
+	if results['eventXPList']:
+		for x in range(len(results['eventXPList'])):
+			replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('eventXPList'), x + 1, 0)))
 	return pack(replay)
 
 def genFreeXPReplay(results):
@@ -168,16 +172,25 @@ def genFreeXPReplay(results):
 		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('additionalXPFactor10'), 0, 0)))
 	if 'boosterFreeXPFactor100' in results and results['boosterFreeXPFactor100'] != 0:
 		replay.append(makeStepCompDescr(ValueReplay.FACTOR, makeIndex(nameToIndex('boosterFreeXPFactor100'), 0, 0)))
+	if results['eventFreeXPList']:
+		for x in range(len(results['eventFreeXPList'])):
+			replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('eventFreeXPList'), x + 1, 0)))
 	return pack(replay)
 	
 def genGoldReplay(results):
 	replay = []
 	replay.append(makeStepCompDescr(ValueReplay.SET, makeIndex(nameToIndex('originalGold'), 0, 0)))
+	if results['eventGoldList']:
+		for x in range(len(results['eventGoldList'])):
+			replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('eventGoldList'), x + 1, 0)))
 	return pack(replay)
 
 def genCrystalReplay(results):
 	replay = []
 	replay.append(makeStepCompDescr(ValueReplay.SET, makeIndex(nameToIndex('originalCrystal'), 0, 0)))
+	if results['eventCrystalList']:
+		for x in range(len(results['eventCrystalList'])):
+			replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('eventCrystalList'), x + 1, 0)))
 	return pack(replay)
 
 @override(_EconomicsRecordsChains, "_addMoneyResults")
