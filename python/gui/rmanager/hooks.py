@@ -199,8 +199,6 @@ def _EconomicsRecordsChains_addMoneyResults(baseMethod, baseObject, connector, r
 		results['creditsReplay'] = genCreditsReplay(results)
 	if 'goldReplay' in results and not results['goldReplay']:
 		results['goldReplay'] = genGoldReplay(results)
-	if 'originalCreditsToDraw' not in results:
-		results['originalCreditsToDraw'] = results['creditsToDraw']
 	return baseMethod(baseObject, connector, results)
 
 @override(_EconomicsRecordsChains, "_addXPResults")

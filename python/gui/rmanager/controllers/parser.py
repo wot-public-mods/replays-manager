@@ -114,11 +114,12 @@ class ParserController(object):
 					personalVehicle['appliedPremiumCreditsFactor100'] = personalVehicle.get('appliedPremiumCreditsFactor100', 100)
 					personalVehicle['piggyBank'] = personalVehicle.get('piggyBank', 0)
 					personalVehicle['premiumPlusCreditsFactor100'] = personalVehicle.get('premiumPlusCreditsFactor100', 100)
-
+					if 'originalCreditsToDraw' not in personalVehicle:
+						personalVehicle['originalCreditsToDraw'] = personalVehicle.get('creditsToDraw', 0)
+			
 			# 1.5 fixes
 			if 'vehicles' in result_blocks['data']['result_data']:
 				for vehicleID, vehicleData in result_blocks['data']['result_data']['vehicles'].iteritems():
-					#vehicleData = result_blocks['data']['result_data']['vehicles'][vehicleID]
 					vehicleData[0]['xpPenalty'] = vehicleData[0].get('xpPenalty', 0)
 
 			result_dict['common_data']['battleType'] = result_blocks['data']['result_data']['common']['guiType']
