@@ -193,24 +193,16 @@ def genCrystalReplay(results):
 			replay.append(makeStepCompDescr(ValueReplay.ADD, makeIndex(nameToIndex('eventCrystalList'), x + 1, 0)))
 	return pack(replay)
 
-@override(_EconomicsRecordsChains, "_addMoneyResults")
-def _EconomicsRecordsChains_addMoneyResults(baseMethod, baseObject, connector, results):
+@override(_EconomicsRecordsChains, "addResults")
+def _EconomicsRecordsChains_addResults(baseMethod, baseObject, intCD, results):
 	if 'creditsReplay' in results and not results['creditsReplay']:
 		results['creditsReplay'] = genCreditsReplay(results)
 	if 'goldReplay' in results and not results['goldReplay']:
 		results['goldReplay'] = genGoldReplay(results)
-	return baseMethod(baseObject, connector, results)
-
-@override(_EconomicsRecordsChains, "_addXPResults")
-def _EconomicsRecordsChains_addXPResults(baseMethod, baseObject, connector, results):
 	if 'xpReplay' in results and not results['xpReplay']:
 		results['xpReplay'] = genXPReplay(results)
 	if 'freeXPReplay' in results and not results['freeXPReplay']:
 		results['freeXPReplay'] = genFreeXPReplay(results)
-	return baseMethod(baseObject, connector, results)
-
-@override(_EconomicsRecordsChains, "_addCrystalResults")
-def _EconomicsRecordsChains_addCrystalResults(baseMethod, baseObject, connector, results):
 	if 'crystalReplay' in results and not results['crystalReplay']:
 		results['crystalReplay'] = genCrystalReplay(results)
-	return baseMethod(baseObject, connector, results)
+	return baseMethod(baseObject, intCD, results)
