@@ -8,7 +8,7 @@ import BattleReplay
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from gui import DialogsInterface
 from gui.shared.personality import ServicesLocator
-from gui.Scaleform.daapi.view.dialogs import (SimpleDialogMeta, ConfirmDialogButtons, \
+from gui.Scaleform.daapi.view.dialogs import (SimpleDialogMeta, ConfirmDialogButtons,
 												InfoDialogButtons, DIALOG_BUTTON_ID)
 from gui.Scaleform.daapi.settings.views import VIEW_ALIAS
 from gui.Scaleform.framework.entities.EventSystemEntity import EventSystemEntity
@@ -20,7 +20,7 @@ from gui.shared.utils.functions import getViewName
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.lang import l10n
-from gui.rmanager.rmanager_constants import (REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS, \
+from gui.rmanager.rmanager_constants import (REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS,
 												REPLAY_FLAG_FILE, REPLAYS_MANAGER_UPLOADER_ALIAS)
 from helpers import dependency
 from skeletons.gui.battle_results import IBattleResultsService
@@ -30,7 +30,7 @@ from skeletons.gui.shared import IItemsCache
 
 class CustomDialogButtons(ConfirmDialogButtons):
 	def getLabels(self):
-		return [{'id': DIALOG_BUTTON_ID.SUBMIT, 'label': self._submit, 'focused': False}, \
+		return [{'id': DIALOG_BUTTON_ID.SUBMIT, 'label': self._submit, 'focused': False},
 				{'id': DIALOG_BUTTON_ID.CLOSE, 'label': self._close, 'focused': True}]
 
 class ActionsController(object):
@@ -112,8 +112,8 @@ class ActionsController(object):
 					self.battleResults.postResult(replayData, False)
 					self.itemsCache.items.isSynced = original_isSynced
 
-			g_eventBus.handleEvent(events.LoadViewEvent(VIEW_ALIAS.BATTLE_RESULTS, \
-									getViewName(VIEW_ALIAS.BATTLE_RESULTS, str(arenaUniqueID)), \
+			g_eventBus.handleEvent(events.LoadViewEvent(VIEW_ALIAS.BATTLE_RESULTS,
+									getViewName(VIEW_ALIAS.BATTLE_RESULTS, str(arenaUniqueID)),
 									ctx={'arenaUniqueID': arenaUniqueID}), EVENT_BUS_SCOPE.LOBBY)
 
 			LOG_DEBUG('ActionsController.__showBattleResults => replayName: %s' % replayName)
@@ -149,7 +149,7 @@ class ActionsController(object):
 				else:
 					def getErrorInfoDialogMeta():
 						buttons = InfoDialogButtons(l10n('ui.popup.button.close'))
-						return SimpleDialogMeta(message=l10n('ui.uploader.status%s' % g_controllers.uploader.status), \
+						return SimpleDialogMeta(message=l10n('ui.uploader.status%s' % g_controllers.uploader.status),
 												title=l10n('ui.uploader.statusErrorOccure'), buttons=buttons)
 					DialogsInterface.showDialog(getErrorInfoDialogMeta(), lambda *args: None)
 		except: #NOSONAR
@@ -169,7 +169,7 @@ class ActionsController(object):
 	def __removeBattleReplay(replayName):
 		def getConfirmDialogMeta():
 			buttons = CustomDialogButtons(l10n('ui.popup.button.yes'), l10n('ui.popup.button.no'))
-			return SimpleDialogMeta(message=l10n('ui.popup.delete.message') % replayName, \
+			return SimpleDialogMeta(message=l10n('ui.popup.delete.message') % replayName,
 									title=l10n('ui.popup.delete.title'), buttons=buttons)
 		def dialogCallback(result):
 			if result:
@@ -228,27 +228,27 @@ class ReplayContextMenuHandler(AbstractContextMenuHandler, EventSystemEntity):
 		g_controllers.actions.handleAction(REPLAY_ACTIONS.REMOVE, self._replayName)
 
 	def _getHandlers(self):
-		result = { \
-			REPLAY_ACTIONS.SHOW_RESULTS: 'showResults', \
-			REPLAY_ACTIONS.PLAY: 'playReplay', \
-			REPLAY_ACTIONS.UPLOAD: 'uploadReplay', \
-			REPLAY_ACTIONS.FAVORITE_ADD: 'replayAddFavorite', \
-			REPLAY_ACTIONS.FAVORITE_REMOVE: 'replayRemoveFavorite', \
-			REPLAY_ACTIONS.REMOVE: 'removeReplay' \
+		result = {
+			REPLAY_ACTIONS.SHOW_RESULTS: 'showResults',
+			REPLAY_ACTIONS.PLAY: 'playReplay',
+			REPLAY_ACTIONS.UPLOAD: 'uploadReplay',
+			REPLAY_ACTIONS.FAVORITE_ADD: 'replayAddFavorite',
+			REPLAY_ACTIONS.FAVORITE_REMOVE: 'replayRemoveFavorite',
+			REPLAY_ACTIONS.REMOVE: 'removeReplay'
 		}
 		return result
 
 	def _generateOptions(self, ctx=None):
-		options = [ \
-			self._makeItem(REPLAY_ACTIONS.SHOW_RESULTS, l10n('ui.action.showResults'), \
-							{'enabled': self._hasBattleResults and self._canShowBattleResults}), \
-			self._makeItem(REPLAY_ACTIONS.PLAY, l10n('ui.action.play')), \
-			self._makeItem(REPLAY_ACTIONS.UPLOAD, l10n('ui.action.upload')) \
+		options = [
+			self._makeItem(REPLAY_ACTIONS.SHOW_RESULTS, l10n('ui.action.showResults'),
+							{'enabled': self._hasBattleResults and self._canShowBattleResults}),
+			self._makeItem(REPLAY_ACTIONS.PLAY, l10n('ui.action.play')),
+			self._makeItem(REPLAY_ACTIONS.UPLOAD, l10n('ui.action.upload'))
 		]
 		options.extend(self._getFavorite())
-		options2 = [ \
-			self._makeSeparator(), \
-			self._makeItem(REPLAY_ACTIONS.REMOVE, l10n('ui.action.delete')) \
+		options2 = [
+			self._makeSeparator(),
+			self._makeItem(REPLAY_ACTIONS.REMOVE, l10n('ui.action.delete'))
 		]
 		options.extend(options2)
 		return options

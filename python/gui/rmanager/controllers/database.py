@@ -256,14 +256,14 @@ def _filterByDate(timestamp, dateKey):
 
 def replayFilterFunc(item, settings):
 	tankInfo = settings['tankInfo']
-	result = ( \
-		(item['isWinner'] == settings['isWinner'] or settings['isWinner'] == -100) and \
-		(item['favorite'] == settings['favorite'] or settings['favorite'] == -1) and \
-		(item['battleType'] == settings['battleType'] or settings['battleType'] == -1) and \
-		(item['mapName'] == settings['mapName'] or settings['mapName'] == '') and \
-		(item['tankInfo']['vehicleNation'] == tankInfo['vehicleNation'] or tankInfo['vehicleNation'] == -1) and \
-		(item['tankInfo']['vehicleLevel'] == tankInfo['vehicleLevel'] or tankInfo['vehicleLevel'] == -1) and \
-		(item['tankInfo']['vehicleType'] == tankInfo['vehicleType'] or tankInfo['vehicleType'] == '') and \
-		(_filterByDate(item['timestamp'], settings['dateTime'])) \
+	result = (
+		(item['isWinner'] == settings['isWinner'] or settings['isWinner'] == -100) and
+		(item['favorite'] == settings['favorite'] or settings['favorite'] == -1) and
+		(item['battleType'] == settings['battleType'] or settings['battleType'] == -1) and
+		(item['mapName'] == settings['mapName'] or settings['mapName'] == '') and
+		(item['tankInfo']['vehicleNation'] == tankInfo['vehicleNation'] or tankInfo['vehicleNation'] == -1) and
+		(item['tankInfo']['vehicleLevel'] == tankInfo['vehicleLevel'] or tankInfo['vehicleLevel'] == -1) and
+		(item['tankInfo']['vehicleType'] == tankInfo['vehicleType'] or tankInfo['vehicleType'] == '') and
+		(_filterByDate(item['timestamp'], settings['dateTime']))
 	)
 	return result

@@ -71,10 +71,10 @@ class ReplaysManagerUploader(ReplaysManagerUploaderMeta):
 
 	def __getLocalizationVO(self):
 		result = dict()
-		uploaderLangKeys = ('windowTitle', 'labelStatus', 'statusNotFound', 'statusFound', 'statusLoading', \
-						'statusConnectionError', 'statusLoadingComplete', 'statusWrongAccount', 'statusNotAccount', \
-						'linkLabel', 'statusErrorOccure', 'error0', 'error1', 'error2', 'error3', 'error4', 'error5', \
-						'error6', 'progressLabel', 'statusSucces', 'responceLabel', 'buttonStartUpload', 'inputTitle', \
+		uploaderLangKeys = ('windowTitle', 'labelStatus', 'statusNotFound', 'statusFound', 'statusLoading',
+						'statusConnectionError', 'statusLoadingComplete', 'statusWrongAccount', 'statusNotAccount',
+						'linkLabel', 'statusErrorOccure', 'error0', 'error1', 'error2', 'error3', 'error4', 'error5',
+						'error6', 'progressLabel', 'statusSucces', 'responceLabel', 'buttonStartUpload', 'inputTitle',
 						'inputDescription', 'checkBoxIsSecretLabel', 'checkBoxIsSecretInfo')
 		for langKey in uploaderLangKeys:
 			result[langKey] = l10n('ui.uploader.%s' % langKey)

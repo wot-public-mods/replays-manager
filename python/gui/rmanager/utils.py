@@ -10,7 +10,7 @@ import BigWorld
 import ResMgr
 from constants import CURRENT_REALM
 
-__all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm', 'requestProgress', \
+__all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm', 'requestProgress',
 			'versionTuple', 'openURL', 'getTankType', 'convertData')
 
 def override(holder, name, target=None):
@@ -86,24 +86,24 @@ class MultiPartForm(object):
 		parts = []
 		part_boundary = '--' + self.boundary
 
-		parts.extend( \
-			[part_boundary, \
-			  'Content-Disposition: form-data; name="%s"' % name, \
-			  '', \
-			  value, \
-			] \
-			for name, value in self.form_fields \
+		parts.extend(
+			[part_boundary,
+			  'Content-Disposition: form-data; name="%s"' % name,
+			  '',
+			  value,
+			]
+			for name, value in self.form_fields
 			)
 
-		parts.extend( \
-			[part_boundary, \
-			  'Content-Disposition: file; name="%s"; filename="%s"' % \
-				 (field_name, filename), \
-			  'Content-Type: %s' % content_type, \
-			  '', \
-			  body, \
-			] \
-			for field_name, filename, content_type, body in self.files \
+		parts.extend(
+			[part_boundary,
+			  'Content-Disposition: file; name="%s"; filename="%s"' %
+				 (field_name, filename),
+			  'Content-Type: %s' % content_type,
+			  '',
+			  body,
+			]
+			for field_name, filename, content_type, body in self.files
 			)
 
 		flattened = list(itertools.chain(*parts))

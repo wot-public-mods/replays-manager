@@ -167,20 +167,20 @@ class ParserController(object):
 			nationIdx = nationsIndices[vNation]
 			itemID = core_vehicles.g_list.getIDsByName(vFullName)[1]
 			vItem = core_vehicles.g_cache.vehicle(nationIdx, itemID)
-			return { \
-				'vehicleNation': int(nationIdx), \
-				'vehicleLevel': int(vItem.level), \
-				'vehicleType': getTankType(vItem.tags), \
-				'userString': vItem.userString, \
-				'shortUserString': vItem.shortUserString \
+			return {
+				'vehicleNation': int(nationIdx),
+				'vehicleLevel': int(vItem.level),
+				'vehicleType': getTankType(vItem.tags),
+				'userString': vItem.userString,
+				'shortUserString': vItem.shortUserString
 			}
 		except: #NOSONAR
 			LOG_ERROR('getVehicleInfo')
 			LOG_CURRENT_EXCEPTION()
-			return { \
-				'vehicleNation': 0, \
-				'vehicleLevel': 1, \
-				'vehicleType': 'unknown', \
-				'userString': 'unknown', \
-				'shortUserString': 'unknown' \
+			return {
+				'vehicleNation': 0,
+				'vehicleLevel': 1,
+				'vehicleType': 'unknown',
+				'userString': 'unknown',
+				'shortUserString': 'unknown'
 			}

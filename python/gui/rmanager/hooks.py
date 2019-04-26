@@ -55,9 +55,9 @@ def getOptions(baseMethod, baseObject, ctx=None):
 	if baseObject.prbDispatcher:
 		options.extend(baseMethod(baseObject, ctx))
 	else:
-		options.extend([ \
-			baseObject._makeItem(USER.COPY_TO_CLIPBOARD, MENU.contextmenu(USER.COPY_TO_CLIPBOARD)), \
-			baseObject._makeItem(USER.VEHICLE_INFO, MENU.contextmenu(USER.VEHICLE_INFO)) \
+		options.extend([
+			baseObject._makeItem(USER.COPY_TO_CLIPBOARD, MENU.contextmenu(USER.COPY_TO_CLIPBOARD)),
+			baseObject._makeItem(USER.VEHICLE_INFO, MENU.contextmenu(USER.VEHICLE_INFO))
 		])
 	return options
 
@@ -68,8 +68,8 @@ try:
 except ImportError:
 	LOG_ERROR('modsListApi not installed')
 if g_modsListApi:
-	g_modsListApi.addModification(id='rmanager', name=l10n('modsListApi.name'), enabled=True, \
-		description=l10n('modsListApi.description'), icon='gui/maps/rmanager/modsListApi.png', \
+	g_modsListApi.addModification(id='rmanager', name=l10n('modsListApi.name'), enabled=True,
+		description=l10n('modsListApi.description'), icon='gui/maps/rmanager/modsListApi.png',
 		callback=showManager, login=True, lobby=True)
 
 # Data Collect
@@ -125,24 +125,24 @@ def genCreditsReplay(results):
 	replay = []
 	replay.append(makeStepCompDescr(op.SET, makeIndex(nameToIndex('originalCredits'), 0, 0)))
 	replay.append(makeStepCompDescr(op.MUL, makeIndex(nameToIndex('appliedPremiumCreditsFactor100'), 0, 0)))
-	replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalCreditsPenalty'), 0, \
+	replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalCreditsPenalty'), 0,
 															nameToIndex('appliedPremiumCreditsFactor100'))))
-	replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalCreditsContributionOut'), 0, \
+	replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalCreditsContributionOut'), 0,
 															nameToIndex('appliedPremiumCreditsFactor100'))))
-	replay.append(makeStepCompDescr(op.ADDCOEFF, makeIndex(nameToIndex('originalCreditsContributionIn'), 0, \
+	replay.append(makeStepCompDescr(op.ADDCOEFF, makeIndex(nameToIndex('originalCreditsContributionIn'), 0,
 															nameToIndex('appliedPremiumCreditsFactor100'))))
-	replay.append(makeStepCompDescr(op.ADDCOEFF, makeIndex(nameToIndex('originalCreditsToDraw'), 0, \
+	replay.append(makeStepCompDescr(op.ADDCOEFF, makeIndex(nameToIndex('originalCreditsToDraw'), 0,
 															nameToIndex('appliedPremiumCreditsFactor100'))))
 	replay.append(makeStepCompDescr(op.TAG, makeIndex(nameToIndex('subtotalCredits'), 0, 0)))
 	if 'premSquadCreditsFactor100' in results and results['premSquadCreditsFactor100'] != 0:
 		replay.append(makeStepCompDescr(op.ADD, makeIndex(nameToIndex('originalPremSquadCredits'), 0, 0)))
-		replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalCreditsPenaltySquad'), 0, \
+		replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalCreditsPenaltySquad'), 0,
 																nameToIndex('premSquadCreditsFactor100'))))
-		replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalCreditsContributionOutSquad'), 0, \
+		replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalCreditsContributionOutSquad'), 0,
 																nameToIndex('premSquadCreditsFactor100'))))
-		replay.append(makeStepCompDescr(op.ADDCOEFF, makeIndex(nameToIndex('originalCreditsContributionInSquad'), 0, \
+		replay.append(makeStepCompDescr(op.ADDCOEFF, makeIndex(nameToIndex('originalCreditsContributionInSquad'), 0,
 																nameToIndex('premSquadCreditsFactor100'))))
-		replay.append(makeStepCompDescr(op.ADDCOEFF, makeIndex(nameToIndex('originalCreditsToDrawSquad'), 0, \
+		replay.append(makeStepCompDescr(op.ADDCOEFF, makeIndex(nameToIndex('originalCreditsToDrawSquad'), 0,
 																nameToIndex('premSquadCreditsFactor100'))))
 	if 'boosterCreditsFactor100' in results and results['boosterCreditsFactor100'] != 0:
 		replay.append(makeStepCompDescr(op.FACTOR, makeIndex(nameToIndex('boosterCreditsFactor100'), 0, 0)))
@@ -155,7 +155,7 @@ def genXPReplay(results):
 	replay = []
 	replay.append(makeStepCompDescr(op.SET, makeIndex(nameToIndex('originalXP'), 0, 0)))
 	replay.append(makeStepCompDescr(op.MUL, makeIndex(nameToIndex('appliedPremiumXPFactor100'), 0, 0)))
-	replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalXPPenalty'), 0, \
+	replay.append(makeStepCompDescr(op.SUBCOEFF, makeIndex(nameToIndex('originalXPPenalty'), 0,
 															nameToIndex('appliedPremiumXPFactor100'))))
 	replay.append(makeStepCompDescr(op.TAG, makeIndex(nameToIndex('subtotalXP'), 0, 0)))
 	if 'dailyXPFactor10' in results and results['dailyXPFactor10'] != 10:

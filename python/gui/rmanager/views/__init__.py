@@ -6,9 +6,9 @@ from gui.rmanager.views.uploaderWindow import ReplaysManagerUploader
 
 def getViewSettings():
 	viewSettings = []
-	viewSettings.append(ViewSettings(REPLAYS_MANAGER_WINDOW_ALIAS, ReplaysManagerWindow, 'ReplaysManagerWindow.swf', \
+	viewSettings.append(ViewSettings(REPLAYS_MANAGER_WINDOW_ALIAS, ReplaysManagerWindow, 'ReplaysManagerWindow.swf',
 						ViewTypes.WINDOW, None, ScopeTemplates.GLOBAL_SCOPE, isModal=True, canClose=True, canDrag=False))
-	viewSettings.append(ViewSettings(REPLAYS_MANAGER_UPLOADER_ALIAS, ReplaysManagerUploader, 'ReplaysManagerUpload.swf', \
+	viewSettings.append(ViewSettings(REPLAYS_MANAGER_UPLOADER_ALIAS, ReplaysManagerUploader, 'ReplaysManagerUpload.swf',
 						ViewTypes.TOP_WINDOW, None, ScopeTemplates.GLOBAL_SCOPE, isModal=True, canClose=True, canDrag=True))
 	return viewSettings
 
