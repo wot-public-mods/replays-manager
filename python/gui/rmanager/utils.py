@@ -27,13 +27,14 @@ def override(holder, name, target=None):
 		setattr(holder, name, overrided)
 
 def byteify(data):
-	"""using for convert unicode key/value to utf-8"""
+	"""Encodes data with UTF-8
+	:param data: Data to encode"""
 	result = data
-	if isinstance(data, types.DictType):
+	if isinstance(data, dict):
 		result = {byteify(key): byteify(value) for key, value in data.iteritems()}
-	elif isinstance(data, (types.ListType, tuple, set)):
+	elif isinstance(data, (list, tuple, set)):
 		result = [byteify(element) for element in data]
-	elif isinstance(data, types.UnicodeType):
+	elif isinstance(data, unicode):
 		result = data.encode('utf-8')
 	return result
 
