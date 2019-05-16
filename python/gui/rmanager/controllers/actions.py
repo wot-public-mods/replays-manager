@@ -197,11 +197,11 @@ class ActionsController(object):
 class ReplayContextMenuHandler(AbstractContextMenuHandler, EventSystemEntity):
 
 	def __init__(self, cmProxy, ctx=None):
-		super(ReplayContextMenuHandler, self).__init__(cmProxy, ctx, self._getHandlers())
 		self._replayName = None
 		self._isFavorite = None
 		self._hasBattleResults = None
 		self._canShowBattleResults = None
+		super(ReplayContextMenuHandler, self).__init__(cmProxy, ctx, self._getHandlers())
 
 	def showResults(self):
 		LOG_DEBUG('ReplayContextMenuHandler.showResults')
