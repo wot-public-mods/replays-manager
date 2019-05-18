@@ -202,7 +202,7 @@ class DataBaseController(object):
 
 	@staticmethod
 	def __filterReplays(settings, replaysCommonData):
-		filteredList = filter(lambda item: replayFilterFunc(item, settings), replaysCommonData)
+		filteredList = [item for item in replaysCommonData if replayFilterFunc(item, settings)]
 		return filteredList
 
 	@staticmethod
