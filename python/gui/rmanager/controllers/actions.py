@@ -5,6 +5,7 @@ from adisp import process
 import BigWorld
 import BattleReplay
 
+from constants import PremiumConfigs
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from gui import DialogsInterface
 from gui.shared.personality import ServicesLocator
@@ -78,8 +79,6 @@ class ActionsController(object):
 		try:
 
 			# fix 1.5
-			from gui.shared.personality import ServicesLocator
-			from constants import PremiumConfigs
 			piggyBankCfg = {'multiplier': 0.1}
 			settings = ServicesLocator.lobbyContext.getServerSettings().getSettings()
 			settings[PremiumConfigs.PIGGYBANK] = settings.get(PremiumConfigs.PIGGYBANK, piggyBankCfg)

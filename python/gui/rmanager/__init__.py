@@ -9,10 +9,7 @@ __email__ = "prn.a_andruschyshyn@wargaming.net"
 __status__ = "Production"
 
 from gui.rmanager.hooks import *
-from gui.rmanager.lang import *
-from gui.rmanager.events import *
-from gui.rmanager.utils import *
-from gui.rmanager.rmanager_constants import *
+from gui.rmanager.events import g_eventsManager
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.views import *
 
