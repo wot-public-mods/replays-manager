@@ -119,7 +119,7 @@ class ParserController(object):
 
 			# 1.5 fixes
 			if 'vehicles' in result_blocks['data']['result_data']:
-				for vehicleID, vehicleData in result_blocks['data']['result_data']['vehicles'].iteritems():
+				for _, vehicleData in result_blocks['data']['result_data']['vehicles'].iteritems():
 					vehicleData[0]['xpPenalty'] = vehicleData[0].get('xpPenalty', 0)
 
 			result_dict['common_data']['battleType'] = result_blocks['data']['result_data']['common']['guiType']
