@@ -9,7 +9,7 @@ from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
 
-from gui.rmanager.rmanager_constants import CURRENT_GAME_VERSION
+from gui.rmanager.rmanager_constants import RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION
 from gui.rmanager.utils import byteify, versionTuple, getTankType
 
 __all__ = ('ParserController', )
@@ -82,8 +82,10 @@ class ParserController(object):
 	@staticmethod
 	def getProcessedReplayData(result_blocks, file_name):
 		result_dict = dict()
-
 		if 'common' in result_blocks['data']:
+			clientVersionFromExe = result_blocks['data']['common']['clientVersionFromExe']
+			if versionTuple(clientVersionFromExe) < REPLAY_SUPPORTED_VERSION:
+				return None
 			date_string = result_blocks['data']['common']['dateTime']
 			timestamp = int(time.mktime(datetime.strptime(date_string, "%d.%m.%Y %H:%M:%S").timetuple()))
 			result_dict['replay_data'] = result_blocks
@@ -97,8 +99,7 @@ class ParserController(object):
 			result_dict['common_data']['playerVehicle'] = result_blocks['data']['common']['playerVehicle']
 			result_dict['common_data']['tankInfo'] = result_blocks['data']['common']['vehicleInfo']
 			result_dict['common_data']['battleType'] = result_blocks['data']['common']['battleType']
-			canShowBattleResults = versionTuple(result_blocks['data']['common']['clientVersionFromExe']) >= CURRENT_GAME_VERSION
-			result_dict['common_data']['canShowBattleResults'] = canShowBattleResults
+			result_dict['common_data']['canShowBattleResults'] = versionTuple(clientVersionFromExe) >= RESULTS_SUPPORTED_VERSION
 		else:
 			return None
 
@@ -108,14 +109,24 @@ class ParserController(object):
 			for key in result_blocks['data']['result_data']['personal']:
 				if key != 'avatar':
 					personal_block = result_blocks['data']['result_data']['personal'].get(key).copy()
-					personalVehicle = result_dict['replay_data']['data']['result_data']['personal'][key]
+					pVehicle = result_dict['replay_data']['data']['result_data']['personal'][key]
+					pVehicle['premiumCreditsFactor100'] = pVehicle.get('premiumCreditsFactor100', 100)
+					pVehicle['appliedPremiumCreditsFactor100'] = pVehicle.get('appliedPremiumCreditsFactor100', 100)
+					pVehicle['premiumXPFactor100'] = pVehicle.get('premiumXPFactor100', 100)
+					pVehicle['appliedPremiumXPFactor100'] = pVehicle.get('appliedPremiumXPFactor100', 100)
+					pVehicle['additionalXPFactor10'] = pVehicle.get('additionalXPFactor10', 10)
+					pVehicle['originalCreditsToDraw'] = pVehicle.get('originalCreditsToDraw', \
+																				pVehicle.get('creditsToDraw', 0))
 					# 1.5 fixes
-					personalVehicle['premiumCreditsFactor100'] = personalVehicle.get('premiumCreditsFactor100', 100)
-					personalVehicle['appliedPremiumCreditsFactor100'] = personalVehicle.get('appliedPremiumCreditsFactor100', 100)
-					personalVehicle['piggyBank'] = personalVehicle.get('piggyBank', 0)
-					personalVehicle['premiumPlusCreditsFactor100'] = personalVehicle.get('premiumPlusCreditsFactor100', 100)
-					if 'originalCreditsToDraw' not in personalVehicle:
-						personalVehicle['originalCreditsToDraw'] = personalVehicle.get('creditsToDraw', 0)
+					pVehicle['piggyBank'] = pVehicle.get('piggyBank', 0)
+					pVehicle['premiumPlusXPFactor100'] = pVehicle.get('premiumPlusXPFactor100', 100)
+					pVehicle['premiumPlusCreditsFactor100'] = pVehicle.get('premiumPlusCreditsFactor100', 100)
+					pVehicle['premSquadCreditsFactor100'] = pVehicle.get('premSquadCreditsFactor100', 100)
+					pVehicle['originalPremSquadCredits'] = pVehicle.get('originalPremSquadCredits', 0)
+					pVehicle['originalCreditsPenaltySquad'] = pVehicle.get('originalCreditsPenaltySquad', 0)
+					pVehicle['originalCreditsContributionOutSquad'] = pVehicle.get('originalCreditsContributionOutSquad', 0)
+					pVehicle['originalCreditsContributionInSquad'] = pVehicle.get('originalCreditsContributionInSquad', 0)
+					pVehicle['originalCreditsToDrawSquad'] = pVehicle.get('originalCreditsToDrawSquad', 0)
 
 			# 1.5 fixes
 			if 'vehicles' in result_blocks['data']['result_data']:
