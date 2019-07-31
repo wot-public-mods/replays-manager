@@ -11,6 +11,7 @@ import BigWorld
 from adisp import async, process
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 
+from gui.impl import backport
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.rmanager_constants import REPLAYS_PATH, DB_FILENAME, DB_VERSION, DATABASE_STATES
@@ -214,7 +215,7 @@ class DataBaseController(object):
 	def __expandNumbers(items):
 		for item in items:
 			for key in 'damageAssistedRadio', 'damage', 'credits', 'xp':
-				item[key] = BigWorld.wg_getIntegralFormat(item[key])
+				item[key] = backport.getIntegralFormat(item[key])
 		return items
 
 
