@@ -16,9 +16,10 @@ REPLAYS_MANAGER_UPLOADER_ALIAS = 'ReplaysManagerUploadWindow'
 
 REPLAY_CM_HANDLER_TYPE = 'replayCMHandler'
 REPLAY_FLAG_FILE = 'replay_need_to_play.killme'
-DB_VERSION = 8
-DB_FILENAME = "./replays/replays_manager/database"
-REPLAYS_PATH = os.getcwd() + '/replays/'
+DB_VERSION = 9
+#TODO find refacto this
+REPLAYS_PATH = os.path.split(os.getcwd())[0] + '/replays/'
+DB_FILENAME = REPLAYS_PATH + 'replays_manager/database'
 UPLOAD_REPLAY_TEMP = 'temp_upload_data.dat'
 
 WOTREPLAYS_API_URL = 'http://wotreplays.%s/index.php/api/upload/bwId/%s/username/%s/server/MOD_UPLOAD'
