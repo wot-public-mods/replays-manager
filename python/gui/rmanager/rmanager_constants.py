@@ -17,8 +17,8 @@ REPLAYS_MANAGER_UPLOADER_ALIAS = 'ReplaysManagerUploadWindow'
 REPLAY_CM_HANDLER_TYPE = 'replayCMHandler'
 REPLAY_FLAG_FILE = 'replay_need_to_play.killme'
 DB_VERSION = 9
-#TODO find refacto this
-REPLAYS_PATH = os.path.split(os.getcwd())[0] + '/replays/'
+
+REPLAYS_PATH = '../replays/'
 DB_FILENAME = REPLAYS_PATH + 'replays_manager/database'
 UPLOAD_REPLAY_TEMP = 'temp_upload_data.dat'
 
