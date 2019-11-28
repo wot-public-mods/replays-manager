@@ -1,5 +1,6 @@
 
 import os
+import sys
 import BigWorld
 
 LANGUAGE_CODES = ('ru', 'uk', 'be', 'en', 'de', 'et', 'bg', 'da', 'fi', 'fil', 'fr', 'el', 'hu', 'id',
@@ -17,8 +18,10 @@ REPLAYS_MANAGER_UPLOADER_ALIAS = 'ReplaysManagerUploadWindow'
 REPLAY_CM_HANDLER_TYPE = 'replayCMHandler'
 REPLAY_FLAG_FILE = 'replay_need_to_play.killme'
 DB_VERSION = 9
-#TODO find refacto this
-REPLAYS_PATH = os.path.split(os.getcwd())[0] + '/replays/'
+
+# Client installation folder (same to './../' but does not depend on the working directory)
+CLIENT_ROOT = os.path.sep.join(sys.executable.split(os.path.sep)[:-2])
+REPLAYS_PATH = CLIENT_ROOT + '/replays/'
 DB_FILENAME = REPLAYS_PATH + 'replays_manager/database'
 UPLOAD_REPLAY_TEMP = 'temp_upload_data.dat'
 
