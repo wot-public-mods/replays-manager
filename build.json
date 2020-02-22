@@ -11,7 +11,7 @@
 	},
 	"info": {
 		"id": "replaysmanager",
-		"author": "net.wargaming",
+		"author": "poliroid",
 		"name": "Replays Manager",
 		"description": "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site",
 		"version": "3.4.4"
