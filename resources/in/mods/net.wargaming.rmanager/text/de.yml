@@ -1,4 +1,4 @@
-﻿﻿
+﻿﻿﻿
 ui.window.title: Replay Manager
 ui.window.tabsOwn: Meine Replays
 ui.window.placeholder: Wählen Sie ein Replay aus der Liste aus, um Informationen anzuzeigen
@@ -95,7 +95,7 @@ ui.uploader.checkBoxIsSecretInfo: {HEADER}Verstecktes Replay{/HEADER}{BODY}Nur S
 
 
 
-ui.waiting.prepareDB: Bereite die Liste vor. Bitte warten …
+ui.waiting.prepareDB: Bereite Liste vor. Bitte warten …
 ui.waiting.updatingList: Aktualisiere Liste
 
 
