@@ -1,7 +1,7 @@
-﻿
+﻿﻿﻿
 ui.window.title: Replay Manager
 ui.window.tabsOwn: Meine Replays
-ui.window.placeholder: Wählen Sie ein Replay in der Liste aus, um Informationen anzeigen zu lassen.
+ui.window.placeholder: Wählen Sie ein Replay aus der Liste aus, um Informationen anzuzeigen
 ui.window.frags: Abschüsse
 ui.window.damage: Schaden
 ui.window.credits: Kreditpunkte
@@ -31,11 +31,11 @@ ui.window.sorting.byKills: Fahrzeuge zerstört
 ui.window.sorting.bySpotted: Fahrzeuge aufgeklärt
 ui.window.sorting.byAssist: Unterstützung
 
-ui.window.dateFilter.label: Replays für
-ui.window.dateFilter.today: heute
+ui.window.dateFilter.label: Replays seit
+ui.window.dateFilter.today: Heute
 ui.window.dateFilter.week: Woche
 ui.window.dateFilter.month: Monat
-ui.window.dateFilter.allTime: gesamter Zeitraum
+ui.window.dateFilter.allTime: Gesamter Zeitraum
 ui.window.filterButtonLabel: Filter
 ui.window.filterTab.title: FILTER
 ui.window.filterTab.all: Alle
@@ -52,8 +52,8 @@ ui.window.filterTab.vehicleTypeSPG: SFL
 ui.window.filterTab.vehicleLevel: Stufe
 ui.window.filterTab.battleType: Gefechtstyp:
 ui.window.filterTab.battleResult: Gefechtsergebnisse:
-ui.window.filterTab.otherLabel: Verschiedenes:
-ui.window.filterTab.otherShowFavorite: Lieblings Replays
+ui.window.filterTab.otherLabel: Sonstiges:
+ui.window.filterTab.otherShowFavorite: Lieblings-Replays
 
 ui.window.paginatorLabel: Seiten
 ui.window.paginatorPrev: <<
@@ -69,7 +69,7 @@ ui.window.tabsInfo: Info
 ui.uploader.windowTitle: Replay auf WoTReplays.eu hochladen
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Replay nicht gefunden
-ui.uploader.statusWrongAccount: Sie können nur Ihr Replay hochladen!
+ui.uploader.statusWrongAccount: Sie können nur Ihr eigenes Replay hochladen!
 ui.uploader.statusNotAccount: Starten Sie das Spiel um das Replay abzuspielen
 ui.uploader.statusErrorOccure: Fehler
 ui.uploader.statusFound: Replay nicht gefunden
@@ -91,7 +91,7 @@ ui.uploader.buttonStartUpload: Upload starten
 ui.uploader.inputTitle: Name (max. 100 Zeichen)
 ui.uploader.inputDescription: Beschreibung (max. 500 Zeichen)
 ui.uploader.checkBoxIsSecretLabel: Verstecktes Replay
-ui.uploader.checkBoxIsSecretInfo: {HEADER}Verstecktes  Replay{/HEADER}{BODY}Nur Sie können dieses Replay anschauen.{/BODY}
+ui.uploader.checkBoxIsSecretInfo: {HEADER}Verstecktes Replay{/HEADER}{BODY}Nur Sie können dieses Replay anschauen.{/BODY}
 
 
 
@@ -103,8 +103,8 @@ ui.waiting.updatingList: Aktualisiere Liste
 ui.action.showResults: Ergebnisse anzeigen
 ui.action.play: Abspielen
 ui.action.upload: Auf WoTReplays.eu hochladen
-ui.action.favoriteAdd: Zu meinen Favoriten hinzufügen
-ui.action.favoriteDelete: Von meinen Favoriten entfernen
+ui.action.favoriteAdd: Zu Favoriten hinzufügen
+ui.action.favoriteDelete: Von Favoriten entfernen
 ui.action.delete: Entfernen
 
 
@@ -112,14 +112,14 @@ ui.action.delete: Entfernen
 ui.popup.button.yes: Ja
 ui.popup.button.no: Nein
 ui.popup.button.close: Schließen
-ui.popup.play.title: Neustart des Spiels bestätigen
-ui.popup.play.message: Das Spiel muss zum ansehen des Replays neu gestartet werden. Fortfahren?
+ui.popup.play.title: Spielneustart bestätigen
+ui.popup.play.message: Das Spiel muss zum Ansehen des Replays neugestartet werden. Fortfahren?
 ui.popup.delete.title: Replay löschen
-ui.popup.delete.message: Wollen Sie die Datei %s löschen?
+ui.popup.delete.message: Sind Sie sicher, dass Sie die Datei löschen möchsten: %s?
 
 
-modsListApi.title: Modifikationsliste
-modsListApi.info: {HEADER}Modifikationsliste{/HEADER}{BODY}Verwalten Sie spielend einfach Ihre Modifikationen{/BODY}
+modsListApi.title: Mods-Liste
+modsListApi.info: {HEADER}Liste verfügbarer Modifikationen{/HEADER}{BODY}Einfache Verwaltung Deiner Modifikationen{/BODY}
 modsListApi.name: Replay Manager
 modsListApi.description: Mit diesem einfachen Replay Manager können Sie Replays ansehen, Gefechtsergebnisse betrachten und Ihre Replays auf WoTReplays.eu hochladen
 
