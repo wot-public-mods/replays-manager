@@ -1,6 +1,5 @@
 
 import os
-import sys
 import BigWorld
 
 LANGUAGE_CODES = ('ru', 'uk', 'be', 'en', 'de', 'et', 'bg', 'da', 'fi', 'fil', 'fr', 'el', 'hu', 'id',

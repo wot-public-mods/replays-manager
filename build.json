@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"software": {
-		"animate": "C:\\Program Files\\Adobe\\Adobe Animate CC 2019\\Animate.exe",
+		"animate": "C:\\Program Files\\Adobe\\Adobe Animate 2020\\Animate.exe",
 		"python": "C:\\Program Files\\Python27\\python.exe",
 		"sonar": "sonar.cmd"
 	},
@@ -14,6 +14,6 @@
 		"author": "poliroid",
 		"name": "Replays Manager",
 		"description": "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site",
-		"version": "3.4.5"
+		"version": "3.4.6"
 	}
 }
