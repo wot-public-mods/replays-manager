@@ -200,6 +200,7 @@ class ReplayContextMenuHandler(AbstractContextMenuHandler, EventSystemEntity):
 		self._isFavorite = None
 		self._hasBattleResults = None
 		self._canShowBattleResults = None
+		self._canPlay = None
 		super(ReplayContextMenuHandler, self).__init__(cmProxy, ctx, self._getHandlers())
 
 	def showResults(self):
@@ -241,7 +242,8 @@ class ReplayContextMenuHandler(AbstractContextMenuHandler, EventSystemEntity):
 		options = [
 			self._makeItem(REPLAY_ACTIONS.SHOW_RESULTS, l10n('ui.action.showResults'),
 							{'enabled': self._hasBattleResults and self._canShowBattleResults}),
-			self._makeItem(REPLAY_ACTIONS.PLAY, l10n('ui.action.play')),
+			self._makeItem(REPLAY_ACTIONS.PLAY, l10n('ui.action.play'),
+							{'enabled': self._canPlay}),
 			self._makeItem(REPLAY_ACTIONS.UPLOAD, l10n('ui.action.upload'))
 		]
 		options.extend(self._getFavorite())
@@ -263,9 +265,11 @@ class ReplayContextMenuHandler(AbstractContextMenuHandler, EventSystemEntity):
 		self._isFavorite = bool(ctx.isFavorite)
 		self._hasBattleResults = bool(ctx.hasBattleResults)
 		self._canShowBattleResults = bool(ctx.canShowBattleResults)
+		self._canPlay = bool(ctx.canPlay)
 
 	def _clearFlashValues(self):
 		self._replayName = None
 		self._isFavorite = None
 		self._hasBattleResults = None
 		self._canShowBattleResults = None
+		self._canPlay = None

@@ -168,7 +168,7 @@
 				try
 				{
 					this.btnShowResults.enabled = this.data.hasBattleResults && this.data.canShowBattleResults;
-					this.btnPlay.enabled = true;
+					this.btnPlay.enabled = this.data.canPlay;
 					this.btnUpload.enabled = Helpers.apiStatus;
 					this.btnRemove.enabled = true;
 					
