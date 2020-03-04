@@ -9,8 +9,8 @@ from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
 
-from gui.rmanager.utils import byteify, versionTuple, getTankType
 from gui.rmanager.rmanager_constants import RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION, PROCESS_SUPPORTED_VERSION
+from gui.rmanager.utils import byteify, versionTuple, getTankType, fixBadges
 
 __all__ = ('ParserController', )
 
@@ -70,7 +70,8 @@ class ParserController(object):
 							result_blocks['data']['common'] = blockdict
 						else:
 							blockdict = byteify(json.loads(myblock))
-							result_blocks['data']['result_data'] = blockdict[0]
+							result_blocks['data']['result_data'] = fixBadges(blockdict[0])
+
 				except: #NOSONAR
 					LOG_ERROR('ParserController.parseReplay %s' % file_name)
 					LOG_CURRENT_EXCEPTION()
