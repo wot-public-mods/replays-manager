@@ -11,7 +11,7 @@ import ResMgr
 from constants import CURRENT_REALM
 
 __all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm', 'requestProgress',
-			'versionTuple', 'openURL', 'getTankType', 'convertData')
+			'versionTuple', 'openURL', 'getTankType', 'convertData', 'fixBadges')
 
 def override(holder, name, wrapper=None, setter=None):
 	"""Override methods, properties, functions, attributes
@@ -161,3 +161,14 @@ def convertData(data):
 	elif isinstance(data, collections.Iterable):
 		result = type(data)(map(convertData, data))
 	return result
+
+def fixBadges(data, indent=0):
+	for key in data.keys():
+		if key == 'badges':
+			badge = data[key]
+			if not badge or isinstance(badge[0], int):
+				badge = [badge, [1]]
+			data[key] = badge
+		elif isinstance(data[key], dict):
+			data[key] = fixBadges(data[key], indent + 1)
+	return data

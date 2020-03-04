@@ -174,6 +174,7 @@
 					replayName: this.data.label, 
 					hasBattleResults: Boolean(this.data.hasBattleResults),
 					canShowBattleResults: Boolean(this.data.canShowBattleResults),
+					canPlay: Boolean(this.data.canPlay),
 					apiStatus: Helpers.apiStatus, 
 					isFavorite: Boolean(this.data.favorite)
 				}

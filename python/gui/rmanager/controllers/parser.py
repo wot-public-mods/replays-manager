@@ -9,8 +9,8 @@ from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
 
-from gui.rmanager.rmanager_constants import RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION
-from gui.rmanager.utils import byteify, versionTuple, getTankType
+from gui.rmanager.rmanager_constants import RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION, PROCESS_SUPPORTED_VERSION
+from gui.rmanager.utils import byteify, versionTuple, getTankType, fixBadges
 
 __all__ = ('ParserController', )
 
@@ -70,7 +70,8 @@ class ParserController(object):
 							result_blocks['data']['common'] = blockdict
 						else:
 							blockdict = byteify(json.loads(myblock))
-							result_blocks['data']['result_data'] = blockdict[0]
+							result_blocks['data']['result_data'] = fixBadges(blockdict[0])
+
 				except: #NOSONAR
 					LOG_ERROR('ParserController.parseReplay %s' % file_name)
 					LOG_CURRENT_EXCEPTION()
@@ -84,7 +85,7 @@ class ParserController(object):
 		result_dict = dict()
 		if 'common' in result_blocks['data']:
 			clientVersionFromExe = versionTuple(result_blocks['data']['common']['clientVersionFromExe'])
-			if clientVersionFromExe < REPLAY_SUPPORTED_VERSION and clientVersionFromExe != (0, 0, 0, 0):
+			if clientVersionFromExe < PROCESS_SUPPORTED_VERSION and clientVersionFromExe != (0, 0, 0, 0):
 				return None
 			date_string = result_blocks['data']['common']['dateTime']
 			timestamp = int(time.mktime(datetime.strptime(date_string, "%d.%m.%Y %H:%M:%S").timetuple()))
@@ -100,6 +101,7 @@ class ParserController(object):
 			result_dict['common_data']['tankInfo'] = result_blocks['data']['common']['vehicleInfo']
 			result_dict['common_data']['battleType'] = result_blocks['data']['common']['battleType']
 			result_dict['common_data']['canShowBattleResults'] = clientVersionFromExe == (0, 0, 0, 0) or clientVersionFromExe >= RESULTS_SUPPORTED_VERSION
+			result_dict['common_data']['canPlay'] = clientVersionFromExe == (0, 0, 0, 0) or clientVersionFromExe >= REPLAY_SUPPORTED_VERSION
 		else:
 			return None
 
