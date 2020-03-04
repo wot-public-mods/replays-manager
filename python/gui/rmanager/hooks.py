@@ -2,11 +2,14 @@
 import struct
 
 from ValueReplay import ValueReplay as op, ValueReplayConnector
+import BigWorld
+from Account import PlayerAccount
 from battle_results_shared import VEH_FULL_RESULTS
 from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
 from gui.app_loader.settings import APP_NAME_SPACE
 from gui.battle_results.reusable.personal import _EconomicsRecordsChains
+from gui.battle_results.service import BattleResultsService
 from gui.game_control.epic_meta_game_ctrl import EpicBattleMetaGameController
 from gui.lobby_context import LobbyContext
 from gui.Scaleform.daapi.view.lobby.user_cm_handlers import AppealCMHandler, USER
@@ -215,3 +218,10 @@ def _EconomicsRecordsChains_addResults(baseMethod, baseObject, intCD, results):
 	if 'crystalReplay' in results and not results['crystalReplay']:
 		results['crystalReplay'] = genCrystalReplay(results)
 	return baseMethod(baseObject, intCD, results)
+
+@override(BattleResultsService, "_BattleResultsService__postStatistics")
+def _postStatistics(baseMethod, baseObject, reusableInfo, result):
+	playerAccount = BigWorld.player()
+	if playerAccount is None or not isinstance(playerAccount, PlayerAccount):
+		return
+	return baseMethod(baseObject, reusableInfo, result)
