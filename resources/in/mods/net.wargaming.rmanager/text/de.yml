@@ -1,4 +1,4 @@
-﻿﻿﻿﻿
+﻿﻿﻿﻿﻿
 ui.window.title: Replays Manager
 ui.window.tabsOwn: Meine Replays
 ui.window.placeholder: Wählen Sie ein Replay aus der Liste aus, um weitere Informationen anzuzeigen
@@ -119,7 +119,7 @@ ui.popup.delete.message: Möchten Sie das Replay wirklich löschen: %s?
 
 
 modsListApi.title: Mods-Liste
-modsListApi.info: {HEADER}Liste verfügbarer Modifikationen{/HEADER}{BODY}Einfache Verwaltung Deiner Modifikationen{/BODY}
+modsListApi.info: {HEADER}Liste verfügbarer Modifikationen{/HEADER}{BODY}Einfacher Zugriff, Anpassung und Verwaltung von Modifikationen{/BODY}
 modsListApi.name: Replays Manager
 modsListApi.description: Komfortable Ansicht der persönlichen Replays, Gefechtsergebnisse anzeigen, Wiedergeben sowie Hochladen der Replays auf WoTReplays.eu
 
