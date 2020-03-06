@@ -1,4 +1,4 @@
-﻿﻿
+﻿﻿﻿
 ui.window.title: Replays Manager
 ui.window.tabsOwn: My replays
 ui.window.placeholder: Select a replay from the list to display further information
@@ -118,8 +118,8 @@ ui.popup.delete.title: Delete replay
 ui.popup.delete.message: Are you sure you want to delete the file: %s?
 
 
-modsListApi.title: Modifications List
-modsListApi.info: {HEADER}Modifications List{/HEADER}{BODY}Managing your modifications easily{/BODY}
+modsListApi.title: Modifications list
+modsListApi.info: {HEADER}Modifications list{/HEADER}{BODY}Access, customize and manage modifications easily{/BODY}
 modsListApi.name: Replays Manager
 modsListApi.description: Conveniently display your replays, view battle results, play back as well as upload replays on WoTReplays.eu
 
