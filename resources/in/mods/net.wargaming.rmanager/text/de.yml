@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿
+﻿﻿﻿﻿﻿﻿
 ui.window.title: Replays Manager
 ui.window.tabsOwn: Meine Replays
 ui.window.placeholder: Wählen Sie ein Replay aus der Liste aus, um weitere Informationen anzuzeigen
@@ -113,7 +113,7 @@ ui.popup.button.yes: Ja
 ui.popup.button.no: Nein
 ui.popup.button.close: Schließen
 ui.popup.play.title: Spielneustart bestätigen
-ui.popup.play.message: Zum Ansehen des Replays muss das Spiel neugestartet werden. Fortfahren?
+ui.popup.play.message: Das Spiel muss zum Ansehen des Replays neugestartet werden. Fortfahren?
 ui.popup.delete.title: Replay löschen
 ui.popup.delete.message: Möchten Sie das Replay wirklich löschen: %s?
 
