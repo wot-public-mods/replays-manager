@@ -1,7 +1,7 @@
-﻿
-ui.window.title: Replay Manager
+﻿﻿﻿
+ui.window.title: Replays Manager
 ui.window.tabsOwn: My replays
-ui.window.placeholder: Select a replay from the list to display information
+ui.window.placeholder: Select a replay from the list to display further information
 ui.window.frags: Destroyed
 ui.window.damage: Damage
 ui.window.credits: Credits
@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Defeat
 ui.window.battleResultDraw: Draw
 ui.window.buttonShowResult: Show battle results
 ui.window.buttonPlay: Play
-ui.window.buttonUpload: Upload to WoTReplays.eu
+ui.window.buttonUpload: Upload to WoTReplays
 ui.window.buttonRemove: Delete
 ui.window.buttonApply: Apply
 ui.window.buttonReset: Reset
@@ -23,7 +23,7 @@ ui.window.sorting.label: Sort by
 ui.window.sorting.byTime: date
 ui.window.sorting.byCredits: credits
 ui.window.sorting.byDamage: damage
-ui.window.sorting.byResults: results
+ui.window.sorting.byResults: result
 ui.window.sorting.byMap: map
 ui.window.sorting.byVehicle: vehicle
 ui.window.sorting.byXp: experience
@@ -49,9 +49,9 @@ ui.window.filterTab.vehicleTypeMedium: Medium tank
 ui.window.filterTab.vehicleTypeLight: Light tank
 ui.window.filterTab.vehicleTypeATSPG: Tank destroyer
 ui.window.filterTab.vehicleTypeSPG: SPG
-ui.window.filterTab.vehicleLevel: tier
+ui.window.filterTab.vehicleLevel: Tier
 ui.window.filterTab.battleType: Battle type:
-ui.window.filterTab.battleResult: Battle results:
+ui.window.filterTab.battleResult: Battle result:
 ui.window.filterTab.otherLabel: Misc:
 ui.window.filterTab.otherShowFavorite: Favorite replays
 
@@ -100,27 +100,27 @@ ui.waiting.updatingList: Updating the list
 
 
 
-ui.action.showResults: Show results
+ui.action.showResults: Show battle results
 ui.action.play: Play
 ui.action.upload: Upload to WoTReplays.eu
 ui.action.favoriteAdd: Add to favorites
 ui.action.favoriteDelete: Remove from favorites
-ui.action.delete: Remove
+ui.action.delete: Delete
 
 
 
 ui.popup.button.yes: Yes
 ui.popup.button.no: No
 ui.popup.button.close: Close
-ui.popup.play.title: Confirm Game Restart
-ui.popup.play.message: Restart the game to watch the replay. Continue?
-ui.popup.delete.title: Delete Replay
+ui.popup.play.title: Confirm game restart
+ui.popup.play.message: To watch the replay it is neccesarry to restart the game. Continue?
+ui.popup.delete.title: Delete replay
 ui.popup.delete.message: Are you sure you want to delete the file: %s?
 
 
-modsListApi.title: Modifications List
-modsListApi.info: {HEADER}Modifications List{/HEADER}{BODY}Managing your modifications easily{/BODY}
-modsListApi.name: Replay Manager
-modsListApi.description: This simple replay manager allows you to watch replays, view battle results, and upload your replays to WoTReplays.eu
+modsListApi.title: Modifications list
+modsListApi.info: {HEADER}Modifications list{/HEADER}{BODY}Access, customize and manage modifications easily{/BODY}
+modsListApi.name: Replays Manager
+modsListApi.description: Conveniently display your replays, view battle results, play back as well as upload replays on WoTReplays.eu
 
 

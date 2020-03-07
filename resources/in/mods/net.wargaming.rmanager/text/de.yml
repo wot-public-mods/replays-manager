@@ -1,12 +1,12 @@
-﻿﻿﻿
-ui.window.title: Replay Manager
+﻿﻿﻿﻿﻿﻿
+ui.window.title: Replays Manager
 ui.window.tabsOwn: Meine Replays
-ui.window.placeholder: Wählen Sie ein Replay aus der Liste aus, um Informationen anzuzeigen
+ui.window.placeholder: Wählen Sie ein Replay aus der Liste aus, um weitere Informationen anzuzeigen
 ui.window.frags: Abschüsse
 ui.window.damage: Schaden
 ui.window.credits: Kreditpunkte
 ui.window.xp: Erfahrung
-ui.window.spotted: Aufgeklärt
+ui.window.spotted: Entdeckt
 ui.window.assist: Schaden ermöglicht
 ui.window.battleResult: —
 ui.window.battleResultVictory: Sieg
@@ -14,22 +14,22 @@ ui.window.battleResultDefeat: Niederlage
 ui.window.battleResultDraw: Unentschieden
 ui.window.buttonShowResult: Gefechtsergebnisse anzeigen
 ui.window.buttonPlay: Abspielen
-ui.window.buttonUpload: Auf WoTReplays.eu hochladen
+ui.window.buttonUpload: Auf WoTReplays hochladen
 ui.window.buttonRemove: Löschen
 ui.window.buttonApply: Anwenden
 ui.window.buttonReset: Zurücksetzen
 ui.window.infoPlaceholder: Abschüsse
 ui.window.sorting.label: Sortieren nach
 ui.window.sorting.byTime: Datum
-ui.window.sorting.byCredits: Kreditpunkte
+ui.window.sorting.byCredits: Kreditpunkten
 ui.window.sorting.byDamage: Schaden
-ui.window.sorting.byResults: Ergebnisse
+ui.window.sorting.byResults: Ergebnis
 ui.window.sorting.byMap: Karte
 ui.window.sorting.byVehicle: Fahrzeug
 ui.window.sorting.byXp: Erfahrung
-ui.window.sorting.byKills: Fahrzeuge zerstört
-ui.window.sorting.bySpotted: Fahrzeuge aufgeklärt
-ui.window.sorting.byAssist: Unterstützung
+ui.window.sorting.byKills: Fahrzeugen zerstört
+ui.window.sorting.bySpotted: Fahrzeugen entdeckt
+ui.window.sorting.byAssist: Schaden ermöglicht
 
 ui.window.dateFilter.label: Replays seit
 ui.window.dateFilter.today: Heute
@@ -50,8 +50,8 @@ ui.window.filterTab.vehicleTypeLight: Leichter Panzer
 ui.window.filterTab.vehicleTypeATSPG: Jagdpanzer
 ui.window.filterTab.vehicleTypeSPG: SFL
 ui.window.filterTab.vehicleLevel: Stufe
-ui.window.filterTab.battleType: Gefechtstyp:
-ui.window.filterTab.battleResult: Gefechtsergebnisse:
+ui.window.filterTab.battleType: Gefechtsart:
+ui.window.filterTab.battleResult: Gefechtsergebnis:
 ui.window.filterTab.otherLabel: Sonstiges:
 ui.window.filterTab.otherShowFavorite: Lieblings-Replays
 
@@ -95,17 +95,17 @@ ui.uploader.checkBoxIsSecretInfo: {HEADER}Verstecktes Replay{/HEADER}{BODY}Nur S
 
 
 
-ui.waiting.prepareDB: Bereite Liste vor. Bitte warten …
+ui.waiting.prepareDB: Bereite Liste vor. Bitte warten...
 ui.waiting.updatingList: Aktualisiere Liste
 
 
 
-ui.action.showResults: Ergebnisse anzeigen
+ui.action.showResults: Gefechtsergebnisse anzeigen
 ui.action.play: Abspielen
 ui.action.upload: Auf WoTReplays.eu hochladen
 ui.action.favoriteAdd: Zu Favoriten hinzufügen
 ui.action.favoriteDelete: Von Favoriten entfernen
-ui.action.delete: Entfernen
+ui.action.delete: Löschen
 
 
 
@@ -115,12 +115,12 @@ ui.popup.button.close: Schließen
 ui.popup.play.title: Spielneustart bestätigen
 ui.popup.play.message: Das Spiel muss zum Ansehen des Replays neugestartet werden. Fortfahren?
 ui.popup.delete.title: Replay löschen
-ui.popup.delete.message: Sind Sie sicher, dass Sie die Datei löschen möchsten: %s?
+ui.popup.delete.message: Möchten Sie das Replay wirklich löschen: %s?
 
 
 modsListApi.title: Mods-Liste
-modsListApi.info: {HEADER}Liste verfügbarer Modifikationen{/HEADER}{BODY}Einfache Verwaltung Deiner Modifikationen{/BODY}
-modsListApi.name: Replay Manager
-modsListApi.description: Mit diesem einfachen Replay Manager können Sie Replays ansehen, Gefechtsergebnisse betrachten und Ihre Replays auf WoTReplays.eu hochladen
+modsListApi.info: {HEADER}Liste verfügbarer Modifikationen{/HEADER}{BODY}Einfacher Zugriff, Anpassung und Verwaltung von Modifikationen{/BODY}
+modsListApi.name: Replays Manager
+modsListApi.description: Komfortable Ansicht der persönlichen Replays, Gefechtsergebnisse anzeigen, Wiedergeben sowie Hochladen der Replays auf WoTReplays.eu
 
 
