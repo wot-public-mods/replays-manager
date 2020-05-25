@@ -2,18 +2,18 @@
 	"version": 3,
 	"software": {
 		"animate": "C:\\Program Files\\Adobe\\Adobe Animate 2020\\Animate.exe",
-		"python": "C:\\Program Files\\Python27\\python.exe",
+		"python": "C:\\Program Files\\Python-2.7.17\\python.exe",
 		"sonar": "sonar.cmd"
 	},
 	"game": {
 		"folder": "E:\\wot\\ct",
-		"version": "1.9.0.0"
+		"version": "1.9.1.0"
 	},
 	"info": {
 		"id": "replaysmanager",
 		"author": "poliroid",
 		"name": "Replays Manager",
 		"description": "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site",
-		"version": "3.4.8"
+		"version": "3.4.9"
 	}
 }
