@@ -10,11 +10,10 @@
 	import scaleform.clik.events.ListEvent;
 	import scaleform.clik.events.IndexEvent;
 	import scaleform.clik.data.DataProvider;
+	import scaleform.clik.motion.Tween;
 	
 	import net.wg.gui.components.controls.BlackButton;
 	import net.wg.infrastructure.interfaces.IViewStackContent;
-	
-	import com.greensock.TweenLite;
 	
 	import com.kmalyshev.rmanager.lang.STRINGS;
 	import com.kmalyshev.rmanager.events.PagingEvent;
@@ -170,11 +169,11 @@
 			if (show)
 			{
 				this.replayInfo.y = hiddenY;
-				TweenLite.to(this.replayInfo, 0.5, {y: 25});
+				new Tween(500, this.replayInfo, {y: 25}, {fastTransform: false});
 			}
 			else
 			{
-				TweenLite.to(this.replayInfo, 0.5, {y: hiddenY});
+				new Tween(500, this.replayInfo, {y: hiddenY}, {fastTransform: false});
 			}
 		}
 		
@@ -184,11 +183,11 @@
 			if (show)
 			{
 				this.replayFilters.y = hiddenY;
-				TweenLite.to(this.replayFilters, 0.5, {y: 25});
+				new Tween(500, this.replayFilters, {y: 25}, {fastTransform: false});
 			}
 			else
 			{
-				TweenLite.to(this.replayFilters, 0.5, {y: hiddenY});
+				new Tween(500, this.replayFilters, {y: hiddenY}, {fastTransform: false});
 			}
 		}
 		
