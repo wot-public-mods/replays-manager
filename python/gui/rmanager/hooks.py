@@ -101,6 +101,23 @@ def __showBattleResults(baseMethod, baseObject, reusableInfo, composer):
 		if arenaBonusType == ARENA_BONUS_TYPE.EPIC_BATTLE:
 			event_dispatcher.showEpicBattlesAfterBattleWindow(reusableInfo)
 
+# this one for open replays result window in login space
+# its not the best solution, but its work
+# one of solutions was remove replaysmanager from lign window
+from gui.battle_results.components.personal import PremiumInfoBlock
+@override(PremiumInfoBlock, 'getVO')
+def __getVO(baseMethod, baseObject):
+	if BigWorld.player() is None:
+		class FakePlayer:
+			def isInBattleQueue(self):
+				return False
+		realBWPlayer = BigWorld.player
+		BigWorld.player = FakePlayer
+		base = baseMethod(baseObject)
+		BigWorld.player = realBWPlayer
+	else:
+		base =  baseMethod(baseObject)
+	return base
 
 # Add missing battle result fields (creditsReplay, xpReply, freeXpReplay, goldReplay, fortResource, crystalReplay)
 # See BattleReplay.py onBattleResultsReceived method
