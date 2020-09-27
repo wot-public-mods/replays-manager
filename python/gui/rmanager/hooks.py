@@ -8,7 +8,7 @@ from battle_results_shared import VEH_FULL_RESULTS
 from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
 from gui.app_loader.settings import APP_NAME_SPACE
-from gui.battle_results.reusable.personal import _EconomicsRecordsChains
+from gui.battle_results.reusable.economics import _EconomicsRecordsChains
 from gui.battle_results.service import BattleResultsService
 from gui.game_control.epic_meta_game_ctrl import EpicBattleMetaGameController
 from gui.lobby_context import LobbyContext

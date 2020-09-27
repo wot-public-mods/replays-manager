@@ -82,6 +82,13 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 
 	def __processReplaysData(self, sortedList, listLength):
 		self._sortedList = sortedList
+
+		# fix list for login window state (cant show battle results window)
+		account = BigWorld.player()
+		for item in self._sortedList:
+			if not account:
+				item['canShowBattleResults'] = False
+
 		pageNum = self._settings['paging']['page']
 		pageSize = self._settings['paging']['pageSize']
 		endIndex = pageNum * pageSize
