@@ -87,7 +87,7 @@ if g_dataCollector:
 
 
 @override(EpicBattleMetaGameController, '_EpicBattleMetaGameController__showBattleResults')
-def __showBattleResults(baseMethod, baseObject, reusableInfo, composer):
+def __showBattleResults(baseMethod, baseObject, reusableInfo, _, resultsWindow):
 	arenaBonusType = reusableInfo.common.arenaBonusType
 	arenaUniqueID = reusableInfo.arenaUniqueID
 
@@ -99,7 +99,7 @@ def __showBattleResults(baseMethod, baseObject, reusableInfo, composer):
 		from constants import ARENA_BONUS_TYPE
 		from gui.shared import event_dispatcher
 		if arenaBonusType == ARENA_BONUS_TYPE.EPIC_BATTLE:
-			event_dispatcher.showEpicBattlesAfterBattleWindow(reusableInfo)
+			event_dispatcher.showEpicBattlesAfterBattleWindow(reusableInfo, resultsWindow)
 
 # this one for open replays result window in login space
 # its not the best solution, but its work
