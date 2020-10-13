@@ -16,7 +16,7 @@ from gui.Scaleform.framework.entities.EventSystemEntity import EventSystemEntity
 from gui.Scaleform.framework.managers.context_menu import AbstractContextMenuHandler
 from gui.Scaleform.framework.managers.loaders import SFViewLoadParams
 from gui.Scaleform.framework.managers import context_menu
-from gui.shared import events, g_eventBus, EVENT_BUS_SCOPE
+from gui.shared.event_dispatcher import showBattleResultsWindow
 from gui.shared.utils.functions import getViewName
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
@@ -111,9 +111,7 @@ class ActionsController(object):
 					self.battleResults.postResult(replayData, False)
 					self.itemsCache.items.isSynced = original_isSynced
 
-			g_eventBus.handleEvent(events.LoadViewEvent(VIEW_ALIAS.BATTLE_RESULTS,
-									getViewName(VIEW_ALIAS.BATTLE_RESULTS, str(arenaUniqueID)),
-									ctx={'arenaUniqueID': arenaUniqueID}), EVENT_BUS_SCOPE.LOBBY)
+			showBattleResultsWindow(arenaUniqueID)
 
 			LOG_DEBUG('ActionsController.__showBattleResults => replayName: %s' % replayName)
 		except: #NOSONAR

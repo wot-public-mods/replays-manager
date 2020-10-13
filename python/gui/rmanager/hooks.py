@@ -4,11 +4,11 @@ import struct
 from ValueReplay import ValueReplay as op, ValueReplayConnector
 import BigWorld
 from Account import PlayerAccount
-from battle_results_shared import VEH_FULL_RESULTS
+from battle_results import g_config as battle_results_config
 from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
 from gui.app_loader.settings import APP_NAME_SPACE
-from gui.battle_results.reusable.economics import _EconomicsRecordsChains
+from gui.battle_results.reusable.personal import _EconomicsRecordsChains
 from gui.battle_results.service import BattleResultsService
 from gui.game_control.epic_meta_game_ctrl import EpicBattleMetaGameController
 from gui.lobby_context import LobbyContext
@@ -87,7 +87,7 @@ if g_dataCollector:
 
 
 @override(EpicBattleMetaGameController, '_EpicBattleMetaGameController__showBattleResults')
-def __showBattleResults(baseMethod, baseObject, reusableInfo, composer):
+def __showBattleResults(baseMethod, baseObject, reusableInfo, _, resultsWindow):
 	arenaBonusType = reusableInfo.common.arenaBonusType
 	arenaUniqueID = reusableInfo.arenaUniqueID
 
@@ -99,25 +99,7 @@ def __showBattleResults(baseMethod, baseObject, reusableInfo, composer):
 		from constants import ARENA_BONUS_TYPE
 		from gui.shared import event_dispatcher
 		if arenaBonusType == ARENA_BONUS_TYPE.EPIC_BATTLE:
-			event_dispatcher.showEpicBattlesAfterBattleWindow(reusableInfo)
-
-# this one for open replays result window in login space
-# its not the best solution, but its work
-# one of solutions was remove replaysmanager from lign window
-from gui.battle_results.components.personal import PremiumInfoBlock
-@override(PremiumInfoBlock, 'getVO')
-def __getVO(baseMethod, baseObject):
-	if BigWorld.player() is None:
-		class FakePlayer:
-			def isInBattleQueue(self):
-				return False
-		realBWPlayer = BigWorld.player
-		BigWorld.player = FakePlayer
-		base = baseMethod(baseObject)
-		BigWorld.player = realBWPlayer
-	else:
-		base =  baseMethod(baseObject)
-	return base
+			event_dispatcher.showEpicBattlesAfterBattleWindow(reusableInfo, resultsWindow)
 
 # Add missing battle result fields (creditsReplay, xpReply, freeXpReplay, goldReplay, fortResource, crystalReplay)
 # See BattleReplay.py onBattleResultsReceived method
@@ -132,7 +114,7 @@ def makeIndex(paramIndex, paramSubIndex, secondParamIndex):
 	return ValueReplayConnector._bitCoder.emplace(paramIndex, paramSubIndex, secondParamIndex)
 
 def nameToIndex(name):
-	return VEH_FULL_RESULTS.indexOf(name)
+	return battle_results_config['allResults'].indexOf(name)
 
 def makeStepCompDescr(operator, index):
 	return (index << 4) + (operator & 15)
