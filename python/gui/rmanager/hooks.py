@@ -4,11 +4,11 @@ import struct
 from ValueReplay import ValueReplay as op, ValueReplayConnector
 import BigWorld
 from Account import PlayerAccount
-from battle_results_shared import VEH_FULL_RESULTS
+from battle_results import g_config as battle_results_config
 from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
 from gui.app_loader.settings import APP_NAME_SPACE
-from gui.battle_results.reusable.economics import _EconomicsRecordsChains
+from gui.battle_results.reusable.personal import _EconomicsRecordsChains
 from gui.battle_results.service import BattleResultsService
 from gui.game_control.epic_meta_game_ctrl import EpicBattleMetaGameController
 from gui.lobby_context import LobbyContext
@@ -132,7 +132,7 @@ def makeIndex(paramIndex, paramSubIndex, secondParamIndex):
 	return ValueReplayConnector._bitCoder.emplace(paramIndex, paramSubIndex, secondParamIndex)
 
 def nameToIndex(name):
-	return VEH_FULL_RESULTS.indexOf(name)
+	return battle_results_config['allResults'].indexOf(name)
 
 def makeStepCompDescr(operator, index):
 	return (index << 4) + (operator & 15)
