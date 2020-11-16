@@ -16,7 +16,6 @@ from gui.Scaleform.framework.entities.EventSystemEntity import EventSystemEntity
 from gui.Scaleform.framework.managers.context_menu import AbstractContextMenuHandler
 from gui.Scaleform.framework.managers.loaders import SFViewLoadParams
 from gui.Scaleform.framework.managers import context_menu
-from gui.shared.event_dispatcher import showBattleResultsWindow
 from gui.shared.utils.functions import getViewName
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
@@ -111,7 +110,12 @@ class ActionsController(object):
 					self.battleResults.postResult(replayData, False)
 					self.itemsCache.items.isSynced = original_isSynced
 
-			showBattleResultsWindow(arenaUniqueID)
+			# handler for windows diplay
+			#  ClassicResults
+			#  BattleRoyaleResults
+			#  HalloweenResults
+			handler = self.battleResults._BattleResultsService__notifyBattleResultsPosted
+			handler(arenaUniqueID, True)
 
 			LOG_DEBUG('ActionsController.__showBattleResults => replayName: %s' % replayName)
 		except: #NOSONAR
