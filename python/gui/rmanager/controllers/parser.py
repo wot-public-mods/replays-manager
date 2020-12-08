@@ -8,6 +8,7 @@ from constants import ARENA_GUI_TYPE
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
+from soft_exception import SoftException
 
 from gui.rmanager.rmanager_constants import (RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION,\
 											 PROCESS_SUPPORTED_VERSION)
@@ -67,7 +68,10 @@ class ParserController(object):
 						blockdict = dict()
 						if 'arenaUniqueID' not in str(myblock):
 							blockdict = byteify(json.loads(myblock))
-							blockdict['vehicleInfo'] = ParserController.getVehicleInfo(blockdict)
+							vehicleInfo = ParserController.getVehicleInfo(blockdict)
+							if not vehicleInfo:
+								return None
+							blockdict['vehicleInfo'] = vehicleInfo
 							result_blocks['data']['common'] = blockdict
 						else:
 							blockdict = byteify(json.loads(myblock))
@@ -179,7 +183,10 @@ class ParserController(object):
 			vFullName = data['playerVehicle'].replace('-', ':', 1)
 			vNation = vFullName.split(':', 1)[0]
 			nationIdx = nationsIndices[vNation]
-			itemID = core_vehicles.g_list.getIDsByName(vFullName)[1]
+			try:
+				itemID = core_vehicles.g_list.getIDsByName(vFullName)[1]
+			except SoftException:
+				return
 			vItem = core_vehicles.g_cache.vehicle(nationIdx, itemID)
 			return {
 				'vehicleNation': int(nationIdx),
@@ -191,10 +198,3 @@ class ParserController(object):
 		except: #NOSONAR
 			LOG_ERROR('getVehicleInfo')
 			LOG_CURRENT_EXCEPTION()
-			return {
-				'vehicleNation': 0,
-				'vehicleLevel': 1,
-				'vehicleType': 'unknown',
-				'userString': 'unknown',
-				'shortUserString': 'unknown'
-			}
