@@ -1,0 +1,125 @@
+
+ui.window.title: Replays Manager
+ui.window.tabsOwn: リプレイ一覧
+ui.window.placeholder: 一覧からリプレイを選択すると詳細情報が表示されます
+ui.window.frags: 撃破数
+ui.window.damage: ダメージ
+ui.window.credits: クレジット
+ui.window.xp: 経験値
+ui.window.spotted: 発見数
+ui.window.assist: アシスト
+ui.window.battleResult: —
+ui.window.battleResultVictory: 勝利
+ui.window.battleResultDefeat: 敗北
+ui.window.battleResultDraw: 引き分け
+ui.window.buttonShowResult: 戦闘結果表示
+ui.window.buttonPlay: 再生
+ui.window.buttonUpload: WoTReplays にアップロード
+ui.window.buttonRemove: 削除
+ui.window.buttonApply: 適用
+ui.window.buttonReset: リセット
+ui.window.infoPlaceholder: 被撃破
+ui.window.sorting.label: 並び替え
+ui.window.sorting.byTime: 日付
+ui.window.sorting.byCredits: クレジット
+ui.window.sorting.byDamage: ダメージ
+ui.window.sorting.byResults: 結果
+ui.window.sorting.byMap: マップ
+ui.window.sorting.byVehicle: 車輌
+ui.window.sorting.byXp: 経験値
+ui.window.sorting.byKills: 撃破車輌数
+ui.window.sorting.bySpotted: 発見車輌数
+ui.window.sorting.byAssist: アシスト
+
+ui.window.dateFilter.label: リプレイ
+ui.window.dateFilter.today: 今日
+ui.window.dateFilter.week: 1週間
+ui.window.dateFilter.month: 1カ月
+ui.window.dateFilter.allTime: 全期間
+ui.window.filterButtonLabel: フィルター
+ui.window.filterTab.title: フィルター
+ui.window.filterTab.all: All
+ui.window.filterTab.any: Any
+ui.window.filterTab.map: マップ:
+ui.window.filterTab.mapAll: 全マップ
+ui.window.filterTab.vehicle: 車輌:
+ui.window.filterTab.vehicleTypeAll: 全車輌タイプ
+ui.window.filterTab.vehicleTypeHeavy: 重戦車
+ui.window.filterTab.vehicleTypeMedium: 中戦車
+ui.window.filterTab.vehicleTypeLight: 軽戦車
+ui.window.filterTab.vehicleTypeATSPG: 駆逐戦車
+ui.window.filterTab.vehicleTypeSPG: 自走砲
+ui.window.filterTab.vehicleLevel: Tier
+ui.window.filterTab.battleType: 戦闘モード:
+ui.window.filterTab.battleResult: 戦闘結果:
+ui.window.filterTab.otherLabel: その他:
+ui.window.filterTab.otherShowFavorite: お気に入りのリプレイ
+
+ui.window.paginatorLabel: ページ
+ui.window.paginatorPrev: <<
+ui.window.paginatorNext: >>
+ui.window.paginatorFirst: 先頭
+ui.window.paginatorLast: 末尾
+
+ui.window.tabsFilter: フィルタ
+ui.window.tabsInfo: 詳細
+
+
+
+ui.uploader.windowTitle: WoTReplays.eu にアップロード
+ui.uploader.labelStatus: 状況
+ui.uploader.statusNotFound: リプレイが見つかりません
+ui.uploader.statusWrongAccount: アップロード可能なのは自分のリプレイだけです!
+ui.uploader.statusNotAccount: リプレイを読み込むためにクライアントを実行してください
+ui.uploader.statusErrorOccure: エラー
+ui.uploader.statusFound: リプレイが見つかりません
+ui.uploader.statusLoading: アップロード中です
+ui.uploader.statusConnectionError: 接続エラー!
+ui.uploader.statusLoadingComplete: サーバーの応答待機中です
+ui.uploader.statusSucces: WoTReplays.eu へのアップロードが成功しました
+ui.uploader.linkLabel: リンク
+ui.uploader.error0: サイトのシステムエラー: 
+ui.uploader.error1: ファイルが見つかりません: 
+ui.uploader.error2: 処理に失敗しました: 
+ui.uploader.error3: ユーザーが見つかりません: 
+ui.uploader.error4: クエリが空です: 
+ui.uploader.error5: リプレイの保存に失敗しました: 
+ui.uploader.error6: アップロード対象のリプレイが他のユーザーによって登録されています。
+ui.uploader.responceLabel: リプレイを WoTReplays.eu にアップロードしました! <br />サイトに移動: {{url}} <br />ダウンロード: {{directLink}}
+ui.uploader.progressLabel:  Kb / {{value}} Kb 中
+ui.uploader.buttonStartUpload: アップロード実行
+ui.uploader.inputTitle: 名称 (100文字まで)
+ui.uploader.inputDescription: 説明 (500文字まで)
+ui.uploader.checkBoxIsSecretLabel: リプレイを非表示にする
+ui.uploader.checkBoxIsSecretInfo: {HEADER}リプレイを非表示にする{/HEADER}{BODY}自分だけがリプレイを見れるようにします。{/BODY}
+
+
+
+ui.waiting.prepareDB: 一覧を取得しています。しばらくお待ちください...
+ui.waiting.updatingList: 一覧を更新しています
+
+
+
+ui.action.showResults: 戦闘結果を表示
+ui.action.play: 再生
+ui.action.upload: WoTReplays.eu へアップロード
+ui.action.favoriteAdd: お気に入りに追加
+ui.action.favoriteDelete: お気に入りから削除
+ui.action.delete: 削除
+
+
+
+ui.popup.button.yes: はい
+ui.popup.button.no: いいえ
+ui.popup.button.close: 閉じる
+ui.popup.play.title: クライアント再起動の確認
+ui.popup.play.message: リプレイ再生のためWoTクライアントを再起動する必要があります。続行しますか?
+ui.popup.delete.title: リプレイファイルの削除
+ui.popup.delete.message: ファイルを削除してよろしいですか: %s?
+
+
+modsListApi.title: Mod 一覧
+modsListApi.info: {HEADER}Mod 一覧{/HEADER}{BODY}Mod の操作、設定変更、管理を行います{/BODY}
+modsListApi.name: Replays Manager
+modsListApi.description: リプレイファイル再生、戦闘結果表示、 WoTReplays.eu へのアップロードと同様のプレイバック機能を提供します
+
