@@ -14,7 +14,7 @@ from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from gui.impl import backport
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
-from gui.rmanager.rmanager_constants import REPLAYS_PATH, DB_FILENAME, DB_VERSION, DATABASE_STATES
+from gui.rmanager._constants import REPLAYS_PATH, DB_FILENAME, DB_VERSION, DATABASE_STATES
 from gui.rmanager.utils import convertData
 
 __all__ = ('DataBaseController', )

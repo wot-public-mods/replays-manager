@@ -20,7 +20,7 @@ from gui.shared.utils.functions import getViewName
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.lang import l10n
-from gui.rmanager.rmanager_constants import (REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS,
+from gui.rmanager._constants import (REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS,
 												REPLAY_FLAG_FILE, REPLAYS_MANAGER_UPLOADER_ALIAS)
 from helpers import dependency
 from skeletons.gui.battle_results import IBattleResultsService
