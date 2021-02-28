@@ -20,7 +20,7 @@ from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.lang import l10n
 from gui.rmanager.utils import override
-from gui.rmanager.rmanager_constants import  REPLAYS_MANAGER_WINDOW_ALIAS
+from gui.rmanager._constants import  REPLAYS_MANAGER_WINDOW_ALIAS
 
 __all__ = ()
 

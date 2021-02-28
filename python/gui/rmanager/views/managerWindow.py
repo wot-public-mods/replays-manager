@@ -8,7 +8,7 @@ from gui.Scaleform.framework.entities.abstract.AbstractWindowView import Abstrac
 from gui.rmanager.lang import l10n, allFields
 from gui.rmanager.controllers import g_controllers
 from gui.rmanager.events import g_eventsManager
-from gui.rmanager.rmanager_constants import DEFAULT_SETTINGS, WAITING_DELAY
+from gui.rmanager._constants import DEFAULT_SETTINGS, WAITING_DELAY
 
 __all__ = ('ReplaysManagerWindow', )
 
