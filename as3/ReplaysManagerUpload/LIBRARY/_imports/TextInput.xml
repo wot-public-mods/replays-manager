@@ -1,0 +1,34 @@
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_imports/TextInput" itemID="58e2de1a-000001cc" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="TextInput" linkageURL="guiControlsLogin.swf" lastModified="1491393109" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+  <timeline>
+    <DOMTimeline name="TextInput">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+  <parametersAsXML><![CDATA[   <property id="actAsButton">
+      <Inspectable name="actAsButton" unlocalizedName="actAsButton" variable="actAsButton" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="displayAsPassword">
+      <Inspectable name="displayAsPassword" unlocalizedName="displayAsPassword" variable="displayAsPassword" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="maxChars">
+      <Inspectable name="maxChars" unlocalizedName="maxChars" variable="maxChars" category="" verbose="0" defaultValue="50" type="Number"/>
+   </property>
+   <property id="selectionBgColor">
+      <Inspectable name="selectionBgColor" unlocalizedName="selectionBgColor" variable="selectionBgColor" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="selectionTextColor">
+      <Inspectable name="selectionTextColor" unlocalizedName="selectionTextColor" variable="selectionTextColor" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+]]></parametersAsXML>
+</DOMComponentItem>

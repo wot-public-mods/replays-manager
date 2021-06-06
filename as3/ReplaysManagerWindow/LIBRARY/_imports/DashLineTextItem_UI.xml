@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_imports/DashLineTextItem_UI" itemID="54c3f891-00000095" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="DashLineTextItem_UI" linkageURL="guiControlsLobby.swf" lastModified="1475457913">
+  <timeline>
+    <DOMTimeline name="DashLineTextItem_UI">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

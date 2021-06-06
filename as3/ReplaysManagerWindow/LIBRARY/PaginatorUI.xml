@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="PaginatorUI" itemID="54bfa6b0-0000006a" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.Paginator" linkageClassName="com.kmalyshev.rmanager.ui.PaginatorUI" lastModified="1622966506">
+  <timeline>
+    <DOMTimeline name="PaginatorUI">
+      <layers>
+        <DOMLayer name="main" color="#4F80FF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="LabelButtonBarUI" name="buttonBar" selected="true">
+                  <transformationPoint>
+                    <Point x="300" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

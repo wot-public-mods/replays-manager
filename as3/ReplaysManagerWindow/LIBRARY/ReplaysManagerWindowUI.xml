@@ -1,0 +1,109 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysManagerWindowUI" itemID="5c8ad2f0-00000196" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.ReplaysManagerWindow" linkageClassName="ReplaysManagerWindowUI" lastModified="1622967753">
+  <timeline>
+    <DOMTimeline name="ReplaysManagerWindowUI">
+      <layers>
+        <DOMLayer name="views" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/ViewStack" name="view">
+                  <matrix>
+                    <Matrix tx="5" ty="9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="tabs_delim" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/tabs_delim_mc">
+                  <matrix>
+                    <Matrix a="9.91998291015625" tx="4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="47.1" y="2.05"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.19921875"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg_list1" color="#669900" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="_local/images/image 9.png">
+                  <matrix>
+                    <Matrix a="1.0040283203125" d="1.26092529296875" tx="4" ty="2"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg_list" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="_local/images/list_bg.png">
+                  <matrix>
+                    <Matrix a="1.72520446777344" d="0.99847412109375" tx="4" ty="2"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg_tank" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/tank_bg" centerPoint3DX="499" centerPoint3DY="333">
+                  <matrix>
+                    <Matrix a="0.990005493164063" d="0.945709228515625" tx="4" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="500" y="350"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.5"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg_gradient" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="_local/images/gradient_bot.png">
+                  <matrix>
+                    <Matrix a="0" b="-0.3134765625" c="1.13897705078125" d="0" ty="664.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="260" y="439"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+                <DOMBitmapInstance libraryItemName="_local/images/gradient_top.png">
+                  <matrix>
+                    <Matrix a="0.520828247070313" d="0.337509155273438" ty="2"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

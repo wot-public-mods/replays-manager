@@ -1,0 +1,114 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysManagerStatusView" itemID="58e2d5d4-000001b9" linkageExportForAS="true" linkageBaseClass="com.poliroid.gui.lobby.rmanager.components.ReplaysManagerStatusView" linkageClassName="ReplaysManagerStatusViewUI" lastModified="1622965439">
+  <timeline>
+    <DOMTimeline name="ReplaysManagerStatusView">
+      <layers>
+        <DOMLayer name="text_layer" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="statusTF" width="340" height="14.5" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="22" ty="22"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Статус: Начинается загрузка!</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="2" strength="1.3"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="uploadStats" width="121" height="14.5" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="22" ty="62"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#CCCCCC"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="2" strength="1.3"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="uploadStatsPerc" width="36" height="14.5" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="202" ty="62"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>0%</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" autoKern="false" lineSpacing="0" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#CCCCCC"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="2" strength="1.3"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="responseTF" width="396" height="76" isSelectable="false" renderAsHTML="true" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="22" ty="102"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="2" strength="1.3"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="uploadbar" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/LoadingBar" name="uploadBar">
+                  <matrix>
+                    <Matrix tx="20" ty="80"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#EEC27B" alpha="0"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!8800 4000|0 4000!0 4000|0 0!0 0|8800 0!8800 0|8800 4000"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

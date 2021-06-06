@@ -1,0 +1,119 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#999999" width="1000" height="668" frameRate="30" currentTimeline="1" xflVersion="2.981" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 21.0 build 41649" majorVersion="21" buildNumber="41649" timelineLabelWidth="234" viewAngle3D="86.8503432264464" vanishingPoint3DX="500" vanishingPoint3DY="334" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" autoSaveEnabled="true" autoSaveHasPrompted="true" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="CBBB04A0509F8940A38F010F82BF36D6">
+     <folders>
+          <DOMFolderItem name="_imports" itemID="5cf8dd9d-0000007d" isExpanded="true"/>
+          <DOMFolderItem name="_local" itemID="5cf8ddb1-00000080" isExpanded="true"/>
+          <DOMFolderItem name="_local/bg_tanks_images" itemID="54b7bb69-000004ae" isExpanded="true"/>
+          <DOMFolderItem name="_local/images" itemID="54b76cf7-0000024f" isExpanded="true"/>
+          <DOMFolderItem name="_local/images/flags_new" itemID="558697f4-0000023d"/>
+          <DOMFolderItem name="_local/images/icons" itemID="54b8c0ca-0000070d"/>
+          <DOMFolderItem name="_local/images/replayItem" itemID="55854efa-000002eb"/>
+          <DOMFolderItem name="_local/MovieClips" itemID="54b7d025-00000527" isExpanded="true"/>
+          <DOMFolderItem name="_local/MovieClips/replay_item_ico" itemID="54bcd4f6-00000032"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="_imports/$TitleFont" itemID="5cf8e290-00000077" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$TitleFont" linkageURL="gfxfontlib.swf" font="ZurichCondBold" size="0" id="2" sourceLastImported="1387448491" embedRanges="9999"/>
+          <DOMFontItem name="_imports/$FieldFont" itemID="5cf8e289-00000076" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$FieldFont" linkageURL="gfxfontlib.swf" font="ZurichCond" size="0" id="1" sourceLastImported="1421397177" embedRanges="9999"/>
+     </fonts>
+     <media>
+          <DOMBitmapItem name="_local/bg_tanks_images/1.png" itemID="60bc8524-000001ed" sourceExternalFilepath="./LIBRARY/_local/bg_tanks_images/1.png" sourceLastImported="1622967370" externalFileSize="800851" originalCompressionType="lossless" quality="50" href="_local/bg_tanks_images/1.png" bitmapDataHRef="M 25 1421329829.dat" frameRight="20000" frameBottom="14000"/>
+          <DOMBitmapItem name="_local/images/Bitmap 1.png" itemID="60bc8545-000001f1" sourceExternalFilepath="./LIBRARY/_local/images/Bitmap 1.png" sourceLastImported="1622967510" externalFileSize="8049" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/Bitmap 1.png" bitmapDataHRef="M 27 1421331581.dat" frameRight="3340" frameBottom="1440"/>
+          <DOMBitmapItem name="_local/images/favorite.png" itemID="60bc8534-000001f0" sourceExternalFilepath="./LIBRARY/_local/images/favorite.png" sourceLastImported="1622967604" externalFileSize="6067" allowSmoothing="true" originalCompressionType="lossless" quality="50" href="_local/images/favorite.png" bitmapDataHRef="M 23 1421671173.dat" frameRight="2020" frameBottom="1500"/>
+          <DOMBitmapItem name="_local/images/flags_new/flag_defeat.png" itemID="60bc858b-00000204" sourceExternalFilepath="./LIBRARY/_local/images/flags_new/flag_defeat.png" sourceLastImported="1622967672" externalFileSize="1761" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/flags_new/flag_defeat.png" bitmapDataHRef="M 33 1434884071.dat" frameRight="560" frameBottom="680"/>
+          <DOMBitmapItem name="_local/images/flags_new/flag_draw.png" itemID="60bc858b-00000205" sourceExternalFilepath="./LIBRARY/_local/images/flags_new/flag_draw.png" sourceLastImported="1622967676" externalFileSize="1874" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/flags_new/flag_draw.png" bitmapDataHRef="M 34 1434884071.dat" frameRight="560" frameBottom="680"/>
+          <DOMBitmapItem name="_local/images/flags_new/flag_victory.png" itemID="60bc8580-00000203" sourceExternalFilepath="./LIBRARY/_local/images/flags_new/flag_victory.png" sourceLastImported="1622967680" externalFileSize="1785" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/flags_new/flag_victory.png" bitmapDataHRef="M 35 1434884071.dat" frameRight="560" frameBottom="680"/>
+          <DOMBitmapItem name="_local/images/gradient_bot.png" itemID="60bc854d-000001f3" sourceExternalFilepath="./LIBRARY/_local/images/gradient_bot.png" sourceLastImported="1622967628" externalFileSize="660183" originalCompressionType="lossless" quality="50" href="_local/images/gradient_bot.png" bitmapDataHRef="M 1 1421307120.dat" frameRight="10400" frameBottom="17560"/>
+          <DOMBitmapItem name="_local/images/gradient_top.png" itemID="60bc8558-000001f7" sourceExternalFilepath="./LIBRARY/_local/images/gradient_top.png" sourceLastImported="1622967632" externalFileSize="1749761" originalCompressionType="lossless" quality="50" href="_local/images/gradient_top.png" bitmapDataHRef="M 5 1421308722.dat" frameRight="38400" frameBottom="20740"/>
+          <DOMBitmapItem name="_local/images/icons/ico_assist.png" itemID="60bc858c-00000206" sourceExternalFilepath="./LIBRARY/_local/images/icons/ico_assist.png" sourceLastImported="1622967692" externalFileSize="5432" allowSmoothing="true" originalCompressionType="lossless" quality="50" href="_local/images/icons/ico_assist.png" bitmapDataHRef="M 36 1435240312.dat" frameRight="860" frameBottom="860"/>
+          <DOMBitmapItem name="_local/images/icons/ico_credits.png" itemID="60bc860c-00000221" sourceExternalFilepath="./LIBRARY/_local/images/icons/ico_credits.png" sourceLastImported="1622967694" externalFileSize="1233" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/icons/ico_credits.png" bitmapDataHRef="M 44 1421396387.dat" frameRight="480" frameBottom="480"/>
+          <DOMBitmapItem name="_local/images/icons/ico_damage.png" itemID="60bc8592-00000208" sourceExternalFilepath="./LIBRARY/_local/images/icons/ico_damage.png" sourceLastImported="1622967698" externalFileSize="1537" originalCompressionType="lossless" quality="50" href="_local/images/icons/ico_damage.png" bitmapDataHRef="M 38 1421395093.dat" frameRight="480" frameBottom="480"/>
+          <DOMBitmapItem name="_local/images/icons/ico_frags.png" itemID="60bc8594-00000209" sourceExternalFilepath="./LIBRARY/_local/images/icons/ico_frags.png" sourceLastImported="1622967700" externalFileSize="1538" originalCompressionType="lossless" quality="50" href="_local/images/icons/ico_frags.png" bitmapDataHRef="M 40 1421395445.dat" frameRight="480" frameBottom="480"/>
+          <DOMBitmapItem name="_local/images/icons/ico_spotted.png" itemID="60bc8596-0000020a" sourceExternalFilepath="./LIBRARY/_local/images/icons/ico_spotted.png" sourceLastImported="1622967702" externalFileSize="5164" allowSmoothing="true" originalCompressionType="lossless" quality="50" href="_local/images/icons/ico_spotted.png" bitmapDataHRef="M 37 1435240312.dat" frameRight="860" frameBottom="860"/>
+          <DOMBitmapItem name="_local/images/icons/ico_xp.png" itemID="60bc8598-0000020b" sourceExternalFilepath="./LIBRARY/_local/images/icons/ico_xp.png" sourceLastImported="1622967704" externalFileSize="1294" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/icons/ico_xp.png" bitmapDataHRef="M 45 1421396387.dat" frameRight="480" frameBottom="480"/>
+          <DOMBitmapItem name="_local/images/iconDown.png" itemID="60bc8556-000001f6" sourceExternalFilepath="./LIBRARY/_local/images/iconDown.png" sourceLastImported="1622967638" externalFileSize="379" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/iconDown.png" bitmapDataHRef="M 24 1421754884.dat" frameRight="260" frameBottom="160"/>
+          <DOMBitmapItem name="_local/images/iconUp.png" itemID="60bc8571-000001fd" sourceExternalFilepath="./LIBRARY/_local/images/iconUp.png" sourceLastImported="1622967642" externalFileSize="354" allowSmoothing="true" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/iconUp.png" bitmapDataHRef="M 23 1421754884.dat" frameRight="260" frameBottom="160"/>
+          <DOMBitmapItem name="_local/images/image 38.png" itemID="60bc8571-000001fe" sourceExternalFilepath="./LIBRARY/_local/images/image 38.png" sourceLastImported="1622967646" externalFileSize="6496" useImportedJPEGData="false" compressionType="lossless" originalCompressionType="lossless" quality="50" href="_local/images/image 38.png" bitmapDataHRef="M 26 1421330037.dat" frameRight="18800" frameBottom="1700"/>
+          <DOMBitmapItem name="_local/images/image 9.png" itemID="60bc8571-000001ff" sourceExternalFilepath="./LIBRARY/_local/images/image 9.png" sourceLastImported="1622967650" externalFileSize="845667" allowSmoothing="true" originalCompressionType="lossless" quality="50" href="_local/images/image 9.png" bitmapDataHRef="M 27 1421935388.dat" frameRight="19760" frameBottom="10500"/>
+          <DOMBitmapItem name="_local/images/list_bg.png" itemID="60bc8568-000001fc" sourceExternalFilepath="./LIBRARY/_local/images/list_bg.png" sourceLastImported="1622967656" externalFileSize="55489" originalCompressionType="lossless" quality="50" href="_local/images/list_bg.png" bitmapDataHRef="M 2 1421307120.dat" frameRight="11500" frameBottom="13260"/>
+          <DOMBitmapItem name="_local/images/no_map.png" itemID="60bc8572-00000200" sourceExternalFilepath="./LIBRARY/_local/images/no_map.png" sourceLastImported="1622967666" externalFileSize="20788" originalCompressionType="lossless" quality="50" href="_local/images/no_map.png" bitmapDataHRef="M 31 1421334316.dat" frameRight="4620" frameBottom="1960"/>
+          <DOMBitmapItem name="_local/images/replayItem/replay_item_over_new.png" itemID="60bc860c-00000222" sourceExternalFilepath="./LIBRARY/_local/images/replayItem/replay_item_over_new.png" sourceLastImported="1622967708" externalFileSize="266520" originalCompressionType="lossless" quality="50" href="_local/images/replayItem/replay_item_over_new.png" bitmapDataHRef="M 33 1434800944.dat" frameRight="19000" frameBottom="2360"/>
+     </media>
+     <symbols>
+          <Include href="_imports/ButtonBarEx.xml" itemID="54c09b28-000000c7" lastModified="1475458143"/>
+          <Include href="_imports/ButtonBlack.xml" itemID="55707490-0000018e" lastModified="1475458124"/>
+          <Include href="_imports/ButtonBlackToggleUI.xml" itemID="55855fb2-00000446" lastModified="1475460055"/>
+          <Include href="_imports/ButtonNormal.xml" itemID="52c92cc2-00000540" lastModified="1475458042"/>
+          <Include href="_imports/ButtonRed.xml" itemID="55706531-00000177" lastModified="1475458027"/>
+          <Include href="_imports/CheckBoxFilter.xml" itemID="55859986-00000232" lastModified="1475458005"/>
+          <Include href="_imports/CheckBoxTankers.xml" itemID="558ab90e-00000067" lastModified="1475457986"/>
+          <Include href="_imports/ContentTabBar.xml" itemID="54c3e64b-00000049" lastModified="1475457969"/>
+          <Include href="_imports/ContextMenu.xml" itemID="58991792-00000182" lastModified="1486428050"/>
+          <Include href="_imports/CSVehicleButtonUI.xml" itemID="54c4e072-0000012f" lastModified="1422188658"/>
+          <Include href="_imports/DashLineTextItem_UI.xml" itemID="54c3f891-00000095" lastModified="1475457913"/>
+          <Include href="_imports/DropDownImageText.xml" itemID="54d32a1b-0000007a" lastModified="1475457714"/>
+          <Include href="_imports/DropdownMenu.xml" itemID="54d0bf68-00000052" lastModified="1475457690"/>
+          <Include href="_imports/ScrollBar.xml" itemID="52b2f9ae-00000271" lastModified="1475457764"/>
+          <Include href="_imports/ScrollingList.xml" itemID="52b2e7d2-00000226" lastModified="1475457805"/>
+          <Include href="_imports/TabButton.xml" itemID="54c0a084-000000df" lastModified="1475457827"/>
+          <Include href="_imports/UILoaderAlt.xml" itemID="52b34b52-000001f2" lastModified="1475457866"/>
+          <Include href="_imports/ViewStack.xml" itemID="54c09b3d-000000ca" lastModified="1475457886"/>
+          <Include href="_local/MovieClips/asc_desc_mc.xml" loadImmediate="false" itemID="54be4234-00000071" lastModified="1421755003"/>
+          <Include href="_local/MovieClips/battleResult_mc.xml" loadImmediate="false" itemID="54bce524-000000ad" lastModified="1434884139"/>
+          <Include href="_local/MovieClips/battleResultText_mc.xml" loadImmediate="false" itemID="5582ae15-000000e5" lastModified="1434884024"/>
+          <Include href="_local/MovieClips/empty_mc.xml" loadImmediate="false" itemID="54be234f-0000004a" lastModified="1421747037"/>
+          <Include href="_local/MovieClips/favorite_mc.xml" loadImmediate="false" itemID="54bcfb9d-000000fe" lastModified="1421671325"/>
+          <Include href="_local/MovieClips/hitAreaA.xml" loadImmediate="false" itemID="5c88df46-00000186" lastModified="1552474058"/>
+          <Include href="_local/MovieClips/no_map_mc.xml" loadImmediate="false" itemID="54b8b69c-000006e1" lastModified="1421391516"/>
+          <Include href="_local/MovieClips/replay_info_veh_bg.xml" loadImmediate="false" itemID="54c4ec36-00000154" lastModified="1422191750"/>
+          <Include href="_local/MovieClips/replay_item_ico/ico_assist_mc.xml" loadImmediate="false" itemID="558c07d9-0000009e" lastModified="1435240409"/>
+          <Include href="_local/MovieClips/replay_item_ico/ico_credits_mc.xml" loadImmediate="false" itemID="54b8c9f2-00000762" lastModified="1421396466"/>
+          <Include href="_local/MovieClips/replay_item_ico/ico_damage_mc.xml" loadImmediate="false" itemID="54b8c911-0000073e" lastModified="1421396241"/>
+          <Include href="_local/MovieClips/replay_item_ico/ico_frags_mc.xml" loadImmediate="false" itemID="54b8c8fb-00000737" lastModified="1421396219"/>
+          <Include href="_local/MovieClips/replay_item_ico/ico_spotted_mc.xml" loadImmediate="false" itemID="558c07a4-00000090" lastModified="1435240357"/>
+          <Include href="_local/MovieClips/replay_item_ico/ico_xp_mc.xml" loadImmediate="false" itemID="54b8ca3b-00000774" lastModified="1421396539"/>
+          <Include href="_local/MovieClips/ReplayIRBG.xml" loadImmediate="false" itemID="5585534d-0000033c" lastModified="1434800973"/>
+          <Include href="_local/MovieClips/shadow_mc.xml" loadImmediate="false" itemID="54be2756-00000056" lastModified="1421748055"/>
+          <Include href="_local/MovieClips/tabs_delim_mc.xml" loadImmediate="false" itemID="54c10924-00000195" lastModified="1421937034"/>
+          <Include href="_local/MovieClips/tank_bg.xml" loadImmediate="false" itemID="54b7c232-000004d6" lastModified="1421329832"/>
+          <Include href="LabelButtonBarUI.xml" itemID="54bfa6dd-0000006c" lastModified="1622966504"/>
+          <Include href="PaginatorUI.xml" itemID="54bfa6b0-0000006a" lastModified="1622966506"/>
+          <Include href="ReplayFiltersUI.xml" itemID="55658340-0000016f" lastModified="1622966511"/>
+          <Include href="ReplayInfoUI.xml" itemID="54c3f7c3-00000092" lastModified="1622966522"/>
+          <Include href="ReplayItemRendererUI.xml" itemID="55658352-00000171" lastModified="1622967809"/>
+          <Include href="ReplaysManagerImported.xml" itemID="58e52bf7-000001b2" lastModified="1622966558"/>
+          <Include href="ReplaysManagerWindowUI.xml" itemID="5c8ad2f0-00000196" lastModified="1622967753"/>
+          <Include href="ReplaysViewUI.xml" itemID="5565834a-00000170" lastModified="1622966567"/>
+          <Include href="TextLinkButtonUI.xml" itemID="54bf9a50-00000052" lastModified="1622966573"/>
+          <Include href="TextLinkSortButtonUI.xml" itemID="54bf9a5f-00000053" lastModified="1622967453"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#9933CC" locked="true" current="true" isSelected="true" autoNamed="false">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="ReplaysManagerWindowUI" name="main">
+                                             <transformationPoint>
+                                                  <Point x="500" y="350"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts/>
+     <persistentData>
+          <PD n="com.air.sdk.path"/>
+     </persistentData>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="549964" publishTime="1622966607"/>
+          <PublishItem publishSize="549964" publishTime="1622966595"/>
+          <PublishItem publishSize="549965" publishTime="1622966586"/>
+          <PublishItem publishSize="549965" publishTime="1622966584"/>
+          <PublishItem publishSize="549964" publishTime="1622966582"/>
+     </publishHistory>
+</DOMDocument>

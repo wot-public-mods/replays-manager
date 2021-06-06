@@ -1,0 +1,316 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayInfoUI" itemID="54c3f7c3-00000092" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.ReplayInfo" linkageClassName="com.kmalyshev.rmanager.ui.ReplayInfoUI" lastModified="1622966522" lastUniqueIdentifier="15">
+  <timeline>
+    <DOMTimeline name="ReplayInfoUI">
+      <layers>
+        <DOMLayer name="placeholder" color="#FF4FFF" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="placeholder" selected="true" width="231" height="236" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="2" ty="202"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="20.05" size="16" bitmapSize="320" face="$TitleFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="buttons" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="_imports/ButtonBlack" name="btnRemove" uniqueID="2">
+                  <matrix>
+                    <Matrix ty="550"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" unlocalizedName="label" variable="label" category="" verbose="0" defaultValue="btn" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="_imports/ButtonNormal" name="btnUpload" uniqueID="3">
+                  <matrix>
+                    <Matrix ty="520"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" unlocalizedName="label" variable="label" category="" verbose="0" defaultValue="btn" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="_imports/ButtonNormal" name="btnPlay" uniqueID="4">
+                  <matrix>
+                    <Matrix ty="490"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" unlocalizedName="label" variable="label" category="" verbose="0" defaultValue="btn" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="_imports/ButtonRed" name="btnShowResults" uniqueID="5">
+                  <matrix>
+                    <Matrix ty="460"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" unlocalizedName="label" variable="label" category="" verbose="0" defaultValue="btn" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="title" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="mapName" width="231" height="25.05" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="17"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="25.05" size="20" bitmapSize="400" face="$TitleFont*" fillColor="#CCCCCC"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#000000" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="battleType" width="231" height="20.05" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="42"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="20.05" size="16" bitmapSize="320" face="$TitleFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter blurX="4" blurY="4" color="#000000" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="datetime" color="#669900" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="dateTime" width="231" height="15" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="175.5"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="15" bitmapSize="240" face="$TitleFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter blurX="4" blurY="4" color="#000000" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="vehicle" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/CSVehicleButtonUI" name="vehicleIcon">
+                  <matrix>
+                    <Matrix a="0.959182739257813" tx="35" ty="144"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mapOverlay" color="#FF4F4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/replay_info_veh_bg" name="mapOverlay">
+                  <matrix>
+                    <Matrix a="0.647064208984375" d="0.377044677734375" tx="2" ty="150"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="115.5" y="14.05"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.69921875"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="map" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/UILoaderAlt" name="mapIcon">
+                  <matrix>
+                    <Matrix tx="2" ty="75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="noMap" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/no_map_mc" name="noMap">
+                  <matrix>
+                    <Matrix tx="2" ty="75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="115.5" y="49"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="battleResults" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/battleResultText_mc" name="battleResult" centerPoint3DX="117.5" centerPoint3DY="221.1">
+                  <matrix>
+                    <Matrix ty="210"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="117.5" y="11.1"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="text" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/DashLineTextItem_UI" name="frags">
+                  <matrix>
+                    <Matrix ty="275"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_imports/DashLineTextItem_UI" name="damage">
+                  <matrix>
+                    <Matrix ty="295"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_imports/DashLineTextItem_UI" name="credits">
+                  <matrix>
+                    <Matrix ty="235"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_imports/DashLineTextItem_UI" name="xp">
+                  <matrix>
+                    <Matrix ty="255"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_imports/DashLineTextItem_UI" name="spotted">
+                  <matrix>
+                    <Matrix ty="315"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_imports/DashLineTextItem_UI" name="assist">
+                  <matrix>
+                    <Matrix ty="335"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/empty_mc" centerPoint3DX="117.5" centerPoint3DY="284.85">
+                  <matrix>
+                    <Matrix a="4.69999694824219" d="11.4000701904297"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="25" y="25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

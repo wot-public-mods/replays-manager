@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_imports/CheckBoxTankers" itemID="558ab90e-00000067" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="CheckBoxTankers" linkageURL="guiControlsLobby.swf" lastModified="1475457986">
+  <timeline>
+    <DOMTimeline name="CheckBoxTankers">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,190 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysViewUI" itemID="5565834a-00000170" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.ReplaysView" linkageClassName="com.kmalyshev.rmanager.ui.ReplaysViewUI" lastModified="1622966567" lastUniqueIdentifier="6">
+  <timeline>
+    <DOMTimeline name="ReplaysViewUI">
+      <layers>
+        <DOMLayer name="filters_button" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="_imports/ButtonBlackToggleUI" name="btnFilters" uniqueID="6">
+                  <matrix>
+                    <Matrix tx="725"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" unlocalizedName="label" variable="label" category="" verbose="0" defaultValue="btn" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="filters_mask" color="#FF800A" locked="true" autoNamed="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!19400 500|19400 12300!19400 12300|14300 12300!14300 12300|14300 500!14300 500|19400 500"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="filters" color="#9933CC" parentLayerIndex="1" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplayFiltersUI" name="replayFilters" centerPoint3DX="842.5" centerPoint3DY="317.5">
+                  <matrix>
+                    <Matrix tx="725" ty="35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="info_mask" color="#FF800A" locked="true" autoNamed="false" layerType="mask">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#FF0000"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!19400 500S2|19400 12300!19400 12300|14300 12300!14300 12300|14300 500!14300 500|19400 500"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="replay_info" color="#9933CC" parentLayerIndex="3" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplayInfoUI" name="replayInfo" centerPoint3DX="842.5" centerPoint3DY="310">
+                  <matrix>
+                    <Matrix tx="725" ty="35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point y="30"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="content_tabs" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="replays_list" color="#808080" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/ScrollingList" name="replaysList">
+                  <matrix>
+                    <Matrix ty="25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="sortingMenu" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="LabelButtonBarUI" name="sortingButtonBar">
+                  <matrix>
+                    <Matrix tx="8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="150" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="dateFilterMenu" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="LabelButtonBarUI" name="dateFilterButtonBar">
+                  <matrix>
+                    <Matrix tx="8" ty="615"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="300" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="paginatorMenu" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="PaginatorUI" name="paginator">
+                  <matrix>
+                    <Matrix tx="8" ty="630"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="300" y="10"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="replay_item" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="replay_item_bg" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="_local/images/list_bg.png">
+                  <matrix>
+                    <Matrix a="0.443466186523438" d="0.889907836914063" tx="715" ty="25"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

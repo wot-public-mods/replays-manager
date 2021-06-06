@@ -1,0 +1,66 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" backgroundColor="#999999" width="440" height="200" frameRate="30" currentTimeline="1" xflVersion="2.981" creatorInfo="Adobe Animate" platform="Windows" versionInfo="Saved by Animate Windows 21.0 build 41649" majorVersion="21" buildNumber="41649" viewAngle3D="45.2189284794376" vanishingPoint3DX="220" vanishingPoint3DY="100" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false" filetypeGUID="DD0DDBBF-5BEF-45B2-9F24-A3048D2A676F" fileGUID="0D6E8D3BAEF1D94ABC63C44BA2A5AB75">
+     <folders>
+          <DOMFolderItem name="_imports" itemID="5cf8ddea-00000085" isExpanded="true"/>
+          <DOMFolderItem name="_local" itemID="5cf8ddf6-00000088" isExpanded="true"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="_imports/$TitleFont" itemID="5832c456-00003909" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$TitleFont" linkageURL="gfxfontlib.swf" font="ZurichCondBold" size="0" id="3" sourceLastImported="1622962956"/>
+          <DOMFontItem name="_imports/$FieldFont" itemID="5832c456-00003907" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="$FieldFont" linkageURL="gfxfontlib.swf" font="ZurichCond" size="0" id="4" sourceLastImported="1364979294"/>
+     </fonts>
+     <media>
+          <DOMBitmapItem name="_local/wotreplays_logo.png" itemID="60bc7bc1-00000184" sourceExternalFilepath="E:/git/wot-replaysmanager/as3/ReplaysManagerUpload/LIBRARY/_local/wotreplays_logo.png" sourceLastImported="1622965176" externalFileCRC32="881593266" externalFileSize="90268" allowSmoothing="true" originalCompressionType="lossless" quality="50" href="_local/wotreplays_logo.png" bitmapDataHRef="M 1 1434618196.dat" frameRight="3600" frameBottom="2500"/>
+     </media>
+     <symbols>
+          <Include href="_imports/ButtonRed.xml" itemID="585afeef-0000026d" lastModified="1484517704"/>
+          <Include href="_imports/CheckBox.xml" itemID="587c103c-00000139" lastModified="1490777944"/>
+          <Include href="_imports/LoadingBar.xml" itemID="532f1b60-00000254" lastModified="1494667214"/>
+          <Include href="_imports/TextInput.xml" itemID="58e2de1a-000001cc" lastModified="1491393109"/>
+          <Include href="_local/wotreplays_logo.xml" loadImmediate="false" itemID="558289a2-000000c6" lastModified="1434618274"/>
+          <Include href="ReplaysManagerInfoView.xml" itemID="58e2d5ca-000001b8" lastModified="1622965456"/>
+          <Include href="ReplaysManagerStatusView.xml" itemID="58e2d5d4-000001b9" lastModified="1622965439"/>
+          <Include href="ReplaysManagerUploadUI.xml" itemID="58e1a003-0000012a" lastModified="1622965348"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Scene 1">
+               <layers>
+                    <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="ReplaysManagerUploadUI" name="main" centerPoint3DX="220" centerPoint3DY="250">
+                                             <transformationPoint>
+                                                  <Point x="220" y="100"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <scripts/>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="21656" publishTime="1559813637"/>
+          <PublishItem publishSize="21656" publishTime="1559813636"/>
+          <PublishItem publishSize="21656" publishTime="1559813635"/>
+          <PublishItem publishSize="21656" publishTime="1559813634"/>
+          <PublishItem publishSize="13448" publishTime="1494667118"/>
+          <PublishItem publishSize="13316" publishTime="1491395716"/>
+          <PublishItem publishSize="13317" publishTime="1491395617"/>
+          <PublishItem publishSize="13317" publishTime="1491395607"/>
+          <PublishItem publishSize="13316" publishTime="1491395492"/>
+          <PublishItem publishSize="13313" publishTime="1491395384"/>
+          <PublishItem publishSize="13313" publishTime="1491395344"/>
+          <PublishItem publishSize="8984" publishTime="1491395332"/>
+          <PublishItem publishSize="13183" publishTime="1491394474"/>
+          <PublishItem publishSize="13183" publishTime="1491394470"/>
+          <PublishItem publishSize="12970" publishTime="1491394292"/>
+          <PublishItem publishSize="12999" publishTime="1491393632"/>
+          <PublishItem publishSize="13003" publishTime="1491393462"/>
+          <PublishItem publishSize="13003" publishTime="1491393449"/>
+          <PublishItem publishSize="13041" publishTime="1491393212"/>
+          <PublishItem publishSize="13041" publishTime="1491393165"/>
+     </publishHistory>
+</DOMDocument>

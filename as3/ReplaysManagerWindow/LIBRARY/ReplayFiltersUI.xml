@@ -1,0 +1,254 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayFiltersUI" itemID="55658340-0000016f" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.ReplayFilters" linkageClassName="com.kmalyshev.rmanager.ui.ReplayFiltersUI" lastModified="1622966511" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="ReplayFiltersUI">
+      <layers>
+        <DOMLayer name="buttons" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="_imports/ButtonRed" name="btnApply" uniqueID="1">
+                  <matrix>
+                    <Matrix ty="520"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" unlocalizedName="label" variable="label" category="" verbose="0" defaultValue="btn" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="_imports/ButtonBlack" name="btnReset" uniqueID="2">
+                  <matrix>
+                    <Matrix ty="550"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" unlocalizedName="label" variable="label" category="" verbose="0" defaultValue="btn" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="title" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="title" selected="true" width="231" height="25.05" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="17"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="25.05" size="20" bitmapSize="400" face="$TitleFont*" fillColor="#CCCCCC"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#000000" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="labels" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="mapLabel" width="231" height="14.5" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="67"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Карта:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#000000" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="vehicleLabel" width="231" height="14.5" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="217"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Танк:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#000000" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="battleTypeLabel" width="231" height="14.5" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="277"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Тип боя:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#000000" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="battleResultLabel" width="231" height="14.5" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="337"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Результат боя:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#000000" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="otherLabel" width="231" height="14.5" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="2" ty="397"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Разное:</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#999999"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#000000" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="vehicle" color="#FF4FFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/DropDownImageText" name="vehicleType">
+                  <matrix>
+                    <Matrix tx="60" ty="235"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_imports/DropDownImageText" name="vehicleNation">
+                  <matrix>
+                    <Matrix ty="235"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_imports/DropDownImageText" name="vehicleLevel">
+                  <matrix>
+                    <Matrix tx="120" ty="235"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="battleType" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/DropdownMenu" name="battleType">
+                  <matrix>
+                    <Matrix ty="295"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="battleResult" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/DropdownMenu" name="battleResult">
+                  <matrix>
+                    <Matrix ty="355"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="other" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/CheckBoxTankers" name="cbFavorite">
+                  <matrix>
+                    <Matrix ty="415"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="maps" color="#4F80FF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/ScrollingList" name="mapsList">
+                  <matrix>
+                    <Matrix ty="85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,488 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayItemRendererUI" itemID="55658352-00000171" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.ReplayItemRenderer" linkageClassName="com.kmalyshev.rmanager.ui.ReplayItemRendererUI" scaleGridLeft="1" scaleGridRight="688.45" scaleGridTop="1" scaleGridBottom="116.25" lastModified="1622967809" lastUniqueIdentifier="14">
+  <timeline>
+    <DOMTimeline name="ReplayItemRendererUI" currentFrame="10">
+      <layers>
+        <DOMLayer name="Action Layer" color="#FFFF00" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="9" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="9" duration="10" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="19" duration="10" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="29" duration="10" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="39" duration="11" motionTweenScale="false" keyMode="8192">
+              <Actionscript>
+                <script><![CDATA[stop ();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Label Layer" color="#FFFF00" locked="true">
+          <frames>
+            <DOMFrame index="0" duration="10" name="up" labelType="name" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="10" name="over" labelType="name" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="20" duration="10" name="out" labelType="name" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="30" duration="10" name="down" labelType="name" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="40" duration="10" name="selected_up" labelType="name" motionTweenScale="false" keyMode="8192">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="hitAreaA" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/hitAreaA" name="hitAreaA">
+                  <matrix>
+                    <Matrix a="13.7203979492188" d="2.31964111328125" tx="2" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="0.05"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="favorite_replay" color="#808080" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/favorite_mc" name="favoriteMC" centerPoint3DX="52.5" centerPoint3DY="39.5">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50.5" y="37.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="icons" color="#4FFFFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/replay_item_ico/ico_frags_mc" centerPoint3DX="480" centerPoint3DY="65">
+                  <matrix>
+                    <Matrix a="1.25" d="1.25" tx="470" ty="55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8" y="8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/replay_item_ico/ico_damage_mc" centerPoint3DX="480" centerPoint3DY="95">
+                  <matrix>
+                    <Matrix a="1.25" d="1.25" tx="470" ty="85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8" y="8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/replay_item_ico/ico_credits_mc" centerPoint3DX="390" centerPoint3DY="65">
+                  <matrix>
+                    <Matrix a="1.25" d="1.25" tx="380" ty="55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8" y="8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/replay_item_ico/ico_xp_mc" centerPoint3DX="390" centerPoint3DY="95">
+                  <matrix>
+                    <Matrix a="1.25" d="1.25" tx="380" ty="85"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="8" y="8"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/replay_item_ico/ico_spotted_mc">
+                  <matrix>
+                    <Matrix a="0.465118408203125" d="0.465118408203125" tx="560" ty="55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21.5" y="21.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/replay_item_ico/ico_assist_mc">
+                  <matrix>
+                    <Matrix a="0.465118408203125" d="0.465118408203125" tx="560" ty="84.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="21.5" y="21.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="dynamicText" color="#FF4FFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="mapName" selected="true" width="296" height="21.3" includeOutlines="true" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="382" ty="17"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>Руинберг - Встречный бой</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="21.3" size="17" bitmapSize="340" face="$TitleFont*" fillColor="#EEC27B"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                </DOMDynamicText>
+                <DOMDynamicText name="fragsTF" width="41" height="16.95" includeOutlines="true" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="497" ty="57"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="16.95" size="14" bitmapSize="280" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="damageTF" width="41" height="16.95" includeOutlines="true" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="497" ty="87"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="16.95" size="14" bitmapSize="280" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="creditsTF" width="41" height="16.95" includeOutlines="true" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="407" ty="57"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="16.95" size="14" bitmapSize="280" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="xpTF" width="41" height="16.95" includeOutlines="true" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="407" ty="87"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="16.95" size="14" bitmapSize="280" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="dateTimeTF" width="176" height="14.5" includeOutlines="true" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="12" ty="92"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters></characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <GlowFilter color="#000000" strength="3"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="spottedTF" width="41" height="16.95" includeOutlines="true" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="587" ty="57"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="16.95" size="14" bitmapSize="280" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+                <DOMDynamicText name="assistTF" width="41" height="16.95" includeOutlines="true" isSelectable="false" lineType="multiline">
+                  <matrix>
+                    <Matrix tx="587" ty="87"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs aliasText="false" autoKern="false" lineSpacing="0" lineHeight="16.95" size="14" bitmapSize="280" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="3" strength="2"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="vehicleName" color="#FF800A" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMDynamicText name="tankNameTF" width="156" height="14.5" includeOutlines="true" isSelectable="false">
+                  <matrix>
+                    <Matrix tx="202" ty="92"/>
+                  </matrix>
+                  <textRuns>
+                    <DOMTextRun>
+                      <characters>—</characters>
+                      <textAttrs>
+                        <DOMTextAttrs alignment="center" aliasText="false" lineHeight="14.5" bitmapSize="240" face="$FieldFont*" fillColor="#FFFFFF"/>
+                      </textAttrs>
+                    </DOMTextRun>
+                  </textRuns>
+                  <filters>
+                    <DropShadowFilter angle="90" distance="1" quality="3" strength="1.3"/>
+                  </filters>
+                </DOMDynamicText>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="vehicleIcon" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/UILoaderAlt" name="vehicleIcon">
+                  <matrix>
+                    <Matrix tx="200" ty="10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mapOverlay" color="#FF800A" locked="true" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance libraryItemName="_local/images/Bitmap 1.png">
+                  <matrix>
+                    <Matrix a="1.39999389648438" d="1.39999389648438" tx="30" ty="10"/>
+                  </matrix>
+                </DOMBitmapInstance>
+                <DOMBitmapInstance libraryItemName="_local/images/Bitmap 1.png">
+                  <matrix>
+                    <Matrix a="-1" d="1.36111450195313" tx="427" ty="10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="83.5" y="36"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="mapIcon" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_imports/UILoaderAlt" name="mapIcon" selected="true">
+                  <matrix>
+                    <Matrix tx="10" ty="10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="no_map_mc" color="#4F80FF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/no_map_mc" name="noMapMC" selected="true" centerPoint3DX="125.5" centerPoint3DY="59">
+                  <matrix>
+                    <Matrix tx="10" ty="10"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="115.5" y="49"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="flag" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/battleResult_mc" name="battleResult" selected="true" centerPoint3DX="719.85" centerPoint3DY="63.8">
+                  <matrix>
+                    <Matrix a="0.571441650390625" d="0.50006103515625" tx="664" ty="15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="97.75" y="97.6"/>
+                  </transformationPoint>
+                  <filters>
+                    <GlowFilter color="#000000" quality="2"/>
+                  </filters>
+                  <color>
+                    <Color alphaMultiplier="0.80078125"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="overlay" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="10" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="10" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/ReplayIRBG" selected="true" centerPoint3DX="345" centerPoint3DY="60">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="343" y="58"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.5"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="20" duration="10" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="30" duration="10" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="40" duration="10" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/ReplayIRBG" centerPoint3DX="345" centerPoint3DY="60">
+                  <matrix>
+                    <Matrix tx="2" ty="2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="343" y="58"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.75"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg_top" color="#9933CC" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="_local/images/image 38.png">
+                  <matrix>
+                    <Matrix a="-0.734024047851563" d="-0.4705810546875" tx="690" ty="41"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg_bot" color="#FF800A" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance selected="true" libraryItemName="_local/images/image 38.png">
+                  <matrix>
+                    <Matrix a="0.734024047851563" d="0.4705810546875" ty="78"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#FF4FFF" locked="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="50" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#D6D6D6" alpha="0"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!13800 2360S2|0 2360!0 2360|0 0!0 0|13800 0!13800 0|13800 2360"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

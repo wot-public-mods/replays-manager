@@ -1,0 +1,129 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysManagerInfoView" itemID="58e2d5ca-000001b8" linkageExportForAS="true" linkageBaseClass="com.poliroid.gui.lobby.rmanager.components.ReplaysManagerInfoView" linkageClassName="ReplaysManagerInfoViewUI" lastModified="1622965456" lastUniqueIdentifier="4">
+  <timeline>
+    <DOMTimeline name="ReplaysManagerInfoView">
+      <layers>
+        <DOMLayer name="inputs" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="_imports/TextInput" name="titleInput" uniqueID="1">
+                  <matrix>
+                    <Matrix a="5.00003051757813" tx="15" ty="15"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="actAsButton">
+      <Inspectable name="actAsButton" unlocalizedName="actAsButton" variable="actAsButton" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="displayAsPassword">
+      <Inspectable name="displayAsPassword" unlocalizedName="displayAsPassword" variable="displayAsPassword" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="maxChars">
+      <Inspectable name="maxChars" unlocalizedName="maxChars" variable="maxChars" category="" verbose="0" defaultValue="100" type="Number"/>
+   </property>
+   <property id="selectionBgColor">
+      <Inspectable name="selectionBgColor" unlocalizedName="selectionBgColor" variable="selectionBgColor" category="" verbose="0" defaultValue="9868935" type="Number"/>
+   </property>
+   <property id="selectionTextColor">
+      <Inspectable name="selectionTextColor" unlocalizedName="selectionTextColor" variable="selectionTextColor" category="" verbose="0" defaultValue="1973787" type="Number"/>
+   </property>
+   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="410" type="Number"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="_imports/TextInput" name="descriptionInput" uniqueID="3">
+                  <matrix>
+                    <Matrix tx="15" ty="50"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="actAsButton">
+      <Inspectable name="actAsButton" unlocalizedName="actAsButton" variable="actAsButton" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="displayAsPassword">
+      <Inspectable name="displayAsPassword" unlocalizedName="displayAsPassword" variable="displayAsPassword" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="maxChars">
+      <Inspectable name="maxChars" unlocalizedName="maxChars" variable="maxChars" category="" verbose="0" defaultValue="500" type="Number"/>
+   </property>
+   <property id="selectionBgColor">
+      <Inspectable name="selectionBgColor" unlocalizedName="selectionBgColor" variable="selectionBgColor" category="" verbose="0" defaultValue="9868935" type="Number"/>
+   </property>
+   <property id="selectionTextColor">
+      <Inspectable name="selectionTextColor" unlocalizedName="selectionTextColor" variable="selectionTextColor" category="" verbose="0" defaultValue="1973787" type="Number"/>
+   </property>
+   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="410" type="Number"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="_imports/CheckBox" name="isSecret" uniqueID="4">
+                  <matrix>
+                    <Matrix tx="15" ty="145.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="400" type="Number"/>
+   </property>
+   <property id="infoIcoType">
+      <Inspectable name="infoIcoType" unlocalizedName="infoIcoType" variable="infoIcoType" category="" verbose="0" defaultValue="info" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="buttons" color="#9933CC" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMComponentInstance libraryItemName="_imports/ButtonRed" name="startUpload" uniqueID="2">
+                  <matrix>
+                    <Matrix a="1.625" tx="155" ty="171"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40" y="11"/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="width" variable="width" category="" verbose="0" defaultValue="130" type="Number"/>
+   </property>
+   <property id="height">
+      <Inspectable name="height" unlocalizedName="height" variable="height" category="" verbose="0" defaultValue="22" type="Number"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" unlocalizedName="label" variable="label" category="" verbose="0" defaultValue="upload" type="String"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#4FFF4F" outline="true" useOutlineView="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#EEC27B" alpha="0"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!8800 4000|0 4000!0 4000|0 0!0 0|8800 0!8800 0|8800 4000"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

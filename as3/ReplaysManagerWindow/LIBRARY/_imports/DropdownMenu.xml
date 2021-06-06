@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_imports/DropdownMenu" itemID="54d0bf68-00000052" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="DropdownMenuUI" linkageURL="guiControlsLobbyBattle.swf" lastModified="1475457690">
+  <timeline>
+    <DOMTimeline name="DropdownMenu">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,156 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysManagerUploadUI" itemID="58e1a003-0000012a" linkageExportForAS="true" linkageBaseClass="com.poliroid.gui.lobby.rmanager.ReplaysManagerUpload" linkageClassName="ReplaysManagerUploadUI" lastModified="1622965348" lastUniqueIdentifier="5">
+  <timeline>
+    <DOMTimeline name="ReplaysManagerUploadUI">
+      <layers>
+        <DOMLayer name="as" color="#FF4FFF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" duration="14" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="15" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();
+]]></script>
+              </Actionscript>
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="names" color="#009999" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="2" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" duration="14" name="upload" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="info" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplaysManagerInfoView" name="info" selected="true">
+                  <transformationPoint>
+                    <Point x="220" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="13" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplaysManagerInfoView" name="info" centerPoint3DX="220" centerPoint3DY="100">
+                  <transformationPoint>
+                    <Point x="220" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="15" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplaysManagerInfoView" name="info" centerPoint3DX="220" centerPoint3DY="-100">
+                  <matrix>
+                    <Matrix ty="-200"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="220" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="status" color="#FF800A" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplaysManagerStatusView" name="status">
+                  <transformationPoint>
+                    <Point x="220" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplaysManagerStatusView" name="status" centerPoint3DX="220" centerPoint3DY="300">
+                  <matrix>
+                    <Matrix ty="200"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="220" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" duration="13" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplaysManagerStatusView" name="status" centerPoint3DX="220" centerPoint3DY="300">
+                  <matrix>
+                    <Matrix ty="200"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="220" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="15" tweenType="motion" motionTweenSnap="true" keyMode="22017">
+              <elements>
+                <DOMSymbolInstance libraryItemName="ReplaysManagerStatusView" name="status" centerPoint3DX="220" centerPoint3DY="100">
+                  <transformationPoint>
+                    <Point x="220" y="100"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg_logo" color="#4F80FF" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="16" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="_local/wotreplays_logo">
+                  <matrix>
+                    <Matrix tx="259" ty="74.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="90" y="62.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color alphaMultiplier="0.1484375"/>
+                  </color>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="bg" color="#4FFF4F" autoNamed="false">
+          <frames>
+            <DOMFrame index="0" duration="16" keyMode="9728">
+              <elements>
+                <DOMShape>
+                  <fills>
+                    <FillStyle index="1">
+                      <SolidColor color="#EEC27B" alpha="0"/>
+                    </FillStyle>
+                  </fills>
+                  <edges>
+                    <Edge fillStyle1="1" edges="!8800 4000|0 4000!0 4000|0 0!0 0|8800 0!8800 0|8800 4000"/>
+                  </edges>
+                </DOMShape>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

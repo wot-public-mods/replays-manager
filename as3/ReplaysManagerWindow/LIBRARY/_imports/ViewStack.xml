@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_imports/ViewStack" itemID="54c09b3d-000000ca" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="ViewStack" linkageURL="guiControlsLobbyBattle.swf" lastModified="1475457886">
+  <timeline>
+    <DOMTimeline name="ViewStack">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

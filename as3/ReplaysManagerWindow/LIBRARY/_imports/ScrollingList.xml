@@ -1,0 +1,15 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_imports/ScrollingList" itemID="52b2e7d2-00000226" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="ScrollingList" linkageURL="guiControlsLobby.swf" lastModified="1475457805">
+  <timeline>
+    <DOMTimeline name="ScrollingList">
+      <layers>
+        <DOMLayer name="Layer 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>
