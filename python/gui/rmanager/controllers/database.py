@@ -43,7 +43,6 @@ class DataBaseController(object):
 	@process
 	def prepareDataBase(self):
 		LOG_DEBUG('DataBaseController.prepareDataBase')
-		g_eventsManager.onUpdatingDatabaseStart()
 		try:
 			dbfolder = DB_FILENAME.replace("/database", "")
 			if not os.path.exists(dbfolder):

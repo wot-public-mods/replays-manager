@@ -10,7 +10,6 @@ class EventsManager(object):
 		self.onAppFinish = Event.Event()
 		self.onLoginViewLoaded = Event.Event()
 
-		self.onUpdatingDatabaseStart = Event.Event()
 		self.onUpdatingDatabaseStop = Event.Event()
 		self.onParsingReplay = Event.Event()
 
