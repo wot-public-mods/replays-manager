@@ -204,6 +204,12 @@ def genCrystalReplay(results):
 			replay.append(makeStepCompDescr(op.ADD, makeIndex(nameToIndex('eventCrystalList'), x + 1, 0)))
 	return pack(replay)
 
+def battle_royale_fix(results):
+	if 'currencies' in results and 'brcoin' in results['currencies']:
+		if not results['currencies']['brcoin']['replay']:
+			del results['currencies']['brcoin']
+	return results
+
 @override(_EconomicsRecordsChains, "addResults")
 def _EconomicsRecordsChains_addResults(baseMethod, baseObject, intCD, results):
 	if 'creditsReplay' in results and not results['creditsReplay']:
@@ -216,6 +222,10 @@ def _EconomicsRecordsChains_addResults(baseMethod, baseObject, intCD, results):
 		results['freeXPReplay'] = genFreeXPReplay(results)
 	if 'crystalReplay' in results and not results['crystalReplay']:
 		results['crystalReplay'] = genCrystalReplay(results)
+
+	# TODO replay value rebuild
+	results = battle_royale_fix(results)
+
 	return baseMethod(baseObject, intCD, results)
 
 @override(BattleResultsService, "_BattleResultsService__postStatistics")
