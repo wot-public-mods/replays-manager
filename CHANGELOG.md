@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.6.3
+
+* fixes for 1.18.0
+
 ## v3.6.2
 
 * work with 1.17.0 (battle royale)
