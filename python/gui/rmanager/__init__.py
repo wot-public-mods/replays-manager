@@ -1,11 +1,11 @@
 
-__author__ = "Andruschyshyn Andrey and Kirill Malyshev"
+__author__ = "Andrii Andrushchyshyn and Kirill Malyshev"
 __copyright__ = "Copyright 2022, poliroid"
-__credits__ = ["Andruschyshyn Andrey", "Kirill Malyshev"]
+__credits__ = ["Andrii Andrushchyshyn", "Kirill Malyshev"]
 __license__ = "LGPL-3.0-or-later"
 __version__ = "3.6.2"
-__maintainer__ = "Andruschyshyn Andrey"
-__email__ = "poliroid@pm.me"
+__maintainer__ = "Andrii Andrushchyshyn"
+__email__ = "contact@poliroid.me"
 __status__ = "Production"
 
 from gui.rmanager.hooks import *
