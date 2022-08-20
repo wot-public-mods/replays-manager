@@ -85,22 +85,6 @@ except ImportError:
 if g_dataCollector:
 	g_dataCollector.addSoloMod('replays_manager', __version__)
 
-
-@override(EpicBattleMetaGameController, '_EpicBattleMetaGameController__showBattleResults')
-def __showBattleResults(baseMethod, baseObject, reusableInfo, _, resultsWindow):
-	arenaBonusType = reusableInfo.common.arenaBonusType
-	arenaUniqueID = reusableInfo.arenaUniqueID
-
-	if not hasattr(baseObject, '_arenaBattleResultsWasShown'):
-		baseObject._arenaBattleResultsWasShown = set()
-
-	if arenaUniqueID not in baseObject._arenaBattleResultsWasShown:
-		baseObject._arenaBattleResultsWasShown.add(arenaUniqueID)
-		from constants import ARENA_BONUS_TYPE
-		from gui.shared import event_dispatcher
-		if arenaBonusType == ARENA_BONUS_TYPE.EPIC_BATTLE:
-			event_dispatcher.showEpicBattlesAfterBattleWindow(reusableInfo, resultsWindow)
-
 # Add missing battle result fields (creditsReplay, xpReply, freeXpReplay, goldReplay, fortResource, crystalReplay)
 # See BattleReplay.py onBattleResultsReceived method
 
