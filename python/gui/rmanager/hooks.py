@@ -10,7 +10,6 @@ from gui.shared.personality import ServicesLocator
 from gui.app_loader.settings import APP_NAME_SPACE
 from gui.battle_results.reusable.personal import _EconomicsRecordsChains
 from gui.battle_results.service import BattleResultsService
-from gui.game_control.epic_meta_game_ctrl import EpicBattleMetaGameController
 from gui.lobby_context import LobbyContext
 from gui.Scaleform.daapi.view.lobby.user_cm_handlers import AppealCMHandler, USER
 from gui.Scaleform.daapi.view.login.LoginView import LoginView
@@ -54,15 +53,12 @@ def getItemByCD(baseMethod, baseObject, typeCompDescr):
 
 @override(AppealCMHandler, 'getOptions')
 def getOptions(baseMethod, baseObject, ctx=None):
-	options = []
 	if baseObject.prbDispatcher:
-		options.extend(baseMethod(baseObject, ctx))
-	else:
-		options.extend([
-			baseObject._makeItem(USER.COPY_TO_CLIPBOARD, MENU.contextmenu(USER.COPY_TO_CLIPBOARD)),
-			baseObject._makeItem(USER.VEHICLE_INFO, MENU.contextmenu(USER.VEHICLE_INFO))
-		])
-	return options
+		return baseMethod(baseObject, ctx) or []
+	return [
+		baseObject._makeItem(USER.COPY_TO_CLIPBOARD, MENU.contextmenu(USER.COPY_TO_CLIPBOARD)),
+		baseObject._makeItem(USER.VEHICLE_INFO, MENU.contextmenu(USER.VEHICLE_INFO))
+	]
 
 # modsListApi
 g_modsListApi = None
