@@ -1,6 +1,6 @@
 
 import json
-from adisp import process
+from adisp import adisp_process
 
 import ArenaType
 import BigWorld
@@ -72,7 +72,7 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 	def onReplayAction(self, actionType, replayName):
 		g_controllers.actions.handleAction(actionType, replayName)
 
-	@process
+	@adisp_process
 	def __getAPIStatus(self):
 		status = yield g_controllers.uploader.apiStatus()
 		self.as_setAPIStatusS(status)

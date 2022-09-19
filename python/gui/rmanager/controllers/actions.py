@@ -1,6 +1,6 @@
 
 import os
-from adisp import process
+from adisp import adisp_process
 
 import BigWorld
 import BattleReplay
@@ -183,7 +183,7 @@ class ActionsController(object):
 		DialogsInterface.showDialog(getConfirmDialogMeta(), dialogCallback)
 
 	def __tryToPlay(self, replayName):
-		@process
+		@adisp_process
 		def onReplayFinished():
 			result = yield DialogsInterface.showI18nConfirmDialog('replayStopped')
 			if result:
