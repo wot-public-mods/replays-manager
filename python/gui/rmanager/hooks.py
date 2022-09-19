@@ -1,14 +1,12 @@
 
 import struct
-
-from ValueReplay import ValueReplay as op, ValueReplayConnector
 import BigWorld
+
 from Account import PlayerAccount
 from battle_results import g_config as battle_results_config
 from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
 from gui.app_loader.settings import APP_NAME_SPACE
-from gui.battle_results.reusable.personal import _EconomicsRecordsChains
 from gui.battle_results.service import BattleResultsService
 from gui.lobby_context import LobbyContext
 from gui.Scaleform.daapi.view.lobby.user_cm_handlers import AppealCMHandler, USER
@@ -16,10 +14,23 @@ from gui.Scaleform.daapi.view.login.LoginView import LoginView
 from gui.Scaleform.framework.managers.loaders import SFViewLoadParams
 from gui.Scaleform.locale.MENU import MENU
 from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
+from soft_exception import SoftException
+from ValueReplay import ValueReplay as op, ValueReplayConnector
+
 from gui.rmanager.events import g_eventsManager
 from gui.rmanager.lang import l10n
-from gui.rmanager.utils import override
+from gui.rmanager.utils import override, safeImport
 from gui.rmanager._constants import  REPLAYS_MANAGER_WINDOW_ALIAS
+
+# normal client codebase
+_EconomicsRecordsChains = safeImport('gui.battle_results.reusable.personal', '_EconomicsRecordsChains')
+
+# waffantrager event codebase
+if not _EconomicsRecordsChains:
+	_EconomicsRecordsChains = safeImport('gui.battle_results.reusable.economics', '_EconomicsRecordsChains')
+
+if not _EconomicsRecordsChains:
+	raise SoftException('cant import EconomicsRecordsChains')
 
 __all__ = ()
 

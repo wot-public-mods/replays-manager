@@ -1,6 +1,7 @@
 
 import ast
 import collections
+import importlib
 import itertools
 import mimetools
 import os
@@ -11,7 +12,7 @@ import ResMgr
 from constants import CURRENT_REALM
 
 __all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm', 'requestProgress',
-			'versionTuple', 'openURL', 'getTankType', 'convertData', 'fixBadges')
+			'versionTuple', 'openURL', 'getTankType', 'convertData', 'fixBadges', 'safeImport')
 
 def override(holder, name, wrapper=None, setter=None):
 	"""Override methods, properties, functions, attributes
@@ -172,3 +173,10 @@ def fixBadges(data, indent=0):
 		elif isinstance(data[key], dict):
 			data[key] = fixBadges(data[key], indent + 1)
 	return data
+
+def safeImport(path, target):
+	try:
+		module = importlib.import_module(path)
+		return getattr(module, target, None)
+	except ImportError:
+		return None
