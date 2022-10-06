@@ -1,5 +1,25 @@
 # Changelog
 
+## v3.6.8
+
+* 1.18.1 fixes
+
+## v3.6.7
+
+* waffantrager event fixes
+
+## v3.6.6
+
+* fix TypeError gui.rmanager.hooks in getOptions
+
+## v3.6.5
+
+* version bump
+
+## v3.6.4
+
+* fix epic battle promo bug
+
 ## v3.6.3
 
 * fixes for 1.18.0
