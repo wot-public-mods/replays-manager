@@ -3,7 +3,7 @@ import math
 import os
 import threading
 import urllib2
-from adisp import async, process
+from adisp import adisp_async, adisp_process
 
 import BigWorld
 from account_helpers import getAccountDatabaseID
@@ -50,8 +50,8 @@ class UploaderController(object):
 		self.__sended = 0.0
 
 	@staticmethod
-	@async
-	@process
+	@adisp_async
+	@adisp_process
 	def apiStatus(callback):
 		url = 'http://wotreplays.%s' % ('ru' if CURRENT_REALM == 'RU' else 'eu')
 		response = yield lambda callback: BigWorld.fetchURL(url, callback)

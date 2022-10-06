@@ -8,7 +8,7 @@ from datetime import datetime, timedelta, time as datetime_time
 from operator import itemgetter
 
 import BigWorld
-from adisp import async, process
+from adisp import adisp_async, adisp_process
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 
 from gui.impl import backport
@@ -40,7 +40,7 @@ class DataBaseController(object):
 		self.__replayFiles = None
 		self.__state = DATABASE_STATES.FINI
 
-	@process
+	@adisp_process
 	def prepareDataBase(self):
 		LOG_DEBUG('DataBaseController.prepareDataBase')
 		try:
@@ -74,8 +74,8 @@ class DataBaseController(object):
 		self.__database['replays_data'] = dict()
 		self.__database.close()
 
-	@async
-	@process
+	@adisp_async
+	@adisp_process
 	def __updateDataBase(self, callback=None):
 		LOG_DEBUG('DataBaseController.__updateDataBase')
 		replaysToParse = list()
