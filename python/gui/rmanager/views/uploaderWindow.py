@@ -1,10 +1,10 @@
 
 from gui.Scaleform.framework.entities.abstract.AbstractWindowView import AbstractWindowView
 
-from gui.rmanager.controllers import g_controllers
-from gui.rmanager.events import g_eventsManager
-from gui.rmanager.lang import l10n
-from gui.rmanager.utils import openURL
+from ..controllers import g_controllers
+from ..events import g_eventsManager
+from ..lang import l10n
+from ..utils import openURL
 
 __all__ = ('ReplaysManagerUploader', )
 

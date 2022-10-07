@@ -1,9 +1,9 @@
 from gui.Scaleform.framework import g_entitiesFactories, ViewSettings, ScopeTemplates
 from frameworks.wulf import WindowLayer
 
-from gui.rmanager._constants import REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_UPLOADER_ALIAS
-from gui.rmanager.views.managerWindow import ReplaysManagerWindow
-from gui.rmanager.views.uploaderWindow import ReplaysManagerUploader
+from .._constants import REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_UPLOADER_ALIAS
+from .managerWindow import ReplaysManagerWindow
+from .uploaderWindow import ReplaysManagerUploader
 
 def getViewSettings():
 	viewSettings = []

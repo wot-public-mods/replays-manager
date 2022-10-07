@@ -17,10 +17,10 @@ from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
 from soft_exception import SoftException
 from ValueReplay import ValueReplay as op, ValueReplayConnector
 
-from gui.rmanager.events import g_eventsManager
-from gui.rmanager.lang import l10n
-from gui.rmanager.utils import override, safeImport
-from gui.rmanager._constants import  REPLAYS_MANAGER_WINDOW_ALIAS
+from .events import g_eventsManager
+from .lang import l10n
+from .utils import override, safeImport
+from ._constants import  REPLAYS_MANAGER_WINDOW_ALIAS
 
 # normal client codebase
 _EconomicsRecordsChains = safeImport('gui.battle_results.reusable.personal', '_EconomicsRecordsChains')
@@ -85,8 +85,8 @@ if g_modsListApi:
 # Data Collect
 g_dataCollector = None
 try:
-	from gui.rmanager import __version__
-	from gui.rmanager.data_collector import g_dataCollector
+	from . import __version__
+	from .data_collector import g_dataCollector
 except ImportError:
 	LOG_ERROR('datacollector broken')
 if g_dataCollector:

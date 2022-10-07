@@ -1,4 +1,4 @@
-from gui.rmanager.events import g_eventsManager
+from ..events import g_eventsManager
 
 __all__ = ('g_controllers', )
 
@@ -12,10 +12,10 @@ class ControllersHolder():
 
 	def init(self):
 
-		from gui.rmanager.controllers.actions import ActionsController
-		from gui.rmanager.controllers.database import DataBaseController
-		from gui.rmanager.controllers.parser import ParserController
-		from gui.rmanager.controllers.uploader import UploaderController
+		from .actions import ActionsController
+		from .database import DataBaseController
+		from .parser import ParserController
+		from .uploader import UploaderController
 
 		self.actions = ActionsController()
 		self.database = DataBaseController()

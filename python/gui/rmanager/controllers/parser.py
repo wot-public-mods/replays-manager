@@ -10,9 +10,9 @@ from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
 from soft_exception import SoftException
 
-from gui.rmanager._constants import (RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION,\
+from .._constants import (RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION,\
 											 PROCESS_SUPPORTED_VERSION)
-from gui.rmanager.utils import byteify, versionTuple, getTankType, fixBadges
+from ..utils import byteify, versionTuple, getTankType, fixBadges
 
 __all__ = ('ParserController', )
 

@@ -10,10 +10,10 @@ from account_helpers import getAccountDatabaseID
 from constants import CURRENT_REALM
 from helpers import isPlayerAccount
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
-from gui.rmanager.events import g_eventsManager
-from gui.rmanager._constants import (WAITING_DELAY, WOTREPLAYS_API_URL, REPLAYS_PATH,
+from ..events import g_eventsManager
+from .._constants import (WAITING_DELAY, WOTREPLAYS_API_URL, REPLAYS_PATH,
 											UPLOADER_STATUS, UPLOAD_REPLAY_TEMP)
-from gui.rmanager.utils import MultiPartForm, requestProgress
+from ..utils import MultiPartForm, requestProgress
 
 __all__ = ('UploaderController', )
 

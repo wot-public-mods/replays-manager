@@ -8,10 +8,10 @@ __maintainer__ = "Andrii Andrushchyshyn"
 __email__ = "contact@poliroid.me"
 __status__ = "Production"
 
-from gui.rmanager.hooks import *
-from gui.rmanager.events import g_eventsManager
-from gui.rmanager.controllers import g_controllers
-from gui.rmanager.views import *
+from .hooks import *
+from .events import g_eventsManager
+from .controllers import g_controllers
+from .views import *
 
 __all__ = ('init', 'fini')
 

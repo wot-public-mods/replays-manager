@@ -17,10 +17,10 @@ from gui.Scaleform.framework.managers.context_menu import AbstractContextMenuHan
 from gui.Scaleform.framework.managers.loaders import SFViewLoadParams
 from gui.Scaleform.framework.managers import context_menu
 from gui.shared.utils.functions import getViewName
-from gui.rmanager.controllers import g_controllers
-from gui.rmanager.events import g_eventsManager
-from gui.rmanager.lang import l10n
-from gui.rmanager._constants import (REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS,
+from ..controllers import g_controllers
+from ..events import g_eventsManager
+from ..lang import l10n
+from .._constants import (REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS,
 												REPLAY_FLAG_FILE, REPLAYS_MANAGER_UPLOADER_ALIAS)
 from helpers import dependency
 from skeletons.gui.battle_results import IBattleResultsService

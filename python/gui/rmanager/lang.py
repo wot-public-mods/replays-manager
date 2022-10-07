@@ -2,8 +2,8 @@
 from constants import DEFAULT_LANGUAGE
 from helpers import getClientLanguage
 
-from gui.rmanager._constants import DEFAULT_UI_LANGUAGE, LANGUAGE_CODES, LANGUAGE_FILE_PATH
-from gui.rmanager.utils import parseLangFields
+from ._constants import DEFAULT_UI_LANGUAGE, LANGUAGE_CODES, LANGUAGE_FILE_PATH
+from .utils import parseLangFields
 
 __all__ = ('l10n', 'allFields')
 

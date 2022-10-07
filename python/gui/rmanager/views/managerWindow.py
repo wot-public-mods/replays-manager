@@ -1,14 +1,15 @@
 
-import json
-from adisp import adisp_process
-
 import ArenaType
 import BigWorld
+import json
+
+from adisp import adisp_process
 from gui.Scaleform.framework.entities.abstract.AbstractWindowView import AbstractWindowView
-from gui.rmanager.lang import l10n, allFields
-from gui.rmanager.controllers import g_controllers
-from gui.rmanager.events import g_eventsManager
-from gui.rmanager._constants import DEFAULT_SETTINGS, WAITING_DELAY
+
+from ..lang import l10n, allFields
+from ..controllers import g_controllers
+from ..events import g_eventsManager
+from .._constants import DEFAULT_SETTINGS, WAITING_DELAY
 
 __all__ = ('ReplaysManagerWindow', )
 
