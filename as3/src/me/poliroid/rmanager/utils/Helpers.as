@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.utils
+﻿package me.poliroid.rmanager.utils
 {
 	import scaleform.clik.controls.ScrollingList;
 	import scaleform.clik.constants.DirectionMode;
@@ -10,15 +10,15 @@
 	import net.wg.gui.components.controls.DropdownMenu;
 	import net.wg.gui.cyberSport.controls.CSVehicleButton;
 	
-	import com.kmalyshev.rmanager.components.LabelButtonBar;
-	import com.kmalyshev.rmanager.lang.STRINGS;
-	import com.kmalyshev.rmanager.ui.ReplayItemRendererUI;
+	import me.poliroid.rmanager.components.LabelButtonBar;
+	import me.poliroid.rmanager.lang.STRINGS;
+	import me.poliroid.rmanager.ui.ReplayItemRendererUI;
 	
 	public class Helpers
 	{
 		public static var apiStatus:Boolean = false;
 
-		public static const REPLAYS:String = "com.kmalyshev.rmanager.ui.ReplaysViewUI";
+		public static const REPLAYS:String = "me.poliroid.rmanager.ui.ReplaysViewUI";
 		public static const REPLAY_CM_HANDLER_TYPE:String = "replayCMHandler";
 
 		public static const SORTING_BUTTONS:Array = [
@@ -74,7 +74,7 @@
 		{
 			list.label = STRINGS.l10n('ui.window.sorting.label');
 			list.direction = DirectionMode.HORIZONTAL;
-			list.itemRendererName = "com.kmalyshev.rmanager.ui.TextLinkSortButtonUI";
+			list.itemRendererName = "me.poliroid.rmanager.ui.TextLinkSortButtonUI";
 			list.spacing = 5;
 			list.autoSize = "left";
 		}
@@ -83,7 +83,7 @@
 		{
 			list.label = STRINGS.l10n('ui.window.dateFilter.label');
 			list.direction = DirectionMode.HORIZONTAL;
-			list.itemRendererName = "com.kmalyshev.rmanager.ui.TextLinkButtonUI";
+			list.itemRendererName = "me.poliroid.rmanager.ui.TextLinkButtonUI";
 			list.spacing = 5;
 			list.autoSize = "left";
 		}

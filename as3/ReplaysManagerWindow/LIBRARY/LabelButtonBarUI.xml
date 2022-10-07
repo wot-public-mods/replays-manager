@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="LabelButtonBarUI" itemID="54bfa6dd-0000006c" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.LabelButtonBar" linkageClassName="com.kmalyshev.rmanager.ui.LabelButtonBarUI" lastModified="1622966504">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="LabelButtonBarUI" itemID="54bfa6dd-0000006c" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.components.LabelButtonBar" linkageClassName="me.poliroid.rmanager.ui.LabelButtonBarUI" lastModified="1622966504">
   <timeline>
     <DOMTimeline name="LabelButtonBarUI">
       <layers>

@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
@@ -10,8 +10,8 @@
 	import net.wg.gui.components.controls.UILoaderAlt;
 	import net.wg.gui.events.UILoaderEvent;
 	
-	import com.kmalyshev.rmanager.utils.Utils;
-	import com.kmalyshev.rmanager.utils.Helpers;
+	import me.poliroid.rmanager.utils.Utils;
+	import me.poliroid.rmanager.utils.Helpers;
 	
 	public class ReplayItemRenderer extends SoundListItemRenderer
 	{

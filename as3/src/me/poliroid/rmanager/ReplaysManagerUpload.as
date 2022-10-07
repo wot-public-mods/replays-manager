@@ -1,4 +1,4 @@
-﻿package com.poliroid.gui.lobby.rmanager
+﻿package me.poliroid.rmanager
 {
 	import flash.ui.Keyboard;
 	import flash.events.TextEvent;
@@ -9,9 +9,9 @@
 	import scaleform.clik.events.InputEvent;
 	import net.wg.infrastructure.base.AbstractWindowView;
 	
-	import com.poliroid.gui.lobby.rmanager.components.ReplaysManagerInfoView;
-	import com.poliroid.gui.lobby.rmanager.components.ReplaysManagerStatusView;
-	import com.poliroid.gui.lobby.rmanager.data.UploaderLocalizationVO;
+	import me.poliroid.rmanager.components.ReplaysManagerInfoView;
+	import me.poliroid.rmanager.components.ReplaysManagerStatusView;
+	import me.poliroid.rmanager.data.UploaderLocalizationVO;
 	
 	public class ReplaysManagerUpload extends AbstractWindowView
 	{

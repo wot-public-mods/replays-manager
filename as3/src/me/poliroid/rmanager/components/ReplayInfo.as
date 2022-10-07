@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	import flash.display.MovieClip;
 	import flash.text.TextField;
@@ -15,10 +15,10 @@
 	import net.wg.gui.events.UILoaderEvent;
 	import net.wg.gui.rally.vo.VehicleVO;
 	
-	import com.kmalyshev.rmanager.lang.STRINGS;
-	import com.kmalyshev.rmanager.events.ReplayActionEvent;
-	import com.kmalyshev.rmanager.utils.Utils;
-	import com.kmalyshev.rmanager.utils.Helpers;
+	import me.poliroid.rmanager.lang.STRINGS;
+	import me.poliroid.rmanager.events.ReplayActionEvent;
+	import me.poliroid.rmanager.utils.Utils;
+	import me.poliroid.rmanager.utils.Helpers;
 	
 	public class ReplayInfo extends UIComponent
 	{

@@ -1,4 +1,4 @@
-﻿package com.poliroid.gui.lobby.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	
 	import scaleform.clik.events.FocusHandlerEvent;
@@ -10,7 +10,7 @@
 	import net.wg.infrastructure.base.UIComponentEx;
 	import net.wg.gui.messenger.data.ContactsShared;
 	
-	import com.poliroid.gui.lobby.rmanager.data.UploaderLocalizationVO;
+	import me.poliroid.rmanager.data.UploaderLocalizationVO;
 	
 	public class ReplaysManagerInfoView extends UIComponentEx
 	{

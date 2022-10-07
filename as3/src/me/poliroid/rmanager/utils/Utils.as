@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.utils
+﻿package me.poliroid.rmanager.utils
 {
 	
 	public class Utils

@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.lang
+﻿package me.poliroid.rmanager.lang
 {	
 	public class STRINGS extends Object
 	{

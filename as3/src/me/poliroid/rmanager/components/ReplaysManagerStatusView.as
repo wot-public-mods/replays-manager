@@ -1,4 +1,4 @@
-﻿package com.poliroid.gui.lobby.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	import flash.text.StyleSheet;
 	import flash.text.TextField;
@@ -7,7 +7,7 @@
 	import net.wg.gui.components.controls.SoundButton;
 	import net.wg.infrastructure.base.UIComponentEx;
 	
-	import com.poliroid.gui.lobby.rmanager.data.UploaderLocalizationVO;
+	import me.poliroid.rmanager.data.UploaderLocalizationVO;
 	
 	
 	public class ReplaysManagerStatusView extends UIComponentEx

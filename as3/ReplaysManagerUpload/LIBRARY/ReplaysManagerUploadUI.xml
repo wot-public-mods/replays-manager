@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysManagerUploadUI" itemID="58e1a003-0000012a" linkageExportForAS="true" linkageBaseClass="com.poliroid.gui.lobby.rmanager.ReplaysManagerUpload" linkageClassName="ReplaysManagerUploadUI" lastModified="1622965348" lastUniqueIdentifier="5">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysManagerUploadUI" itemID="58e1a003-0000012a" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.ReplaysManagerUpload" linkageClassName="ReplaysManagerUploadUI" lastModified="1622965348" lastUniqueIdentifier="5">
   <timeline>
     <DOMTimeline name="ReplaysManagerUploadUI">
       <layers>

@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TextLinkButtonUI" itemID="54bf9a50-00000052" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.TextLinkButton" linkageClassName="com.kmalyshev.rmanager.ui.TextLinkButtonUI" lastModified="1622966573" lastUniqueIdentifier="2">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="TextLinkButtonUI" itemID="54bf9a50-00000052" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.components.TextLinkButton" linkageClassName="me.poliroid.rmanager.ui.TextLinkButtonUI" lastModified="1622966573" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="TextLinkButtonUI">
       <layers>

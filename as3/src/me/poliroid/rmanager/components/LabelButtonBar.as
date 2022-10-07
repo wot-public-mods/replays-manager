@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;

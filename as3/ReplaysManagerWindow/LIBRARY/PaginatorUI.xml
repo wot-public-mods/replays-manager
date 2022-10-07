@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="PaginatorUI" itemID="54bfa6b0-0000006a" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.Paginator" linkageClassName="com.kmalyshev.rmanager.ui.PaginatorUI" lastModified="1622966506">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="PaginatorUI" itemID="54bfa6b0-0000006a" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.components.Paginator" linkageClassName="me.poliroid.rmanager.ui.PaginatorUI" lastModified="1622966506">
   <timeline>
     <DOMTimeline name="PaginatorUI">
       <layers>

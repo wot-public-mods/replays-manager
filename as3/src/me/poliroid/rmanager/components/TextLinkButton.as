@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	import flash.display.MovieClip;
 	import net.wg.gui.components.controls.SoundButton;

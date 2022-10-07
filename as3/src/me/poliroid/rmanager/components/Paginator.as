@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	import scaleform.clik.constants.InvalidationType;
 	import scaleform.clik.constants.DirectionMode;
@@ -7,8 +7,8 @@
 	import scaleform.clik.events.ButtonEvent;
 	import scaleform.clik.interfaces.IDataProvider;
 	
-	import com.kmalyshev.rmanager.events.PagingEvent;
-	import com.kmalyshev.rmanager.lang.STRINGS;
+	import me.poliroid.rmanager.events.PagingEvent;
+	import me.poliroid.rmanager.lang.STRINGS;
 	
 	public class Paginator extends UIComponent
 	{
@@ -65,7 +65,7 @@
 		{
 			super.configUI();
 			this.buttonBar.label = STRINGS.l10n('ui.window.paginatorLabel');
-			this.buttonBar.itemRendererName = "com.kmalyshev.rmanager.ui.TextLinkButtonUI";
+			this.buttonBar.itemRendererName = "me.poliroid.rmanager.ui.TextLinkButtonUI";
 			this.buttonBar.direction = DirectionMode.HORIZONTAL;
 			this.buttonBar.spacing = 5;
 			this.buttonBar.autoSize = "left";

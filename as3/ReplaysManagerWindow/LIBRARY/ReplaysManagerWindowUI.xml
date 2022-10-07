@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysManagerWindowUI" itemID="5c8ad2f0-00000196" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.ReplaysManagerWindow" linkageClassName="ReplaysManagerWindowUI" lastModified="1622967753">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplaysManagerWindowUI" itemID="5c8ad2f0-00000196" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.ReplaysManagerWindow" linkageClassName="ReplaysManagerWindowUI" lastModified="1622967753">
   <timeline>
     <DOMTimeline name="ReplaysManagerWindowUI">
       <layers>

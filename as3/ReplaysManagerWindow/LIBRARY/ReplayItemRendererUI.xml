@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayItemRendererUI" itemID="55658352-00000171" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.ReplayItemRenderer" linkageClassName="com.kmalyshev.rmanager.ui.ReplayItemRendererUI" scaleGridLeft="1" scaleGridRight="688.45" scaleGridTop="1" scaleGridBottom="116.25" lastModified="1622967809" lastUniqueIdentifier="14">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayItemRendererUI" itemID="55658352-00000171" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.components.ReplayItemRenderer" linkageClassName="me.poliroid.rmanager.ui.ReplayItemRendererUI" scaleGridLeft="1" scaleGridRight="688.45" scaleGridTop="1" scaleGridBottom="116.25" lastModified="1622967809" lastUniqueIdentifier="14">
   <timeline>
     <DOMTimeline name="ReplayItemRendererUI" currentFrame="10">
       <layers>

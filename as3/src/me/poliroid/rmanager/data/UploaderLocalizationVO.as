@@ -1,4 +1,4 @@
-﻿package com.poliroid.gui.lobby.rmanager.data
+﻿package me.poliroid.rmanager.data
 {
 	
 	import net.wg.data.daapi.base.DAAPIDataClass;

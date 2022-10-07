@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package me.poliroid.rmanager.components
 {	
 	import flash.display.MovieClip;
 	import flash.display.InteractiveObject;
@@ -15,11 +15,11 @@
 	import net.wg.gui.components.controls.BlackButton;
 	import net.wg.infrastructure.interfaces.IViewStackContent;
 	
-	import com.kmalyshev.rmanager.lang.STRINGS;
-	import com.kmalyshev.rmanager.events.PagingEvent;
-	import com.kmalyshev.rmanager.events.SortingEvent;
-	import com.kmalyshev.rmanager.events.FilterEvent;
-	import com.kmalyshev.rmanager.utils.Helpers;
+	import me.poliroid.rmanager.lang.STRINGS;
+	import me.poliroid.rmanager.events.PagingEvent;
+	import me.poliroid.rmanager.events.SortingEvent;
+	import me.poliroid.rmanager.events.FilterEvent;
+	import me.poliroid.rmanager.utils.Helpers;
 	
 	public class ReplaysView extends UIComponent implements IViewStackContent
 	{

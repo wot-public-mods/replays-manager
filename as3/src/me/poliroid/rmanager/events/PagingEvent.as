@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.events
+﻿package me.poliroid.rmanager.events
 {
 	import flash.events.Event;
 	

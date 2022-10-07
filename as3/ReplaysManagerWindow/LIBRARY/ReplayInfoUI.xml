@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayInfoUI" itemID="54c3f7c3-00000092" linkageExportForAS="true" linkageBaseClass="com.kmalyshev.rmanager.components.ReplayInfo" linkageClassName="com.kmalyshev.rmanager.ui.ReplayInfoUI" lastModified="1622966522" lastUniqueIdentifier="15">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayInfoUI" itemID="54c3f7c3-00000092" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.components.ReplayInfo" linkageClassName="me.poliroid.rmanager.ui.ReplayInfoUI" lastModified="1622966522" lastUniqueIdentifier="15">
   <timeline>
     <DOMTimeline name="ReplayInfoUI">
       <layers>

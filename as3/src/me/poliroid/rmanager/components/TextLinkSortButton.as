@@ -1,9 +1,9 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	import flash.display.MovieClip;
 	import flash.text.TextFieldAutoSize;
 	
-	import com.kmalyshev.rmanager.events.SortingEvent;
+	import me.poliroid.rmanager.events.SortingEvent;
 	
 	public class TextLinkSortButton extends TextLinkButton
 	{

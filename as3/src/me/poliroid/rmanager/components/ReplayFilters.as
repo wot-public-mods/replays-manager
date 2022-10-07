@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager.components
+﻿package me.poliroid.rmanager.components
 {
 	import flash.text.TextField;
 	import flash.text.TextFieldAutoSize;
@@ -16,10 +16,10 @@
 	import net.wg.gui.components.controls.CheckBox;
 	import net.wg.gui.components.controls.DropdownMenu;
 	
-	import com.kmalyshev.rmanager.events.FilterEvent;
-	import com.kmalyshev.rmanager.lang.STRINGS;
-	import com.kmalyshev.rmanager.utils.Helpers;
-	import com.kmalyshev.rmanager.utils.Utils;
+	import me.poliroid.rmanager.events.FilterEvent;
+	import me.poliroid.rmanager.lang.STRINGS;
+	import me.poliroid.rmanager.utils.Helpers;
+	import me.poliroid.rmanager.utils.Utils;
 	
 	public class ReplayFilters extends UIComponent
 	{

@@ -1,4 +1,4 @@
-﻿package com.kmalyshev.rmanager
+﻿package me.poliroid.rmanager
 {	
 	import flash.text.TextField;
 	import flash.display.InteractiveObject;
@@ -9,17 +9,17 @@
 	import net.wg.infrastructure.constants.WindowViewInvalidationType;
 	import net.wg.infrastructure.interfaces.IWindow;
 	
-	import com.kmalyshev.rmanager.components.Paginator;
+	import me.poliroid.rmanager.components.Paginator;
 	
-	import com.kmalyshev.rmanager.events.ReplayActionEvent;
-	import com.kmalyshev.rmanager.events.PagingEvent;
-	import com.kmalyshev.rmanager.events.SortingEvent;
-	import com.kmalyshev.rmanager.events.FilterEvent;
+	import me.poliroid.rmanager.events.ReplayActionEvent;
+	import me.poliroid.rmanager.events.PagingEvent;
+	import me.poliroid.rmanager.events.SortingEvent;
+	import me.poliroid.rmanager.events.FilterEvent;
 	
-	import com.kmalyshev.rmanager.lang.STRINGS;
-	import com.kmalyshev.rmanager.ui.ReplaysViewUI;
-	import com.kmalyshev.rmanager.utils.Helpers;
-	import com.kmalyshev.rmanager.utils.Utils;
+	import me.poliroid.rmanager.lang.STRINGS;
+	import me.poliroid.rmanager.ui.ReplaysViewUI;
+	import me.poliroid.rmanager.utils.Helpers;
+	import me.poliroid.rmanager.utils.Utils;
 	
 	public class ReplaysManagerWindow extends AbstractWindowView
 	{
