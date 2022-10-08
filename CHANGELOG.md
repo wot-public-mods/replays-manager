@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.6.9
+
+* improved localization
+
 ## v3.6.8
 
 * 1.18.1 fixes

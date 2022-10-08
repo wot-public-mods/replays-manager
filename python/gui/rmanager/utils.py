@@ -2,6 +2,7 @@
 import ast
 import collections
 import importlib
+import functools
 import itertools
 import mimetools
 import os
@@ -11,8 +12,9 @@ import BigWorld
 import ResMgr
 from constants import CURRENT_REALM
 
-__all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm', 'requestProgress',
-			'versionTuple', 'openURL', 'getTankType', 'convertData', 'fixBadges', 'safeImport')
+__all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm',
+		'requestProgress', 'versionTuple', 'openURL', 'getTankType', 'convertData',
+		'fixBadges', 'safeImport', 'cacheResult', )
 
 def override(holder, name, wrapper=None, setter=None):
 	"""Override methods, properties, functions, attributes
@@ -70,6 +72,18 @@ def openURL(url):
 		targetDomain = 'ru' if CURRENT_REALM == 'RU' else 'eu'
 		url = 'http://wotreplays.%s%s' % (targetDomain, url)
 	BigWorld.wg_openWebBrowser(url)
+
+def cacheResult(function):
+	memo = {}
+	@functools.wraps(function)
+	def wrapper(cache_key):
+		try:
+			return memo[cache_key]
+		except KeyError:
+			rv = function(cache_key)
+			memo[cache_key] = rv
+			return rv
+	return wrapper
 
 class MultiPartForm(object):
 	"""using for send multipart form data to server"""
