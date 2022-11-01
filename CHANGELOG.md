@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.7.0
+
+* fixed upload on RUBY
+
 ## v3.6.9
 
 * improved localization
