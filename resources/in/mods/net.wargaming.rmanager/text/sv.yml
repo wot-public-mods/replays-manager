@@ -13,7 +13,7 @@ ui.window.battleResultDefeat: Förlust
 ui.window.battleResultDraw: Oavgjort
 ui.window.buttonShowResult: Visa stridsresultat
 ui.window.buttonPlay: Spela
-ui.window.buttonUpload: Ladda upp till WoTReplays.eu
+ui.window.buttonUpload: Ladda upp till WoTReplays
 ui.window.buttonRemove: Ta bort
 ui.window.buttonApply: Tillämpa
 ui.window.buttonReset: Återställ
@@ -65,7 +65,7 @@ ui.window.tabsInfo: Info
  
  
  
-ui.uploader.windowTitle: Ladda upp inspelningen till WoTReplays.eu
+ui.uploader.windowTitle: Ladda upp inspelningen till WoTReplays
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Inspelningen hittades inte
 ui.uploader.statusWrongAccount: Du bara ladda upp din egen inspelning!
@@ -75,7 +75,7 @@ ui.uploader.statusFound: Inspelningen hittades inte
 ui.uploader.statusLoading: Laddar upp
 ui.uploader.statusConnectionError: Anslutningsfel!
 ui.uploader.statusLoadingComplete: Väntar på servern
-ui.uploader.statusSucces: Din fil har laddats upp till WoTReplays.eu
+ui.uploader.statusSucces: Din fil har laddats upp till WoTReplays
 ui.uploader.linkLabel: länk
 ui.uploader.error0: Systemfel på hemsidan
 ui.uploader.error1: Filen hittades inte
@@ -84,7 +84,7 @@ ui.uploader.error3: Användaren hittades inte
 ui.uploader.error4: Data saknas
 ui.uploader.error5: Kan inte spara inspelningen
 ui.uploader.error6: Inspelningen du försöker ladda upp spelades in av en annan spelare.
-ui.uploader.responceLabel: Din fil har laddats upp till WoTReplays.eu!<br />Till hemsidan: {{url}} <br />Ladda ned filen:  {{directLink}}
+ui.uploader.responceLabel: Din fil har laddats upp till WoTReplays!<br />Till hemsidan: {{url}} <br />Ladda ned filen:  {{directLink}}
 ui.uploader.progressLabel:  Kb av {{value}} Kb
 ui.uploader.buttonStartUpload: Påbörja uppladdning
 ui.uploader.inputTitle: Namn (upp till 100 tecken)
@@ -101,7 +101,7 @@ ui.waiting.updatingList: Uppdaterar listan
  
 ui.action.showResults: Visa resultat
 ui.action.play: Spela
-ui.action.upload: Ladda upp till WoTReplays.eu
+ui.action.upload: Ladda upp till WoTReplays
 ui.action.favoriteAdd: Lägg till i favoriter
 ui.action.favoriteDelete: Ta bort från favoriter
 ui.action.delete: Ta bort
@@ -120,4 +120,4 @@ ui.popup.delete.message: Är du säker på att du vill ta bort filen: %s?
 modsListApi.title: Modifications List
 modsListApi.info: {HEADER}Modifications List{/HEADER}{BODY}Hanterar dina moddar med lätthet{/BODY}
 modsListApi.name: Replay Manager
-modsListApi.description: Detta enkla inspelningshanteringsprogram låter dig titta på inspelningar, stridsresultat och ladda upp dina inspelningar till WoTReplays.eu
+modsListApi.description: Detta enkla inspelningshanteringsprogram låter dig titta på inspelningar, stridsresultat och ladda upp dina inspelningar till WoTReplays

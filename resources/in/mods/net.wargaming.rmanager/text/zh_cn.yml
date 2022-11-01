@@ -66,7 +66,7 @@ ui.window.tabsInfo: 详情
 
 
 
-ui.uploader.windowTitle: 上传回放到 WoTReplays.eu
+ui.uploader.windowTitle: 上传回放到 WoTReplays
 ui.uploader.labelStatus: 状态
 ui.uploader.statusNotFound: 未找到回放
 ui.uploader.statusWrongAccount: 你只能上传自己的回放！
@@ -76,7 +76,7 @@ ui.uploader.statusFound: 未找到回放
 ui.uploader.statusLoading: 正在上传
 ui.uploader.statusConnectionError: 连接错误！
 ui.uploader.statusLoadingComplete: 等待服务器响应
-ui.uploader.statusSucces: 你的回放文件已成功上传至 WoTReplays.eu
+ui.uploader.statusSucces: 你的回放文件已成功上传至 WoTReplays
 ui.uploader.linkLabel: 链接
 ui.uploader.error0: 网站系统错误: 
 ui.uploader.error1: 未找到文件: 
@@ -85,7 +85,7 @@ ui.uploader.error3: 未找到用户:
 ui.uploader.error4: 查询为空: 
 ui.uploader.error5: 保存回放时出现错误: 
 ui.uploader.error6: 正在试图上传的回放是由另一个玩家录制的。
-ui.uploader.responceLabel: 你的回放成功上传至 WoTReplays.eu! <br />前往网站：{{url}} <br />下载文件：{{directLink}}
+ui.uploader.responceLabel: 你的回放成功上传至 WoTReplays! <br />前往网站：{{url}} <br />下载文件：{{directLink}}
 ui.uploader.progressLabel:  Kb of {{value}} Kb
 ui.uploader.buttonStartUpload: 开始上传
 ui.uploader.inputTitle: 名称 (最多 100 个字符)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: 正在更新列表
 
 ui.action.showResults: 显示战斗结果
 ui.action.play: 播放
-ui.action.upload: 上传到 WoTReplays.eu
+ui.action.upload: 上传到 WoTReplays
 ui.action.favoriteAdd: 添加到收藏
 ui.action.favoriteDelete: 从收藏中移除
 ui.action.delete: 删除
@@ -121,6 +121,6 @@ ui.popup.delete.message: 你确定要删除文件：%s?
 modsListApi.title: Mod 列表
 modsListApi.info: {HEADER}Mod 列表{/HEADER}{BODY}更简单地操作、自定义和管理模组。{/BODY}
 modsListApi.name: Replays Manager
-modsListApi.description: 方便地显示你的回放，查看战斗结果并上传至 WoTReplays.eu
+modsListApi.description: 方便地显示你的回放，查看战斗结果并上传至 WoTReplays
 
 

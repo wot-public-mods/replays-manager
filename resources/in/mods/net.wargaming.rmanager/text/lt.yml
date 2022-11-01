@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Pralaimėjimas
 ui.window.battleResultDraw: Lygiosios
 ui.window.buttonShowResult: Parodyti mūšio rezultatus
 ui.window.buttonPlay: Paleisti
-ui.window.buttonUpload: Siųsti į WoTReplays.eu
+ui.window.buttonUpload: Siųsti į WoTReplays
 ui.window.buttonRemove: Ištrinti
 ui.window.buttonApply: Pritaikyti
 ui.window.buttonReset: Atstatyti
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Informacija
 
 
 
-ui.uploader.windowTitle: Siųsti įrašą į WoTReplays.eu
+ui.uploader.windowTitle: Siųsti įrašą į WoTReplays
 ui.uploader.labelStatus: Statusas
 ui.uploader.statusNotFound: Įrašas nerastas
 ui.uploader.statusWrongAccount: Jūs galite įkelti tik savo įrašą!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Įrašas nerastas
 ui.uploader.statusLoading: Siunčiama
 ui.uploader.statusConnectionError: Ryšio klaida!
 ui.uploader.statusLoadingComplete: Laukiama serverio atsakymo
-ui.uploader.statusSucces: Jūsų failas buvo sėkmingai įkeltas į WoTReplays.eu
+ui.uploader.statusSucces: Jūsų failas buvo sėkmingai įkeltas į WoTReplays
 ui.uploader.linkLabel: nuoroda
 ui.uploader.error0: Puslapio sistemos klaida: 
 ui.uploader.error1: Failas nerastas: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Vartotojas nerastas:
 ui.uploader.error4: Tuščia užklausa: 
 ui.uploader.error5: Klaida išsaugant įrašą: 
 ui.uploader.error6: Įrašą, kurį bandote įkelti, įrašė kitas žaidėjas.
-ui.uploader.responceLabel: Jūsų įrašas buvo sėkmingai įkeltas į WoTReplays.eu! <br />Eiti į puslapį: {{url}} <br />Atsisiųsti failą: {{directLink}}
+ui.uploader.responceLabel: Jūsų įrašas buvo sėkmingai įkeltas į WoTReplays! <br />Eiti į puslapį: {{url}} <br />Atsisiųsti failą: {{directLink}}
 ui.uploader.progressLabel:  Kb iš {{value}} Kb
 ui.uploader.buttonStartUpload: Pradėti siuntimą
 ui.uploader.inputTitle: Pavadinimas (iki 100 simbolių)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Atnaujinamas sąrašas
 
 ui.action.showResults: Rodyti rezultatus
 ui.action.play: Paleisti
-ui.action.upload: Nusiųsti į WoTReplays.eu
+ui.action.upload: Nusiųsti į WoTReplays
 ui.action.favoriteAdd: Pridėti prie mėgstamiausių
 ui.action.favoriteDelete: Pašalinti iš mėgstamiausių
 ui.action.delete: Pašalinti
@@ -121,6 +121,6 @@ ui.popup.delete.message: Ar jūs tikrai norite ištrinti failą: %s?
 modsListApi.title: Modifikacijų sąrašas
 modsListApi.info: {HEADER}Modifikacijų sąrašas{/HEADER}{BODY}Patodus modifikacijų valdymas{/BODY}
 modsListApi.name: Replay Manager
-modsListApi.description: Ši paprasta įrašų tvarkyklė leidžia peržiūrėti žaidimo įrašus, pamatyti mūšių rezultatus ir įkelti savo kovų įrašus į WoTReplays.eu
+modsListApi.description: Ši paprasta įrašų tvarkyklė leidžia peržiūrėti žaidimo įrašus, pamatyti mūšių rezultatus ir įkelti savo kovų įrašus į WoTReplays
 
 

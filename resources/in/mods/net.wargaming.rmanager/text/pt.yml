@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Derrota
 ui.window.battleResultDraw: Empate
 ui.window.buttonShowResult: Mostrar resultados da batalha
 ui.window.buttonPlay: Iniciar
-ui.window.buttonUpload: Enviar para WoTReplays.eu
+ui.window.buttonUpload: Enviar para WoTReplays
 ui.window.buttonRemove: Apagar
 ui.window.buttonApply: Aplicar
 ui.window.buttonReset: Reset
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Informação
 
 
 
-ui.uploader.windowTitle: Enviar Repetição para WoTReplays.eu
+ui.uploader.windowTitle: Enviar Repetição para WoTReplays
 ui.uploader.labelStatus: Estado
 ui.uploader.statusNotFound: Repetição não encontrada
 ui.uploader.statusWrongAccount: Só pode enviar a repetição!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Repetição não encontrada
 ui.uploader.statusLoading: A enviar
 ui.uploader.statusConnectionError: Erro de ligação!
 ui.uploader.statusLoadingComplete: A aguardar resposta do servidor
-ui.uploader.statusSucces: O ficheiro foi enviado com sucesso para WoTReplays.eu
+ui.uploader.statusSucces: O ficheiro foi enviado com sucesso para WoTReplays
 ui.uploader.linkLabel: link
 ui.uploader.error0: Erro de sistema do website: 
 ui.uploader.error1: Ficheiro não encontrado: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Utilizador não encontrado:
 ui.uploader.error4: Pesquisa vazia: 
 ui.uploader.error5: Erro a guardar a repetição: 
 ui.uploader.error6: A repetição que está a tentar enviar foi gravado por um jogador diferente.
-ui.uploader.responceLabel: A sua repetição foi enviada com sucesso para WoTReplays.eu! <br />Ir para o website: {{url}} <br />Descarregar o ficheiro: {{directLink}}
+ui.uploader.responceLabel: A sua repetição foi enviada com sucesso para WoTReplays! <br />Ir para o website: {{url}} <br />Descarregar o ficheiro: {{directLink}}
 ui.uploader.progressLabel:  Kb de {{value}} Kb
 ui.uploader.buttonStartUpload: Iniciar o envio
 ui.uploader.inputTitle: Nome (até 100 caracteres)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: A actualizar a lista
 
 ui.action.showResults: Mostrar resultados
 ui.action.play: Iniciar
-ui.action.upload: Enviar para WoTReplays.eu
+ui.action.upload: Enviar para WoTReplays
 ui.action.favoriteAdd: Adicionar aos favoritos
 ui.action.favoriteDelete: Remover dos favoritos
 ui.action.delete: Remover
@@ -121,6 +121,6 @@ ui.popup.delete.message: Tem a certeza que quer apagar o ficheiro: %s?
 modsListApi.title: Lista de Modificações
 modsListApi.info: {HEADER}Lista de Modificações{/HEADER}{BODY}Gerir as sua modificações facilmente{/BODY}
 modsListApi.name: Gestor de Repetições
-modsListApi.description: Este simples gestor de repetições permite ver repetições, ver resultados de batalhas e enviar as suas repetições para WoTReplays.eu
+modsListApi.description: Este simples gestor de repetições permite ver repetições, ver resultados de batalhas e enviar as suas repetições para WoTReplays
 
 

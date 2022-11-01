@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Kaotus
 ui.window.battleResultDraw: Viik
 ui.window.buttonShowResult: Näita lahingu tulemusi
 ui.window.buttonPlay: Mängi
-ui.window.buttonUpload: Laadi üles WoTReplays.eu leheküljele
+ui.window.buttonUpload: Laadi üles WoTReplays leheküljele
 ui.window.buttonRemove: Kustuta
 ui.window.buttonApply: Kinnita
 ui.window.buttonReset: Taasta
@@ -67,7 +67,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Laadi salvestus WoTReplays.eu leheküljele
+ui.uploader.windowTitle: Laadi salvestus WoTReplays leheküljele
 ui.uploader.labelStatus: Staatus
 ui.uploader.statusNotFound: Salvestust ei leitud
 ui.uploader.statusWrongAccount: Sa saad üles laadida vaid enda salvestust!
@@ -77,7 +77,7 @@ ui.uploader.statusFound: Salvestust ei leitud
 ui.uploader.statusLoading: Laadin üles
 ui.uploader.statusConnectionError: Ühenduse viga!
 ui.uploader.statusLoadingComplete: Ootan serveri vastust
-ui.uploader.statusSucces: Sinu fail laaditi edukalt WoTReplays.eu leheküljele üles
+ui.uploader.statusSucces: Sinu fail laaditi edukalt WoTReplays leheküljele üles
 ui.uploader.linkLabel: link
 ui.uploader.error0: Veebilhekülje viga: 
 ui.uploader.error1: Faili ei leitud: 
@@ -86,7 +86,7 @@ ui.uploader.error3: Kasutajat ei leitud:
 ui.uploader.error4: Tühi päring: 
 ui.uploader.error5: Viga salvestuse salvestamisel: 
 ui.uploader.error6: Salvestus, mida sa üritad üles laadida on juba teise mängija poolt üles laetud.
-ui.uploader.responceLabel: Sinu salvestus on edukalt WoTReplays.eu leheküljele üles laaditud! <br />Mine veebilehele: {{url}} <br />Laadi fail alla: {{directLink}}
+ui.uploader.responceLabel: Sinu salvestus on edukalt WoTReplays leheküljele üles laaditud! <br />Mine veebilehele: {{url}} <br />Laadi fail alla: {{directLink}}
 ui.uploader.progressLabel:  Kb / {{value}} Kb
 ui.uploader.buttonStartUpload: Alusta üleslaadimist
 ui.uploader.inputTitle: Nimi (kuni 100 tähemärki)
@@ -103,7 +103,7 @@ ui.waiting.updatingList: Uuendan nimekirja
 
 ui.action.showResults: Näita tulemusi
 ui.action.play: Käivita
-ui.action.upload: Laadi üles WoTReplays.eu leheküljele
+ui.action.upload: Laadi üles WoTReplays leheküljele
 ui.action.favoriteAdd: Lisa lemmikute hulka
 ui.action.favoriteDelete: Eemalda lemmikute hulgast
 ui.action.delete: Eemalda
@@ -122,6 +122,6 @@ ui.popup.delete.message: Kas sa oled kindel, et soovid seda salvestust kustutada
 modsListApi.title: Modifikatsioonide nimekiri
 modsListApi.info: {HEADER}Modifikatsioonide nimekiri{/HEADER}{BODY}Halda kergelt oma modifikatsioone{/BODY}
 modsListApi.name: Salvestuste haldur
-modsListApi.description: See lihtne salvestuste haldur võimaldab sul vaadata salvestusi, näha lahingute tulemusi ning laadida oma salvestusi üles WoTReplays.eu leheküljele
+modsListApi.description: See lihtne salvestuste haldur võimaldab sul vaadata salvestusi, näha lahingute tulemusi ning laadida oma salvestusi üles WoTReplays leheküljele
 
 

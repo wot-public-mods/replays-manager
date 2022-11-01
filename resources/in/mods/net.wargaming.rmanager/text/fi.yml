@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Tappio
 ui.window.battleResultDraw: Tasapeli
 ui.window.buttonShowResult: Näytä taistelun tulokset
 ui.window.buttonPlay: Toista
-ui.window.buttonUpload: Lataa WoTReplays.eu -palveluun
+ui.window.buttonUpload: Lataa WoTReplays -palveluun
 ui.window.buttonRemove: Poista
 ui.window.buttonApply: Hyväksy
 ui.window.buttonReset: Nollaa
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Lataa tallenne WoTReplays.eu -palveluun
+ui.uploader.windowTitle: Lataa tallenne WoTReplays -palveluun
 ui.uploader.labelStatus: Tila
 ui.uploader.statusNotFound: Tallennetta ei löydy
 ui.uploader.statusWrongAccount: Voit ladata vain omia tallenteitasi!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Tallennetta ei löydy
 ui.uploader.statusLoading: Ladataan
 ui.uploader.statusConnectionError: Yhteysvirhe!
 ui.uploader.statusLoadingComplete: Odotetaan vastausta palvelimelta
-ui.uploader.statusSucces: Tiedostosi ladattiin onnistuneesti WoTReplays.eu -palveluun
+ui.uploader.statusSucces: Tiedostosi ladattiin onnistuneesti WoTReplays -palveluun
 ui.uploader.linkLabel: linkki
 ui.uploader.error0: Verkkosivuston järjestelmävirhe: 
 ui.uploader.error1: Tiedostoa ei löydy: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Käyttäjää ei löydy:
 ui.uploader.error4: Tyhjä kysely: 
 ui.uploader.error5: Virhe tallennettaessa tallennetta: 
 ui.uploader.error6: Tallenteen, jota yrität ladata, on tallentanut toinen pelaaja.
-ui.uploader.responceLabel: Tallenteesi on onnistuneesti ladattu WoTReplays.eu -palveluun! <br />Mene verkkosivulle: {{url}} <br />Lataa tiedosto: {{directLink}}
+ui.uploader.responceLabel: Tallenteesi on onnistuneesti ladattu WoTReplays -palveluun! <br />Mene verkkosivulle: {{url}} <br />Lataa tiedosto: {{directLink}}
 ui.uploader.progressLabel:  Kb / {{value}} Kb
 ui.uploader.buttonStartUpload: Aloita lataus
 ui.uploader.inputTitle: Nimi (enintään 100 merkkiä)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Päivitetään listausta
 
 ui.action.showResults: Näytä tulokset
 ui.action.play: Toista
-ui.action.upload: Lataa WoTReplays.eu -palveluun
+ui.action.upload: Lataa WoTReplays -palveluun
 ui.action.favoriteAdd: Lisää suosikkeihin
 ui.action.favoriteDelete: Poista suosikeista
 ui.action.delete: Poista
@@ -121,6 +121,6 @@ ui.popup.delete.message: Oletko varma, että haluat poistaa tiedoston: %s?
 modsListApi.title: Pelimodien listaus
 modsListApi.info: {HEADER}Pelimodien listaus{/HEADER}{BODY}Hallitse pelimodeja helposti{/BODY}
 modsListApi.name: Tallenteiden hallinta
-modsListApi.description: Tämä yksinkertainen tallenteiden hallintaohjelma antaa sinulle mahdollisuuden katsella tallenteita, tarkastella tuloksia ja ladata tallenteesi WoTReplays.eu -palveluun.
+modsListApi.description: Tämä yksinkertainen tallenteiden hallintaohjelma antaa sinulle mahdollisuuden katsella tallenteita, tarkastella tuloksia ja ladata tallenteesi WoTReplays -palveluun.
 
 

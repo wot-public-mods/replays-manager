@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Паражэнне
 ui.window.battleResultDraw: Нічыя
 ui.window.buttonShowResult: Паказаць вынікі
 ui.window.buttonPlay: Прайграць
-ui.window.buttonUpload: Запампаваць на WoTReplays.ru
+ui.window.buttonUpload: Запампаваць на WoTReplays
 ui.window.buttonRemove: Выдаліць
 ui.window.buttonApply: Ужыць
 ui.window.buttonReset: Скінуць
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Звесткі
 
 
 
-ui.uploader.windowTitle: Запампоўванне паўтору бою на WoTReplays.ru
+ui.uploader.windowTitle: Запампоўванне паўтору бою на WoTReplays
 ui.uploader.labelStatus: Стан
 ui.uploader.statusNotFound: Паўтор бою не знойдзены
 ui.uploader.statusWrongAccount: Запампаваць можна толькі паўтор свайго бою!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Паўтор бою знойдзены
 ui.uploader.statusLoading: Ідзе запампоўванне
 ui.uploader.statusConnectionError: Памылка злучэння!
 ui.uploader.statusLoadingComplete: Чаканне адказу ад сервера
-ui.uploader.statusSucces: Ваш файл быў адпраўлены на WoTReplays.ru
+ui.uploader.statusSucces: Ваш файл быў адпраўлены на WoTReplays
 ui.uploader.linkLabel: спасылка
 ui.uploader.error0: Сістэмная памылка сайта: 
 ui.uploader.error1: Файл не знойдзены: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Карыстальнік не знойдзены:
 ui.uploader.error4: Пусты запыт: 
 ui.uploader.error5: Памылка захавання паўтору бою: 
 ui.uploader.error6: Паўтор бою запісаны не тым гульцом, хто запампоўвае яго на вэб-сайт.
-ui.uploader.responceLabel: Ваш паўтор бою запампаваны на вэб-сайт WoTReplays.ru <br />Перайсці на вэб-сайт : {{url}} <br />Спампаваць файл: {{directLink}}
+ui.uploader.responceLabel: Ваш паўтор бою запампаваны на вэб-сайт WoTReplays <br />Перайсці на вэб-сайт : {{url}} <br />Спампаваць файл: {{directLink}}
 ui.uploader.progressLabel:  КБ з {{value}} КБ
 ui.uploader.buttonStartUpload: Пачаць запампаванне
 ui.uploader.inputTitle: Назва (да 100 сімвалаў)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Абнаўленне спіса
 
 ui.action.showResults: Паказаць вынікі
 ui.action.play: Прайграць
-ui.action.upload: Запампаваць на WoTReplays.ru
+ui.action.upload: Запампаваць на WoTReplays
 ui.action.favoriteAdd: Дадаць ва ўпадабаныя
 ui.action.favoriteDelete: Прыбраць з упадабаных
 ui.action.delete: Выдаліць
@@ -121,6 +121,6 @@ ui.popup.delete.message: Ці сапраўды хочаце выдаліць ф�
 modsListApi.title: Спіс мадыфікацый
 modsListApi.info: {HEADER}Спіс мадыфікацый{/HEADER}{BODY}Просты запуск і зручная наладка мадыфікацый{/BODY}
 modsListApi.name: Менеджар паўтораў бою
-modsListApi.description: Зручны прагляд паўтораў, вынікаў, прайграванне, а таксама запампоўванне паўтораў вашых баёў на WoTReplays.ru
+modsListApi.description: Зручны прагляд паўтораў, вынікаў, прайграванне, а таксама запампоўванне паўтораў вашых баёў на WoTReplays
 
 

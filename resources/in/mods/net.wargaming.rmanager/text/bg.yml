@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Загуба
 ui.window.battleResultDraw: Реми
 ui.window.buttonShowResult: Покажи резултати от битка
 ui.window.buttonPlay: Пусни
-ui.window.buttonUpload: Качи на WoTReplays.eu
+ui.window.buttonUpload: Качи на WoTReplays
 ui.window.buttonRemove: Изтрий
 ui.window.buttonApply: Приложи
 ui.window.buttonReset: Нулирай
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Информация
 
 
 
-ui.uploader.windowTitle: Качи запис на WoTReplays.eu
+ui.uploader.windowTitle: Качи запис на WoTReplays
 ui.uploader.labelStatus: Състояние
 ui.uploader.statusNotFound: Записът не е открит
 ui.uploader.statusWrongAccount: Можете да качите само ваш запис!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Записът не е открит
 ui.uploader.statusLoading: Качване
 ui.uploader.statusConnectionError: Грешка при свързване!
 ui.uploader.statusLoadingComplete: Чака се отговор от сървъра
-ui.uploader.statusSucces: Вашият файл е качен успешно на WoTReplays.eu
+ui.uploader.statusSucces: Вашият файл е качен успешно на WoTReplays
 ui.uploader.linkLabel: връзка
 ui.uploader.error0: Системна грешка на уебсайта: 
 ui.uploader.error1: Файлът не е намерен: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Потребителят не е намерен:
 ui.uploader.error4: Празна заявка: 
 ui.uploader.error5: Грешка при запазване на записа: 
 ui.uploader.error6: Записът, което се опитвате да качите, е направен от друг играч.
-ui.uploader.responceLabel: Вашият запис е качен успешно на WoTReplays.eu! <br />Отидете на уебсайта: {{url}} <br />Свалете файла: {{directLink}}
+ui.uploader.responceLabel: Вашият запис е качен успешно на WoTReplays! <br />Отидете на уебсайта: {{url}} <br />Свалете файла: {{directLink}}
 ui.uploader.progressLabel:  Кб от {{value}} Кб
 ui.uploader.buttonStartUpload: Започни качване
 ui.uploader.inputTitle: Име (до 100 знака)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Обновяване на списъка
 
 ui.action.showResults: Покажи резултати
 ui.action.play: Пусни
-ui.action.upload: Качи на WoTReplays.eu
+ui.action.upload: Качи на WoTReplays
 ui.action.favoriteAdd: Добави към любими
 ui.action.favoriteDelete: Махни от любими
 ui.action.delete: Махни
@@ -121,6 +121,6 @@ ui.popup.delete.message: Наистина ли искате да изтриет�
 modsListApi.title: Списък с модификации
 modsListApi.info: {HEADER}Списък с модификации{/HEADER}{BODY}Лесно управление на модификациите ви{/BODY}
 modsListApi.name: Мениджър на записи
-modsListApi.description: Този прост мениджър на записи ви позволява да гледате записи и резултати от битки и да качвате записите си на WoTReplays.eu
+modsListApi.description: Този прост мениджър на записи ви позволява да гледате записи и резултати от битки и да качвате записите си на WoTReplays
 
 

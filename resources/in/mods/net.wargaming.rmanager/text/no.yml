@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Tap
 ui.window.battleResultDraw: Uavgjort
 ui.window.buttonShowResult: Vis kampresultater
 ui.window.buttonPlay: Spill av
-ui.window.buttonUpload: Last opp til WoTReplays.eu
+ui.window.buttonUpload: Last opp til WoTReplays
 ui.window.buttonRemove: Slett
 ui.window.buttonApply: Iverksett
 ui.window.buttonReset: Nullstill
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Last opp reprise til WoTReplays.eu
+ui.uploader.windowTitle: Last opp reprise til WoTReplays
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Kunne ikke finne reprise
 ui.uploader.statusWrongAccount: Du kan kun laste opp din egen reprise!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Kan ikke finne reprise
 ui.uploader.statusLoading: Laster opp
 ui.uploader.statusConnectionError: Feil med forbindelsen!
 ui.uploader.statusLoadingComplete: Venter på svar fra server
-ui.uploader.statusSucces: Din fil ble lastet opp til WoTReplays.eu
+ui.uploader.statusSucces: Din fil ble lastet opp til WoTReplays
 ui.uploader.linkLabel: link
 ui.uploader.error0: Sestemfeil på nettsted: 
 ui.uploader.error1: Kunne ikke finne fila: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Kan ikke finne bruker:
 ui.uploader.error4: Tomt søk: 
 ui.uploader.error5: Feil ved lagring av reprise: 
 ui.uploader.error6: Reprisen du forsøker å laste opp ble lagret av en annen spiller.
-ui.uploader.responceLabel: Din reprise ble lastet opp til WoTReplays.eu! <br />Gå til nettstedet: {{url}} <br />Last ned filen: {{directLink}}
+ui.uploader.responceLabel: Din reprise ble lastet opp til WoTReplays! <br />Gå til nettstedet: {{url}} <br />Last ned filen: {{directLink}}
 ui.uploader.progressLabel:  Kb av {{value}} Kb
 ui.uploader.buttonStartUpload: Start opplasting
 ui.uploader.inputTitle: Navn (opptil 100 tegn)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Oppdaterer lista
 
 ui.action.showResults: Vis resultater
 ui.action.play: Spill av
-ui.action.upload: Last opp til WoTReplays.eu
+ui.action.upload: Last opp til WoTReplays
 ui.action.favoriteAdd: Legg til i favoritter
 ui.action.favoriteDelete: Fjern fra favoritter
 ui.action.delete: Fjern
@@ -121,6 +121,6 @@ ui.popup.delete.message: Er du sikker på at du vil slette filen: %s?
 modsListApi.title: Modifikasjonsliste
 modsListApi.info: {HEADER}Modifikasjonsliste{/HEADER}{BODY}Enkel styring av dine modifikasjoner{/BODY}
 modsListApi.name: Reprisebehandler
-modsListApi.description: Denne enkle reprisebehandleren lar deg se repriser, kampresultater og laste opp repriser til WoTReplays.eu
+modsListApi.description: Denne enkle reprisebehandleren lar deg se repriser, kampresultater og laste opp repriser til WoTReplays
 
 

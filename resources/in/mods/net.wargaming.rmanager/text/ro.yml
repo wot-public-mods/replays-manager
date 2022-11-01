@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Înfrângere
 ui.window.battleResultDraw: Egal
 ui.window.buttonShowResult: Afișează rezultatele luptei
 ui.window.buttonPlay: Rulează
-ui.window.buttonUpload: Urcă pe WoTReplays.eu
+ui.window.buttonUpload: Urcă pe WoTReplays
 ui.window.buttonRemove: Șterge
 ui.window.buttonApply: Aplică
 ui.window.buttonReset: Resetare
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Urcă reluarea pe WoTReplays.eu
+ui.uploader.windowTitle: Urcă reluarea pe WoTReplays
 ui.uploader.labelStatus: Stare
 ui.uploader.statusNotFound: Nu s-a găsit reluarea
 ui.uploader.statusWrongAccount: Poți urca doar reluările proprii!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Reluare găsită
 ui.uploader.statusLoading: În urcare
 ui.uploader.statusConnectionError: Eroare de conexiune!
 ui.uploader.statusLoadingComplete: Se așteaptă serverul
-ui.uploader.statusSucces: Fișierul tău a fost urcat cu succes pe WoTReplays.eu
+ui.uploader.statusSucces: Fișierul tău a fost urcat cu succes pe WoTReplays
 ui.uploader.linkLabel: link
 ui.uploader.error0: Eroare de sistem a site-ului: 
 ui.uploader.error1: Nu s-a găsit fișierul: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Nu s-a găsit utilizatorul:
 ui.uploader.error4: Cerere incompletă: 
 ui.uploader.error5: Eroare la salvarea reluării: 
 ui.uploader.error6: Reluarea pe care încerci să o urci a fost salvată de un alt jucător.
-ui.uploader.responceLabel: Reluarea ta a fost urcată cu succes pe WoTReplays.eu! <br />Mergi la site: {{url}} <br />Descarcă fișierul: {{directLink}}
+ui.uploader.responceLabel: Reluarea ta a fost urcată cu succes pe WoTReplays! <br />Mergi la site: {{url}} <br />Descarcă fișierul: {{directLink}}
 ui.uploader.progressLabel:  Kb din {{value}} Kb
 ui.uploader.buttonStartUpload: Start urcare
 ui.uploader.inputTitle: Nume (maxim 100 litere)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Se actualizează lista
 
 ui.action.showResults: Afișare rezultate
 ui.action.play: Redare
-ui.action.upload: Urcă pe WoTReplays.eu
+ui.action.upload: Urcă pe WoTReplays
 ui.action.favoriteAdd: Adaugă la favorite
 ui.action.favoriteDelete: Scoate de la favorite
 ui.action.delete: Elimină
@@ -121,6 +121,6 @@ ui.popup.delete.message: Ești sigur că vrei să ștergi fișierul: %s?
 modsListApi.title: Listă moduri
 modsListApi.info: {HEADER}Listă moduri{/HEADER}{BODY}Managementul facil al modurilor{/BODY}
 modsListApi.name: Manager reluări
-modsListApi.description: Acest simplu manager de reluări îți permite să vizualizezi reluări, să vezi rezultatele luptelor și să urci relulările pe WoTReplays.eu
+modsListApi.description: Acest simplu manager de reluări îți permite să vizualizezi reluări, să vezi rezultatele luptelor și să urci relulările pe WoTReplays
 
 

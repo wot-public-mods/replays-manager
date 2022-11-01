@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Ήττα
 ui.window.battleResultDraw: Ισοπαλία
 ui.window.buttonShowResult: Προβολή αποτελεσμάτων μάχης
 ui.window.buttonPlay: Αναπαραγωγή
-ui.window.buttonUpload: Ανέβασμα στο WoTReplays.eu
+ui.window.buttonUpload: Ανέβασμα στο WoTReplays
 ui.window.buttonRemove: Διαγραφή
 ui.window.buttonApply: Εφαρμογή
 ui.window.buttonReset: Επαναφορά
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Πληροφορίες
 
 
 
-ui.uploader.windowTitle: Ανέβασμα Replay στο WoTReplays.eu
+ui.uploader.windowTitle: Ανέβασμα Replay στο WoTReplays
 ui.uploader.labelStatus: Κατάσταση
 ui.uploader.statusNotFound: Δεν βρέθηκε replay
 ui.uploader.statusWrongAccount: Μπορείτε να ανεβάσετε μόνο τα δικά σας replay!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Δεν βρέθηκε replay
 ui.uploader.statusLoading: Ανέβασμα
 ui.uploader.statusConnectionError: Σφάλμα σύνδεσης!
 ui.uploader.statusLoadingComplete: Αναμονή για ανταπόκριση του server
-ui.uploader.statusSucces: Το αρχείο σας ανέβηκε επιτυχώς στο WoTReplays.eu
+ui.uploader.statusSucces: Το αρχείο σας ανέβηκε επιτυχώς στο WoTReplays
 ui.uploader.linkLabel: link
 ui.uploader.error0: Σφάλμα συστήματος ιστοσελίδας: 
 ui.uploader.error1: Δεν βρέθηκε το αρχείο: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Δεν βρέθηκε ο χρήστης:
 ui.uploader.error4: Κενό ερώτημα: 
 ui.uploader.error5: Σφάλμα στην αποθήκευση του replay: 
 ui.uploader.error6: Η εγγραφή του replay που προσπαθείτε να ανεβάσετε έγινε από άλλον παίκτη.
-ui.uploader.responceLabel: Το replay σας ανέβηκε επιτυχώς στο WoTReplays.eu! <br />Επισκεφτείτε την ιστοσελίδα: {{url}} <br />Κατέβασμα αρχείου: {{directLink}}
+ui.uploader.responceLabel: Το replay σας ανέβηκε επιτυχώς στο WoTReplays! <br />Επισκεφτείτε την ιστοσελίδα: {{url}} <br />Κατέβασμα αρχείου: {{directLink}}
 ui.uploader.progressLabel:  Kb από {{value}} Kb
 ui.uploader.buttonStartUpload: Εκκίνηση ανεβάσματος
 ui.uploader.inputTitle: Όνομα (μέχρι και 100 χαρακτήρες)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Ενημέρωση λίστας
 
 ui.action.showResults: Προβολή αποτελεσμάτων
 ui.action.play: Αναπαραγωγή
-ui.action.upload: Ανέβασμα στο WoTReplays.eu
+ui.action.upload: Ανέβασμα στο WoTReplays
 ui.action.favoriteAdd: Προσθήκη στα αγαπημένα
 ui.action.favoriteDelete: Αφαίρεση από τα αγαπημένα
 ui.action.delete: Αφαίρεση
@@ -121,6 +121,6 @@ ui.popup.delete.message: Θέλετε σίγουρα να διαγράψετε �
 modsListApi.title: Λίστα Modifications
 modsListApi.info: {HEADER}Λίστα Modifications{/HEADER}{BODY}Εύκολη διαχείριση των modifications σας{/BODY}
 modsListApi.name: Replay Manager
-modsListApi.description: Αυτός ο απλός replay manager σας επιτρέπει να βλέπετε replays και αποτελέσματα μάχης, καθώς και να ανεβάζετε τα δικά σας replays στο WoTReplays.eu
+modsListApi.description: Αυτός ο απλός replay manager σας επιτρέπει να βλέπετε replays και αποτελέσματα μάχης, καθώς και να ανεβάζετε τα δικά σας replays στο WoTReplays
 
 

@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Porażka
 ui.window.battleResultDraw: Remis
 ui.window.buttonShowResult: Pokaż wyniki bitwy
 ui.window.buttonPlay: Odtwarzaj
-ui.window.buttonUpload: Wyślij do WoTReplays.eu
+ui.window.buttonUpload: Wyślij do WoTReplays
 ui.window.buttonRemove: Usuń
 ui.window.buttonApply: Zastosuj
 ui.window.buttonReset: Wyzeruj
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Informacja
 
 
 
-ui.uploader.windowTitle: Prześlij powtórkę do WoTReplays.eu
+ui.uploader.windowTitle: Prześlij powtórkę do WoTReplays
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Nie znaleziono powtórki
 ui.uploader.statusWrongAccount: Możesz przesłać tylko swoją powtórkę!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Nie znaleziono powtórki
 ui.uploader.statusLoading: Przesyłanie
 ui.uploader.statusConnectionError: Błąd połączenia!
 ui.uploader.statusLoadingComplete: Oczekiwanie na odpowiedź serwera
-ui.uploader.statusSucces: Twój plik został przesłany do WoTReplays.eu
+ui.uploader.statusSucces: Twój plik został przesłany do WoTReplays
 ui.uploader.linkLabel: odnośnik
 ui.uploader.error0: Błąd systemu strony internetowej: 
 ui.uploader.error1: Nie znaleziono pliku: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Nie znaleziono użytkownika:
 ui.uploader.error4: Puste zapytanie: 
 ui.uploader.error5: Błąd podczas zapisywania powtórki: 
 ui.uploader.error6: Powtórka, którą próbujesz przesłać, została nagrana przez innego gracza.
-ui.uploader.responceLabel: Twoja powtórka została przesłana do WoTReplays.eu! <br />Przejdź do strony: {{url}} <br />Pobierz plik: {{directLink}}
+ui.uploader.responceLabel: Twoja powtórka została przesłana do WoTReplays! <br />Przejdź do strony: {{url}} <br />Pobierz plik: {{directLink}}
 ui.uploader.progressLabel:  Kb z {{value}} Kb
 ui.uploader.buttonStartUpload: Rozpocznij przesyłanie
 ui.uploader.inputTitle: Nazwa (do 100 znaków)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Aktualizacja listy
 
 ui.action.showResults: Pokaż wyniki
 ui.action.play: Odtwarzaj
-ui.action.upload: Prześlij do WoTReplays.eu
+ui.action.upload: Prześlij do WoTReplays
 ui.action.favoriteAdd: Dodaj do ulubionych
 ui.action.favoriteDelete: Usuń z ulubionych
 ui.action.delete: Usuń
@@ -121,6 +121,6 @@ ui.popup.delete.message: Czy jesteś pewien, że chcesz usunąć ten plik: %s?
 modsListApi.title: Lista modyfikacji
 modsListApi.info: {HEADER}Lista modyfikacji{/HEADER}{BODY}Łatwe zarządzanie Twoimi modyfikacjami{/BODY}
 modsListApi.name: Menadżer powtórek
-modsListApi.description: Ten prosty menadżer powtórek pozwala Ci oglądać powtórki, przeglądać wyniki bitew i przesyłać Twoje powtórki do WoTReplays.eu
+modsListApi.description: Ten prosty menadżer powtórek pozwala Ci oglądać powtórki, przeglądać wyniki bitew i przesyłać Twoje powtórki do WoTReplays
 
 

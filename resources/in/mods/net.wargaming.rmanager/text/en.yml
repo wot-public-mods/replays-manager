@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Upload Replay to WoTReplays.eu
+ui.uploader.windowTitle: Upload Replay to WoTReplays
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Replay not found
 ui.uploader.statusWrongAccount: You can upload only your replay!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Replay not found
 ui.uploader.statusLoading: Uploading
 ui.uploader.statusConnectionError: Connection error!
 ui.uploader.statusLoadingComplete: Awaiting server reply
-ui.uploader.statusSucces: Your file was successfully uploaded to WoTReplays.eu
+ui.uploader.statusSucces: Your file was successfully uploaded to WoTReplays
 ui.uploader.linkLabel: link
 ui.uploader.error0: Website system error: 
 ui.uploader.error1: File not found: 
@@ -85,7 +85,7 @@ ui.uploader.error3: User not found:
 ui.uploader.error4: Empty query: 
 ui.uploader.error5: Error saving the replay: 
 ui.uploader.error6: The replay you are trying to upload was recorded by a different player.
-ui.uploader.responceLabel: Your replay was successfully uploaded to WoTReplays.eu! <br />Go to the website: {{url}} <br />Download the file: {{directLink}}
+ui.uploader.responceLabel: Your replay was successfully uploaded to WoTReplays! <br />Go to the website: {{url}} <br />Download the file: {{directLink}}
 ui.uploader.progressLabel:  Kb of {{value}} Kb
 ui.uploader.buttonStartUpload: Start uploading
 ui.uploader.inputTitle: Name (up to 100 characters)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Updating the list
 
 ui.action.showResults: Show battle results
 ui.action.play: Play
-ui.action.upload: Upload to WoTReplays.eu
+ui.action.upload: Upload to WoTReplays
 ui.action.favoriteAdd: Add to favorites
 ui.action.favoriteDelete: Remove from favorites
 ui.action.delete: Delete
@@ -121,6 +121,6 @@ ui.popup.delete.message: Are you sure you want to delete the file: %s?
 modsListApi.title: Modifications list
 modsListApi.info: {HEADER}Modifications list{/HEADER}{BODY}Access, customize and manage modifications easily{/BODY}
 modsListApi.name: Replays Manager
-modsListApi.description: Conveniently display your replays, view battle results, play back as well as upload replays on WoTReplays.eu
+modsListApi.description: Conveniently display your replays, view battle results, play back as well as upload replays on WoTReplays
 
 

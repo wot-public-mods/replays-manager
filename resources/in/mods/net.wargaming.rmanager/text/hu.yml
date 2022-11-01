@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Vereség
 ui.window.battleResultDraw: Döntetlen
 ui.window.buttonShowResult: Csata eredmények megjelenítése
 ui.window.buttonPlay: Lejátszás
-ui.window.buttonUpload: Feltöltés a WoTReplays.eu-ra
+ui.window.buttonUpload: Feltöltés a WoTReplays-ra
 ui.window.buttonRemove: Törlés
 ui.window.buttonApply: Alkalmaz
 ui.window.buttonReset: Visszaállítás
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Visszajátszás feltöltése a WoTReplays.eu-ra
+ui.uploader.windowTitle: Visszajátszás feltöltése a WoTReplays-ra
 ui.uploader.labelStatus: Állapot
 ui.uploader.statusNotFound: A visszajátszás nem található
 ui.uploader.statusWrongAccount: Csak a saját visszajátszásodat töltheted fel!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: A visszajátszás nem található
 ui.uploader.statusLoading: Feltöltés
 ui.uploader.statusConnectionError: Csatlakozási hiba!
 ui.uploader.statusLoadingComplete: Várakozás a szerver válaszára
-ui.uploader.statusSucces: A fájlt sikeresen feltöltöttük a WoTReplays.eu-ra
+ui.uploader.statusSucces: A fájlt sikeresen feltöltöttük a WoTReplays-ra
 ui.uploader.linkLabel: link
 ui.uploader.error0: Weboldal rendszer hiba: 
 ui.uploader.error1: A file nem található: 
@@ -85,7 +85,7 @@ ui.uploader.error3: A felhasználó nem található:
 ui.uploader.error4: Üres lekérdezés: 
 ui.uploader.error5: Hiba a visszajátszás mentése során: 
 ui.uploader.error6: A feltölteni kívánt visszajátszást másik játékos készítette.
-ui.uploader.responceLabel: Visszajátszásod sikeresen feltöltötted a WoTReplays.eu-ra! <br />Weboldal megnyitása: {{url}} <br />Fájl letöltése: {{directLink}}
+ui.uploader.responceLabel: Visszajátszásod sikeresen feltöltötted a WoTReplays-ra! <br />Weboldal megnyitása: {{url}} <br />Fájl letöltése: {{directLink}}
 ui.uploader.progressLabel:  Kb / {{value}} Kb
 ui.uploader.buttonStartUpload: Feltöltés indítása
 ui.uploader.inputTitle: Név (legfeljebb 100 karakter)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Lista frissítése
 
 ui.action.showResults: Eredmények megjelenítése
 ui.action.play: Lejátszás
-ui.action.upload: Feltöltés a WoTReplays.eu-ra
+ui.action.upload: Feltöltés a WoTReplays-ra
 ui.action.favoriteAdd: Hozzáadás a kedvencekhez
 ui.action.favoriteDelete: Eltávolítás a kedvencek közül
 ui.action.delete: Eltávolítás
@@ -121,6 +121,6 @@ ui.popup.delete.message: Biztosan törölni akarod ezt a fájlt: %s?
 modsListApi.title: Mod lista
 modsListApi.info: {HEADER}Mod lista{/HEADER}{BODY}A modjaid egyszerű kezeléséhez.{/BODY}
 modsListApi.name: Visszajátszás kezelő
-modsListApi.description: Ez az egyszerű Visszajátszás kezelő lehetővé teszi számodra, hogy megnézd a visszajátszásaid, a csaták eredményeit és feltöltsd a visszajátszásaid a WoTReplays.eu-ra
+modsListApi.description: Ez az egyszerű Visszajátszás kezelő lehetővé teszi számodra, hogy megnézd a visszajátszásaid, a csaták eredményeit és feltöltsd a visszajátszásaid a WoTReplays-ra
 
 

@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Porážka
 ui.window.battleResultDraw: Remíza
 ui.window.buttonShowResult: Ukázat výsledky bitvy
 ui.window.buttonPlay: Přehrát
-ui.window.buttonUpload: Nahrát na WoTReplays.eu
+ui.window.buttonUpload: Nahrát na WoTReplays
 ui.window.buttonRemove: Smazat
 ui.window.buttonApply: Použít
 ui.window.buttonReset: Vynulovat
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Nahrát záznam na WoTReplays.eu
+ui.uploader.windowTitle: Nahrát záznam na WoTReplays
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Záznam nebyl nalezen
 ui.uploader.statusWrongAccount: Můžete nahrát pouze svůj záznam!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Záznam nebyl nalezen
 ui.uploader.statusLoading: Nahrávání
 ui.uploader.statusConnectionError: Chyba připojení!
 ui.uploader.statusLoadingComplete: Čekání na odpověď serveru
-ui.uploader.statusSucces: Váš soubor byl úspěšně nahrán na WoTReplays.eu
+ui.uploader.statusSucces: Váš soubor byl úspěšně nahrán na WoTReplays
 ui.uploader.linkLabel: odkaz
 ui.uploader.error0: Systémová chyba webové stránky: 
 ui.uploader.error1: Soubor nebyl nalezen: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Uživatel nebyl nalezen:
 ui.uploader.error4: Prázdný dotaz: 
 ui.uploader.error5: Chyba při ukládání záznamu: 
 ui.uploader.error6: Záznam, který se pokoušíte nahrát, byl natočen jiným hráčem.
-ui.uploader.responceLabel: Váš záznam byl úspěšně nahrán na WoTReplays.eu! <br />Přejít na stránku: {{url}} <br />Stáhnout soubor: {{directLink}}
+ui.uploader.responceLabel: Váš záznam byl úspěšně nahrán na WoTReplays! <br />Přejít na stránku: {{url}} <br />Stáhnout soubor: {{directLink}}
 ui.uploader.progressLabel:  Kb z {{value}} Kb
 ui.uploader.buttonStartUpload: Zahájit nahrávání
 ui.uploader.inputTitle: Název (až 100 znaků)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Aktualizace seznamu
 
 ui.action.showResults: Ukázat výsledky
 ui.action.play: Přehrát
-ui.action.upload: Nahrát na WoTReplays.eu
+ui.action.upload: Nahrát na WoTReplays
 ui.action.favoriteAdd: Přidat do oblíbených
 ui.action.favoriteDelete: Odstranit z oblíbených
 ui.action.delete: Odstranit
@@ -121,6 +121,6 @@ ui.popup.delete.message: Opravdu chcete smazat soubor: %s?
 modsListApi.title: Seznam modifikací
 modsListApi.info: {HEADER}Seznam modifikací{/HEADER}{BODY}Spravujte snadno své modifikace{/BODY}
 modsListApi.name: Správce záznamů
-modsListApi.description: Tento jednoduchý správce záznamů vám umožňuje sledování záznamů, prohlížení výsledků bitev a nahrávání vašich záznamů na WoTReplays.eu
+modsListApi.description: Tento jednoduchý správce záznamů vám umožňuje sledování záznamů, prohlížení výsledků bitev a nahrávání vašich záznamů na WoTReplays
 
 

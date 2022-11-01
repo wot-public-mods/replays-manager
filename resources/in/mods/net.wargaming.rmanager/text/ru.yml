@@ -66,7 +66,7 @@ ui.window.tabsInfo: Инфо
 
 
 
-ui.uploader.windowTitle: Загрузка реплея на WoTReplays.ru
+ui.uploader.windowTitle: Загрузка реплея на WoTReplays
 ui.uploader.labelStatus: Статус
 ui.uploader.statusNotFound: Реплей не найден
 ui.uploader.statusWrongAccount: Загрузить можно только свой реплей!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Реплей найден
 ui.uploader.statusLoading: Идет загрузка
 ui.uploader.statusConnectionError: Ошибка соединения!
 ui.uploader.statusLoadingComplete: Ожидание ответа от сервера
-ui.uploader.statusSucces: Ваш реплей был успешно отправлен на WoTReplays.ru!
+ui.uploader.statusSucces: Ваш реплей был успешно отправлен на WoTReplays!
 ui.uploader.linkLabel: ссылка
 ui.uploader.error0: Cистемная ошибка сайта: 
 ui.uploader.error1: Реплей не найден: 
@@ -121,6 +121,6 @@ ui.popup.delete.message: Вы действительно хотите удали
 modsListApi.title: Список модификаций
 modsListApi.info: {HEADER}Список модификаций{/HEADER}{BODY}Простой запуск и удобная настройка модификаций{/BODY}
 modsListApi.name: Менеджер реплеев
-modsListApi.description: Удобный просмотр реплеев, просмотр результатов, воспроизведение, а так же загрузка реплеев на WoTReplays.ru
+modsListApi.description: Удобный просмотр реплеев, просмотр результатов, воспроизведение, а так же загрузка реплеев на WoTReplays
 
 

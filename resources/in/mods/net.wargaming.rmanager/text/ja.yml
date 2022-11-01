@@ -66,7 +66,7 @@ ui.window.tabsInfo: 詳細
 
 
 
-ui.uploader.windowTitle: WoTReplays.eu にアップロード
+ui.uploader.windowTitle: WoTReplays にアップロード
 ui.uploader.labelStatus: 状況
 ui.uploader.statusNotFound: リプレイが見つかりません
 ui.uploader.statusWrongAccount: アップロード可能なのは自分のリプレイだけです!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: リプレイが見つかりません
 ui.uploader.statusLoading: アップロード中です
 ui.uploader.statusConnectionError: 接続エラー!
 ui.uploader.statusLoadingComplete: サーバーの応答待機中です
-ui.uploader.statusSucces: WoTReplays.eu へのアップロードが成功しました
+ui.uploader.statusSucces: WoTReplays へのアップロードが成功しました
 ui.uploader.linkLabel: リンク
 ui.uploader.error0: サイトのシステムエラー: 
 ui.uploader.error1: ファイルが見つかりません: 
@@ -85,7 +85,7 @@ ui.uploader.error3: ユーザーが見つかりません:
 ui.uploader.error4: クエリが空です: 
 ui.uploader.error5: リプレイの保存に失敗しました: 
 ui.uploader.error6: アップロード対象のリプレイが他のユーザーによって登録されています。
-ui.uploader.responceLabel: リプレイを WoTReplays.eu にアップロードしました! <br />サイトに移動: {{url}} <br />ダウンロード: {{directLink}}
+ui.uploader.responceLabel: リプレイを WoTReplays にアップロードしました! <br />サイトに移動: {{url}} <br />ダウンロード: {{directLink}}
 ui.uploader.progressLabel:  Kb / {{value}} Kb 中
 ui.uploader.buttonStartUpload: アップロード実行
 ui.uploader.inputTitle: 名称 (100文字まで)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: 一覧を更新しています
 
 ui.action.showResults: 戦闘結果を表示
 ui.action.play: 再生
-ui.action.upload: WoTReplays.eu へアップロード
+ui.action.upload: WoTReplays へアップロード
 ui.action.favoriteAdd: お気に入りに追加
 ui.action.favoriteDelete: お気に入りから削除
 ui.action.delete: 削除
@@ -121,5 +121,5 @@ ui.popup.delete.message: ファイルを削除してよろしいですか: %s?
 modsListApi.title: Mod 一覧
 modsListApi.info: {HEADER}Mod 一覧{/HEADER}{BODY}Mod の操作、設定変更、管理を行います{/BODY}
 modsListApi.name: Replays Manager
-modsListApi.description: リプレイファイル再生、戦闘結果表示、 WoTReplays.eu へのアップロードと同様のプレイバック機能を提供します
+modsListApi.description: リプレイファイル再生、戦闘結果表示、 WoTReplays へのアップロードと同様のプレイバック機能を提供します
 

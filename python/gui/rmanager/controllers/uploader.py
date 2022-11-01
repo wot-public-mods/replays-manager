@@ -53,8 +53,10 @@ class UploaderController(object):
 	@adisp_async
 	@adisp_process
 	def apiStatus(callback):
-		url = 'http://wotreplays.%s' % ('ru' if CURRENT_REALM == 'RU' else 'eu')
-		response = yield lambda callback: BigWorld.fetchURL(url, callback)
+		host = 'http://wotreplays.eu/'
+		if CURRENT_REALM == 'RU':
+			host = 'http://tankireplays.lesta.ru/'
+		response = yield lambda callback: BigWorld.fetchURL(host, callback)
 		LOG_DEBUG('UploaderController.apiStatus %s' % response.responseCode, response.body)
 		callback(response.responseCode == 200)
 
@@ -113,8 +115,10 @@ class UploaderController(object):
 
 		form.add_file('Replay[file_name]', self.__replay.fileName, fileStream)
 
-		targetDomain = 'ru' if CURRENT_REALM == 'RU' else 'eu'
-		targetURL = WOTREPLAYS_API_URL % (targetDomain, str(self.__replay.userDBID), str(self.__replay.userName))
+		host = 'http://wotreplays.eu'
+		if CURRENT_REALM == 'RU':
+			host = 'http://tankireplays.lesta.ru'
+		targetURL = WOTREPLAYS_API_URL % (host, str(self.__replay.userDBID), str(self.__replay.userName))
 
 		LOG_DEBUG('UploaderController.__uploaderThread endpoint', targetURL)
 

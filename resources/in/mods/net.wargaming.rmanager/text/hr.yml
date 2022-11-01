@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Poraz
 ui.window.battleResultDraw: Nerješeno
 ui.window.buttonShowResult: Prikaži rezultate bitke
 ui.window.buttonPlay: Pokreni
-ui.window.buttonUpload: Postavi na WoTReplays.eu
+ui.window.buttonUpload: Postavi na WoTReplays
 ui.window.buttonRemove: Obriši
 ui.window.buttonApply: Primjeni
 ui.window.buttonReset: Poništi
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Postavi reprizu na WoTReplays.eu
+ui.uploader.windowTitle: Postavi reprizu na WoTReplays
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Repriza nije pronađena
 ui.uploader.statusWrongAccount: Možete postaviti samo svoju reprizu!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Repriza nije pronađena
 ui.uploader.statusLoading: Postavljanje
 ui.uploader.statusConnectionError:Greška u spajanju!
 ui.uploader.statusLoadingComplete: Čekam odgovor servera
-ui.uploader.statusSucces: Vaša datoteka je uspješno postavljena na WoTReplays.eu
+ui.uploader.statusSucces: Vaša datoteka je uspješno postavljena na WoTReplays
 ui.uploader.linkLabel: link
 ui.uploader.error0: Sistemska greška stranice: 
 ui.uploader.error1: Datoteka nije pronađena: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Korisnike nije pronađen:
 ui.uploader.error4: Prazni upit: 
 ui.uploader.error5: Greška u spremanju reprize: 
 ui.uploader.error6: Repriza koju pokušavate postaviti je snimio drugi igrač.
-ui.uploader.responceLabel: Vaša repriza je uspješno postavljena na WoTReplays.eu! <br />Idite na stranicu: {{url}} <br />Preuzmite datoteku: {{directLink}}
+ui.uploader.responceLabel: Vaša repriza je uspješno postavljena na WoTReplays! <br />Idite na stranicu: {{url}} <br />Preuzmite datoteku: {{directLink}}
 ui.uploader.progressLabel:  Kb od {{value}} Kb
 ui.uploader.buttonStartUpload: Započni postavljanje
 ui.uploader.inputTitle: Ime (do 100 znakova)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Osvježavanje spiska
 
 ui.action.showResults: Prikaži rezultate
 ui.action.play: Pokren9i
-ui.action.upload: Postavi na WoTReplays.eu
+ui.action.upload: Postavi na WoTReplays
 ui.action.favoriteAdd: Dodaj u omiljene
 ui.action.favoriteDelete: Ukloni iz omiljenih
 ui.action.delete: Ukloni
@@ -121,6 +121,6 @@ ui.popup.delete.message: Da li ste sigurni da želite obrisati datoteku: %s?
 modsListApi.title: Spisak promjena
 modsListApi.info: {HEADER}Spisak promjena{/HEADER}{BODY}Lakše upravljanje vašim promjenama{/BODY}
 modsListApi.name: Upravljač reprizama
-modsListApi.description: Ovaj jednostavni upravljač reprizama vam omogućava da gledate reprize, pregledavate rezultate bitaka i postavljate vaše reprize na WoTReplays.eu
+modsListApi.description: Ovaj jednostavni upravljač reprizama vam omogućava da gledate reprize, pregledavate rezultate bitaka i postavljate vaše reprize na WoTReplays
 
 

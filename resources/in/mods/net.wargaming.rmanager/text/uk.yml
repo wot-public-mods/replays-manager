@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Поразка
 ui.window.battleResultDraw: Нічия
 ui.window.buttonShowResult: Показати результати
 ui.window.buttonPlay: Відтворити
-ui.window.buttonUpload: Завантажити на WoTReplays.ru
+ui.window.buttonUpload: Завантажити на WoTReplays
 ui.window.buttonRemove: Видалити
 ui.window.buttonApply: Застосувати
 ui.window.buttonReset: Скинути
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Інформація
 
 
 
-ui.uploader.windowTitle: Завантаження повтору бою на WoTReplays.ru
+ui.uploader.windowTitle: Завантаження повтору бою на WoTReplays
 ui.uploader.labelStatus: Статус
 ui.uploader.statusNotFound: Повтор бою не знайдено
 ui.uploader.statusWrongAccount: Завантажити можна лише повтор власного бою!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Повтор бою знайдено
 ui.uploader.statusLoading: Завантажуємо...
 ui.uploader.statusConnectionError: Помилка з’єднання!
 ui.uploader.statusLoadingComplete: Очікуємо відповідь від сервера
-ui.uploader.statusSucces: Ваш файл надіслано на WoTReplays.ru
+ui.uploader.statusSucces: Ваш файл надіслано на WoTReplays
 ui.uploader.linkLabel: посилання
 ui.uploader.error0: Системна помилка сайту: 
 ui.uploader.error1: Файл не знайдено: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Користувача не знайдено:
 ui.uploader.error4: Пустий запит: 
 ui.uploader.error5: Помилка збереження повтору бою: 
 ui.uploader.error6: Повтор бою записано не тим гравцем, хто завантажує його на сайт.
-ui.uploader.responceLabel: Ваш повтор бою завантажено на сайт WoTReplays.ru! <br />Перейти на сайт: {{url}} <br />Завантажити файл: {{directLink}}
+ui.uploader.responceLabel: Ваш повтор бою завантажено на сайт WoTReplays! <br />Перейти на сайт: {{url}} <br />Завантажити файл: {{directLink}}
 ui.uploader.progressLabel:  КБ з {{value}} КБ
 ui.uploader.buttonStartUpload: Почати завантаження
 ui.uploader.inputTitle: Назва (до 100 символів)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Оновлення списку
 
 ui.action.showResults: Показати результати
 ui.action.play: Відтворити
-ui.action.upload: Завантажити на WoTReplays.ru
+ui.action.upload: Завантажити на WoTReplays
 ui.action.favoriteAdd: Додати до уподобань
 ui.action.favoriteDelete: Видалити з уподобань
 ui.action.delete: Видалити
@@ -121,6 +121,6 @@ ui.popup.delete.message: Ви дійсно хочете видалити фай�
 modsListApi.title: Список модифікацій
 modsListApi.info: {HEADER}Список модифікацій{/HEADER} {BODY}Простий запуск і зручне налаштування модифікацій{/BODY}
 modsListApi.name: Менеджер повторів бою
-modsListApi.description: Зручний перегляд повторів, результатів, іх відтворення, а також завантаження повторів ваших боїв на WoTReplays.ru
+modsListApi.description: Зручний перегляд повторів, результатів, іх відтворення, а також завантаження повторів ваших боїв на WoTReplays
 
 

@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Жеңіліс
 ui.window.battleResultDraw: Тең ойын
 ui.window.buttonShowResult: Шайқас қорытындысын қарау
 ui.window.buttonPlay: Ойнату
-ui.window.buttonUpload: WoTReplays.ru-ға жүктеу
+ui.window.buttonUpload: WoTReplays-ға жүктеу
 ui.window.buttonRemove: Жою
 ui.window.buttonApply: Қолдану
 ui.window.buttonReset: Тазарту
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Ақпарат
 
 
 
-ui.uploader.windowTitle: WoTReplays.ru-ға жүктеу
+ui.uploader.windowTitle: WoTReplays-ға жүктеу
 ui.uploader.labelStatus: Мәртебесі
 ui.uploader.statusNotFound: Реплей табылмады
 ui.uploader.statusWrongAccount: Тек бір реплей жүктей аласыз!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Реплей табылмады
 ui.uploader.statusLoading: Жүктелуде
 ui.uploader.statusConnectionError: Байланыс қатесі!
 ui.uploader.statusLoadingComplete: Сервер жауабын күту
-ui.uploader.statusSucces: Файлыңыз WoTReplays.ru-ға сәтті жүктелді
+ui.uploader.statusSucces: Файлыңыз WoTReplays-ға сәтті жүктелді
 ui.uploader.linkLabel: сілтеме
 ui.uploader.error0: Сайт жүйелік қатесі: 
 ui.uploader.error1: Файл табылмады: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Қолданушы табылмады:
 ui.uploader.error4: Бос сұратылым: 
 ui.uploader.error5: Реплейді сақтауда қате шықты: 
 ui.uploader.error6: Сіз жүктемеуге тырысып жатқан реплейді басқа ойыншы жасаған.
-ui.uploader.responceLabel: Реплейіңіз WoTReplays.ru-ға сәтті жүктелді! <br />Сайтқа өту: {{url}} <br /Файлды жүктеу: {{directLink}}
+ui.uploader.responceLabel: Реплейіңіз WoTReplays-ға сәтті жүктелді! <br />Сайтқа өту: {{url}} <br /Файлды жүктеу: {{directLink}}
 ui.uploader.progressLabel: Kb {{value}} Kb ішінен
 ui.uploader.buttonStartUpload: Жүктеуді бастау
 ui.uploader.inputTitle: Атауы (100 таңбаға дейін)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Тізімді жаңарту
 
 ui.action.showResults: Қорытынды көрсету
 ui.action.play: Ойнату
-ui.action.upload: WoTReplays.ru-ға жүктеу
+ui.action.upload: WoTReplays-ға жүктеу
 ui.action.favoriteAdd: Таңдаулыға қосу
 ui.action.favoriteDelete: Таңдаулыдан ап тастау
 ui.action.delete: Ап тастау
@@ -121,6 +121,6 @@ ui.popup.delete.message: %s файлын жоюға сенімдісіз бе?
 modsListApi.title: Өзгертілімдер тізімі
 modsListApi.info: {HEADER}Өзгертілімдер тізімі{/HEADER}{BODY}Managing your modifications easily{/BODY}
 modsListApi.name: Реплей менеджері
-modsListApi.description: Бұл қарапайым реплей менеджері реплейлер мен шайқас нәтижелерін қарап, WoTReplays.ru-ға реплейлеріңізді жүктеуге мүмкіндік береді
+modsListApi.description: Бұл қарапайым реплей менеджері реплейлер мен шайқас нәтижелерін қарап, WoTReplays-ға реплейлеріңізді жүктеуге мүмкіндік береді
 
 

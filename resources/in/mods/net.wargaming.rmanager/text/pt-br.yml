@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Derrota
 ui.window.battleResultDraw: Empate
 ui.window.buttonShowResult: Exibir resultados da batalha
 ui.window.buttonPlay: Executar
-ui.window.buttonUpload: Enviar para WoTReplays.ru
+ui.window.buttonUpload: Enviar para WoTReplays
 ui.window.buttonRemove: Excluir
 ui.window.buttonApply: Aplicar
 ui.window.buttonReset: Reset
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Informações
 
 
 
-ui.uploader.windowTitle: Enviar Reprise para WoTReplays.ru
+ui.uploader.windowTitle: Enviar Reprise para WoTReplays
 ui.uploader.labelStatus: Status
 ui.uploader.statusNotFound: Reprise não encontrado
 ui.uploader.statusWrongAccount: Você pode enviar somente os seus reprises!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Reprise não encontrado
 ui.uploader.statusLoading: Enviando
 ui.uploader.statusConnectionError: Erro de conexão!
 ui.uploader.statusLoadingComplete: Aguardando resposta do servidor
-ui.uploader.statusSucces: Seu arquivo foi enviado com sucesso para WoTReplays.ru
+ui.uploader.statusSucces: Seu arquivo foi enviado com sucesso para WoTReplays
 ui.uploader.linkLabel: link
 ui.uploader.error0: Erro no sistema do site:
 ui.uploader.error1: Arquivo não encontrado:
@@ -85,7 +85,7 @@ ui.uploader.error3: Usuário não encontrado:
 ui.uploader.error4: Consulta vazia:
 ui.uploader.error5: Erro ao salvar o reprise:
 ui.uploader.error6: O reprise que você está tentando enviar foi gravado por um jogador diferente.
-ui.uploader.responceLabel: Seu reprise foi enviado com sucesso para WoTReplays.ru! <br />Vá ao site: {{url}} <br />Baixe o arquivo: {{directLink}}
+ui.uploader.responceLabel: Seu reprise foi enviado com sucesso para WoTReplays! <br />Vá ao site: {{url}} <br />Baixe o arquivo: {{directLink}}
 ui.uploader.progressLabel: Kb de {{value}} Kb
 ui.uploader.buttonStartUpload: Iniciar envio
 ui.uploader.inputTitle: Nome (até 100 caracteres)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Atualizando a lista
 
 ui.action.showResults: Exibir resultados
 ui.action.play: Executar
-ui.action.upload: Enviar para WoTReplays.ru
+ui.action.upload: Enviar para WoTReplays
 ui.action.favoriteAdd: Adicionar aos favoritos
 ui.action.favoriteDelete: Remover dos favoritos
 ui.action.delete: Remover
@@ -121,6 +121,6 @@ ui.popup.delete.message: Tem certeza que deseja excluir o arquivo: %s?
 modsListApi.title: Lista de Modificações
 modsListApi.info: {HEADER}Lista de Modificações{/HEADER}{BODY}Gerencie suas modificações mais facilmente{/BODY}
 modsListApi.name: Gerenciador de Reprises
-modsListApi.description: Este simples gerenciador de reprises permite que você assista reprises, visualize resultados de batalha e envie seus reprises para WoTReplays.ru
+modsListApi.description: Este simples gerenciador de reprises permite que você assista reprises, visualize resultados de batalha e envie seus reprises para WoTReplays
 
 

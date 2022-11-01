@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Yenilgi
 ui.window.battleResultDraw: Beraberlik
 ui.window.buttonShowResult: Savaş sonuçlarını göster
 ui.window.buttonPlay: Oynat
-ui.window.buttonUpload: WoTReplays.ru'ya yükle
+ui.window.buttonUpload: WoTReplays'ya yükle
 ui.window.buttonRemove: Sil
 ui.window.buttonApply: Uygula
 ui.window.buttonReset: Sıfırla
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Bilgi
 
 
 
-ui.uploader.windowTitle: Kayıtları WoTReplays.ru'ya Yükle
+ui.uploader.windowTitle: Kayıtları WoTReplays'ya Yükle
 ui.uploader.labelStatus: Durum
 ui.uploader.statusNotFound: Kayıt bulunamadı
 ui.uploader.statusWrongAccount: Sadece kendi kaydınızı yükleyebilirsiniz!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Kayıt bulunamadı
 ui.uploader.statusLoading: Yükleniyor
 ui.uploader.statusConnectionError: Bağlantı hatası!
 ui.uploader.statusLoadingComplete: Sunucu cevabı bekleniyor
-ui.uploader.statusSucces: Dosyanız başarıyla WoTReplays.ru'ya yüklendi
+ui.uploader.statusSucces: Dosyanız başarıyla WoTReplays'ya yüklendi
 ui.uploader.linkLabel: link
 ui.uploader.error0: Web sitesi sistem hatası:
 ui.uploader.error1: Dosya bulunamadı:
@@ -85,7 +85,7 @@ ui.uploader.error3: Kullanıcı bulunamadı:
 ui.uploader.error4: Boş sorgu: 
 ui.uploader.error5: Savaş kaydı kaydedilirken hata: 
 ui.uploader.error6: Yüklemeye çalıştığınız kayıt farklı bir oyuncu tarafından kaydedilmiş.
-ui.uploader.responceLabel: Savaş kaydınız başarıyla WoTReplays.ru'ya yüklendi! <br />Web sitesine gidin: {{url}} <br />Dosyayı indirin: {{directLink}}
+ui.uploader.responceLabel: Savaş kaydınız başarıyla WoTReplays'ya yüklendi! <br />Web sitesine gidin: {{url}} <br />Dosyayı indirin: {{directLink}}
 ui.uploader.progressLabel:  Kb / {{value}} Kb
 ui.uploader.buttonStartUpload: Yüklemeye başla
 ui.uploader.inputTitle: Adı (100 karaktere kadar)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Liste güncelleniyor
 
 ui.action.showResults: Sonuçları göster
 ui.action.play: Oynat
-ui.action.upload: WoTReplays.ru'ya Yükle
+ui.action.upload: WoTReplays'ya Yükle
 ui.action.favoriteAdd: Favorilere ekle
 ui.action.favoriteDelete: Favorilerden kaldır
 ui.action.delete: Kaldır
@@ -121,6 +121,6 @@ ui.popup.delete.message: Dosyayı silmek istediğinizden emin misiniz: %s?
 modsListApi.title: Modifikasyonlar Listesi
 modsListApi.info: {HEADER}Modifikasyonlar Listesi{/HEADER}{BODY}Modifikasyonlarınızı yönetmenin kolay yolu{/BODY}
 modsListApi.name: Savaş Kaydı Yöneticisi
-modsListApi.description: Bu basit savaş kaydı yöneticisi savaş kayıtlarını izlemenizi, savaş sonuçlarına bakmanızı ve kayıtlarınızı WoTReplays.ru'ya yüklemenizi sağlar.
+modsListApi.description: Bu basit savaş kaydı yöneticisi savaş kayıtlarını izlemenizi, savaş sonuçlarına bakmanızı ve kayıtlarınızı WoTReplays'ya yüklemenizi sağlar.
 
 

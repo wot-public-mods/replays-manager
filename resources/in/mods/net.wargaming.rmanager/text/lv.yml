@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Zaudējums
 ui.window.battleResultDraw: Neizšķirts
 ui.window.buttonShowResult: Parādīt kaujas rezultātus
 ui.window.buttonPlay: Spēlēt
-ui.window.buttonUpload: Augšupielādēt vietnē WoTReplays.eu
+ui.window.buttonUpload: Augšupielādēt vietnē WoTReplays
 ui.window.buttonRemove: Izdzēst
 ui.window.buttonApply: Pielietot
 ui.window.buttonReset: Atiestatīt
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Informācija
 
 
 
-ui.uploader.windowTitle: Augšupielādēt vietnē WoTReplays.eu
+ui.uploader.windowTitle: Augšupielādēt vietnē WoTReplays
 ui.uploader.labelStatus: Statuss
 ui.uploader.statusNotFound: Ieraksts netika atrasts
 ui.uploader.statusWrongAccount: Jūs varat augšupielādēt tikai savu ierakstu!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Ieraksts netika atrasts
 ui.uploader.statusLoading: Augšupielādē
 ui.uploader.statusConnectionError: Savienojuma kļūda!
 ui.uploader.statusLoadingComplete: Gaida servera atbildi
-ui.uploader.statusSucces: Jūsu fails tika veiksmīgi augšupielādēts vietnē WoTReplays.eu
+ui.uploader.statusSucces: Jūsu fails tika veiksmīgi augšupielādēts vietnē WoTReplays
 ui.uploader.linkLabel: saite
 ui.uploader.error0: Tīmekļa vietnes sistēmas kļūda: 
 ui.uploader.error1: Fails netika atrasts: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Lietotājs netika atrasts:
 ui.uploader.error4: Tukšs pieprasījums: 
 ui.uploader.error5: Kļūda saglabājot ierakstu: 
 ui.uploader.error6: Ieraksts, kuru cenšaties augšupielādēt, tika ierakstīts ar citu atskaņotāju.
-ui.uploader.responceLabel: Jūsu ieraksts tika veiksmīgi augšupielādēts vietnē WoTReplays.eu! <br />Doties uz: {{url}} <br />Lejupielādēt failu: {{directLink}}
+ui.uploader.responceLabel: Jūsu ieraksts tika veiksmīgi augšupielādēts vietnē WoTReplays! <br />Doties uz: {{url}} <br />Lejupielādēt failu: {{directLink}}
 ui.uploader.progressLabel: Kb no {{value}} Kb
 ui.uploader.buttonStartUpload: Sākt augšupielādi
 ui.uploader.inputTitle: Nosaukums (līdz 100 simboliem)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Atjaunina sarakstu.
 
 ui.action.showResults: Rādīt rezultātus
 ui.action.play: Spēlēt
-ui.action.upload: Augšupielādēt vietnē WoTReplays.eu
+ui.action.upload: Augšupielādēt vietnē WoTReplays
 ui.action.favoriteAdd: Pievienot izlasei
 ui.action.favoriteDelete: Izņemt no izlases
 ui.action.delete: Izņemt
@@ -121,6 +121,6 @@ ui.popup.delete.message: Tiešām vēlaties izdzēst failu: %s?
 modsListApi.title: Modifikāciju saraksts
 modsListApi.info: {HEADER}Modifikāciju saraksts{/HEADER}{BODY}Jūsu modifikāciju vienkārša menedžēšana{/BODY}
 modsListApi.name: Ierakstu menedžeris
-modsListApi.description: Šis vienkāršais ierakstu menedžeris ļauj jums atskaņot ierakstus, apskatīties kaujas rezultātus un augšupielādēt ierakstus vietnē WoTReplays.eu
+modsListApi.description: Šis vienkāršais ierakstu menedžeris ļauj jums atskaņot ierakstus, apskatīties kaujas rezultātus un augšupielādēt ierakstus vietnē WoTReplays
 
 

@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Défaite
 ui.window.battleResultDraw: Égalité
 ui.window.buttonShowResult: Afficher les résultats de la bataille
 ui.window.buttonPlay: Lire
-ui.window.buttonUpload: Envoyer sur WoTReplays.eu
+ui.window.buttonUpload: Envoyer sur WoTReplays
 ui.window.buttonRemove: Supprimer
 ui.window.buttonApply: Appliquer
 ui.window.buttonReset: Réinitialiser
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Infos
 
 
 
-ui.uploader.windowTitle: Envoyer la relecture sur WoTReplays.eu
+ui.uploader.windowTitle: Envoyer la relecture sur WoTReplays
 ui.uploader.labelStatus: Statut
 ui.uploader.statusNotFound: Relecture introuvable
 ui.uploader.statusWrongAccount: Vous ne pouvez envoyer que votre relecture !
@@ -76,7 +76,7 @@ ui.uploader.statusFound: La relecture est introuvable
 ui.uploader.statusLoading: Envoi en cours
 ui.uploader.statusConnectionError: Erreur de connexion !
 ui.uploader.statusLoadingComplete: En attente de la réponse du serveur
-ui.uploader.statusSucces: Votre fichier a bien été envoyé sur WoTReplays.eu
+ui.uploader.statusSucces: Votre fichier a bien été envoyé sur WoTReplays
 ui.uploader.linkLabel: lien
 ui.uploader.error0: Erreur système du site : 
 ui.uploader.error1: Fichier introuvable : 
@@ -85,7 +85,7 @@ ui.uploader.error3: Utilisateur introuvable :
 ui.uploader.error4: Requête vide : 
 ui.uploader.error5: Erreur lors de l'enregistrement de la relecture : 
 ui.uploader.error6: La relecture que vous essayez d'envoyer a été enregistrée par un joueur différent.
-ui.uploader.responceLabel: Votre relecture a bien été envoyée sur WoTReplays.eu ! <br />Aller sur le site : {{url}} <br />Télécharger le fichier : {{directLink}}
+ui.uploader.responceLabel: Votre relecture a bien été envoyée sur WoTReplays ! <br />Aller sur le site : {{url}} <br />Télécharger le fichier : {{directLink}}
 ui.uploader.progressLabel:  ko sur {{value}} ko
 ui.uploader.buttonStartUpload: Commencer l'envoi
 ui.uploader.inputTitle: Nom (jusqu'à 100 caractères)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Envoi de la liste
 
 ui.action.showResults: Afficher les résultats
 ui.action.play: Lire
-ui.action.upload: Envoyer sur WoTReplays.eu
+ui.action.upload: Envoyer sur WoTReplays
 ui.action.favoriteAdd: Ajouter aux favoris
 ui.action.favoriteDelete: Retirer des favoris
 ui.action.delete: Retirer
@@ -121,6 +121,6 @@ ui.popup.delete.message: Êtes-vous sûr de vouloir supprimer le fichier : %s 
 modsListApi.title: Liste des modifications
 modsListApi.info: {HEADER}Liste des modifications{/HEADER}{BODY}Gérez facilement vos modifications{/BODY}
 modsListApi.name: Gestionnaire des relectures
-modsListApi.description: Ce simple gestionnaire des relectures vous permet de regarder les relectures, de voir les résultats de la bataille et d'envoyer vos relectures favorites sur WoTReplays.eu
+modsListApi.description: Ce simple gestionnaire des relectures vous permet de regarder les relectures, de voir les résultats de la bataille et d'envoyer vos relectures favorites sur WoTReplays
 
 

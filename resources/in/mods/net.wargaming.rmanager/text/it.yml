@@ -14,7 +14,7 @@ ui.window.battleResultDefeat: Sconfitta
 ui.window.battleResultDraw: Stallo
 ui.window.buttonShowResult: Mostra risultati di battaglia
 ui.window.buttonPlay: Gioca
-ui.window.buttonUpload: Carica su WoTReplays.eu
+ui.window.buttonUpload: Carica su WoTReplays
 ui.window.buttonRemove: Cancella
 ui.window.buttonApply: Applica
 ui.window.buttonReset: Reset
@@ -66,7 +66,7 @@ ui.window.tabsInfo: Info
 
 
 
-ui.uploader.windowTitle: Carica replay su WoTReplays.eu
+ui.uploader.windowTitle: Carica replay su WoTReplays
 ui.uploader.labelStatus: Stato
 ui.uploader.statusNotFound: Replay non trovato
 ui.uploader.statusWrongAccount: Puoi caricare il tuo replay!
@@ -76,7 +76,7 @@ ui.uploader.statusFound: Replay non trovato
 ui.uploader.statusLoading: Caricamento
 ui.uploader.statusConnectionError: Errore di connessione!
 ui.uploader.statusLoadingComplete: In attesa di risposta dal server
-ui.uploader.statusSucces: Il tuo file è stato caricato con successo su WoTReplays.eu
+ui.uploader.statusSucces: Il tuo file è stato caricato con successo su WoTReplays
 ui.uploader.linkLabel: link
 ui.uploader.error0: Errore di sistema del sito: 
 ui.uploader.error1: File non trovato: 
@@ -85,7 +85,7 @@ ui.uploader.error3: Utente non trovato:
 ui.uploader.error4: Richiesta vuota: 
 ui.uploader.error5: Errore durante il salvataggio del replay: 
 ui.uploader.error6: Il replay che stai cercando di caricare è stato registrato da un giocatore differente.
-ui.uploader.responceLabel: Il tuo replay è stato caricato con successo su WoTReplays.eu! <br />Vai al sito: {{url}} <br />Scarica il file: {{directLink}}
+ui.uploader.responceLabel: Il tuo replay è stato caricato con successo su WoTReplays! <br />Vai al sito: {{url}} <br />Scarica il file: {{directLink}}
 ui.uploader.progressLabel:  Kb di {{value}} Kb
 ui.uploader.buttonStartUpload: Inizia a caricare
 ui.uploader.inputTitle: Nome (fino a 100 caratteri)
@@ -102,7 +102,7 @@ ui.waiting.updatingList: Aggiornamento della lista
 
 ui.action.showResults: Mostra risultati
 ui.action.play: Gioca
-ui.action.upload: Carica su WoTReplays.eu
+ui.action.upload: Carica su WoTReplays
 ui.action.favoriteAdd: Aggiungi ai favoriti
 ui.action.favoriteDelete: Rimuovi dai favoriti
 ui.action.delete: Rimuovi
@@ -121,6 +121,6 @@ ui.popup.delete.message: Sei sicuro di voler eliminare il file : %s?
 modsListApi.title: Lista modifiche
 modsListApi.info: {HEADER}Lista modifiche{/HEADER}{BODY}Semplifica la gestione delle modifiche{/BODY}
 modsListApi.name: Gestore replay
-modsListApi.description: Questo semplice gestore ti permette di guardare i replay, visualizzare i risultati di battaglia e caricare i tuoi replay su WoTReplays.eu
+modsListApi.description: Questo semplice gestore ti permette di guardare i replay, visualizzare i risultati di battaglia e caricare i tuoi replay su WoTReplays
 
 
