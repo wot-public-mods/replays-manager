@@ -191,22 +191,9 @@
 		
 		public static function ConfigureBattleTypeDropdown(menu:DropdownMenu):void
 		{
-			
-			var _fl:Array = new Array();
-			_fl.push({label: STRINGS.l10n('ui.window.filterTab.all'), data: -1});
-			for (var i:int = 0; i < 17; i++)
-			{
-				var labelText:String = Utils.getBattleTypeLocalString(i.toString());
-				if(labelText != "") {
-					_fl.push({label: labelText, data: i});
-				}				
-			}
-			
 			menu.focusable = false;
 			menu.itemRenderer = "DropDownListItemRendererSound";
 			menu.dropdown = "DropdownMenu_ScrollingList";
-			menu.rowCount = _fl.length;
-			menu.dataProvider = new DataProvider(_fl);
 			menu.width = 235;
 			menu.selectedIndex = -1;
 			menu.validateNow();

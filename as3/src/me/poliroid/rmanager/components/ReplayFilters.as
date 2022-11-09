@@ -78,8 +78,7 @@
 
 				Helpers.ConfigureBattleTypeDropdown(this.battleType);
 				this.battleType.addEventListener(ListEvent.INDEX_CHANGE, this.handleBattleTypeIndexChange);
-				this.battleType.selectedIndex = 0;
-				
+
 				this.battleResultLabel.text = STRINGS.l10n('ui.window.filterTab.battleResult');
 				Helpers.ConfigureBattleResultDropdown(this.battleResult);
 				this.battleResult.addEventListener(ListEvent.INDEX_CHANGE, this.handleBattleResultIndexChange);
@@ -133,6 +132,12 @@
 				this.mapsList.dataProvider = mapsData;
 				this.mapsList.validateNow();
 				this.mapsList.rowCount = 6;
+
+				var battleTypesData:DataProvider = new DataProvider(this._data.battleTypes);
+				this.battleType.dataProvider = battleTypesData;
+				this.battleType.selectedIndex = 0;
+				this.battleType.validateNow();
+				this.battleType.rowCount = battleTypesData.length;
 			}
 		}
 		

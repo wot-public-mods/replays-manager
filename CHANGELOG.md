@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.7.1
+
+* fixed filter battle types
+
 ## v3.7.0
 
 * fixed upload on RUBY

@@ -150,12 +150,12 @@
 			Helpers.apiStatus = status;
 		}
 		
-		public function as_initFilters(maps:Array):void
+		public function as_initFilters(maps:Array, battleTypes:Array):void
 		{
 			try
 			{
 				var currentView:ReplaysViewUI = ReplaysViewUI(this.view.currentView);
-				currentView.setFiltersData(maps);
+				currentView.setFiltersData(maps, battleTypes);
 			}
 			catch (err:Error)
 			{

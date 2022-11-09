@@ -213,9 +213,9 @@
 			}
 		}
 		
-		public function setFiltersData(maps:Array):void
+		public function setFiltersData(maps:Array, battleTypes:Array):void
 		{
-			this.replayFilters.setData({maps: maps});
+			this.replayFilters.setData({maps: maps, battleTypes: battleTypes});
 			this.replayFilters.validateNow();
 		}
 		

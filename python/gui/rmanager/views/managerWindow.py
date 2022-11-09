@@ -4,6 +4,8 @@ import BigWorld
 import json
 
 from adisp import adisp_process
+from constants import ARENA_GUI_TYPE
+from helpers import i18n
 from gui.Scaleform.framework.entities.abstract.AbstractWindowView import AbstractWindowView
 
 from ..lang import l10n, allFields
@@ -15,9 +17,9 @@ __all__ = ('ReplaysManagerWindow', )
 
 class ReplaysManagerWindowMeta(AbstractWindowView):
 
-	def as_initFiltersS(self, mapping):
+	def as_initFiltersS(self, maps, battleTypes):
 		if self._isDAAPIInited():
-			return self.flashObject.as_initFilters(mapping)
+			return self.flashObject.as_initFilters(maps, battleTypes)
 
 	def as_updateWaitingS(self, message):
 		if self._isDAAPIInited():
@@ -144,7 +146,15 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 			return result
 
 		maps = filterMaps(maps)
-		self.as_initFiltersS(maps)
+
+		btypes = [{'label': l10n('ui.window.filterTab.vehicleTypeAll'), 'data': -1}]
+		for gui_type in ARENA_GUI_TYPE.RANGE:
+			label = i18n.makeString('#menu:loading/battleTypes/{}'.format(gui_type))
+			if 'loading/battleTypes' in label:
+				continue
+			btypes.append({'label': label, 'data': gui_type})
+
+		self.as_initFiltersS(maps, btypes)
 
 	def __populateLanguage(self):
 		self.as_setLangDataS(allFields())
