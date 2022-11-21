@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Tip bitke:
 ui.window.filterTab.battleResult: Rezultati bitke:
 ui.window.filterTab.otherLabel: Razno:
 ui.window.filterTab.otherShowFavorite: Omiljene reprize
+ui.window.filterTab.otherUseOriginalXP: Izvorno iskustvo
 
 ui.window.paginatorLabel: Stranice
 ui.window.paginatorPrev: <<

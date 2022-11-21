@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Taistelutyyppi:
 ui.window.filterTab.battleResult: Taistelun tulos:
 ui.window.filterTab.otherLabel: Sekalaiset:
 ui.window.filterTab.otherShowFavorite: Suosikkitallenteet
+ui.window.filterTab.otherUseOriginalXP: Alkuperäinen kokemus
 
 ui.window.paginatorLabel: Sivut
 ui.window.paginatorPrev: <<

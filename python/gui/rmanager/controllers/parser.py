@@ -148,6 +148,7 @@ class ParserController(object):
 			result_dict['common_data']['kills'] = int(personal_block.get('kills'))
 			result_dict['common_data']['damageAssistedRadio'] = int(personal_block.get('damageAssistedRadio'))
 			result_dict['common_data']['spotted'] = int(personal_block.get('spotted'))
+			result_dict['common_data']['originalXP'] = int(personal_block.get('originalXP'))
 			playerTeam = int(personal_block.get('team'))
 
 			winnerTeam = int(result_blocks['data']['result_data']['common']['winnerTeam'])
@@ -171,6 +172,7 @@ class ParserController(object):
 			result_dict['common_data']['kills'] = -10
 			result_dict['common_data']['damageAssistedRadio'] = -10
 			result_dict['common_data']['spotted'] = -10
+			result_dict['common_data']['originalXP'] = -10
 
 		if result_dict['common_data']['battleType'] not in ARENA_GUI_TYPE.RANGE:
 			result_dict['common_data']['battleType'] = ARENA_GUI_TYPE.RANDOM

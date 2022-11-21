@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Savaş türü:
 ui.window.filterTab.battleResult: Savaş sonuçları:
 ui.window.filterTab.otherLabel: Çeşitli:
 ui.window.filterTab.otherShowFavorite: Favori savaş kayıtları
+ui.window.filterTab.otherUseOriginalXP: Orijinal deneyim
 
 ui.window.paginatorLabel: Sayfalar
 ui.window.paginatorPrev: <<

@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Tipo de batalha:
 ui.window.filterTab.battleResult: Resultados da batalha:
 ui.window.filterTab.otherLabel: Misc:
 ui.window.filterTab.otherShowFavorite: Repetições favoritas
+ui.window.filterTab.otherUseOriginalXP: Experiência original
 
 ui.window.paginatorLabel: Páginas
 ui.window.paginatorPrev: <<

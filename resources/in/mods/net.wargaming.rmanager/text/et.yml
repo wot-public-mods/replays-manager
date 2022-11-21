@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Lahingu tüüp:
 ui.window.filterTab.battleResult: Lahingu tulemused:
 ui.window.filterTab.otherLabel: Muu:
 ui.window.filterTab.otherShowFavorite: Lemmikud salvestused
+ui.window.filterTab.otherUseOriginalXP: Algne kogemust
 
 ui.window.paginatorLabel: Leheküljed
 ui.window.paginatorPrev: <<

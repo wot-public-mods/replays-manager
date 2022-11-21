@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Kaujas veids:
 ui.window.filterTab.battleResult: Kaujas rezultāti:
 ui.window.filterTab.otherLabel: Dažādi:
 ui.window.filterTab.otherShowFavorite: Labākie ieraksti
+ui.window.filterTab.otherUseOriginalXP: Oriģināla pieredze
 
 ui.window.paginatorLabel: Lapas
 ui.window.paginatorPrev: <<

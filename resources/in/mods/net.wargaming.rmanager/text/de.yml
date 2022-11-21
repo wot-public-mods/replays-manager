@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿
+﻿﻿
 ui.window.title: Replays Manager
 ui.window.tabsOwn: Meine Replays
 ui.window.placeholder: Wählen Sie ein Replay aus der Liste aus, um weitere Informationen anzuzeigen
@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Gefechtsart:
 ui.window.filterTab.battleResult: Gefechtsergebnis:
 ui.window.filterTab.otherLabel: Sonstiges:
 ui.window.filterTab.otherShowFavorite: Lieblings-Replays
+ui.window.filterTab.otherUseOriginalXP: Ursprüngliche Erfahrung
 
 ui.window.paginatorLabel: Seiten
 ui.window.paginatorPrev: <<

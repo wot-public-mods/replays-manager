@@ -41,6 +41,7 @@
 		
 		public var otherLabel:TextField;
 		public var cbFavorite:CheckBox;
+		public var cbOriginalXP:CheckBox;
 		
 		public var btnApply:SoundButton;
 		public var btnReset:SoundButton;				
@@ -86,6 +87,7 @@
 				
 				this.otherLabel.text = STRINGS.l10n('ui.window.filterTab.otherLabel');
 				this.cbFavorite.label = STRINGS.l10n('ui.window.filterTab.otherShowFavorite');
+				this.cbOriginalXP.label = STRINGS.l10n('ui.window.filterTab.otherUseOriginalXP');
 				
 				this.btnApply.width = 235;
 				this.btnApply.label = STRINGS.l10n('ui.window.buttonApply');
@@ -155,6 +157,7 @@
 			this.battleType.selectedIndex = 0;
 			this.battleResult.selectedIndex = 0;
 			this.cbFavorite.selected = false;
+			this.cbOriginalXP.selected = false;
 		}
 		
 		protected function handleBattleResultIndexChange(event:ListEvent):void
@@ -189,7 +192,8 @@
 					vehicleType: Utils.getDataFromList(this.vehicleType)
 				}, 
 				battleType: Utils.getDataFromList(this.battleType), 
-				favorite: this.cbFavorite.selected ? 1 : -1
+				favorite: this.cbFavorite.selected ? 1 : -1,
+				originalXP: this.cbOriginalXP.selected ? 1 : -1
 			};
 			dispatchEvent(new FilterEvent(FilterEvent.FILTERS_CHANGED, data));
 		}

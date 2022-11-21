@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: 戦闘モード:
 ui.window.filterTab.battleResult: 戦闘結果:
 ui.window.filterTab.otherLabel: その他:
 ui.window.filterTab.otherShowFavorite: お気に入りのリプレイ
+ui.window.filterTab.otherUseOriginalXP: 元の経験
 
 ui.window.paginatorLabel: ページ
 ui.window.paginatorPrev: <<

@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Csata típusa:
 ui.window.filterTab.battleResult: Csata eredménye:
 ui.window.filterTab.otherLabel: Egyéb:
 ui.window.filterTab.otherShowFavorite: Kedvenc visszajátszásaid
+ui.window.filterTab.otherUseOriginalXP: Eredeti tapasztalat
 
 ui.window.paginatorLabel: Oldal
 ui.window.paginatorPrev: <<

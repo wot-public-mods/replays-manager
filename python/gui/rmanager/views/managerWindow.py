@@ -88,8 +88,8 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 
 		# fix list for login window state (cant show battle results window)
 		account = BigWorld.player()
-		for item in self._sortedList:
-			if not account:
+		if not account:
+			for item in self._sortedList:
 				item['canShowBattleResults'] = False
 
 		pageNum = self._settings['paging']['page']

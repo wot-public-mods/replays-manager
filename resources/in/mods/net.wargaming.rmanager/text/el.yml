@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Τύπος μάχης:
 ui.window.filterTab.battleResult: Αποτελέσματα μάχης:
 ui.window.filterTab.otherLabel: Διάφορα:
 ui.window.filterTab.otherShowFavorite: Αγαπημένα replays
+ui.window.filterTab.otherUseOriginalXP: Πρωτότυπη experience
 
 ui.window.paginatorLabel: Σελίδες
 ui.window.paginatorPrev: <<

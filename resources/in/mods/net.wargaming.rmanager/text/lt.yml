@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Mūšio tipas:
 ui.window.filterTab.battleResult: Mūšio rezultatai:
 ui.window.filterTab.otherLabel: Įvairūs:
 ui.window.filterTab.otherShowFavorite: Mėgstamiausi įrašai
+ui.window.filterTab.otherUseOriginalXP: Originalios patirtis
 
 ui.window.paginatorLabel: Puslapiai
 ui.window.paginatorPrev: <<

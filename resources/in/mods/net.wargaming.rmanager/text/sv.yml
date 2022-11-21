@@ -53,6 +53,7 @@ ui.window.filterTab.battleType: Stridstyp
 ui.window.filterTab.battleResult: Stridsresultat
 ui.window.filterTab.otherLabel: Övrigt
 ui.window.filterTab.otherShowFavorite: Favoriter
+ui.window.filterTab.otherUseOriginalXP: Ursprunglig erfarenhet
  
 ui.window.paginatorLabel: Sidor
 ui.window.paginatorPrev: <<

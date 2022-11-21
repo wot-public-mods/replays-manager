@@ -1,6 +1,6 @@
-<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_imports/CheckBoxTankers" itemID="558ab90e-00000067" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="CheckBoxTankers" linkageURL="guiControlsLobby.swf" lastModified="1668991605" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="_imports/CheckBox" itemID="637ac98b-000005bb" linkageImportForRS="true" linkageExportInFirstFrame="false" linkageClassName="CheckBox" linkageURL="guiControlsLobby.swf" lastModified="1668991629" displayAsComponent="false" customIconID="0" persistLivePreview11="true" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true">
   <timeline>
-    <DOMTimeline name="CheckBoxTankers">
+    <DOMTimeline name="CheckBox">
       <layers>
         <DOMLayer name="Layer 1" color="#4F80FF" current="true" isSelected="true">
           <frames>

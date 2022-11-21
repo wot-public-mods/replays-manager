@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Typ bitvy:
 ui.window.filterTab.battleResult: Výsledky bitvy:
 ui.window.filterTab.otherLabel: Různé:
 ui.window.filterTab.otherShowFavorite: Oblíbené záznamy
+ui.window.filterTab.otherUseOriginalXP: Původní zkušenost
 
 ui.window.paginatorLabel: Stránky
 ui.window.paginatorPrev: <<

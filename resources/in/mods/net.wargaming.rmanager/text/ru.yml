@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Тип боя:
 ui.window.filterTab.battleResult: Результат боя:
 ui.window.filterTab.otherLabel: Разное:
 ui.window.filterTab.otherShowFavorite: Избранные реплеи
+ui.window.filterTab.otherUseOriginalXP: Оригинальный опыт
 
 ui.window.paginatorLabel: Страницы
 ui.window.paginatorPrev: <<

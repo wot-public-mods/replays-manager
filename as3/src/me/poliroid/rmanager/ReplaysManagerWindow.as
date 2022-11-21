@@ -39,7 +39,8 @@
 					vehicleLevel: -1, 
 					vehicleType: ""
 				}, 
-				dateTime: "all"
+				dateTime: "all", 
+				originalXP: -1
 			}, 
 			sorting: {
 				key: "timestamp", 
@@ -139,8 +140,6 @@
 		
 		private function handleFiltersChanged(event:FilterEvent):void
 		{
-			
-			DebugUtils.LOG_DEBUG("handleFiltersChanged", Utils.objectToString(event.data.tankInfo));
 			this.settingsObject["filters"] = Utils.mergeObjects(this.settingsObject["filters"], event.data);
 			this.updateReplaysList(App.utils.JSON.encode(this.settingsObject));
 		}

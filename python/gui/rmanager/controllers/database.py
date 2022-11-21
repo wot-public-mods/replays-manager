@@ -137,7 +137,7 @@ class DataBaseController(object):
 		LOG_DEBUG('DataBaseController.getReplaysData')
 		replaysCommonData = self.__getReplaysCommonData()
 		filteredList = self.__filterReplays(settings['filters'], replaysCommonData)
-		sortedList = self.__sortReplays(filteredList, settings['sorting'])
+		sortedList = self.__sortReplays(filteredList, settings)
 		expandedNumbers = self.__expandNumbers(sortedList)
 		return expandedNumbers
 
@@ -206,14 +206,18 @@ class DataBaseController(object):
 		return filteredList
 
 	@staticmethod
-	def __sortReplays(list, settings):
-		list.sort(key=itemgetter(settings['key']), reverse=settings['reverse'])
-		return list
+	def __sortReplays(items, settings):
+		filters, sorting = settings['filters'], settings['sorting']
+		if filters.get('originalXP', -1) == 1:
+			for item in items:
+				item['xp'] = item.get('originalXP', item['xp'])
+		items.sort(key=itemgetter(sorting['key']), reverse=sorting['reverse'])
+		return items
 
 	@staticmethod
 	def __expandNumbers(items):
 		for item in items:
-			for key in 'damageAssistedRadio', 'damage', 'credits', 'xp':
+			for key in 'damageAssistedRadio', 'damage', 'credits', 'xp', 'originalXP':
 				item[key] = backport.getIntegralFormat(item[key])
 		return items
 

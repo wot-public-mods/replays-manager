@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.7.2
+
+* Ability to use original experience instead of final experience (for more logical sorting)
+
 ## v3.7.1
 
 * fixed filter battle types

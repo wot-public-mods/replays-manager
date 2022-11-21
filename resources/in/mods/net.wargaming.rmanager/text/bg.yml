@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Вид битка:
 ui.window.filterTab.battleResult: Резултати от битка:
 ui.window.filterTab.otherLabel: Разни:
 ui.window.filterTab.otherShowFavorite: Любими записи
+ui.window.filterTab.otherUseOriginalXP: Оригинални опит
 
 ui.window.paginatorLabel: Страници
 ui.window.paginatorPrev: <<

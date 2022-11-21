@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayFiltersUI" itemID="55658340-0000016f" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.components.ReplayFilters" linkageClassName="me.poliroid.rmanager.ui.ReplayFiltersUI" lastModified="1622966511" lastUniqueIdentifier="4">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="ReplayFiltersUI" itemID="55658340-0000016f" linkageExportForAS="true" linkageBaseClass="me.poliroid.rmanager.components.ReplayFilters" linkageClassName="me.poliroid.rmanager.ui.ReplayFiltersUI" lastModified="1668991649" lastUniqueIdentifier="6">
   <timeline>
     <DOMTimeline name="ReplayFiltersUI">
       <layers>
@@ -40,11 +40,11 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="title" color="#9933CC" current="true" isSelected="true" autoNamed="false">
+        <DOMLayer name="title" color="#9933CC" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMDynamicText name="title" selected="true" width="231" height="25.05" isSelectable="false">
+                <DOMDynamicText name="title" width="231" height="25.05" isSelectable="false">
                   <matrix>
                     <Matrix tx="2" ty="17"/>
                   </matrix>
@@ -64,7 +64,7 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="labels" color="#FF800A" autoNamed="false">
+        <DOMLayer name="labels" color="#FF800A" locked="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
@@ -132,7 +132,7 @@
                     <GlowFilter color="#000000" quality="3" strength="2"/>
                   </filters>
                 </DOMDynamicText>
-                <DOMDynamicText name="otherLabel" width="231" height="14.5" isSelectable="false">
+                <DOMDynamicText name="otherLabel" selected="true" width="231" height="14.5" isSelectable="false">
                   <matrix>
                     <Matrix tx="2" ty="397"/>
                   </matrix>
@@ -216,18 +216,34 @@
             </DOMFrame>
           </frames>
         </DOMLayer>
-        <DOMLayer name="other" color="#9933CC" locked="true" autoNamed="false">
+        <DOMLayer name="other" color="#9933CC" current="true" isSelected="true" autoNamed="false">
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="_imports/CheckBoxTankers" name="cbFavorite">
+                <DOMComponentInstance libraryItemName="_imports/CheckBoxTankers" name="cbFavorite" uniqueID="5">
                   <matrix>
-                    <Matrix ty="415"/>
+                    <Matrix tx="1" ty="415"/>
                   </matrix>
                   <transformationPoint>
                     <Point/>
                   </transformationPoint>
-                </DOMSymbolInstance>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="" variable="width" category="" verbose="0" defaultValue="220" type="Number"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="_imports/CheckBox" name="cbOriginalXP" uniqueID="6">
+                  <matrix>
+                    <Matrix ty="440"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point/>
+                  </transformationPoint>
+                  <parametersAsXML><![CDATA[   <property id="width">
+      <Inspectable name="width" unlocalizedName="" variable="width" category="" verbose="0" defaultValue="220" type="Number"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
               </elements>
             </DOMFrame>
           </frames>

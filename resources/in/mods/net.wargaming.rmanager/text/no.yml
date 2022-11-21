@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Kamptype:
 ui.window.filterTab.battleResult: Kampresultater:
 ui.window.filterTab.otherLabel: Div:
 ui.window.filterTab.otherShowFavorite: Favorittrepriser
+ui.window.filterTab.otherUseOriginalXP: Original erfaring
 
 ui.window.paginatorLabel: Sider
 ui.window.paginatorPrev: <<

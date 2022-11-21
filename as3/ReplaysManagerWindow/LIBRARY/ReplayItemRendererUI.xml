@@ -345,7 +345,7 @@
           <frames>
             <DOMFrame index="0" duration="50" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="_imports/UILoaderAlt" name="mapIcon" selected="true">
+                <DOMSymbolInstance libraryItemName="_imports/UILoaderAlt" name="mapIcon">
                   <matrix>
                     <Matrix tx="10" ty="10"/>
                   </matrix>
@@ -361,7 +361,7 @@
           <frames>
             <DOMFrame index="0" duration="50" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="_local/MovieClips/no_map_mc" name="noMapMC" selected="true" centerPoint3DX="125.5" centerPoint3DY="59">
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/no_map_mc" name="noMapMC" centerPoint3DX="125.5" centerPoint3DY="59">
                   <matrix>
                     <Matrix tx="10" ty="10"/>
                   </matrix>
@@ -377,7 +377,7 @@
           <frames>
             <DOMFrame index="0" duration="50" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="_local/MovieClips/battleResult_mc" name="battleResult" selected="true" centerPoint3DX="719.85" centerPoint3DY="63.8">
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/battleResult_mc" name="battleResult" centerPoint3DX="719.85" centerPoint3DY="63.8">
                   <matrix>
                     <Matrix a="0.571441650390625" d="0.50006103515625" tx="664" ty="15"/>
                   </matrix>
@@ -402,7 +402,7 @@
             </DOMFrame>
             <DOMFrame index="10" duration="10" keyMode="9728">
               <elements>
-                <DOMSymbolInstance libraryItemName="_local/MovieClips/ReplayIRBG" selected="true" centerPoint3DX="345" centerPoint3DY="60">
+                <DOMSymbolInstance libraryItemName="_local/MovieClips/ReplayIRBG" centerPoint3DX="345" centerPoint3DY="60">
                   <matrix>
                     <Matrix tx="2" ty="2"/>
                   </matrix>
@@ -442,7 +442,7 @@
           <frames>
             <DOMFrame index="0" duration="50" keyMode="9728">
               <elements>
-                <DOMBitmapInstance selected="true" libraryItemName="_local/images/image 38.png">
+                <DOMBitmapInstance libraryItemName="_local/images/image 38.png">
                   <matrix>
                     <Matrix a="-0.734024047851563" d="-0.4705810546875" tx="690" ty="41"/>
                   </matrix>
@@ -455,7 +455,7 @@
           <frames>
             <DOMFrame index="0" duration="50" keyMode="9728">
               <elements>
-                <DOMBitmapInstance selected="true" libraryItemName="_local/images/image 38.png">
+                <DOMBitmapInstance libraryItemName="_local/images/image 38.png">
                   <matrix>
                     <Matrix a="0.734024047851563" d="0.4705810546875" ty="78"/>
                   </matrix>

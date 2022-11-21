@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Tip luptă:
 ui.window.filterTab.battleResult: Rezultate luptă:
 ui.window.filterTab.otherLabel: Altele:
 ui.window.filterTab.otherShowFavorite: Reluări favorite
+ui.window.filterTab.otherUseOriginalXP: Experiență originală
 
 ui.window.paginatorLabel: Pagini
 ui.window.paginatorPrev: <<

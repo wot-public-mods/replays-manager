@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: Шайқас түрі:
 ui.window.filterTab.battleResult: Шайқас нәтижесі:
 ui.window.filterTab.otherLabel: басқа:
 ui.window.filterTab.otherShowFavorite: Таңдамалы реплейлер
+ui.window.filterTab.otherUseOriginalXP: Түпнұсқа тәжірибе
 
 ui.window.paginatorLabel: Беттер
 ui.window.paginatorPrev: <<
