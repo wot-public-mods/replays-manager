@@ -6,6 +6,7 @@
 /as3/**/*.swf
 /as3/**/*.swc
 /as3/**/*.dat
+/as3/**/*.cache
 
 # compiled python bytecode
 /python/*/*.pyc
