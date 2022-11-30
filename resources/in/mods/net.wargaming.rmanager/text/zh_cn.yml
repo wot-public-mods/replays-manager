@@ -1,7 +1,7 @@
 ﻿﻿
-ui.window.title: Replays Manager
-ui.window.tabsOwn: 我的回放
-ui.window.placeholder: 从列表中选择回放以查看详情
+ui.window.title: 录像管理器
+ui.window.tabsOwn: 我的录像
+ui.window.placeholder: 从列表中选择录像以显示更多信息
 ui.window.frags: 击毁
 ui.window.damage: 伤害
 ui.window.credits: 银币
@@ -9,8 +9,8 @@ ui.window.xp: 经验
 ui.window.spotted: 点亮
 ui.window.assist: 协助
 ui.window.battleResult: —
-ui.window.battleResultVictory: 胜利
-ui.window.battleResultDefeat: 失败
+ui.window.battleResultVictory: 获胜
+ui.window.battleResultDefeat: 战败
 ui.window.battleResultDraw: 平局
 ui.window.buttonShowResult: 显示战斗结果
 ui.window.buttonPlay: 播放
@@ -27,85 +27,84 @@ ui.window.sorting.byResults: 结果
 ui.window.sorting.byMap: 地图
 ui.window.sorting.byVehicle: 车辆
 ui.window.sorting.byXp: 经验
-ui.window.sorting.byKills: 击毁车辆数
-ui.window.sorting.bySpotted: 点亮车辆数
-ui.window.sorting.byAssist: 助攻
+ui.window.sorting.byKills: 击毁
+ui.window.sorting.bySpotted: 点亮
+ui.window.sorting.byAssist: 协助
 
-ui.window.dateFilter.label: 回放
-ui.window.dateFilter.today: 今天
+ui.window.dateFilter.label: 重播
+ui.window.dateFilter.today: 今日
 ui.window.dateFilter.week: 本周
 ui.window.dateFilter.month: 本月
 ui.window.dateFilter.allTime: 全部
-ui.window.filterButtonLabel: 筛选
-ui.window.filterTab.title: 筛选
+ui.window.filterButtonLabel: 过滤器
+ui.window.filterTab.title: 过滤器
 ui.window.filterTab.all: 所有
-ui.window.filterTab.any: 任意
-ui.window.filterTab.map: 地图:
+ui.window.filterTab.any: 任何
+ui.window.filterTab.map: 地图：
 ui.window.filterTab.mapAll: 所有地图
-ui.window.filterTab.vehicle: 车辆:
+ui.window.filterTab.vehicle: 车辆：
 ui.window.filterTab.vehicleTypeAll: 所有类型
 ui.window.filterTab.vehicleTypeHeavy: 重型坦克
 ui.window.filterTab.vehicleTypeMedium: 中型坦克
 ui.window.filterTab.vehicleTypeLight: 轻型坦克
-ui.window.filterTab.vehicleTypeATSPG: 坦克歼击车
+ui.window.filterTab.vehicleTypeATSPG: 反坦克歼击车
 ui.window.filterTab.vehicleTypeSPG: 自行火炮
 ui.window.filterTab.vehicleLevel: 等级
-ui.window.filterTab.battleType: 战斗模式:
-ui.window.filterTab.battleResult: 战斗结果:
-ui.window.filterTab.otherLabel: 其他:
-ui.window.filterTab.otherShowFavorite: 收藏回放
-ui.window.filterTab.otherUseOriginalXP: 原创体验
+ui.window.filterTab.battleType: 战斗类型：
+ui.window.filterTab.battleResult: 战斗结果：
+ui.window.filterTab.otherLabel: 杂项：
+ui.window.filterTab.otherShowFavorite: 最喜欢的录像
 
 ui.window.paginatorLabel: 页
 ui.window.paginatorPrev: <<
 ui.window.paginatorNext: >>
 ui.window.paginatorFirst: 首页
-ui.window.paginatorLast: 尾页
+ui.window.paginatorLast: 末页
 
-ui.window.tabsFilter: 筛选
-ui.window.tabsInfo: 详情
+ui.window.tabsFilter: 滤波器
+ui.window.tabsInfo: 信息
 
 
 
-ui.uploader.windowTitle: 上传回放到 WoTReplays
+ui.uploader.windowTitle: 上传录像到 WoTReplays
 ui.uploader.labelStatus: 状态
-ui.uploader.statusNotFound: 未找到回放
-ui.uploader.statusWrongAccount: 你只能上传自己的回放！
-ui.uploader.statusNotAccount: 运行游戏以加载回放
+ui.uploader.statusNotFound: 未找到录像
+ui.uploader.statusWrongAccount: 您只能上传您的录像！
+ui.uploader.statusNotAccount: 运行游戏以加载录像
 ui.uploader.statusErrorOccure: 错误
-ui.uploader.statusFound: 未找到回放
-ui.uploader.statusLoading: 正在上传
+ui.uploader.statusFound: 未找到录像
+ui.uploader.statusLoading: 上传中
 ui.uploader.statusConnectionError: 连接错误！
 ui.uploader.statusLoadingComplete: 等待服务器响应
-ui.uploader.statusSucces: 你的回放文件已成功上传至 WoTReplays
+ui.uploader.statusSucces: 您的文件已成功上传到 WoTReplays
 ui.uploader.linkLabel: 链接
-ui.uploader.error0: 网站系统错误: 
-ui.uploader.error1: 未找到文件: 
-ui.uploader.error2: 处理失败: 
-ui.uploader.error3: 未找到用户: 
-ui.uploader.error4: 查询为空: 
-ui.uploader.error5: 保存回放时出现错误: 
-ui.uploader.error6: 正在试图上传的回放是由另一个玩家录制的。
-ui.uploader.responceLabel: 你的回放成功上传至 WoTReplays! <br />前往网站：{{url}} <br />下载文件：{{directLink}}
-ui.uploader.progressLabel:  Kb of {{value}} Kb
+ui.uploader.error0: 网站系统错误：
+ui.uploader.error1: 未找到文件： 
+ui.uploader.error2: 未处理错误： 
+ui.uploader.error3: 未找到用户： 
+ui.uploader.error4: 无法查询： 
+ui.uploader.error5: 保存录像时出错： 
+ui.uploader.error6: 您尝试上传的录像是由其他玩家录制的。
+ui.uploader.responceLabel: 您的录像已成功上传到 WoTReplays! <br />转到网站：{{url}} <br />下载文件：{{directLink}}
+ui.uploader.progressLabel:  {{value}} Kb
 ui.uploader.buttonStartUpload: 开始上传
-ui.uploader.inputTitle: 名称 (最多 100 个字符)
-ui.uploader.inputDescription: 描述 (最多 500 个字符)
-ui.uploader.checkBoxIsSecretLabel: 隐藏的回放Hidden replay
-ui.uploader.checkBoxIsSecretInfo: {HEADER}隐藏的回放{/HEADER}{BODY}仅自己能够观看此回放。{/BODY}
+ui.uploader.inputTitle: 名称（最多 100 个字符）
+ui.uploader.inputDescription: 描述（最多 500 个字符）
+ui.uploader.checkBoxIsSecretLabel: 隐藏录像
+ui.uploader.checkBoxIsSecretInfo: {HEADER}隐藏录像{/HEADER}{BODY}只有你能看这个录像。{/BODY}
 
 
 
-ui.waiting.prepareDB: 正在准备列表，请稍后...
-ui.waiting.updatingList: 正在更新列表
+ui.waiting.prepareDB: 正在准备列表。请稍候。。。
+ui.waiting.updatingList: 更新列表
 
 
 
 ui.action.showResults: 显示战斗结果
 ui.action.play: 播放
-ui.action.upload: 上传到 WoTReplays
-ui.action.favoriteAdd: 添加到收藏
-ui.action.favoriteDelete: 从收藏中移除
+ui.action.upload: 上传到 WoTReplays.eu
+ui.action.favoriteAdd: 添加到收藏夹
+ui.action.favoriteDelete: 从收藏夹移除
 ui.action.delete: 删除
 
 
@@ -113,15 +112,15 @@ ui.action.delete: 删除
 ui.popup.button.yes: 是
 ui.popup.button.no: 否
 ui.popup.button.close: 关闭
-ui.popup.play.title: 确认重启游戏
-ui.popup.play.message: 观看游戏回放需要重启游戏，是否继续？
-ui.popup.delete.title: 删除回放
-ui.popup.delete.message: 你确定要删除文件：%s?
+ui.popup.play.title: 确认重新启动游戏
+ui.popup.play.message: 若要观看录像，必须重新启动游戏。是否继续？
+ui.popup.delete.title: 删除录像
+ui.popup.delete.message: 确定删除该文件： %s？
 
 
-modsListApi.title: Mod 列表
-modsListApi.info: {HEADER}Mod 列表{/HEADER}{BODY}更简单地操作、自定义和管理模组。{/BODY}
-modsListApi.name: Replays Manager
-modsListApi.description: 方便地显示你的回放，查看战斗结果并上传至 WoTReplays
+modsListApi.title: 插件列表
+modsListApi.info: {HEADER}插件列表{/HEADER}{BODY}轻松访问、自定义和管理插件{/BODY}
+modsListApi.name: 录像管理器
+modsListApi.description: 可以更方便的显示您的录像，并查看战斗结果，回放以及上传重播至 WoTReplays (懒懒汉化)
 
 
