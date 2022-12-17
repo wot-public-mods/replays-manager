@@ -54,6 +54,7 @@ ui.window.filterTab.battleType: 战斗类型：
 ui.window.filterTab.battleResult: 战斗结果：
 ui.window.filterTab.otherLabel: 杂项：
 ui.window.filterTab.otherShowFavorite: 最喜欢的录像
+ui.window.filterTab.otherUseOriginalXP: 原创体验
 
 ui.window.paginatorLabel: 页
 ui.window.paginatorPrev: <<
