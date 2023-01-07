@@ -1,5 +1,14 @@
 # Changelog
 
+## v3.7.4
+
+* Missing locale
+
+## v3.7.3
+
+* Minimal supported replays version
+* Chinese Simplified translation update by lokisonl@qq.com
+
 ## v3.7.2
 
 * Ability to use original experience instead of final experience (for more logical sorting)
