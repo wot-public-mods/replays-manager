@@ -221,7 +221,7 @@ def _EconomicsRecordsChains_addResults(baseMethod, baseObject, intCD, results):
 
 @override(BattleResultsService, "_BattleResultsService__postStatistics")
 def _postStatistics(baseMethod, baseObject, reusableInfo, result):
-	playerAccount = BigWorld.player()
-	if playerAccount is None or not isinstance(playerAccount, PlayerAccount):
+	from . import g_controllers
+	if g_controllers.actions.skip_statistics:
 		return
 	return baseMethod(baseObject, reusableInfo, result)

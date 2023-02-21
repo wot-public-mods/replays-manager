@@ -42,6 +42,7 @@ class ActionsController(object):
 
 	def __init__(self):
 		self.__isReplayPlayed = False
+		self.skip_statistics = False
 
 	def init(self):
 		g_eventsManager.onLoginViewLoaded += self.__onLoginViewLoaded
@@ -101,7 +102,8 @@ class ActionsController(object):
 				epicMetaGameCtrlABRWS = self.epicMetaGameCtrl._arenaBattleResultsWasShown
 				if arenaUniqueID not in epicMetaGameCtrlABRWS:
 					epicMetaGameCtrlABRWS.add(arenaUniqueID)
-
+				
+				self.skip_statistics = True
 				if self.itemsCache.isSynced():
 					self.battleResults.postResult(replayData, False)
 				else:
@@ -109,6 +111,7 @@ class ActionsController(object):
 					self.itemsCache.items.isSynced = lambda *a, **kw: True
 					self.battleResults.postResult(replayData, False)
 					self.itemsCache.items.isSynced = original_isSynced
+				self.skip_statistics = False
 
 			# handler for windows diplay
 			#  ClassicResults
