@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.7.5
+
+* Minimal supported replays version
+* Skip log statistics on stored battleresults
+
 ## v3.7.4
 
 * Missing locale
