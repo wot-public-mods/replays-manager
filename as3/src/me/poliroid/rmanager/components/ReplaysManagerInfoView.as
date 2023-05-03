@@ -1,6 +1,7 @@
 ﻿package me.poliroid.rmanager.components
 {
-	
+	import flash.text.TextField;
+
 	import scaleform.clik.events.FocusHandlerEvent;
 
 	import net.wg.gui.components.controls.CheckBox;
@@ -54,7 +55,10 @@
 
 		private function onTxtInpFocusInHandler(e:FocusHandlerEvent) : void
 		{
-			(e.target as TextInput).textField.textColor = ContactsShared.INVITE_INPUT_TEXT_COLOR;
+			var tf:TextField = e.target as TextField;
+			if (tf == null)
+				tf = (e.target as TextInput).textField;
+			tf.textColor = ContactsShared.INVITE_INPUT_TEXT_COLOR;
 		}
 	}
 }

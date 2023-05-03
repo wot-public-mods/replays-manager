@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.7.6
+
+* Minimal supported replays version
+* Upload window TF fix
+
 ## v3.7.5
 
 * Minimal supported replays version
