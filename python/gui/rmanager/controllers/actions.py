@@ -11,22 +11,20 @@ from gui import DialogsInterface
 from gui.shared.personality import ServicesLocator
 from gui.Scaleform.daapi.view.dialogs import (SimpleDialogMeta, ConfirmDialogButtons,
 												InfoDialogButtons, DIALOG_BUTTON_ID)
-from gui.Scaleform.daapi.settings.views import VIEW_ALIAS
 from gui.Scaleform.framework.entities.EventSystemEntity import EventSystemEntity
 from gui.Scaleform.framework.managers.context_menu import AbstractContextMenuHandler
-from gui.Scaleform.framework.managers.loaders import SFViewLoadParams
 from gui.Scaleform.framework.managers import context_menu
-from gui.shared.utils.functions import getViewName
-from ..controllers import g_controllers
-from ..events import g_eventsManager
-from ..lang import l10n
-from .._constants import (REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS,
-												REPLAY_FLAG_FILE, REPLAYS_MANAGER_UPLOADER_ALIAS)
 from helpers import dependency
 from skeletons.gui.battle_results import IBattleResultsService
 from skeletons.gui.game_control import IRankedBattlesController
 from skeletons.gui.game_control import IEpicBattleMetaGameController
 from skeletons.gui.shared import IItemsCache
+
+from ..controllers import g_controllers
+from ..events import g_eventsManager
+from ..hooks import showUploader
+from ..lang import l10n
+from .._constants import REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS, REPLAY_FLAG_FILE
 
 class CustomDialogButtons(ConfirmDialogButtons):
 	def getLabels(self):
@@ -149,7 +147,7 @@ class ActionsController(object):
 			if replayData:
 				noError = g_controllers.uploader.prepare(replayName, replayData.get('playerID'), replayData.get('playerName'))
 				if noError:
-					ServicesLocator.appLoader.getDefLobbyApp().loadView(SFViewLoadParams(REPLAYS_MANAGER_UPLOADER_ALIAS))
+					showUploader()
 				else:
 					def getErrorInfoDialogMeta():
 						buttons = InfoDialogButtons(l10n('ui.popup.button.close'))

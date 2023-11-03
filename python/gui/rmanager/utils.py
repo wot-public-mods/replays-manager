@@ -11,6 +11,8 @@ import types
 import BigWorld
 import ResMgr
 from constants import CURRENT_REALM
+from helpers import dependency
+from skeletons.gui.impl import IGuiLoader
 
 __all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm',
 		'requestProgress', 'versionTuple', 'openURL', 'getTankType', 'convertData',
@@ -84,6 +86,11 @@ def cacheResult(function):
 			memo[cache_key] = rv
 			return rv
 	return wrapper
+
+def getParentWindow():
+	uiLoader = dependency.instance(IGuiLoader)
+	if uiLoader and uiLoader.windowsManager:
+		return uiLoader.windowsManager.getMainWindow()
 
 class MultiPartForm(object):
 	"""using for send multipart form data to server"""

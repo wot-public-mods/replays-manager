@@ -1,8 +1,6 @@
 
 import struct
-import BigWorld
 
-from Account import PlayerAccount
 from battle_results import g_config as battle_results_config
 from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
@@ -19,8 +17,8 @@ from ValueReplay import ValueReplay as op, ValueReplayConnector
 
 from .events import g_eventsManager
 from .lang import l10n
-from .utils import override, safeImport
-from ._constants import  REPLAYS_MANAGER_WINDOW_ALIAS
+from .utils import override, safeImport, getParentWindow
+from ._constants import  REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_UPLOADER_ALIAS
 
 # normal client codebase
 _EconomicsRecordsChains = safeImport('gui.battle_results.reusable.personal', '_EconomicsRecordsChains')
@@ -39,7 +37,14 @@ def showManager():
 	app = ServicesLocator.appLoader.getApp(APP_NAME_SPACE.SF_LOBBY)
 	if not app:
 		return
-	app.loadView(SFViewLoadParams(REPLAYS_MANAGER_WINDOW_ALIAS), {})
+	app.loadView(SFViewLoadParams(REPLAYS_MANAGER_WINDOW_ALIAS, parent=getParentWindow()))
+
+def showUploader():
+	"""fire load popover view on button click"""
+	app = ServicesLocator.appLoader.getApp(APP_NAME_SPACE.SF_LOBBY)
+	if not app:
+		return
+	app.loadView(SFViewLoadParams(REPLAYS_MANAGER_UPLOADER_ALIAS, parent=getParentWindow()))
 
 # app login populated
 @override(LoginView, '_populate')
