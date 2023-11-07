@@ -8,6 +8,7 @@ class ControllersHolder():
 		self.actions = None
 		self.database = None
 		self.parser = None
+		self.player = None
 		self.uploader = None
 
 	def init(self):
@@ -15,8 +16,10 @@ class ControllersHolder():
 		from .actions import ActionsController
 		from .database import DataBaseController
 		from .parser import ParserController
+		from .player import BattleReplayPlayer
 		from .uploader import UploaderController
 
+		self.player = BattleReplayPlayer()
 		self.actions = ActionsController()
 		self.database = DataBaseController()
 		self.parser = ParserController()
@@ -25,6 +28,7 @@ class ControllersHolder():
 		self.actions.init()
 		self.database.init()
 		self.parser.init()
+		self.player.init()
 		self.uploader.init()
 
 		g_eventsManager.onAppFinish += self.fini
@@ -34,6 +38,7 @@ class ControllersHolder():
 		self.actions.fini()
 		self.database.fini()
 		self.parser.fini()
+		self.player.fini()
 		self.uploader.fini()
 
 		self.actions = None

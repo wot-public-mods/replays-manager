@@ -8,7 +8,6 @@ class EventsManager(object):
 	def __init__(self):
 
 		self.onAppFinish = Event.Event()
-		self.onLoginViewLoaded = Event.Event()
 
 		self.onUpdatingDatabaseStop = Event.Event()
 		self.onParsingReplay = Event.Event()

@@ -1,6 +1,7 @@
 
 import struct
 
+from BattleReplay import BattleReplay
 from battle_results import g_config as battle_results_config
 from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
@@ -8,14 +9,12 @@ from gui.app_loader.settings import APP_NAME_SPACE
 from gui.battle_results.service import BattleResultsService
 from gui.lobby_context import LobbyContext
 from gui.Scaleform.daapi.view.lobby.user_cm_handlers import AppealCMHandler, USER
-from gui.Scaleform.daapi.view.login.LoginView import LoginView
 from gui.Scaleform.framework.managers.loaders import SFViewLoadParams
 from gui.Scaleform.locale.MENU import MENU
 from gui.shared.utils.requesters.ItemsRequester import ItemsRequester
 from soft_exception import SoftException
 from ValueReplay import ValueReplay as op, ValueReplayConnector
 
-from .events import g_eventsManager
 from .lang import l10n
 from .utils import override, safeImport, getParentWindow
 from ._constants import  REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_UPLOADER_ALIAS
@@ -46,11 +45,11 @@ def showUploader():
 		return
 	app.loadView(SFViewLoadParams(REPLAYS_MANAGER_UPLOADER_ALIAS, parent=getParentWindow()))
 
-# app login populated
-@override(LoginView, '_populate')
-def populate(baseMethod, baseObject):
-	baseMethod(baseObject)
-	g_eventsManager.onLoginViewLoaded()
+@override(BattleReplay, 'getAutoStartFileName')
+def getAutoStartFileName(baseMethod, baseObject):
+	from . import g_controllers
+	replay_filename = g_controllers.player.getReplayFileName()
+	return replay_filename or baseMethod(baseObject)
 
 # context menu fixes
 @override(LobbyContext, 'getPlayerFullName')

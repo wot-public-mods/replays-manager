@@ -1,9 +1,6 @@
 
-import os
-from adisp import adisp_process
-
 import BigWorld
-import BattleReplay
+import os
 
 from constants import PremiumConfigs
 from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
@@ -39,24 +36,13 @@ class ActionsController(object):
 	itemsCache = dependency.descriptor(IItemsCache)
 
 	def __init__(self):
-		self.__isReplayPlayed = False
 		self.skip_statistics = False
 
 	def init(self):
-		g_eventsManager.onLoginViewLoaded += self.__onLoginViewLoaded
 		context_menu.registerHandlers((REPLAY_CM_HANDLER_TYPE, ReplayContextMenuHandler))
 
 	def fini(self):
-		g_eventsManager.onLoginViewLoaded -= self.__onLoginViewLoaded
-
-	def __onLoginViewLoaded(self):
-		LOG_DEBUG('ActionsController.__onLoginViewLoaded')
-		if os.path.exists(REPLAY_FLAG_FILE):
-			with open(REPLAY_FLAG_FILE) as f:
-				replayName = f.read()
-			os.remove(REPLAY_FLAG_FILE)
-			if replayName:
-				self.__tryToPlay(replayName)
+		self.skip_statistics = False
 
 	def handleAction(self, actionType, replayName):
 		LOG_DEBUG('ActionsController.handleAction => actionType: %s, replayName: %s' % (actionType, replayName))
@@ -125,7 +111,6 @@ class ActionsController(object):
 
 	def __playBattleReplay(self, replayName):
 		try:
-			LOG_DEBUG('ActionsController.__playBattleReplay => isReplayPlayed: %s', self.__isReplayPlayed)
 			def getPlayConfirmDialogMeta():
 				buttons = CustomDialogButtons(l10n('ui.popup.button.yes'), l10n('ui.popup.button.no'))
 				return SimpleDialogMeta(message=l10n('ui.popup.play.message'), title=l10n('ui.popup.play.title'), buttons=buttons)
@@ -182,19 +167,6 @@ class ActionsController(object):
 					LOG_CURRENT_EXCEPTION()
 				g_eventsManager.onNeedToUpdateReplaysList()
 		DialogsInterface.showDialog(getConfirmDialogMeta(), dialogCallback)
-
-	def __tryToPlay(self, replayName):
-		@adisp_process
-		def onReplayFinished():
-			result = yield DialogsInterface.showI18nConfirmDialog('replayStopped')
-			if result:
-				BigWorld.restartGame()
-		result = False
-		if BattleReplay.g_replayCtrl.play(REPLAYS_PATH + replayName):
-			BattleReplay.g_replayCtrl._BattleReplay__replayCtrl.replayFinishedCallback = onReplayFinished
-			result = True
-			self.__isReplayPlayed = True
-		return result
 
 class ReplayContextMenuHandler(AbstractContextMenuHandler, EventSystemEntity):
 

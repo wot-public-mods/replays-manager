@@ -2,6 +2,10 @@
 
 ## v3.7.6
 
+* Fixed replay player
+
+## v3.7.6
+
 * Minimal supported replays version
 * Upload window TF fix
 
