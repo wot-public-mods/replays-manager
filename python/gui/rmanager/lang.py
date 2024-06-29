@@ -1,5 +1,6 @@
-﻿
-from constants import DEFAULT_LANGUAGE
+﻿# SPDX-License-Identifier: MIT
+# Copyright (c) 2015-2024 Andrii Andrushchyshyn
+
 from helpers import getClientLanguage
 
 from ._constants import DEFAULT_UI_LANGUAGE, LANGUAGE_CODES, LANGUAGE_FILE_MASK
