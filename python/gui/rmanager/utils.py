@@ -6,6 +6,7 @@ import collections
 import importlib
 import functools
 import itertools
+import logging
 import mimetools
 import os
 import types
@@ -18,7 +19,7 @@ from skeletons.gui.impl import IGuiLoader
 
 __all__ = ('byteify', 'override', 'readFromVFS', 'parse_lang_fields', 'MultiPartForm',
 		'requestProgress', 'versionTuple', 'openURL', 'getTankType', 'convertData',
-		'fixBadges', 'safeImport', 'cacheResult', 'cache_result', )
+		'fixBadges', 'safeImport', 'cacheResult', 'cache_result', 'getLogger')
 
 def override(holder, name, wrapper=None, setter=None):
 	"""Override methods, properties, functions, attributes
@@ -215,3 +216,8 @@ def safeImport(path, target):
 		return getattr(module, target, None)
 	except ImportError:
 		return None
+
+def getLogger(name):
+	logger = logging.getLogger(name)
+	logger.setLevel(logging.DEBUG if os.path.isfile('.debug_mods') else logging.ERROR)
+	return logger

@@ -5,7 +5,6 @@ import struct
 
 from BattleReplay import BattleReplay
 from battle_results import g_config as battle_results_config
-from debug_utils import LOG_ERROR
 from gui.shared.personality import ServicesLocator
 from gui.app_loader.settings import APP_NAME_SPACE
 from gui.battle_results.service import BattleResultsService
@@ -18,8 +17,10 @@ from soft_exception import SoftException
 from ValueReplay import ValueReplay as op, ValueReplayConnector
 
 from .lang import l10n
-from .utils import override, safeImport, getParentWindow
+from .utils import override, safeImport, getParentWindow, getLogger
 from ._constants import  REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_UPLOADER_ALIAS
+
+logger = getLogger(__name__)
 
 # normal client codebase
 _EconomicsRecordsChains = safeImport('gui.battle_results.reusable.personal', '_EconomicsRecordsChains')
@@ -82,7 +83,7 @@ g_modsListApi = None
 try:
 	from gui.modsListApi import g_modsListApi
 except ImportError:
-	LOG_ERROR('modsListApi not installed')
+	logger.error('modsListApi not installed')
 if g_modsListApi:
 	g_modsListApi.addModification(id='rmanager', name=l10n('modsListApi.name'), enabled=True,
 		description=l10n('modsListApi.description'), icon='gui/maps/rmanager/modsListApi.png',
@@ -94,7 +95,7 @@ try:
 	from . import __version__
 	from .data_collector import g_dataCollector
 except ImportError:
-	LOG_ERROR('datacollector broken')
+	logger.error('datacollector broken')
 if g_dataCollector:
 	g_dataCollector.addSoloMod('replays_manager', __version__)
 

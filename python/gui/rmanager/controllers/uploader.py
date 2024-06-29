@@ -5,17 +5,18 @@ import math
 import os
 import threading
 import urllib2
-from adisp import adisp_async, adisp_process
 
 import BigWorld
+from adisp import adisp_async, adisp_process
 from account_helpers import getAccountDatabaseID
 from constants import CURRENT_REALM
 from helpers import isPlayerAccount
-from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from ..events import g_eventsManager
 from .._constants import (WAITING_DELAY, WOTREPLAYS_API_URL, REPLAYS_PATH,
 											UPLOADER_STATUS, UPLOAD_REPLAY_TEMP)
-from ..utils import MultiPartForm, requestProgress
+from ..utils import MultiPartForm, requestProgress, getLogger
+
+logger = getLogger(__name__)
 
 __all__ = ('UploaderController', )
 
@@ -59,18 +60,18 @@ class UploaderController(object):
 		if CURRENT_REALM == 'RU':
 			host = 'http://tankireplays.lesta.ru/'
 		response = yield lambda callback: BigWorld.fetchURL(host, callback)
-		LOG_DEBUG('UploaderController.apiStatus %s' % response.responseCode, response.body)
+		logger.debug('apiStatus %s %s', response.responseCode, response.body)
 		callback(response.responseCode == 200)
 
 	def prepare(self, replayFileName, replayUserDBID, replayUserName):
 
-		LOG_DEBUG('UploaderController.prepare', replayFileName, replayUserDBID, replayUserName)
+		logger.debug('prepare %s %s %s', replayFileName, replayUserDBID, replayUserName)
 
 		if not isPlayerAccount():
 			self.__setStatus(UPLOADER_STATUS.NOT_ACCOUNT)
 			return False
 
-		LOG_DEBUG('UploaderController.prepare', getAccountDatabaseID(), replayUserDBID)
+		logger.debug('prepare next %s %s', getAccountDatabaseID(), replayUserDBID)
 
 		if getAccountDatabaseID() != long(replayUserDBID):
 			self.__setStatus(UPLOADER_STATUS.WRONG_ACCOUNT)
@@ -122,7 +123,7 @@ class UploaderController(object):
 			host = 'http://tankireplays.lesta.ru'
 		targetURL = WOTREPLAYS_API_URL % (host, str(self.__replay.userDBID), str(self.__replay.userName))
 
-		LOG_DEBUG('UploaderController.__uploaderThread endpoint', targetURL)
+		logger.debug('__uploaderThread endpoint %s', targetURL)
 
 		request = urllib2.Request(targetURL)
 		body = str(form)
@@ -139,8 +140,7 @@ class UploaderController(object):
 			self.__setStatus(UPLOADER_STATUS.LOADING)
 			r = urllib2.urlopen(request)
 		except: #NOSONAR
-			LOG_ERROR('UploaderController.__uploaderThread')
-			LOG_CURRENT_EXCEPTION()
+			logger.exception('__uploaderThread')
 			self.__setStatus(UPLOADER_STATUS.CONNECTION_ERROR)
 		else:
 			self.__setResponce(r.read())
@@ -149,7 +149,7 @@ class UploaderController(object):
 		os.remove(UPLOAD_REPLAY_TEMP)
 
 	def __setResponce(self, responce):
-		LOG_DEBUG("UploaderController.__setResponce responce: %s" % str(responce))
+		logger.debug("__setResponce responce: %s", str(responce))
 		if responce:
 			self.__setStatus(UPLOADER_STATUS.LOADING_COMPLETE)
 			g_eventsManager.onUploaderResult(responce)
@@ -160,7 +160,7 @@ class UploaderController(object):
 		g_eventsManager.onUploaderProgress(total, self.__sended, percent)
 
 	def __setStatus(self, status):
-		LOG_DEBUG('UploaderController.__setStatus => status:%s' % status)
+		logger.debug('__setStatus => status:%s', status)
 		if status != self.__status:
 			self.__status = status
 			g_eventsManager.onUploaderStatus(status)

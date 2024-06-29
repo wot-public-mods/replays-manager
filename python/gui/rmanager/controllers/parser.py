@@ -7,14 +7,15 @@ import time
 from datetime import datetime
 
 from constants import ARENA_GUI_TYPE
-from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
 from soft_exception import SoftException
 
 from .._constants import (RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION,\
 											 PROCESS_SUPPORTED_VERSION)
-from ..utils import byteify, versionTuple, getTankType, fixBadges
+from ..utils import byteify, versionTuple, getTankType, fixBadges, getLogger
+
+logger = getLogger(__name__)
 
 __all__ = ('ParserController', )
 
@@ -44,15 +45,14 @@ class ParserController(object):
 				datablockSize = {}
 				startPointer = 8
 			except: #NOSONAR
-				LOG_ERROR('ParserController.parseReplay %s' % file_name)
-				LOG_CURRENT_EXCEPTION()
+				logger.exception('ParserController.parseReplay %s', file_name)
 				return None
 
 			if numofblocks == 0:
-				LOG_DEBUG('File %s has unknown file structure. (numofblocks == 0)' % file_name)
+				logger.debug('File %s has unknown file structure. (numofblocks == 0)', file_name)
 				return None
 			if numofblocks > 4:
-				LOG_DEBUG('File %s has unknown file structure. (numofblocks > 4)' % file_name)
+				logger.debug('File %s has unknown file structure. (numofblocks > 4)', file_name)
 				return None
 
 			while numofblocks >= 1:
@@ -80,8 +80,7 @@ class ParserController(object):
 							result_blocks['data']['result_data'] = fixBadges(blockdict[0])
 
 				except: #NOSONAR
-					LOG_ERROR('ParserController.parseReplay %s' % file_name)
-					LOG_CURRENT_EXCEPTION()
+					logger.exception('parseReplay %s', file_name)
 					return None
 
 			result = ParserController.getProcessedReplayData(result_blocks, file_name)
@@ -200,5 +199,4 @@ class ParserController(object):
 				'shortUserString': vItem.shortUserString
 			}
 		except: #NOSONAR
-			LOG_ERROR('getVehicleInfo')
-			LOG_CURRENT_EXCEPTION()
+			logger.exception('getVehicleInfo')

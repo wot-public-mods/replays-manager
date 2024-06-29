@@ -11,13 +11,14 @@ from operator import itemgetter
 
 import BigWorld
 from adisp import adisp_async, adisp_process
-from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 
 from gui.impl import backport
 from ..controllers import g_controllers
 from ..events import g_eventsManager
 from .._constants import REPLAYS_PATH, DB_FILENAME, DB_VERSION, DATABASE_STATES
-from ..utils import convertData
+from ..utils import convertData, getLogger
+
+logger = getLogger(__name__)
 
 __all__ = ('DataBaseController', )
 
@@ -44,7 +45,7 @@ class DataBaseController(object):
 
 	@adisp_process
 	def prepareDataBase(self):
-		LOG_DEBUG('DataBaseController.prepareDataBase')
+		logger.debug('prepareDataBase')
 		try:
 			dbfolder = DB_FILENAME.replace("/database", "")
 			if not os.path.exists(dbfolder):
@@ -62,13 +63,12 @@ class DataBaseController(object):
 			self.__state = DATABASE_STATES.READY
 		except Exception: #NOSONAR
 			self.__state = DATABASE_STATES.ERROR
-			LOG_ERROR('DataBaseController.prepareDataBase')
-			LOG_CURRENT_EXCEPTION()
+			logger.exception('prepareDataBase')
 		finally:
 			g_eventsManager.onUpdatingDatabaseStop()
 
 	def __createEmptyDataBase(self):
-		LOG_DEBUG('DataBaseController.__createEmptyDataBase')
+		logger.debug('__createEmptyDataBase')
 		self.__database = shelve.open(DB_FILENAME, flag='n', protocol=2)
 		self.__database['db_version'] = DB_VERSION
 		self.__database['corrupted_replays'] = list()
@@ -79,7 +79,7 @@ class DataBaseController(object):
 	@adisp_async
 	@adisp_process
 	def __updateDataBase(self, callback=None):
-		LOG_DEBUG('DataBaseController.__updateDataBase')
+		logger.debug('__updateDataBase')
 		replaysToParse = list()
 		replaysToRemove = list()
 
@@ -96,7 +96,7 @@ class DataBaseController(object):
 			if replayName not in self.__replayFiles:
 				replaysToRemove.append(replayName)
 
-		LOG_DEBUG('DataBaseController.__updateDataBase removing replays', replaysToRemove)
+		logger.debug('__updateDataBase removing replays %s', str(replaysToRemove))
 		if replaysToRemove:
 			self.__removeFromDataBase(replaysToRemove)
 
@@ -122,7 +122,7 @@ class DataBaseController(object):
 		def parseReplayFile():
 			try:
 				replayData = g_controllers.parser.parseReplay(REPLAYS_PATH + replayName, replayName)
-				LOG_DEBUG('DataBaseController.parseReplayFile: %s' % replayName)
+				logger.debug('parseReplayFile: %s', replayName)
 				if replayData:
 					self.__database['replays_data'][replayName] = replayData
 					self.__database['existing_replays'].append(replayName)
@@ -130,13 +130,12 @@ class DataBaseController(object):
 					self.__database['corrupted_replays'].append(replayName)
 				callback(True)
 			except: #NOSONAR
-				LOG_ERROR('DataBaseController.parseReplayFile')
-				LOG_CURRENT_EXCEPTION()
+				logger.exception('parseReplayFile')
 				callback(False)
 		BigWorld.callback(0, parseReplayFile)
 
 	def getReplaysData(self, settings):
-		LOG_DEBUG('DataBaseController.getReplaysData')
+		logger.debug('getReplaysData')
 		replaysCommonData = self.__getReplaysCommonData()
 		filteredList = self.__filterReplays(settings['filters'], replaysCommonData)
 		sortedList = self.__sortReplays(filteredList, settings)
@@ -145,7 +144,7 @@ class DataBaseController(object):
 
 	def getReplayResultData(self, replayName):
 		result = None
-		LOG_DEBUG('DataBaseController.getReplayResultData %s' % replayName)
+		logger.debug('getReplayResultData %s', replayName)
 		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
 		try:
 			result = convertData(self.__database['replays_data'][replayName]['replay_data']['data']['result_data'])
@@ -158,7 +157,7 @@ class DataBaseController(object):
 
 	def getReplayCommonData(self, replayName):
 		result = None
-		LOG_DEBUG('DataBaseController.getReplayCommonData %s' % replayName)
+		logger.debug('getReplayCommonData %s', replayName)
 		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
 		try:
 			result = convertData(self.__database['replays_data'][replayName]['replay_data']['data']['common'])
@@ -168,7 +167,7 @@ class DataBaseController(object):
 
 	def getReplayHasBattleResults(self, replayName):
 		result = None
-		LOG_DEBUG('DataBaseController.getReplayHasBattleResults %s' % replayName)
+		logger.debug('getReplayHasBattleResults %s', replayName)
 		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
 		try:
 			result = self.__database['replays_data'][replayName]['common_data']['hasBattleResults']
@@ -178,7 +177,7 @@ class DataBaseController(object):
 
 	def getReplayFavorite(self, replayName):
 		result = None
-		LOG_DEBUG('DataBaseController.getReplayFavorite %s' % replayName)
+		logger.debug('getReplayFavorite %s', replayName)
 		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
 		try:
 			result = self.__database['replays_data'][replayName]['common_data']['favorite']
@@ -187,7 +186,7 @@ class DataBaseController(object):
 		return result
 
 	def setReplayFavorite(self, replayName, isFavorite):
-		LOG_DEBUG('DataBaseController.setReplayFavorite %s' % replayName)
+		logger.debug('setReplayFavorite %s', replayName)
 		self.__database = shelve.open(DB_FILENAME, flag='w', protocol=2, writeback=True)
 		try:
 			self.__database['replays_data'][replayName]['common_data']['favorite'] = 1 if isFavorite else 0

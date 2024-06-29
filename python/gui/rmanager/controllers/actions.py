@@ -5,7 +5,6 @@ import BigWorld
 import os
 
 from constants import PremiumConfigs
-from debug_utils import LOG_DEBUG, LOG_ERROR, LOG_CURRENT_EXCEPTION
 from gui import DialogsInterface
 from gui.shared.personality import ServicesLocator
 from gui.Scaleform.daapi.view.dialogs import (SimpleDialogMeta, ConfirmDialogButtons,
@@ -23,7 +22,10 @@ from ..controllers import g_controllers
 from ..events import g_eventsManager
 from ..hooks import showUploader
 from ..lang import l10n
+from ..utils import getLogger
 from .._constants import REPLAYS_PATH, REPLAY_CM_HANDLER_TYPE, REPLAY_ACTIONS, REPLAY_FLAG_FILE
+
+logger = getLogger(__name__)
 
 class CustomDialogButtons(ConfirmDialogButtons):
 	def getLabels(self):
@@ -47,7 +49,7 @@ class ActionsController(object):
 		self.skip_statistics = False
 
 	def handleAction(self, actionType, replayName):
-		LOG_DEBUG('ActionsController.handleAction => actionType: %s, replayName: %s' % (actionType, replayName))
+		logger.debug('handleAction => actionType: %s, replayName: %s', actionType, replayName)
 		if actionType == REPLAY_ACTIONS.SHOW_RESULTS:
 			self.__showBattleResults(replayName)
 		if actionType == REPLAY_ACTIONS.PLAY:
@@ -75,7 +77,7 @@ class ActionsController(object):
 
 			arenaUniqueID = replayData.get('arenaUniqueID', 0)
 
-			LOG_DEBUG("ActionsController.__showBattleResults => replayData: %s", replayData)
+			logger.debug("__showBattleResults => replayData: %s", replayData)
 
 			if not self.battleResults.areResultsPosted(arenaUniqueID):
 				rankedControllerABRWS = self.rankedController._RankedBattlesController__arenaBattleResultsWasShown
@@ -106,10 +108,9 @@ class ActionsController(object):
 			handler = self.battleResults._BattleResultsService__notifyBattleResultsPosted
 			handler(arenaUniqueID, True)
 
-			LOG_DEBUG('ActionsController.__showBattleResults => replayName: %s' % replayName)
+			logger.debug('__showBattleResults => replayName: %s', replayName)
 		except: #NOSONAR
-			LOG_ERROR('ActionsController.__showBattleResults')
-			LOG_CURRENT_EXCEPTION()
+			logger.exception('__showBattleResults')
 
 	def __playBattleReplay(self, replayName):
 		try:
@@ -124,8 +125,7 @@ class ActionsController(object):
 					BigWorld.restartGame()
 			DialogsInterface.showDialog(getPlayConfirmDialogMeta(), dialogCallback)
 		except: #NOSONAR
-			LOG_ERROR('ActionsController.__playBattleReplay')
-			LOG_CURRENT_EXCEPTION()
+			logger.exception('__playBattleReplay')
 
 	@staticmethod
 	def __uploadBattleReplay(replayName):
@@ -142,8 +142,7 @@ class ActionsController(object):
 												title=l10n('ui.uploader.statusErrorOccure'), buttons=buttons)
 					DialogsInterface.showDialog(getErrorInfoDialogMeta(), lambda *args: None)
 		except: #NOSONAR
-			LOG_ERROR('ActionsController.__uploadBattleReplay')
-			LOG_CURRENT_EXCEPTION()
+			logger.exception('__uploadBattleReplay')
 
 	@staticmethod
 	def __setReplayFavorite(replayName, isFavorite):
@@ -151,8 +150,7 @@ class ActionsController(object):
 			g_controllers.database.setReplayFavorite(replayName, isFavorite)
 			g_eventsManager.onNeedToUpdateReplaysList()
 		except: #NOSONAR
-			LOG_ERROR('ActionsController.__setReplayFavorite')
-			LOG_CURRENT_EXCEPTION()
+			logger.exception('__setReplayFavorite')
 
 	@staticmethod
 	def __removeBattleReplay(replayName):
@@ -165,8 +163,7 @@ class ActionsController(object):
 				try:
 					os.remove(REPLAYS_PATH + replayName)
 				except: #NOSONAR
-					LOG_ERROR('ActionsController.__removeBattleReplay dialogCallback os.remove')
-					LOG_CURRENT_EXCEPTION()
+					logger.exception('__removeBattleReplay dialogCallback os.remove')
 				g_eventsManager.onNeedToUpdateReplaysList()
 		DialogsInterface.showDialog(getConfirmDialogMeta(), dialogCallback)
 
@@ -181,27 +178,27 @@ class ReplayContextMenuHandler(AbstractContextMenuHandler, EventSystemEntity):
 		super(ReplayContextMenuHandler, self).__init__(cmProxy, ctx, self._getHandlers())
 
 	def showResults(self):
-		LOG_DEBUG('ReplayContextMenuHandler.showResults')
+		logger.debug('ReplayContextMenuHandler.showResults')
 		g_controllers.actions.handleAction(REPLAY_ACTIONS.SHOW_RESULTS, self._replayName)
 
 	def playReplay(self):
-		LOG_DEBUG('ReplayContextMenuHandler.playReplay')
+		logger.debug('ReplayContextMenuHandler.playReplay')
 		g_controllers.actions.handleAction(REPLAY_ACTIONS.PLAY, self._replayName)
 
 	def uploadReplay(self):
-		LOG_DEBUG('ReplayContextMenuHandler.uploadReplay')
+		logger.debug('ReplayContextMenuHandler.uploadReplay')
 		g_controllers.actions.handleAction(REPLAY_ACTIONS.UPLOAD, self._replayName)
 
 	def replayAddFavorite(self):
-		LOG_DEBUG('ReplayContextMenuHandler.replayAddFavorite')
+		logger.debug('ReplayContextMenuHandler.replayAddFavorite')
 		g_controllers.actions.handleAction(REPLAY_ACTIONS.FAVORITE_ADD, self._replayName)
 
 	def replayRemoveFavorite(self):
-		LOG_DEBUG('ReplayContextMenuHandler.replayRemoveFavorite')
+		logger.debug('ReplayContextMenuHandler.replayRemoveFavorite')
 		g_controllers.actions.handleAction(REPLAY_ACTIONS.FAVORITE_REMOVE, self._replayName)
 
 	def removeReplay(self):
-		LOG_DEBUG('ReplayContextMenuHandler.removeReplay')
+		logger.debug('ReplayContextMenuHandler.removeReplay')
 		g_controllers.actions.handleAction(REPLAY_ACTIONS.REMOVE, self._replayName)
 
 	def _getHandlers(self):
