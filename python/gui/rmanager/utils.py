@@ -16,9 +16,9 @@ from constants import CURRENT_REALM
 from helpers import dependency
 from skeletons.gui.impl import IGuiLoader
 
-__all__ = ('byteify', 'override', 'readFromVFS', 'parseLangFields', 'MultiPartForm',
+__all__ = ('byteify', 'override', 'readFromVFS', 'parse_lang_fields', 'MultiPartForm',
 		'requestProgress', 'versionTuple', 'openURL', 'getTankType', 'convertData',
-		'fixBadges', 'safeImport', 'cacheResult', )
+		'fixBadges', 'safeImport', 'cacheResult', 'cache_result', )
 
 def override(holder, name, wrapper=None, setter=None):
 	"""Override methods, properties, functions, attributes
@@ -51,7 +51,7 @@ def byteify(data):
 		result = data.encode('utf-8')
 	return result
 
-def parseLangFields(langFile):
+def parse_lang_fields(langFile):
 	"""split items by lines and key value by ':'
 	like yaml format"""
 	result = {}
@@ -61,8 +61,20 @@ def parseLangFields(langFile):
 			if ': ' not in item:
 				continue
 			key, value = item.split(": ", 1)
-			result[key] = value
+			result[key] = value.replace('\\n', '\n')
 	return result
+
+def cache_result(function):
+	memo = {}
+	@functools.wraps(function)
+	def wrapper(*args):
+		try:
+			return memo[args]
+		except KeyError:
+			rv = function(*args)
+			memo[args] = rv
+			return rv
+	return wrapper
 
 def readFromVFS(path):
 	"""using for read files from VFS"""

@@ -10,7 +10,7 @@ from constants import ARENA_GUI_TYPE
 from helpers import i18n
 from gui.Scaleform.framework.entities.abstract.AbstractWindowView import AbstractWindowView
 
-from ..lang import l10n, allFields
+from ..lang import l10n
 from ..controllers import g_controllers
 from ..events import g_eventsManager
 from .._constants import DEFAULT_SETTINGS, WAITING_DELAY
@@ -159,4 +159,4 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 		self.as_initFiltersS(maps, btypes)
 
 	def __populateLanguage(self):
-		self.as_setLangDataS(allFields())
+		self.as_setLangDataS(l10n.get_sentences())
