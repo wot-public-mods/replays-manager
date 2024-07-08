@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2015-2024 Andrii Andrushchyshyn
 
-__version__ = "1.4.7"
+__version__ = "3.7.8"
 
 from .hooks import *
 from .events import g_eventsManager

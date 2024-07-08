@@ -2,10 +2,12 @@
 # Copyright (c) 2015-2024 Andrii Andrushchyshyn
 
 import json
+import os
 import struct
 import time
 from datetime import datetime
 
+from BattleReplay import REPLAY_FILE_EXTENSION, AUTO_RECORD_TEMP_FILENAME, FIXED_REPLAY_FILENAME
 from constants import ARENA_GUI_TYPE
 from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
@@ -30,7 +32,12 @@ class ParserController(object):
 	@staticmethod
 	def parseReplay(file_path, file_name):
 
-		if file_name == 'temp.wotreplay':
+		# skip autorecord
+		if file_name == AUTO_RECORD_TEMP_FILENAME + REPLAY_FILE_EXTENSION:
+			return None
+
+		# skip last battle record
+		if file_name == FIXED_REPLAY_FILENAME + REPLAY_FILE_EXTENSION:
 			return None
 
 		result_blocks = dict()
@@ -206,3 +213,7 @@ class ParserController(object):
 			}
 		except: #NOSONAR
 			logger.exception('getVehicleInfo')
+
+	@staticmethod
+	def getReplayHash(file_path):
+		return str(os.path.getmtime(file_path))

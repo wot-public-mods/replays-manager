@@ -11,6 +11,7 @@ from operator import itemgetter
 
 import BigWorld
 from adisp import adisp_async, adisp_process
+from BattleReplay import REPLAY_FILE_EXTENSION
 
 from gui.impl import backport
 from ..controllers import g_controllers
@@ -50,7 +51,7 @@ class DataBaseController(object):
 			dbfolder = DB_FILENAME.replace("/database", "")
 			if not os.path.exists(dbfolder):
 				os.makedirs(dbfolder)
-			self.__replayFiles = [os.path.basename(x) for x in glob.iglob(REPLAYS_PATH + '*.wotreplay')]
+			self.__replayFiles = [os.path.basename(x) for x in glob.iglob('%s*%s' % (REPLAYS_PATH, REPLAY_FILE_EXTENSION))]
 			self.__state = DATABASE_STATES.PARSING
 			if not os.path.exists(DB_FILENAME + '.dat'):
 				self.__createEmptyDataBase()
@@ -81,6 +82,7 @@ class DataBaseController(object):
 	def __updateDataBase(self, callback=None):
 		logger.debug('__updateDataBase')
 		replaysToParse = list()
+		replaysToValidate = list()
 		replaysToRemove = list()
 
 		self.__database = shelve.open(DB_FILENAME, flag='w', protocol=2, writeback=True)
@@ -88,7 +90,7 @@ class DataBaseController(object):
 			if replayName in self.__database['corrupted_replays']:
 				continue
 			if replayName in self.__database['existing_replays']:
-				continue
+				replaysToValidate.append(replayName)
 			else:
 				replaysToParse.append(replayName)
 
@@ -99,6 +101,10 @@ class DataBaseController(object):
 		logger.debug('__updateDataBase removing replays %s', str(replaysToRemove))
 		if replaysToRemove:
 			self.__removeFromDataBase(replaysToRemove)
+
+		for replayName in replaysToValidate:
+			if not self.__validateReplayHash(replayName):
+				replaysToParse.append(replayName)
 
 		result = True
 		replaysCount = len(replaysToParse)
@@ -118,16 +124,37 @@ class DataBaseController(object):
 			if self.__database['replays_data'].has_key(replayName):
 				del self.__database['replays_data'][replayName]
 
+	def __validateReplayHash(self, replayName):
+		try:
+			parsedHash = self.__database['replays_data'][replayName].get('hash', None)
+			currentHash = g_controllers.parser.getReplayHash(REPLAYS_PATH + replayName)
+			logger.debug('validateReplayFile: %s (%s %s)', replayName, parsedHash, currentHash)
+			return parsedHash == currentHash
+		except:
+			logger.exception('validateReplayFile %s', replayName)
+
 	def __parseReplayFile(self, replayName, callback):
 		def parseReplayFile():
 			try:
-				replayData = g_controllers.parser.parseReplay(REPLAYS_PATH + replayName, replayName)
+				file_path = REPLAYS_PATH + replayName
+				replayData = g_controllers.parser.parseReplay(file_path, replayName)
 				logger.debug('parseReplayFile: %s', replayName)
 				if replayData:
+					# add file hash to replay data
+					# if file later will be updated with results
+					# we will proces it again
+					replayData['hash'] = g_controllers.parser.getReplayHash(file_path)
+					# store replay data in database
 					self.__database['replays_data'][replayName] = replayData
 					self.__database['existing_replays'].append(replayName)
+					# if this replay is known as corrupted
+					# remove it from corrupted list
+					if replayName in self.__database['corrupted_replays']:
+						self.__database['corrupted_replays'].remove(replayName)
 				else:
-					self.__database['corrupted_replays'].append(replayName)
+					# store replay as corrupted
+					if replayName not in self.__database['corrupted_replays']:
+						self.__database['corrupted_replays'].append(replayName)
 				callback(True)
 			except: #NOSONAR
 				logger.exception('parseReplayFile')

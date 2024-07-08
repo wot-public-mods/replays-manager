@@ -60,7 +60,7 @@ class UploaderController(object):
 		if CURRENT_REALM == 'RU':
 			host = 'http://tankireplays.lesta.ru/'
 		response = yield lambda callback: BigWorld.fetchURL(host, callback)
-		logger.debug('apiStatus %s %s', response.responseCode, response.body)
+		logger.debug('apiStatus %s %s', response.responseCode, response.body if response.responseCode != 200 else '')
 		callback(response.responseCode == 200)
 
 	def prepare(self, replayFileName, replayUserDBID, replayUserName):

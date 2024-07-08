@@ -1,5 +1,18 @@
 # Changelog
 
+## v3.7.8
+
+* WoT 1.25.1 fixes
+* minimal supported replays version
+* reparse replay data on file change
+* localization fallback implementation
+* license update
+
+## v3.7.7
+
+* fixed replay player
+* improved views loading
+
 ## v3.7.6
 
 * Fixed replay player
