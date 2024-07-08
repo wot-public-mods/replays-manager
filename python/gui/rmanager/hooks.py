@@ -29,6 +29,10 @@ _EconomicsRecordsChains = safeImport('gui.battle_results.reusable.personal', '_E
 if not _EconomicsRecordsChains:
 	_EconomicsRecordsChains = safeImport('gui.battle_results.reusable.economics', '_EconomicsRecordsChains')
 
+# WoT 1.25.1 codebase
+if not _EconomicsRecordsChains:
+	_EconomicsRecordsChains = safeImport('gui.battle_results.reusable.economics_records', 'EconomicsRecordsChains')
+
 if not _EconomicsRecordsChains:
 	raise SoftException('cant import EconomicsRecordsChains')
 

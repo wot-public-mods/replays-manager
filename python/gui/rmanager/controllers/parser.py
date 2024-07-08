@@ -158,6 +158,12 @@ class ParserController(object):
 			if winnerTeam == 0:
 				result_dict['common_data']['isWinner'] = -5
 
+			# 1.25.1 fixes
+			common_data = result_blocks['data']['result_data']['common']
+			if 'bonusCapsOverrides' in common_data:
+				for override in common_data['bonusCapsOverrides'].values():
+					for opeartor in override.keys():
+						override[opeartor] = set(override[opeartor])
 			hasBattleResults = True
 		else:
 			hasBattleResults = False
