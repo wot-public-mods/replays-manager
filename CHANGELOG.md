@@ -2,6 +2,11 @@
 
 ## v3.7.8
 
+* reworked raw parser (increased compatibility)
+* minimal supported replays version
+
+## v3.7.8
+
 * WoT 1.25.1 fixes
 * minimal supported replays version
 * reparse replay data on file change

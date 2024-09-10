@@ -58,6 +58,9 @@ PROCESS_SUPPORTED_VERSION = (1, 26, 0, 0)
 REPLAY_SUPPORTED_VERSION = (1, 26, 0, 0)
 RESULTS_SUPPORTED_VERSION = (1, 26, 0, 0)
 
+# number of bytes to pack data in replay file
+DEFAULT_PACK_SIZE = 4
+
 DEFAULT_SETTINGS = {
 	'filters': {
 		'originalXP': False,

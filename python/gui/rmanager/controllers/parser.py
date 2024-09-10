@@ -14,7 +14,7 @@ from nations import INDICES as nationsIndices
 from soft_exception import SoftException
 
 from .._constants import (RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION,\
-											 PROCESS_SUPPORTED_VERSION)
+							PROCESS_SUPPORTED_VERSION, DEFAULT_PACK_SIZE)
 from ..utils import byteify, versionTuple, getTankType, fixBadges, getLogger
 
 logger = getLogger(__name__)
@@ -43,50 +43,45 @@ class ParserController(object):
 		result_blocks = dict()
 		result_blocks['data'] = dict()
 
-		with open(file_path, 'rb') as f:
+		with open(file_path, 'rb') as fh:
 			try:
-				f.seek(4)
-				numofblocks = struct.unpack('I', f.read(4))[0]
-				blockNum = 1
-				datablockPointer = {}
-				datablockSize = {}
-				startPointer = 8
-			except: #NOSONAR
+				# get blocks count
+				offset = DEFAULT_PACK_SIZE
+				fh.seek(DEFAULT_PACK_SIZE)
+				blocks_count = struct.unpack('I', fh.read(DEFAULT_PACK_SIZE))[0]
+				offset += DEFAULT_PACK_SIZE
+			except:
 				logger.exception('ParserController.parseReplay %s', file_name)
 				return None
 
-			if numofblocks == 0:
-				logger.debug('File %s has unknown file structure. (numofblocks == 0)', file_name)
+			if blocks_count == 0:
+				logger.debug('File %s has unknown file structure. (blocks_count == 0)', file_name)
 				return None
-			if numofblocks > 4:
-				logger.debug('File %s has unknown file structure. (numofblocks > 4)', file_name)
+			elif blocks_count > 2:
+				logger.debug('File %s has unknown file structure. (blocks_count > 2)', file_name)
 				return None
 
-			while numofblocks >= 1:
+			# iter blocks
+			has_common = False
+			for _ in range(blocks_count):
+				fh.seek(offset)
+				block_size = struct.unpack('I', fh.read(DEFAULT_PACK_SIZE))[0]
+				offset += DEFAULT_PACK_SIZE
+				fh.seek(offset)
+				data = fh.read(block_size)
+				offset += block_size
 				try:
-					f.seek(startPointer)
-					size = f.read(4)
-					datablockSize[blockNum] = struct.unpack('I', size)[0]
-					datablockPointer[blockNum] = startPointer + 4
-					startPointer = datablockPointer[blockNum] + datablockSize[blockNum]
-					blockNum += 1
-					numofblocks -= 1
-					for i in datablockSize:
-						f.seek(datablockPointer[i])
-						myblock = f.read(int(datablockSize[i]))
-						blockdict = dict()
-						if 'arenaUniqueID' not in str(myblock):
-							blockdict = byteify(json.loads(myblock))
-							vehicleInfo = ParserController.getVehicleInfo(blockdict)
-							if not vehicleInfo:
-								return None
-							blockdict['vehicleInfo'] = vehicleInfo
-							result_blocks['data']['common'] = blockdict
-						else:
-							blockdict = byteify(json.loads(myblock))
-							result_blocks['data']['result_data'] = fixBadges(blockdict[0])
-
-				except: #NOSONAR
+					blockdict = byteify(json.loads(data))
+					if not has_common:
+						vehicleInfo = ParserController.getVehicleInfo(blockdict)
+						if not vehicleInfo:
+							return None
+						blockdict['vehicleInfo'] = vehicleInfo
+						result_blocks['data']['common'] = blockdict
+						has_common = True
+					else:
+						result_blocks['data']['result_data'] = fixBadges(blockdict[0])
+				except:
 					logger.exception('parseReplay %s', file_name)
 					return None
 
