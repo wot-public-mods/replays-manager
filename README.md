@@ -1,15 +1,45 @@
-﻿# Replays Manager
+﻿# Replays Manager - World of Tanks Mod
 
-**Replays Manager** is a modification for the game World of Tanks that enhances your experience with game replays. This tool allows you to conveniently view, manage, and analyze your replays. Additionally, it provides features for reviewing battle results, playing back your replays, and uploading them directly to the WoTReplays site.
+## 🚀 Overview
 
-## Features:
-- **Common Battle Results**: Quickly check the results of past battles in summary view.
-- **Battle Results WIndow**: Easily access and view your saved wotreplays in ingame battle results window.
-- **Upload to WoTReplays**: Directly upload your replays to the WoTReplays website.
-- **Replay Playback**: Play the replay you need right from the game.
+**Replays Manager** is a powerful mod for **World of Tanks** that simplifies how you handle and analyze your game replays. With this tool, you can easily manage your battle replays, review results, and even upload them directly to the **WoTReplays** website. It’s a must-have for players who want to improve their gameplay and track their performance over time.
 
-## Dependency
-This project relies on the [mods-list](https://gitlab.com/wot-public-mods/mods-list) mod. Make sure to include this mod to ensure proper functionality of the Replays Manager.
+## 🌟 Features
 
-## An example of what a manager looks like
-![An example of what a manager looks like](https://gitlab.com/wot-public-mods/replays-manager/-/raw/master/resources/ui_preview.png)
+- 📊 **Quick Battle Results**: View a summary of your past battles at a glance.
+- 🖼️ **In-Game Battle Results Window**: Conveniently access and view saved replays within the in-game battle results window.
+- 🌐 **Upload to WoTReplays**: Seamlessly upload your replays to the **WoTReplays** site without leaving the game.
+- 🎥 **Replay Playback**: Play back any of your saved replays directly from the game interface.
+
+## 🖼️ Screenshot
+
+### Example of the Replays Manager interface:
+![Replays Manager Interface](https://gitlab.com/wot-public-mods/replays-manager/-/raw/master/resources/ui_preview.png)
+
+## 📦 Dependency
+This project relies on the [Mods List](https://gitlab.com/wot-public-mods/mods-list) mod. Make sure to include this mod to ensure the proper functionality of **BattleHits**.
+
+## 💡 How It Works
+
+After each battle, **BattleHits** retrieves the shots data and presents a visual representation in your lobby. You can review where shots hit your tank or where your shots hit your enemies, helping you analyze your performance.
+
+## 💖 Donate
+
+If you enjoy **BattleHits** and would like to support its development, consider making a donation. Your contributions help improve the mod and keep it updated!
+
+- **Support on Patreon**: [Patreon Link](https://www.patreon.com/poliroid)
+- **Directly donate**: [Donation Methods](https://poliroid.me/donate/)
+
+Thank you for your support!
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://gitlab.com/wot-public-mods/replays-manager/-/blob/master/LICENSE.md) file for details.
+
+## 🤝 Contributing
+
+Feel free to contribute to the project by submitting issues or pull requests! We welcome all forms of feedback and contributions from the World of Tanks community.
+
+---
+
+Enjoying BattleHits? Consider supporting us by sharing this mod with other players!
