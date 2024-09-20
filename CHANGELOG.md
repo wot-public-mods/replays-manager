@@ -1,6 +1,10 @@
 # Changelog
 
-## v3.7.8
+## v3.8.00
+
+* improved localization
+
+## v3.7.9
 
 * reworked raw parser (increased compatibility)
 * minimal supported replays version
