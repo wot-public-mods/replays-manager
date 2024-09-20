@@ -191,7 +191,7 @@ def convertData(data):
 	if isinstance(data, basestring):
 		try:
 			result = ast.literal_eval(data)
-		except: #NOSONAR
+		except:
 			result = str(data)
 	elif isinstance(data, collections.Mapping):
 		result = dict(map(convertData, data.iteritems()))

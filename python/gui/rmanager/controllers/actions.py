@@ -109,7 +109,7 @@ class ActionsController(object):
 			handler(arenaUniqueID, True)
 
 			logger.debug('__showBattleResults => replayName: %s', replayName)
-		except: #NOSONAR
+		except:
 			logger.exception('__showBattleResults')
 
 	def __playBattleReplay(self, replayName):
@@ -124,7 +124,7 @@ class ActionsController(object):
 					BigWorld.savePreferences()
 					BigWorld.restartGame()
 			DialogsInterface.showDialog(getPlayConfirmDialogMeta(), dialogCallback)
-		except: #NOSONAR
+		except:
 			logger.exception('__playBattleReplay')
 
 	@staticmethod
@@ -141,7 +141,7 @@ class ActionsController(object):
 						return SimpleDialogMeta(message=l10n('ui.uploader.status%s' % g_controllers.uploader.status),
 												title=l10n('ui.uploader.statusErrorOccure'), buttons=buttons)
 					DialogsInterface.showDialog(getErrorInfoDialogMeta(), lambda *args: None)
-		except: #NOSONAR
+		except:
 			logger.exception('__uploadBattleReplay')
 
 	@staticmethod
@@ -149,7 +149,7 @@ class ActionsController(object):
 		try:
 			g_controllers.database.setReplayFavorite(replayName, isFavorite)
 			g_eventsManager.onNeedToUpdateReplaysList()
-		except: #NOSONAR
+		except:
 			logger.exception('__setReplayFavorite')
 
 	@staticmethod
@@ -162,7 +162,7 @@ class ActionsController(object):
 			if result:
 				try:
 					os.remove(REPLAYS_PATH + replayName)
-				except: #NOSONAR
+				except:
 					logger.exception('__removeBattleReplay dialogCallback os.remove')
 				g_eventsManager.onNeedToUpdateReplaysList()
 		DialogsInterface.showDialog(getConfirmDialogMeta(), dialogCallback)

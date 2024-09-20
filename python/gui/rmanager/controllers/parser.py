@@ -206,7 +206,7 @@ class ParserController(object):
 				'userString': vItem.userString,
 				'shortUserString': vItem.shortUserString
 			}
-		except: #NOSONAR
+		except:
 			logger.exception('getVehicleInfo')
 
 	@staticmethod

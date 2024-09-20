@@ -62,7 +62,7 @@ class DataBaseController(object):
 					self.__createEmptyDataBase()
 			yield self.__updateDataBase()
 			self.__state = DATABASE_STATES.READY
-		except Exception: #NOSONAR
+		except Exception:
 			self.__state = DATABASE_STATES.ERROR
 			logger.exception('prepareDataBase')
 		finally:
@@ -156,7 +156,7 @@ class DataBaseController(object):
 					if replayName not in self.__database['corrupted_replays']:
 						self.__database['corrupted_replays'].append(replayName)
 				callback(True)
-			except: #NOSONAR
+			except:
 				logger.exception('parseReplayFile')
 				callback(False)
 		BigWorld.callback(0, parseReplayFile)
@@ -176,7 +176,7 @@ class DataBaseController(object):
 		try:
 			result = convertData(self.__database['replays_data'][replayName]['replay_data']['data']['result_data'])
 			json.dumps(result)
-		except: #NOSONAR
+		except:
 			pass
 		finally:
 			self.__database.close()

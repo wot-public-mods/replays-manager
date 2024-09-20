@@ -139,7 +139,7 @@ class UploaderController(object):
 		try:
 			self.__setStatus(UPLOADER_STATUS.LOADING)
 			r = urllib2.urlopen(request)
-		except: #NOSONAR
+		except:
 			logger.exception('__uploaderThread')
 			self.__setStatus(UPLOADER_STATUS.CONNECTION_ERROR)
 		else:

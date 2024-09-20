@@ -70,7 +70,7 @@ def getItemByCD(baseMethod, baseObject, typeCompDescr):
 	try:
 		result = baseMethod(baseObject, typeCompDescr)
 		return result
-	except: #NOSONAR
+	except:
 		return 0
 
 @override(AppealCMHandler, 'getOptions')
