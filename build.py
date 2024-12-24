@@ -174,6 +174,7 @@ def build_python():
 				logger.error('python fail compile: %s\n%s', filePath, e.output.decode())
 
 # handle args from command line
+RUN_GAME = 'run' in sys.argv
 BUILD_FLASH = 'flash' in sys.argv
 COPY_INTO_GAME = 'ingame' in sys.argv
 CREATE_DISTRIBUTE = 'distribute' in sys.argv
@@ -277,3 +278,7 @@ for path in cleanup_list:
 		shutil.rmtree(path)
 	elif os.path.isfile(path):
 		os.remove(path)
+
+if RUN_GAME:
+	executable_path = '%s/WorldOfTanks.exe' % GAME_FOLDER
+	subprocess.Popen([executable_path])
