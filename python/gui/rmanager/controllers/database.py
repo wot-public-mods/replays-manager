@@ -54,12 +54,20 @@ class DataBaseController(object):
 			self.__replayFiles = [os.path.basename(x) for x in glob.iglob('%s*%s' % (REPLAYS_PATH, REPLAY_FILE_EXTENSION))]
 			self.__state = DATABASE_STATES.PARSING
 			if not os.path.exists(DB_FILENAME + '.dat'):
-				self.__createEmptyDataBase()
+				self._initialize_database(dbfolder)
 			else:
-				self.__database = shelve.open(DB_FILENAME, protocol=2)
-				if self.__database['db_version'] != DB_VERSION:
-					self.__database.close()
-					self.__createEmptyDataBase()
+				try:
+					self.__database = shelve.open(DB_FILENAME, protocol=2)
+					if self.__database['db_version'] != DB_VERSION:
+						self.__database.close()
+						self._initialize_database(dbfolder)
+				except:
+					logger.exception('prepareDataBase')
+					try:
+						self.__database.close()
+					except:
+						logger.exception('prepareDataBase 2')
+					self._initialize_database(dbfolder)
 			yield self.__updateDataBase()
 			self.__state = DATABASE_STATES.READY
 		except Exception:
@@ -68,8 +76,14 @@ class DataBaseController(object):
 		finally:
 			g_eventsManager.onUpdatingDatabaseStop()
 
-	def __createEmptyDataBase(self):
-		logger.debug('__createEmptyDataBase')
+	def _initialize_database(self, db_folder):
+		try:
+			for file_name in os.listdir(db_folder):
+				file_path = os.path.join(db_folder, file_name)
+				if os.path.isfile(file_path):
+					os.remove(file_path)
+		except:
+			logger.exception('_initialize_database')
 		self.__database = shelve.open(DB_FILENAME, flag='n', protocol=2)
 		self.__database['db_version'] = DB_VERSION
 		self.__database['corrupted_replays'] = list()

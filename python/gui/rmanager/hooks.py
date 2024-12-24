@@ -96,11 +96,11 @@ if g_modsListApi:
 # Data Collect
 g_dataCollector = None
 try:
-	from . import __version__
 	from .data_collector import g_dataCollector
 except ImportError:
 	logger.error('datacollector broken')
 if g_dataCollector:
+	from gui.mods.mod_rmanager import __version__
 	g_dataCollector.addSoloMod('replays_manager', __version__)
 
 # Add missing battle result fields (creditsReplay, xpReply, freeXpReplay, goldReplay, fortResource, crystalReplay)

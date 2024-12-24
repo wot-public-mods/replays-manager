@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.8.01
+
+* fixed problem when user somehow broke their database
+
 ## v3.8.00
 
 * improved localization
