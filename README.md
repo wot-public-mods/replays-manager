@@ -14,7 +14,7 @@
 ## 🖼️ Screenshot
 
 ### Example of the Replays Manager interface:
-![Replays Manager Interface](https://gitlab.com/wot-public-mods/replays-manager/-/raw/master/resources/ui_preview.png)
+![Replays Manager Interface](./resources/ui_preview.png)
 
 ## 📦 Dependency
 This project relies on the [Mods List](https://gitlab.com/wot-public-mods/mods-list) mod. Make sure to include this mod to ensure the proper functionality of **BattleHits**.
@@ -34,7 +34,7 @@ Thank you for your support!
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](https://gitlab.com/wot-public-mods/replays-manager/-/blob/master/LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE.md) file for details.
 
 ## 🤝 Contributing
 
