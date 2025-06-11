@@ -9,7 +9,7 @@ LANGUAGE_FILES = 'mods/net.wargaming.rmanager/text'
 LANGUAGE_DEFAULT = 'en'
 LANGUAGE_FALLBACK = ('ru', 'be', 'kk', )
 
-DEFAULT_UI_LANGUAGE = 'ru'
+DEFAULT_UI_LANGUAGE = 'en'
 WAITING_DELAY = 0.3
 
 REPLAYS_MANAGER_WINDOW_ALIAS = 'ReplaysManagerWindow'

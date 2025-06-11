@@ -4,6 +4,8 @@
 
 * minimal supported replays version
 * disable upload on broken provider
+* fix default UI language
+
 ## v3.8.01
 
 * fixed problem when user somehow broke their database
