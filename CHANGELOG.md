@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.8.02
+
+* minimal supported replays version
 ## v3.8.01
 
 * fixed problem when user somehow broke their database
