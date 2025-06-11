@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-# Copyright (c) 2015-2024 Andrii Andrushchyshyn
+# Copyright (c) 2015-2025 Andrii Andrushchyshyn
 
 import math
 import os
@@ -56,12 +56,13 @@ class UploaderController(object):
 	@adisp_async
 	@adisp_process
 	def apiStatus(callback):
-		host = 'http://wotreplays.eu/'
 		if CURRENT_REALM == 'RU':
-			host = 'http://tankireplays.lesta.ru/'
-		response = yield lambda callback: BigWorld.fetchURL(host, callback)
-		logger.debug('apiStatus %s %s', response.responseCode, response.body if response.responseCode != 200 else '')
-		callback(response.responseCode == 200)
+			callback(False)
+		else:
+			host = 'http://wotreplays.eu/'
+			response = yield lambda callback: BigWorld.fetchURL(host, callback)
+			logger.debug('apiStatus %s %s', response.responseCode, response.body if response.responseCode != 200 else '')
+			callback(response.responseCode == 200)
 
 	def prepare(self, replayFileName, replayUserDBID, replayUserName):
 

@@ -3,6 +3,7 @@
 ## v3.8.02
 
 * minimal supported replays version
+* disable upload on broken provider
 ## v3.8.01
 
 * fixed problem when user somehow broke their database
