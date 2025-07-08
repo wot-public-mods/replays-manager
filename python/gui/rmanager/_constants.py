@@ -17,7 +17,7 @@ REPLAYS_MANAGER_UPLOADER_ALIAS = 'ReplaysManagerUploadWindow'
 
 REPLAY_CM_HANDLER_TYPE = 'replayCMHandler'
 REPLAY_FLAG_FILE = 'replay_need_to_play.killme'
-DB_VERSION = 15
+DB_VERSION = 16
 
 CLIENT_ROOT = '.'
 REPLAYS_PATH = CLIENT_ROOT + '/replays/'

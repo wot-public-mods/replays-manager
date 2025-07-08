@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.8.1
+
+* fix(core): Correctly calculate and display total assist damage
+* refactor: Clean up uploader and remove obsolete API endpoints
+
 ## v3.8.02
 
 * minimal supported replays version

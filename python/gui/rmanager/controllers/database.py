@@ -259,7 +259,7 @@ class DataBaseController(object):
 	@staticmethod
 	def __expandNumbers(items):
 		for item in items:
-			for key in 'damageAssistedRadio', 'damage', 'credits', 'xp', 'originalXP':
+			for key in 'assist', 'damage', 'credits', 'xp', 'originalXP':
 				item[key] = backport.getIntegralFormat(item[key])
 		return items
 

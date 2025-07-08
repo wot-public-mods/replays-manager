@@ -149,7 +149,7 @@ class ParserController(object):
 			result_dict['common_data']['credits'] = int(personal_block.get('credits'))
 			result_dict['common_data']['damage'] = int(personal_block.get('damageDealt'))
 			result_dict['common_data']['kills'] = int(personal_block.get('kills'))
-			result_dict['common_data']['damageAssistedRadio'] = int(personal_block.get('damageAssistedRadio'))
+			result_dict['common_data']['assist'] = int(personal_block.get('damageAssistedRadio', 0)) + int(personal_block.get('damageAssistedTrack', 0)) + int(personal_block.get('damageAssistedStun', 0))
 			result_dict['common_data']['spotted'] = int(personal_block.get('spotted'))
 			result_dict['common_data']['originalXP'] = int(personal_block.get('originalXP'))
 			playerTeam = int(personal_block.get('team'))
@@ -179,7 +179,7 @@ class ParserController(object):
 			result_dict['common_data']['damage'] = -10
 			result_dict['common_data']['isWinner'] = -10
 			result_dict['common_data']['kills'] = -10
-			result_dict['common_data']['damageAssistedRadio'] = -10
+			result_dict['common_data']['assist'] = -10
 			result_dict['common_data']['spotted'] = -10
 			result_dict['common_data']['originalXP'] = -10
 

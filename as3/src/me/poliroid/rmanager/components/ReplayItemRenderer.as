@@ -129,7 +129,7 @@
 					this.creditsTF.text = this.data.hasBattleResults ? this.data.credits : "—";
 					this.xpTF.text = this.data.hasBattleResults ? this.data.xp : "—";
 					this.spottedTF.text = this.data.hasBattleResults ? this.data.spotted : "—";
-					this.assistTF.text = this.data.hasBattleResults ? this.data.damageAssistedRadio : "—";
+					this.assistTF.text = this.data.hasBattleResults ? this.data.assist : "—";
 					
 					this.mapIcon.addEventListener(UILoaderEvent.IOERROR, this.onMapIconIOError);
 					this.mapIcon.source = "../maps/icons/map/stats/" + this.data.mapName + ".png";

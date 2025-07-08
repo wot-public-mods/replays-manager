@@ -28,7 +28,7 @@
 			{label: STRINGS.l10n('ui.window.sorting.byKills'), selected: false, ascending: false, key: "kills"},
 			{label: STRINGS.l10n('ui.window.sorting.byDamage'), selected: false, ascending: false, key: "damage"},
 			{label: STRINGS.l10n('ui.window.sorting.bySpotted'), selected: false, ascending: false, key: "spotted"},
-			{label: STRINGS.l10n('ui.window.sorting.byAssist'), selected: false, ascending: false, key: "damageAssistedRadio"}
+			{label: STRINGS.l10n('ui.window.sorting.byAssist'), selected: false, ascending: false, key: "assist"}
 		];
 		public static const DATE_BUTTONS:Array = [
 			{label: STRINGS.l10n('ui.window.dateFilter.today'), selected: false, key: "today"},

@@ -214,7 +214,7 @@
 					this.setDashLineValue(this.credits, this.data.credits.toString());
 					this.setDashLineValue(this.xp, this.data.xp.toString());
 					this.setDashLineValue(this.spotted, this.data.spotted.toString());
-					this.setDashLineValue(this.assist, this.data.damageAssistedRadio.toString());
+					this.setDashLineValue(this.assist, this.data.assist.toString());
 					
 				}
 				catch (err:Error)
