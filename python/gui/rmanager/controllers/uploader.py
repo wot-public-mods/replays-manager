@@ -13,7 +13,7 @@ from constants import CURRENT_REALM
 from helpers import isPlayerAccount
 from ..events import g_eventsManager
 from .._constants import (WAITING_DELAY, WOTREPLAYS_API_URL, REPLAYS_PATH,
-											UPLOADER_STATUS, UPLOAD_REPLAY_TEMP)
+						   UPLOADER_STATUS, UPLOAD_REPLAY_TEMP, SUPPORTED_REALMS)
 from ..utils import MultiPartForm, requestProgress, getLogger
 
 logger = getLogger(__name__)
@@ -56,7 +56,7 @@ class UploaderController(object):
 	@adisp_async
 	@adisp_process
 	def apiStatus(callback):
-		if CURRENT_REALM == 'RU':
+		if CURRENT_REALM not in SUPPORTED_REALMS:
 			callback(False)
 		else:
 			host = 'http://wotreplays.eu/'
@@ -119,10 +119,7 @@ class UploaderController(object):
 
 		form.add_file('Replay[file_name]', self.__replay.fileName, fileStream)
 
-		host = 'http://wotreplays.eu'
-		if CURRENT_REALM == 'RU':
-			host = 'http://tankireplays.lesta.ru'
-		targetURL = WOTREPLAYS_API_URL % (host, str(self.__replay.userDBID), str(self.__replay.userName))
+		targetURL = WOTREPLAYS_API_URL % (str(self.__replay.userDBID), str(self.__replay.userName))
 
 		logger.debug('__uploaderThread endpoint %s', targetURL)
 

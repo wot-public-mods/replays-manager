@@ -13,7 +13,6 @@ import types
 
 import BigWorld
 import ResMgr
-from constants import CURRENT_REALM
 from helpers import dependency
 from skeletons.gui.impl import IGuiLoader
 
@@ -97,8 +96,7 @@ def cache_result(function):
 
 def openURL(url):
 	if url.startswith('/'):
-		targetDomain = 'ru' if CURRENT_REALM == 'RU' else 'eu'
-		url = 'http://wotreplays.%s%s' % (targetDomain, url)
+		url = 'http://wotreplays.eu' + url
 	BigWorld.wg_openWebBrowser(url)
 
 def cacheResult(function):

@@ -24,7 +24,8 @@ REPLAYS_PATH = CLIENT_ROOT + '/replays/'
 DB_FILENAME = REPLAYS_PATH + 'replays_manager/database'
 UPLOAD_REPLAY_TEMP = 'temp_upload_data.dat'
 
-WOTREPLAYS_API_URL = '%s/index.php/api/upload/bwId/%s/username/%s/server/MOD_UPLOAD'
+WOTREPLAYS_API_URL = 'http://wotreplays.eu/index.php/api/upload/bwId/%s/username/%s/server/MOD_UPLOAD'
+SUPPORTED_REALMS = ('EU', 'NA', 'ASIA')
 
 class UPLOADER_STATUS:
 	REPLAY_NOT_FOUND = 'NotFound'
