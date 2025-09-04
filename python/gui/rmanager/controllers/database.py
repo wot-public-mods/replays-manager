@@ -260,7 +260,7 @@ class DataBaseController(object):
 	def __expandNumbers(items):
 		for item in items:
 			for key in 'assist', 'damage', 'credits', 'xp', 'originalXP':
-				item[key] = backport.getIntegralFormat(item[key])
+				item[key] = backport.getIntegralFormat(item[key] if key in item else 0)
 		return items
 
 

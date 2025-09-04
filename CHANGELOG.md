@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.8.2
+
+* feat: Update mod for WoT 2.0
+* feat(build): Modernize build script and enhance configuration
+
 ## v3.8.1
 
 * fix(core): Correctly calculate and display total assist damage
