@@ -1,18 +1,18 @@
 {
-	"version": 3,
-	"software": {
-		"animate": "/path/to/adobe_animate",
-		"python": "/path/to/python_27"
-	},
-	"game": {
-		"folder": "/path/to/wot_dir",
-		"version": "wot_version"
-	},
-	"info": {
-		"id": "replaysmanager",
-		"author": "poliroid",
-		"name": "Replays Manager",
-		"description": "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site",
-		"version": "mod_version"
-	}
+    "version": 5,
+    "software": {
+        "animate": "/path/to/adobe_animate",
+        "python": "/path/to/python_27"
+    },
+    "game": {
+        "force": true,
+        "folder": "/path/to/wot_dir",
+        "version": "wot_version"
+    },
+    "info": {
+        "id": "me.poliroid.replaysmanager",
+        "name": "Replays Manager",
+        "description": "Convenient viewing of replays, viewing results, playback, and uploading replays to wotreplays site",
+        "version": "mod_version"
+    }
 }
