@@ -138,6 +138,9 @@ class ParserController(object):
 					pVehicle['originalCreditsContributionInSquad'] = pVehicle.get('originalCreditsContributionInSquad', 0)
 					pVehicle['originalCreditsToDrawSquad'] = pVehicle.get('originalCreditsToDrawSquad', 0)
 
+					# 2.0.0 fixes
+					pVehicle['outfit'] = None
+
 			# 1.5 fixes
 			if 'vehicles' in result_blocks['data']['result_data']:
 				for _, vehicleData in result_blocks['data']['result_data']['vehicles'].iteritems():

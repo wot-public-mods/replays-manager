@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.8.3
+
+* Changes the Replays Manager window to be non-modal and draggable for better usability.
+* Adds a backward compatibility fix to the replay parser for the 'outfit' key from older replay versions (1.29.1).
+
 ## v3.8.2
 
 * feat: Update mod for WoT 2.0

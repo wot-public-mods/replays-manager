@@ -17,7 +17,7 @@ REPLAYS_MANAGER_UPLOADER_ALIAS = 'ReplaysManagerUploadWindow'
 
 REPLAY_CM_HANDLER_TYPE = 'replayCMHandler'
 REPLAY_FLAG_FILE = 'replay_need_to_play.killme'
-DB_VERSION = 16
+DB_VERSION = 17
 
 CLIENT_ROOT = '.'
 REPLAYS_PATH = CLIENT_ROOT + '/replays/'
@@ -52,9 +52,9 @@ class DATABASE_STATES:
 	PARSING = 'parsing'
 	ERROR = 'error'
 
-PROCESS_SUPPORTED_VERSION = (2, 0, 0, 0)
-REPLAY_SUPPORTED_VERSION = (2, 0, 0, 0)
-RESULTS_SUPPORTED_VERSION = (2, 0, 0, 0)
+PROCESS_SUPPORTED_VERSION = (1, 29, 1, 0)
+REPLAY_SUPPORTED_VERSION = (1, 29, 1, 0)
+RESULTS_SUPPORTED_VERSION = (1, 29, 1, 0)
 
 # number of bytes to pack data in replay file
 DEFAULT_PACK_SIZE = 4
