@@ -45,7 +45,6 @@ class BattleReplayPlayer:
 		adaptor = PlayerEventsAdaptor(machine)
 		observers = self.gameplayLogic._GameplayLogic__machine._StateMachine__observers
 		machine._StateMachine__observers._observers = observers._observers[:]
-		machine._StateMachine__observers._stateIDs = observers._stateIDs[:]
 
 		# swap GameplayStateMachine to our BattleReplayMachine
 		self.gameplayLogic._GameplayLogic__machine = machine
