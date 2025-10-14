@@ -17,15 +17,15 @@
 ![Replays Manager Interface](./resources/ui_preview.png)
 
 ## 📦 Dependency
-This project relies on the [Mods List](https://gitlab.com/wot-public-mods/mods-list) mod. Make sure to include this mod to ensure the proper functionality of **BattleHits**.
+This project relies on the [Mods List](https://gitlab.com/wot-public-mods/mods-list) mod. Make sure to include this mod to ensure the proper functionality of **Replays Manager**.
 
 ## 💡 How It Works
 
-After each battle, **BattleHits** retrieves the shots data and presents a visual representation in your lobby. You can review where shots hit your tank or where your shots hit your enemies, helping you analyze your performance.
+After each battle, **Replays Manager** retrieves the shots data and presents a visual representation in your lobby. You can review where shots hit your tank or where your shots hit your enemies, helping you analyze your performance.
 
 ## 💖 Donate
 
-If you enjoy **BattleHits** and would like to support its development, consider making a donation. Your contributions help improve the mod and keep it updated!
+If you enjoy **Replays Manager** and would like to support its development, consider making a donation. Your contributions help improve the mod and keep it updated!
 
 - **Support on Patreon**: [Patreon Link](https://www.patreon.com/poliroid)
 - **Directly donate**: [Donation Methods](https://poliroid.me/donate/)
@@ -42,4 +42,4 @@ Feel free to contribute to the project by submitting issues or pull requests! We
 
 ---
 
-Enjoying BattleHits? Consider supporting us by sharing this mod with other players!
+Enjoying Replays Manager? Consider supporting us by sharing this mod with other players!

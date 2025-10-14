@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.8.5
+* fix: improve browser compatibility and update README
+
 ## v3.8.4
 * fix(player): Remove unused stateIDs causing player issues
 

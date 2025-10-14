@@ -97,7 +97,10 @@ def cache_result(function):
 def openURL(url):
 	if url.startswith('/'):
 		url = 'http://wotreplays.eu' + url
-	BigWorld.wg_openWebBrowser(url)
+	try:
+		BigWorld.wg_openWebBrowser(url)
+	except AttributeError:
+		BigWorld.openWebBrowser(url)
 
 def cacheResult(function):
 	memo = {}
