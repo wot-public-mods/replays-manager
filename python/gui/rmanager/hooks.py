@@ -66,10 +66,9 @@ def getPlayerFullName(baseMethod, baseObject, pName, clanInfo=None, clanAbbrev=N
 	return baseMethod(baseObject, str(pName), clanInfo, clanAbbrev, regionCode, pDBID)
 
 @override(ItemsRequester, 'getItemByCD')
-def getItemByCD(baseMethod, baseObject, typeCompDescr):
+def getItemByCD(baseMethod, baseObject, *a, **kw):
 	try:
-		result = baseMethod(baseObject, typeCompDescr)
-		return result
+		return baseMethod(baseObject, *a, **kw)
 	except:
 		return 0
 

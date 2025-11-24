@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.8.6
+* fix(hooks): Bad override signature
+
 ## v3.8.5
 * fix: improve browser compatibility and update README
 
