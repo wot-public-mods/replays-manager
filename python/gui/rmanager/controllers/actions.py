@@ -18,6 +18,7 @@ from skeletons.gui.game_control import IRankedBattlesController
 from skeletons.gui.game_control import IEpicBattleMetaGameController
 from skeletons.gui.shared import IItemsCache
 
+from adisp import adisp_process
 from ..controllers import g_controllers
 from ..events import g_eventsManager
 from ..hooks import showUploader
@@ -63,6 +64,7 @@ class ActionsController(object):
 		if actionType == REPLAY_ACTIONS.REMOVE:
 			self.__removeBattleReplay(replayName)
 
+	@adisp_process
 	def __showBattleResults(self, replayName):
 		try:
 
@@ -71,7 +73,7 @@ class ActionsController(object):
 			settings = ServicesLocator.lobbyContext.getServerSettings().getSettings()
 			settings[PremiumConfigs.PIGGYBANK] = settings.get(PremiumConfigs.PIGGYBANK, piggyBankCfg)
 
-			replayData = g_controllers.database.getReplayResultData(replayName)
+			replayData = yield g_controllers.database.getReplayResultData(replayName)
 			if not replayData:
 				return
 

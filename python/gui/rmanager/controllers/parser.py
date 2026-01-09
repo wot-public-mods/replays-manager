@@ -34,11 +34,11 @@ class ParserController(object):
 
 		# skip autorecord
 		if file_name == AUTO_RECORD_TEMP_FILENAME + REPLAY_FILE_EXTENSION:
-			return None
+			return None, None
 
 		# skip last battle record
 		if file_name == FIXED_REPLAY_FILENAME + REPLAY_FILE_EXTENSION:
-			return None
+			return None, None
 
 		result_blocks = dict()
 		result_blocks['data'] = dict()
@@ -52,14 +52,14 @@ class ParserController(object):
 				offset += DEFAULT_PACK_SIZE
 			except:
 				logger.exception('ParserController.parseReplay %s', file_name)
-				return None
+				return None, None
 
 			if blocks_count == 0:
 				logger.debug('File %s has unknown file structure. (blocks_count == 0)', file_name)
-				return None
+				return None, None
 			elif blocks_count > 2:
 				logger.debug('File %s has unknown file structure. (blocks_count > 2)', file_name)
-				return None
+				return None, None
 
 			# iter blocks
 			has_common = False
@@ -75,7 +75,7 @@ class ParserController(object):
 					if not has_common:
 						vehicleInfo = ParserController.getVehicleInfo(blockdict)
 						if not vehicleInfo:
-							return None
+							return None, None
 						blockdict['vehicleInfo'] = vehicleInfo
 						result_blocks['data']['common'] = blockdict
 						has_common = True
@@ -83,10 +83,13 @@ class ParserController(object):
 						result_blocks['data']['result_data'] = fixBadges(blockdict[0])
 				except:
 					logger.exception('parseReplay %s', file_name)
-					return None
+					return None, None
 
 			result = ParserController.getProcessedReplayData(result_blocks, file_name)
-			return result
+			replay_data = None
+			if 'result_data' in result_blocks['data']:
+				replay_data = result_blocks['data']['result_data']
+			return result, replay_data
 
 	@staticmethod
 	def getProcessedReplayData(result_blocks, file_name):
@@ -97,7 +100,6 @@ class ParserController(object):
 				return None
 			date_string = result_blocks['data']['common']['dateTime']
 			timestamp = int(time.mktime(datetime.strptime(date_string, "%d.%m.%Y %H:%M:%S").timetuple()))
-			result_dict['replay_data'] = result_blocks
 			result_dict['common_data'] = dict()
 			result_dict['common_data']['label'] = file_name
 			result_dict['common_data']['favorite'] = 0
@@ -106,6 +108,8 @@ class ParserController(object):
 			result_dict['common_data']['mapName'] = result_blocks['data']['common']['mapName']
 			result_dict['common_data']['mapDisplayName'] = result_blocks['data']['common']['mapDisplayName']
 			result_dict['common_data']['playerVehicle'] = result_blocks['data']['common']['playerVehicle']
+			result_dict['common_data']['playerName'] = result_blocks['data']['common']['playerName']
+			result_dict['common_data']['playerID'] = result_blocks['data']['common']['playerID']
 			result_dict['common_data']['tankInfo'] = result_blocks['data']['common']['vehicleInfo']
 			result_dict['common_data']['battleType'] = result_blocks['data']['common']['battleType']
 			result_dict['common_data']['canShowBattleResults'] = exeVer == (0, 0, 0, 0) or exeVer >= RESULTS_SUPPORTED_VERSION
@@ -119,7 +123,7 @@ class ParserController(object):
 			for key in result_blocks['data']['result_data']['personal']:
 				if key != 'avatar':
 					personal_block = result_blocks['data']['result_data']['personal'].get(key).copy()
-					pVehicle = result_dict['replay_data']['data']['result_data']['personal'][key]
+					pVehicle = result_blocks['data']['result_data']['personal'][key]
 					pVehicle['premiumCreditsFactor100'] = pVehicle.get('premiumCreditsFactor100', 100)
 					pVehicle['appliedPremiumCreditsFactor100'] = pVehicle.get('appliedPremiumCreditsFactor100', 100)
 					pVehicle['premiumXPFactor100'] = pVehicle.get('premiumXPFactor100', 100)

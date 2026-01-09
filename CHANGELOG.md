@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.8.7
+* feat(database): add cancellation support for database preparation
+* perf(database): optimize replay storage to metadata-only
+* chore: update copyright year to 2026
+
 ## v3.8.6
 * fix(hooks): Bad override signature
 

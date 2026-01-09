@@ -165,7 +165,7 @@ class DataBaseController(object):
 		def parseReplayFile():
 			try:
 				file_path = REPLAYS_PATH + replayName
-				replayData = g_controllers.parser.parseReplay(file_path, replayName)
+				replayData, _ = g_controllers.parser.parseReplay(file_path, replayName)
 				logger.debug('parseReplayFile: %s', replayName)
 				if replayData:
 					# add file hash to replay data
@@ -189,6 +189,20 @@ class DataBaseController(object):
 				callback(False)
 		BigWorld.callback(0, parseReplayFile)
 
+	def __getReplayData(self, replayName, callback):
+		def parseReplayFile():
+			try:
+				file_path = REPLAYS_PATH + replayName
+				_, replayRawData = g_controllers.parser.parseReplay(file_path, replayName)
+				logger.debug('parseReplayFile: %s', replayName)
+				if replayRawData:
+					callback(convertData(replayRawData))
+					return
+			except:
+				logger.exception('parseReplayFile')
+			callback(None)
+		BigWorld.callback(0, parseReplayFile)
+
 	def getReplaysData(self, settings):
 		logger.debug('getReplaysData')
 		replaysCommonData = self.__getReplaysCommonData()
@@ -197,45 +211,21 @@ class DataBaseController(object):
 		expandedNumbers = self.__expandNumbers(sortedList)
 		return expandedNumbers
 
-	def getReplayResultData(self, replayName):
-		result = None
-		logger.debug('getReplayResultData %s', replayName)
-		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
-		try:
-			result = convertData(self.__database['replays_data'][replayName]['replay_data']['data']['result_data'])
-			json.dumps(result)
-		except:
-			pass
-		finally:
-			self.__database.close()
-		return result
+	@adisp_async
+	@adisp_process
+	def getReplayResultData(self, replayName, callback):
+		result = yield lambda callback: self.__getReplayData(replayName, callback)
+		if result:
+			callback(result)
+			return
+		callback(None)
 
 	def getReplayCommonData(self, replayName):
 		result = None
 		logger.debug('getReplayCommonData %s', replayName)
 		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
 		try:
-			result = convertData(self.__database['replays_data'][replayName]['replay_data']['data']['common'])
-		finally:
-			self.__database.close()
-		return result
-
-	def getReplayHasBattleResults(self, replayName):
-		result = None
-		logger.debug('getReplayHasBattleResults %s', replayName)
-		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
-		try:
-			result = self.__database['replays_data'][replayName]['common_data']['hasBattleResults']
-		finally:
-			self.__database.close()
-		return result
-
-	def getReplayFavorite(self, replayName):
-		result = None
-		logger.debug('getReplayFavorite %s', replayName)
-		self.__database = shelve.open(DB_FILENAME, flag='r', protocol=2)
-		try:
-			result = self.__database['replays_data'][replayName]['common_data']['favorite']
+			result = convertData(self.__database['replays_data'][replayName]['common_data'])
 		finally:
 			self.__database.close()
 		return result
