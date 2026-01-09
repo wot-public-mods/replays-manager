@@ -44,6 +44,9 @@ class DataBaseController(object):
 		self.__replayFiles = None
 		self.__state = DATABASE_STATES.FINI
 
+	def cancelDataBasePreparation(self):
+		self.__state = DATABASE_STATES.INITED
+
 	@adisp_process
 	def prepareDataBase(self):
 		logger.debug('prepareDataBase')
@@ -68,8 +71,11 @@ class DataBaseController(object):
 					except:
 						logger.exception('prepareDataBase 2')
 					self._initialize_database(dbfolder)
-			yield self.__updateDataBase()
-			self.__state = DATABASE_STATES.READY
+			success = yield self.__updateDataBase()
+			if success:
+				self.__state = DATABASE_STATES.READY
+			else:
+				self.__state = DATABASE_STATES.INITED
 		except Exception:
 			self.__state = DATABASE_STATES.ERROR
 			logger.exception('prepareDataBase')
@@ -120,14 +126,22 @@ class DataBaseController(object):
 			if not self.__validateReplayHash(replayName):
 				replaysToParse.append(replayName)
 
-		result = True
+		if self.__state != DATABASE_STATES.PARSING:
+			callback(False)
+			self.__database.close()
+			return
+
 		replaysCount = len(replaysToParse)
 		for idx, replayName in enumerate(replaysToParse):
+			if self.__state != DATABASE_STATES.PARSING:
+				callback(False)
+				self.__database.close()
+				return
 			g_eventsManager.onParsingReplay(idx, replaysCount)
-			result = yield lambda callback: self.__parseReplayFile(replayName, callback)
-		self.__database.close()
+			yield lambda callback: self.__parseReplayFile(replayName, callback)
 
-		callback(result)
+		self.__database.close()
+		callback(True)
 
 	def __removeFromDataBase(self, replays):
 		for replayName in replays:

@@ -67,6 +67,7 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 		g_eventsManager.onNeedToUpdateReplaysList -= self.__prepareDataBase
 		g_eventsManager.onUpdatingDatabaseStop -= self.__onUpdatingDatabaseStop
 		g_eventsManager.onParsingReplay -= self.__onParsingReplay
+		self.__cancelDataBasePreparation()
 		super(ReplaysManagerWindow, self)._dispose()
 
 	def updateReplaysList(self, settings, paging=False):
@@ -130,6 +131,11 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 	def __prepareDataBase(self):
 		self.as_showWaitingS(l10n('ui.waiting.prepareDB'), {})
 		BigWorld.callback(WAITING_DELAY, g_controllers.database.prepareDataBase)
+
+	def __cancelDataBasePreparation(self):
+		self.as_hideWaitingS()
+		if g_controllers.database:
+			g_controllers.database.cancelDataBasePreparation()
 
 	def __populateFilters(self):
 		maps = list()
