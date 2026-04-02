@@ -3,22 +3,26 @@
 
 import ast
 import collections
-import importlib
 import functools
+import importlib
 import itertools
 import logging
 import mimetools
 import os
+import time
 import types
+import typing
 
 import BigWorld
 import ResMgr
+
 from helpers import dependency
 from skeletons.gui.impl import IGuiLoader
 
 __all__ = ('byteify', 'override', 'vfs_dir_list_files', 'vfs_file_read', 'parse_localization_file',
 			'MultiPartForm', 'requestProgress', 'versionTuple', 'openURL', 'getTankType', 
-			'convertData', 'fixBadges', 'safeImport', 'cacheResult', 'cache_result', 'getLogger')
+			'convertData', 'fixBadges', 'safeImport', 'cacheResult', 'cache_result', 'getLogger',
+			'ttl_cache', )
 
 def override(holder, name, wrapper=None, setter=None):
 	"""Override methods, properties, functions, attributes
@@ -233,3 +237,48 @@ def getLogger(name):
 	logger = logging.getLogger(name)
 	logger.setLevel(logging.DEBUG if os.path.isfile('.debug_mods') else logging.ERROR)
 	return logger
+
+def ttl_cache(ttl):
+	"""Decorator that caches function result for a fixed time-to-live (TTL).
+
+	The cache is shared across all calls of the decorated function and does NOT
+	take function arguments into account (single-value cache).
+
+	Args:
+		ttl (float): Time-to-live in seconds.
+
+	Returns:
+		Callable: Decorated function with TTL-based caching.
+	"""
+	def decorator(func):
+		"""Wraps the target function with caching logic."""
+
+		# Using lists to allow mutation inside closure (Python 2 compatible).
+		cache = [None]        # type: list[typing.Any]
+		expires_at = [0.0]    # type: list[float]
+
+		def wrapper(*args, **kwargs):
+			"""Returns cached value if valid, otherwise recomputes it.
+
+			Args:
+				*args: Positional arguments passed to the original function.
+				**kwargs: Keyword arguments passed to the original function.
+
+			Returns:
+				Any: Cached or freshly computed function result.
+			"""
+			now = time.time()
+
+			# Return cached value if it exists and has not expired.
+			if cache[0] is not None and now < expires_at[0]:
+				return cache[0]
+
+			# Compute new value and update cache.
+			cache[0] = func(*args, **kwargs)
+			expires_at[0] = now + ttl
+
+			return cache[0]
+
+		return wrapper
+
+	return decorator

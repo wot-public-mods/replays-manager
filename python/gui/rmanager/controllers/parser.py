@@ -5,17 +5,19 @@ import json
 import os
 import struct
 import time
-from datetime import datetime
 
+from datetime import datetime
 from BattleReplay import REPLAY_FILE_EXTENSION, AUTO_RECORD_TEMP_FILENAME, FIXED_REPLAY_FILENAME
 from constants import ARENA_GUI_TYPE
+from gui.server_events import IEventsCache
+from helpers import dependency
 from items import vehicles as core_vehicles
 from nations import INDICES as nationsIndices
 from soft_exception import SoftException
 
 from .._constants import (RESULTS_SUPPORTED_VERSION, REPLAY_SUPPORTED_VERSION,\
 							PROCESS_SUPPORTED_VERSION, DEFAULT_PACK_SIZE)
-from ..utils import byteify, versionTuple, getTankType, fixBadges, getLogger
+from ..utils import byteify, versionTuple, getTankType, fixBadges, getLogger, ttl_cache
 
 logger = getLogger(__name__)
 
@@ -145,6 +147,14 @@ class ParserController(object):
 					# 2.0.0 fixes
 					pVehicle['outfit'] = None
 
+				# 2.2.0.2
+				link = result_blocks['data']['result_data']['personal'][key]
+				allQuests = getAllQuests()
+				if 'questsProgress' in link:
+					for key in list(link['questsProgress']):
+						if key not in allQuests:
+							del link['questsProgress'][key]
+
 			# 1.5 fixes
 			if 'vehicles' in result_blocks['data']['result_data']:
 				for _, vehicleData in result_blocks['data']['result_data']['vehicles'].iteritems():
@@ -219,3 +229,8 @@ class ParserController(object):
 	@staticmethod
 	def getReplayHash(file_path):
 		return str(os.path.getmtime(file_path))
+
+@ttl_cache(10.0)
+@dependency.replace_none_kwargs(eventsCache=IEventsCache)
+def getAllQuests(eventsCache=None):
+    return list(eventsCache.getAllQuests())

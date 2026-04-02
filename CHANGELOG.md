@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.8.8
+* fix(results): filter invalid quests
+
 ## v3.8.7
 * feat(database): add cancellation support for database preparation
 * perf(database): optimize replay storage to metadata-only

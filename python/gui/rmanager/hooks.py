@@ -206,9 +206,13 @@ def genCrystalReplay(results):
 	return pack(replay)
 
 def battle_royale_fix(results):
-	if 'currencies' in results and 'brcoin' in results['currencies']:
-		if not results['currencies']['brcoin']['replay']:
-			del results['currencies']['brcoin']
+	if 'currencies' in results:
+		if 'brcoin' in results['currencies'] and 'replay' in results['currencies']['brcoin']:
+			if not results['currencies']['brcoin']['replay']:
+				del results['currencies']['brcoin']
+		if 'stpcoin' in results['currencies'] and 'replay' in results['currencies']['stpcoin']:
+			if not results['currencies']['stpcoin']['replay']:
+				del results['currencies']['stpcoin']
 	return results
 
 @override(_EconomicsRecordsChains, "addResults")
