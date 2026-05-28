@@ -36,7 +36,7 @@
 		public var battleTypeLabel:TextField;
 		public var battleType:DropdownMenu;
 		
-		public var battleResultLabel:TextField;		
+		public var battleResultLabel:TextField;
 		public var battleResult:DropdownMenu;
 		
 		public var otherLabel:TextField;
@@ -44,7 +44,7 @@
 		public var cbOriginalXP:CheckBox;
 		
 		public var btnApply:SoundButton;
-		public var btnReset:SoundButton;				
+		public var btnReset:SoundButton;
 		
 		private var _data:Object;
 		private var _selectedTF:TextFormat;

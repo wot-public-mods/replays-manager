@@ -1,5 +1,9 @@
 # Changelog
 
+## v3.8.9
+* build(package): improve build artifact handling
+* fix(filters): update replay filter options
+
 ## v3.8.8
 * fix(results): filter invalid quests
 

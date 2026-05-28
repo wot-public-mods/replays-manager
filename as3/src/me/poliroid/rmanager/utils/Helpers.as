@@ -174,7 +174,7 @@
 		{
 			var _fl:Array = new Array();
 			_fl.push({label: STRINGS.l10n('ui.window.filterTab.all'), data: -1, icon: "../maps/icons/filters/levels/level_all.png"});
-			for (var i:uint = 1; i <= 10; i++)
+			for (var i:uint = 1; i <= 11; i++)
 			{
 				_fl.push({label: i + " " + STRINGS.l10n('ui.window.filterTab.vehicleLevel'), data: i, icon: "../maps/icons/filters/levels/level_" + i + ".png"});
 			}
@@ -200,7 +200,7 @@
 		}
 		
 		public static function ConfigureBattleResultDropdown(menu:DropdownMenu):void
-		{			
+		{
 			menu.focusable = false;
 			menu.itemRenderer = "DropDownListItemRendererSound";
 			menu.dropdown = "DropdownMenu_ScrollingList";

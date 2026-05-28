@@ -7,8 +7,9 @@ import json
 
 from adisp import adisp_process
 from constants import ARENA_GUI_TYPE
-from helpers import i18n
+from gui.battle_results.components.common import _ARENA_TYPE_EXT_FORMAT
 from gui.Scaleform.framework.entities.abstract.AbstractWindowView import AbstractWindowView
+from helpers import i18n
 
 from ..lang import l10n
 from ..controllers import g_controllers
@@ -157,8 +158,8 @@ class ReplaysManagerWindow(ReplaysManagerWindowMeta):
 
 		btypes = [{'label': l10n('ui.window.filterTab.vehicleTypeAll'), 'data': -1}]
 		for gui_type in ARENA_GUI_TYPE.RANGE:
-			label = i18n.makeString('#menu:loading/battleTypes/{}'.format(gui_type))
-			if 'loading/battleTypes' in label:
+			label = i18n.makeString(_ARENA_TYPE_EXT_FORMAT.format(gui_type))
+			if 'loading/battle' in label:
 				continue
 			btypes.append({'label': label, 'data': gui_type})
 
