@@ -1,8 +1,10 @@
 # SPDX-License-Identifier: MIT
 # Copyright (c) 2015-2026 Andrii Andrushchyshyn
 
-from gui.Scaleform.framework import g_entitiesFactories, ViewSettings, ScopeTemplates
 from frameworks.wulf import WindowLayer
+from gui.Scaleform.framework import ViewSettings, ScopeTemplates
+from helpers import dependency
+from skeletons.gui.impl import IGuiLoader
 
 from .._constants import REPLAYS_MANAGER_WINDOW_ALIAS, REPLAYS_MANAGER_UPLOADER_ALIAS
 from .managerWindow import ReplaysManagerWindow
@@ -16,5 +18,7 @@ def getViewSettings():
 						WindowLayer.WINDOW, None, ScopeTemplates.GLOBAL_SCOPE, isModal=True, canClose=True, canDrag=True))
 	return viewSettings
 
+guiLoader = dependency.instance(IGuiLoader)
+
 for item in getViewSettings():
-	g_entitiesFactories.addSettings(item)
+	guiLoader.entitiesFactory.addSettings(item)

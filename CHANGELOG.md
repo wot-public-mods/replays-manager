@@ -1,5 +1,8 @@
 # Changelog
 
+## v3.9.0
+* fix(gui): register replay views through the GUI loader
+
 ## v3.8.9
 * build(package): improve build artifact handling
 * fix(filters): update replay filter options
